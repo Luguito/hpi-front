@@ -8,6 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        'hpi-white': "#FFFFFF",
+        'hpi-blue-dark': "#002E6D",
+        'hpi-dark-gradient':"#000102",
+        'hpi-blue-light':"#009BDE",
+        'hpi-grey-dark':"#707070",
+        'hpi-grey-light':"#C9C9C9",
+        'hpi-blue-sea':"#10205F",
+        'hpi-celeste':"#9ACAEB17"
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
