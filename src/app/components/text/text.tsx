@@ -1,7 +1,7 @@
 import BoldText from "./bold";
 import MediumText from "./medium";
 
-export default function Text({ children, type, size, color }: { children: React.ReactNode, type: TypeText, size: string, color: string }) {
+export default function Text({ children, type, classes }: { children: React.ReactNode, type: TypeText, classes:string }) {
     const TextComponents = {
         'medium': MediumText,
         'bold': BoldText
@@ -9,7 +9,7 @@ export default function Text({ children, type, size, color }: { children: React.
 
     const TextComponent = TextComponents[type];
     return (
-        <TextComponent styles={size + ' ' + color}>
+        <TextComponent styles={classes}>
             {children}
         </TextComponent>
     )

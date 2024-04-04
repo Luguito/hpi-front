@@ -1,8 +1,10 @@
+import Text from "../text/text";
+
 export default function NavBar() {
     const navOptions = ['HOME', 'AUTOMATION', 'SHARED SERVICES', 'DIGITAL SOLUTIONS', 'CONTACT US'];
 
     return (
-        <nav className="flex justify-between bg-hpi-white py-14">
+        <nav className="flex justify-between bg-hpi-white py-14 px-24">
             <section>
                 <article>
                     Hutchison Port
@@ -12,14 +14,14 @@ export default function NavBar() {
                 <article className="flex gap-10">
                     {
                         navOptions.map((option, key) =>  (
-                            <p className="text-hpi-blue-dark" key={key}>
+                            <Text type="medium" classes="text-[20px] text-hpi-blue-dark" key={key}>
                                 {option}
-                            </p>
+                            </Text>
                         ))
                     }
                 </article>
                 <article>
-                    <p className="text-hpi-blue-dark">EN</p>
+                    <Text type="medium" classes="text-[20px] text-hpi-blue-dark">EN</Text>
                 </article>
             </section>
         </nav>
