@@ -1,6 +1,6 @@
 import Text from "../text/text";
 
-export default function NavBar() {
+export default function Navbar() {
     const navOptions = ['HOME', 'AUTOMATION', 'SHARED SERVICES', 'DIGITAL SOLUTIONS', 'CONTACT US'];
 
     return (
