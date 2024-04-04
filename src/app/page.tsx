@@ -1,10 +1,9 @@
-import Image from "next/image";
-import NavBar from "./components/navbar/navbar";
+import VideoPlayer from "./components/video/video";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main>
-      <NavBar></NavBar>
-    </main>
+    <section>
+      <VideoPlayer></VideoPlayer>
+    </section>
   );
 }
