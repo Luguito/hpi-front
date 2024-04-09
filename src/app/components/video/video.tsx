@@ -1,10 +1,10 @@
 import React from 'react';
 
-const VideoPlayer = () => {
+const VideoPlayer = ({ videoSrc }: { videoSrc: string }) => {
   return (
-    <div>
+    <div className="after:content-[''] after:absolute after:top-0 after:left-0 after:bg-hpi-opacity-video after:w-full after:h-full">
       <video className="opacity-65" width="auto" height="100" autoPlay loop muted playsInline>
-        <source src="https://storage.googleapis.com/dexfreight-webapp-assets/landing.mp4" type="video/mp4" />
+        <source src={videoSrc} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>

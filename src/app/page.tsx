@@ -1,16 +1,17 @@
 import Button from "./components/button/button";
 import Text from "./components/text/text";
-import VideoPlayer from "./components/video/video";
+import VideoContainer from "./components/video-container/video-container";
+
 
 export default function HomePage() {
   return (
     <section>
+      {/* Video Section */}
+      <VideoContainer
+        title="Innovative Solutions for Next-Generation Port Operations"
+        videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/landing.mp4" />
 
-      <section className="relative">
-        <VideoPlayer></VideoPlayer>
-        <Text type="medium" classes="absolute top-1/4 left-1/4 text-[80px] text-hpi-white">Innovative Solutions for Next-Generation Port Operations</Text>
-      </section>
-
+        
       <section className="text-center my-40">
         <article className="bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
           <Text type="bold" classes="text-[60px]">

@@ -16,7 +16,8 @@ const config: Config = {
         'hpi-grey-dark':"#707070",
         'hpi-grey-light':"#C9C9C9",
         'hpi-blue-sea':"#10205F",
-        'hpi-celeste':"#9ACAEB17"
+        'hpi-celeste':"#9ACAEB17",
+        'hpi-opacity-video': 'rgba(0, 0, 0, 0.5)'
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
