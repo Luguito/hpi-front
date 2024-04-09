@@ -3,9 +3,8 @@ import React from 'react';
 const VideoPlayer = () => {
   return (
     <div>
-      <h1>Video Player</h1>
-      <video controls width="640" height="360">
-        <source src="../../../../public/Landing Banner.mp4" type="video/mp4" />
+      <video className="opacity-65" width="auto" height="100" autoPlay loop muted playsInline>
+        <source src="https://storage.googleapis.com/dexfreight-webapp-assets/landing.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>

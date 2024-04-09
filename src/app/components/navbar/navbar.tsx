@@ -1,4 +1,6 @@
 import Text from "../text/text";
+import Image from 'next/image';
+import profilePic from '../../../../public/hp-logo.svg';
 
 export default function Navbar() {
     const navOptions = ['HOME', 'AUTOMATION', 'SHARED SERVICES', 'DIGITAL SOLUTIONS', 'CONTACT US'];
@@ -7,14 +9,14 @@ export default function Navbar() {
         <nav className="flex justify-between bg-hpi-white py-14 px-24">
             <section>
                 <article>
-                    Hutchison Port
+                    <Image src={profilePic} alt="Hutchison Port" width="250" height="20" priority></Image>
                 </article>
             </section>
             <section className="flex gap-10">
                 <article className="flex gap-10">
                     {
-                        navOptions.map((option, key) =>  (
-                            <Text type="medium" classes="text-[20px] text-hpi-blue-dark" key={key}>
+                        navOptions.map((option, key) => (
+                            <Text type="medium" classes="text-[20px] text-hpi-blue-dark cursor-pointer" key={key}>
                                 {option}
                             </Text>
                         ))
