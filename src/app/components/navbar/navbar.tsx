@@ -23,8 +23,8 @@ export default function Navbar() {
                 <article className="flex gap-10">
                     {
                         navOptions.map((option, key) => (
-                            <Link href={option.link}>
-                                <Text type="medium" classes="text-[20px] text-hpi-blue-dark cursor-pointer" key={key}>
+                            <Link href={option.link} key={key}>
+                                <Text type="medium" classes="text-[20px] text-hpi-blue-dark cursor-pointer">
                                     {option.name}
                                 </Text>
                             </Link>

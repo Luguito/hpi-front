@@ -7,12 +7,14 @@ export default function HomePage() {
   return (
     <section>
       {/* Video Section */}
-      <VideoContainer
-        title="Innovative Solutions for Next-Generation Port Operations"
-        videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/landing.mp4" />
+      <section className="snap-center">
+        <VideoContainer
+          title="Innovative Solutions for Next-Generation Port Operations"
+          videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/landing.mp4" />
+      </section>
 
-        
-      <section className="text-center my-40">
+
+      <section className="text-center my-40 snap-center">
         <article className="bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
           <Text type="bold" classes="text-[60px]">
             Hutchison Ports is at the forefront of the industry,
@@ -24,7 +26,7 @@ export default function HomePage() {
       </section>
 
       {/* Technological solutions */}
-      <section className="bg-hpi-celeste mx-36 rounded-3xl">
+      <section className="bg-hpi-celeste mx-36 rounded-3xl snap-center">
         <header className="text-center py-20">
           <Text type="medium" classes="text-[40px] text-hpi-blue-light">Our Technological Solutions</Text>
         </header>
@@ -58,7 +60,7 @@ export default function HomePage() {
 
       {/* What's new ... section */}
 
-      <section className="mt-48">
+      <section className="mt-48 snap-center">
         <header className="text-center">
           <Text type="bold" classes="text-[50px] bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">What’s New at Hutchison Ports</Text>
           <Text type="medium" classes="text-[35px] text-hpi-grey-dark">Discover our latest technological advances and features</Text>
