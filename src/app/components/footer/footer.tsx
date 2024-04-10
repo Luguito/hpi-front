@@ -35,14 +35,14 @@ export default function Footer() {
                     <article className="flex gap-10">
                         {
                             footOptions.map((option, key) => (
-                                <Text type="medium" classes="text-[20px] text-hpi-white" key={key}>
+                                <Text type="medium" classes="text-[16px] text-hpi-white" key={key}>
                                     {option}
                                 </Text>
                             ))
                         }
                     </article>
                     <article>
-                        <Text type="medium" classes="text-[20px] text-hpi-white">
+                        <Text type="medium" classes="text-[16px] text-hpi-white">
                             2024 HUTCHISON PORT HOLDINGS LIMITED. ALL RIGHTS RESERVED.
                         </Text>
                     </article>
