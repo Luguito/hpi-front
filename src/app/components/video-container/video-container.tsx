@@ -6,7 +6,7 @@ const VideoContainer = ({ title, videoSrc }: { title: string, videoSrc: string }
     return (
         <section className="relative">
             <VideoPlayer videoSrc={videoSrc}></VideoPlayer>
-            <Text type="medium" classes="absolute top-1/4 left-1/4 text-[80px] text-hpi-white">{title}</Text>
+            <Text type="medium" classes="absolute top-1/4 text-center text-[80px] text-hpi-white">{title}</Text>
         </section>
     );
 };
