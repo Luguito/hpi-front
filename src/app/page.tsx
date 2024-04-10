@@ -7,12 +7,13 @@ export default function HomePage() {
   return (
     <section>
       {/* Video Section */}
-      <section className="snap-center">
-        <VideoContainer
-          title="Innovative Solutions for Next-Generation Port Operations"
-          videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/landing.mp4" />
-      </section>
-
+      <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/landing.mp4">
+        <Text type="medium" classes="absolute text-center text-[80px] text-hpi-white">
+          Innovative Solutions <br />
+          for Next-Generation <br />
+          Port Operations
+        </Text>
+      </VideoContainer>
 
       <section className="text-center my-40 snap-center">
         <article className="bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
