@@ -1,10 +1,17 @@
 import Text from "../text/text";
 import Image from 'next/image';
 import profilePic from '../../../../public/hp-logo.svg';
+import Link from 'next/link';
 
 export default function Navbar() {
-    const navOptions = ['HOME', 'AUTOMATION', 'SHARED SERVICES', 'DIGITAL SOLUTIONS', 'CONTACT US'];
-
+    // const navOptions = ['HOME', 'AUTOMATION', 'SHARED SERVICES', 'DIGITAL SOLUTIONS', 'CONTACT US'];
+    const navOptions = [
+        { name: 'HOME', link: '/'},
+        { name: 'AUTOMATION', link: '/'},
+        { name: 'SHARED SERVICES', link: '/shared-services'},
+        { name: 'DIGITAL SOLUTIONS', link: '/'},
+        { name: 'CONTACT US', link: '/'},
+    ]
     return (
         <nav className="flex justify-between bg-hpi-white py-14 px-24">
             <section>
@@ -16,9 +23,11 @@ export default function Navbar() {
                 <article className="flex gap-10">
                     {
                         navOptions.map((option, key) => (
-                            <Text type="medium" classes="text-[20px] text-hpi-blue-dark cursor-pointer" key={key}>
-                                {option}
-                            </Text>
+                            <Link href={option.link}>
+                                <Text type="medium" classes="text-[20px] text-hpi-blue-dark cursor-pointer" key={key}>
+                                    {option.name}
+                                </Text>
+                            </Link>
                         ))
                     }
                 </article>

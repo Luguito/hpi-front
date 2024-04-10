@@ -30,14 +30,14 @@ export default function HomePage() {
         </header>
         <section className="pb-28">
           <nav className="flex justify-evenly gap-4">
-            <Text type="bold" classes="text-[50px] text-hpi-blue-dark">Automation</Text>
-            <Text type="bold" classes="text-[50px] text-hpi-grey-light">Shared Services</Text>
-            <Text type="bold" classes="text-[50px] text-hpi-grey-light">Digital Solutions</Text>
+            <Text type="bold" classes="text-[40px] text-hpi-blue-dark">Automation</Text>
+            <Text type="bold" classes="text-[40px] text-hpi-grey-light">Shared Services</Text>
+            <Text type="bold" classes="text-[40px] text-hpi-grey-light">Digital Solutions</Text>
           </nav>
           <section className="flex justify-between mt-28 px-28">
             <article className="w-1/3">
               {/* p, button*/}
-              <Text type="medium" classes="text-[30px] text-hpi-grey-dark">
+              <Text type="medium" classes="text-[25px] text-hpi-grey-dark">
                 Implementing AI and automation technologies, we elevate terminal productivity, safety, and quality through optimized scheduling, autonomous operations, and gate automation, leading to operational excellence.
               </Text>
               <div className="mt-14">
