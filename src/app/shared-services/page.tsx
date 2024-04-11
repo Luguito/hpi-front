@@ -8,9 +8,13 @@ export default function HomePage() {
     return (
         <section>
             {/* Video Section */}
-            <VideoContainer
-                title="Unleashing Growth with Shared Services (RaaS)"
-                videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/landing.mp4" />
+            <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/landing.mp4">
+                <Text type="medium" classes="absolute text-center text-[80px] text-hpi-white">
+                    Unleashing Growth <br />
+                    with Shared Services <br />
+                    (RaaS)
+                </Text>
+            </VideoContainer>
 
             {/* Description */}
             <section className="text-center my-40">
@@ -244,7 +248,7 @@ export default function HomePage() {
             <section className="my-44 bg-hpi-blue-dark">
                 <header className="text-center py-24">
                     <Text type="bold" classes="text-[50px] text-hpi-white">
-                    Success Showcases
+                        Success Showcases
                     </Text>
                     <Text type="medium" classes="text-[35px] text-hpi-white mt-12">
                         Our success stories across the globe—from Karachi to Hong Kong and <br />
