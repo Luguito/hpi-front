@@ -2,14 +2,14 @@
 
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
-import Blogs from  "../../../../public/home/blogs-image.png";
+import Blogs from "../../../../public/home/blogs-image.png";
 import Text from "../text/text"
 import Image from "next/image";
 const imgs = [
-    Blogs,
-    Blogs,
-    Blogs,
-    Blogs,
+  Blogs,
+  Blogs,
+  Blogs,
+  Blogs,
 ];
 
 const ONE_SECOND = 1000;
@@ -88,25 +88,25 @@ const Images = ({ imgIndex }: { imgIndex: number }) => {
       {imgs.map((imgSrc, idx) => {
         return (
           <motion.div
-            children={(
-              <section className="flex justify-between shadow rounded-3xl py-7 px-9" key={idx}>
-                  <section className="flex flex-col gap-3">
-                    <Text type="bold" classes="text-[35px] text-hpi-blue-light">
-                      New mobile app UBI for truck drivers
-                    </Text>
-                    <Text type="medium" classes="text-[25px] text-hpi-grey-dark">
-                      Check whether the container is on the vessel, or ready for pickup or collected.
-                    </Text>
-                  </section>
-                  <article className="w-2/4">
-                    <Image src={imgSrc} alt="Blog Image" />
-                  </article>
-                </section>
-            )}
+
             key={idx}
             transition={SPRING_OPTIONS}
             className="shrink-0 rounded-xl w-[49.5em]"
-          />
+          >
+            <section className="flex justify-between shadow rounded-3xl py-7 px-9" key={idx}>
+              <section className="flex flex-col gap-3">
+                <Text type="bold" classes="text-[35px] text-hpi-blue-light">
+                  New mobile app UBI for truck drivers
+                </Text>
+                <Text type="medium" classes="text-[25px] text-hpi-grey-dark">
+                  Check whether the container is on the vessel, or ready for pickup or collected.
+                </Text>
+              </section>
+              <article className="w-2/4">
+                <Image src={imgSrc} alt="Blog Image" />
+              </article>
+            </section>
+          </motion.div>
         );
       })}
     </>
@@ -127,9 +127,8 @@ const Dots = ({
           <button
             key={idx}
             onClick={() => setImgIndex(idx)}
-            className={`h-3 w-3 rounded-full transition-colors ${
-              idx === imgIndex ? "bg-hpi-blue-dark" : "bg-hpi-white border-hpi-blue-dark border-2"
-            }`}
+            className={`h-3 w-3 rounded-full transition-colors ${idx === imgIndex ? "bg-hpi-blue-dark" : "bg-hpi-white border-hpi-blue-dark border-2"
+              }`}
           />
         );
       })}

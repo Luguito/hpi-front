@@ -18,6 +18,7 @@ export const TechSolutionsComponent = () => {
         'shared-services': SharedSection,
         'digital-solutions': DigitalSection,
     }
+    // @ts-ignore
     const CurrentSection = sections[currentSection];
 
     return (

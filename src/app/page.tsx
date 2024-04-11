@@ -20,6 +20,7 @@ export default function HomePage() {
           Port Operations
         </Text>
       </VideoContainer>
+      {/* @ts-ignore */}
 
       <RevealOnScrollComponent className="text-center my-40 " >
         <article className="snap-center bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
@@ -33,11 +34,14 @@ export default function HomePage() {
       </RevealOnScrollComponent>
 
       {/* Technological solutions */}
+      {/* @ts-ignore */}
+
       <RevealOnScrollComponent className="bg-hpi-celeste mx-36 rounded-3xl">
         <TechSolutionsComponent />
       </RevealOnScrollComponent>
 
       {/* What's new ... section */}
+      {/* @ts-ignore */}
       <RevealOnScrollComponent className="mt-48">
         <section className="snap-center">
           <header className="text-center">
