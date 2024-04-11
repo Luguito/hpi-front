@@ -13,7 +13,7 @@ export default function Navbar() {
         { name: 'CONTACT US', link: '/'},
     ]
     return (
-        <nav className="flex justify-between bg-hpi-white py-14 px-24">
+        <nav className="flex justify-between bg-hpi-white py-14 px-24 snap-end">
             <section>
                 <article>
                     <Image src={profilePic} alt="Hutchison Port" width="250" height="20" priority></Image>
