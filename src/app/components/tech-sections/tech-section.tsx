@@ -1,7 +1,7 @@
 
 'use client'
 
-import { useState } from "react"
+import React, { useState } from "react"
 import Button from "../button/button";
 import Text from "../text/text";
 import AutomationImage from '../../../../public/home/Automation.png'
@@ -13,17 +13,17 @@ import { motion } from 'framer-motion';
 
 export const TechSolutionsComponent = () => {
     const [currentSection, setSection] = useState('automation');
-    const sections = {
+    const sections: Record<string, any> = {
         'automation': AutomationSection,
         'shared-services': SharedSection,
         'digital-solutions': DigitalSection,
     }
-    // @ts-ignore
+
     const CurrentSection = sections[currentSection];
 
     return (
-        <section className="snap-center">
-            <header className="text-center py-20">
+        <section className="mt-20 snap-center">
+            <header className="text-center py-12">
                 <Text type="medium" classes="text-[40px] text-hpi-blue-light">Our Technological Solutions</Text>
             </header>
             <section className="pb-28">
@@ -60,7 +60,7 @@ export const AutomationSection = () => {
             </article>
             <article className="flex justify-center">
                 {/* img */}
-                <Image src={AutomationImage} height={400} alt="Img Here" />
+                <Image src={AutomationImage} width={600} alt="Img Here" />
             </article>
         </motion.section>
     )

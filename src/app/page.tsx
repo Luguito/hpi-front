@@ -22,7 +22,7 @@ export default function HomePage() {
       </VideoContainer>
       {/* @ts-ignore */}
 
-      <RevealOnScrollComponent className="text-center my-40 " >
+      <RevealOnScrollComponent className="text-center mt-40">
         <article className="snap-center bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
           <Text type="bold" classes="text-[60px]">
             Hutchison Ports is at the forefront of the industry,
@@ -32,10 +32,8 @@ export default function HomePage() {
           </Text>
         </article>
       </RevealOnScrollComponent>
-
       {/* Technological solutions */}
       {/* @ts-ignore */}
-
       <RevealOnScrollComponent className="bg-hpi-celeste mx-36 rounded-3xl">
         <TechSolutionsComponent />
       </RevealOnScrollComponent>
