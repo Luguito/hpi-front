@@ -2,11 +2,14 @@ import { RevealOnScrollComponent } from "./animations/reveal";
 import Button from "./components/button/button";
 import Text from "./components/text/text";
 import VideoContainer from "./components/video-container/video-container";
-import BlogImages from '../../public/blogs-image.png'
+import BlogImages from '../../public/home/blogs-image.png'
 import Image from "next/image";
+import { SwipeCarousel } from "./components/carousel/carousel";
+import { TechSolutionsComponent } from "./components/tech-sections/tech-section";
 
 
 export default function HomePage() {
+
   return (
     <section>
       {/* Video Section */}
@@ -17,7 +20,7 @@ export default function HomePage() {
           Port Operations
         </Text>
       </VideoContainer>
-      
+
       <RevealOnScrollComponent className="text-center my-40 " >
         <article className="snap-center bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
           <Text type="bold" classes="text-[60px]">
@@ -31,37 +34,7 @@ export default function HomePage() {
 
       {/* Technological solutions */}
       <RevealOnScrollComponent className="bg-hpi-celeste mx-36 rounded-3xl">
-        <section className="snap-center">
-          <header className="text-center py-20">
-            <Text type="medium" classes="text-[40px] text-hpi-blue-light">Our Technological Solutions</Text>
-          </header>
-          <section className="pb-28">
-            <nav className="flex justify-evenly gap-4">
-              <Text type="bold" classes="text-[40px] text-hpi-blue-dark">Automation</Text>
-              <Text type="bold" classes="text-[40px] text-hpi-grey-light">Shared Services</Text>
-              <Text type="bold" classes="text-[40px] text-hpi-grey-light">Digital Solutions</Text>
-            </nav>
-            <section className="flex justify-between mt-28 px-28">
-              <article className="w-1/3">
-                {/* p, button*/}
-                <Text type="medium" classes="text-[25px] text-hpi-grey-dark">
-                  Implementing AI and automation technologies, we elevate terminal productivity, safety, and quality through optimized scheduling, autonomous operations, and gate automation, leading to operational excellence.
-                </Text>
-                <div className="mt-14">
-                  <Button>
-                    <Text type="bold" classes="text-[30px] text-hpi-white">
-                      Learn More
-                    </Text>
-                  </Button>
-                </div>
-              </article>
-              <article className="flex justify-center">
-                {/* img */}
-                <img src="" alt="Img Here" />
-              </article>
-            </section>
-          </section>
-        </section>
+        <TechSolutionsComponent />
       </RevealOnScrollComponent>
 
       {/* What's new ... section */}
@@ -72,6 +45,7 @@ export default function HomePage() {
             <Text type="medium" classes="text-[35px] text-hpi-grey-dark">Discover our latest technological advances and features</Text>
           </header>
           <section className="flex gap-6 mx-36 mt-24">
+            {/* <SwipeCarousel></SwipeCarousel> */}
             {
               ['', ''].map((op, index) => (
                 <section className="flex justify-between shadow rounded-3xl py-7 px-9" key={index}>
