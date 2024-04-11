@@ -3,25 +3,25 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
-trigger:
-- main
+# trigger:
+# - main
 
-pool: Self
+# pool: Self
 
-steps:
-# - task: NodeTool@0
+# steps:
+# # - task: NodeTool@0
+# #   inputs:
+# #     versionSpec: '10.x'
+# #   displayName: 'Install Node.js'
+# # - script: |
+# #     npm install
+# #     npm run build
+# #   displayName: 'npm install and build'
+
+# - task: vercel-deployment-task@1
+#   name: Deploy
 #   inputs:
-#     versionSpec: '10.x'
-#   displayName: 'Install Node.js'
-# - script: |
-#     npm install
-#     npm run build
-#   displayName: 'npm install and build'
-
-- task: vercel-deployment-task@1
-  name: Deploy
-  inputs:
-    vercelProjectId: 'prj_AaHaVtVZg7TmLYcza9Czsy2uP1dH'
-    vercelOrgId: 'team_CQINOd9OGOsSF29lxTLL9VDE'
-    vercelToken: 'NSwfZB3fVPKOaNdyq2tvodgB'
-    production: true
+#     vercelProjectId: 'prj_AaHaVtVZg7TmLYcza9Czsy2uP1dH'
+#     vercelOrgId: 'team_CQINOd9OGOsSF29lxTLL9VDE'
+#     vercelToken: 'NSwfZB3fVPKOaNdyq2tvodgB'
+#     production: true
