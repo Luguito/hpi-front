@@ -2,14 +2,10 @@
 
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
-  import Blogs from  "../../../../public/blogs-image.png";
+import Blogs from  "../../../../public/home/blogs-image.png";
+import Text from "../text/text"
+import Image from "next/image";
 const imgs = [
-    Blogs,
-    Blogs,
-    Blogs,
-    Blogs,
-    Blogs,
-    Blogs,
     Blogs,
     Blogs,
     Blogs,
@@ -33,20 +29,20 @@ export const SwipeCarousel = () => {
   const dragX = useMotionValue(0);
 
   useEffect(() => {
-    const intervalRef = setInterval(() => {
-      const x = dragX.get();
+    // const intervalRef = setInterval(() => {
+    //   const x = dragX.get();
 
-      if (x === 0) {
-        setImgIndex((pv) => {
-          if (pv === imgs.length - 1) {
-            return 0;
-          }
-          return pv + 1;
-        });
-      }
-    }, AUTO_DELAY);
+    //   if (x === 0) {
+    //     setImgIndex((pv) => {
+    //       if (pv === imgs.length - 1) {
+    //         return 0;
+    //       }
+    //       return pv + 1;
+    //     });
+    //   }
+    // }, AUTO_DELAY);
 
-    return () => clearInterval(intervalRef);
+    // return () => clearInterval(intervalRef);
   }, []);
 
   const onDragEnd = () => {
@@ -60,7 +56,7 @@ export const SwipeCarousel = () => {
   };
 
   return (
-    <div className="relative overflow-hidden bg-neutral-950 py-8">
+    <div className="relative overflow-hidden py-8">
       <motion.div
         drag="x"
         dragConstraints={{
@@ -75,13 +71,13 @@ export const SwipeCarousel = () => {
         }}
         transition={SPRING_OPTIONS}
         onDragEnd={onDragEnd}
-        className="flex cursor-grab items-center active:cursor-grabbing"
+        className="flex cursor-grab items-center gap-5 active:cursor-grabbing"
       >
         <Images imgIndex={imgIndex} />
       </motion.div>
 
       <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} />
-      <GradientEdges />
+      {/* <GradientEdges /> */}
     </div>
   );
 };
@@ -92,17 +88,24 @@ const Images = ({ imgIndex }: { imgIndex: number }) => {
       {imgs.map((imgSrc, idx) => {
         return (
           <motion.div
+            children={(
+              <section className="flex justify-between shadow rounded-3xl py-7 px-9" key={idx}>
+                  <section className="flex flex-col gap-3">
+                    <Text type="bold" classes="text-[35px] text-hpi-blue-light">
+                      New mobile app UBI for truck drivers
+                    </Text>
+                    <Text type="medium" classes="text-[25px] text-hpi-grey-dark">
+                      Check whether the container is on the vessel, or ready for pickup or collected.
+                    </Text>
+                  </section>
+                  <article className="w-2/4">
+                    <Image src={imgSrc} alt="Blog Image" />
+                  </article>
+                </section>
+            )}
             key={idx}
-            style={{
-              backgroundImage: `url(${imgSrc})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-            animate={{
-              scale: imgIndex === idx ? 0.95 : 0.85,
-            }}
             transition={SPRING_OPTIONS}
-            className="aspect-video shrink-0 rounded-xl bg-neutral-800 object-cover"
+            className="shrink-0 rounded-xl w-[49.5em]"
           />
         );
       })}
@@ -118,14 +121,14 @@ const Dots = ({
   setImgIndex: Dispatch<SetStateAction<number>>;
 }) => {
   return (
-    <div className="mt-4 flex w-full justify-center gap-2">
-      {imgs.map((_, idx) => {
+    <div className="mt-20 flex w-full justify-center gap-2">
+      {['', ''].map((_, idx) => {
         return (
           <button
             key={idx}
             onClick={() => setImgIndex(idx)}
             className={`h-3 w-3 rounded-full transition-colors ${
-              idx === imgIndex ? "bg-neutral-50" : "bg-neutral-500"
+              idx === imgIndex ? "bg-hpi-blue-dark" : "bg-hpi-white border-hpi-blue-dark border-2"
             }`}
           />
         );

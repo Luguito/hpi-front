@@ -45,8 +45,8 @@ export default function HomePage() {
             <Text type="medium" classes="text-[35px] text-hpi-grey-dark">Discover our latest technological advances and features</Text>
           </header>
           <section className="flex gap-6 mx-36 mt-24">
-            {/* <SwipeCarousel></SwipeCarousel> */}
-            {
+            <SwipeCarousel></SwipeCarousel>
+            {/* {
               ['', ''].map((op, index) => (
                 <section className="flex justify-between shadow rounded-3xl py-7 px-9" key={index}>
                   <section className="flex flex-col gap-3">
@@ -62,7 +62,7 @@ export default function HomePage() {
                   </article>
                 </section>
               ))
-            }
+            } */}
           </section>
         </section>
       </RevealOnScrollComponent>
