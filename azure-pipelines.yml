@@ -25,7 +25,4 @@ steps:
     vercelProjectId: 'prj_AaHaVtVZg7TmLYcza9Czsy2uP1dH'
     vercelOrgId: 'team_CQINOd9OGOsSF29lxTLL9VDE'
     vercelToken: 'NSwfZB3fVPKOaNdyq2tvodgB'
-  vercelProjectId: "<project-id>"
-  vercelOrgId: "<org-id>"
-  vercelToken: "<vercel-token>" # '$(VERCEL_TOKEN)'
   production: true
