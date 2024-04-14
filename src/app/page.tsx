@@ -1,9 +1,6 @@
 import { RevealOnScrollComponent } from "./animations/reveal";
-import Button from "./components/button/button";
 import Text from "./components/text/text";
 import VideoContainer from "./components/video-container/video-container";
-import BlogImages from '../../public/home/blogs-image.png'
-import Image from "next/image";
 import { SwipeCarousel } from "./components/carousel/carousel";
 import { TechSolutionsComponent } from "./components/tech-sections/tech-section";
 
@@ -13,7 +10,7 @@ export default function HomePage() {
   return (
     <section>
       {/* Video Section */}
-      <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/landing.mp4">
+      <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/landing.mp4" bgColor="bg-hpi-opacity-video">
         <Text type="medium" classes="absolute text-center text-[80px] text-hpi-white">
           Innovative Solutions <br />
           for Next-Generation <br />
@@ -22,7 +19,7 @@ export default function HomePage() {
       </VideoContainer>
       {/* @ts-ignore */}
 
-      <RevealOnScrollComponent className="text-center mt-40">
+      <RevealOnScrollComponent className="text-center mt-32">
         <article className="snap-center bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
           <Text type="bold" classes="text-[60px]">
             Hutchison Ports is at the forefront of the industry,
