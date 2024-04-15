@@ -4,10 +4,8 @@ import VideoContainer from "../components/video-container/video-container";
 import Image from 'next/image'
 import Group from '../../../public/Group 62.png'
 import ROSA from '../../../public/home/Shared.svg'
-import MIND from '../../../public/shared-services/head-side-medical (1).svg'
-import GROW from '../../../public/shared-services/chat-arrow-grow.svg'
-import SOLUTION from '../../../public/shared-services/lightbulb-on.svg';
-import EYE from '../../../public/shared-services/Group 37.svg';
+
+
 
 import DOCUMENT from '../../../public/shared-services/document-signed.svg';
 import COMPARATION from '../../../public/shared-services/scale-comparison.svg';
@@ -19,6 +17,8 @@ import EFFICIENCY from '../../../public/shared-services/efficiency.png';
 
 
 import { RevealOnScrollComponent } from '../animations/reveal';
+import { HoverComponent } from "../components/hover/hover";
+import { CentralisedSolution, EyeSolution, GrowSolution, PeaceSolution } from "./ui/operations";
 
 export default function HomePage() {
     return (
@@ -118,31 +118,47 @@ export default function HomePage() {
                             ROC offers a flexible subscription model enabling terminals to seamlessly transition to a new operational model.
                         </p>
                     </header>
-                    <section className="flex justify-center flex-wrap gap-10 mt-14">
-                        <article className="flex flex-col items-center justify-center border-4 border-hpi-blue-dark  rounded-2xl w-[35%] gap-6 py-16">
-                            <Image src={MIND} alt="Mind Icon" />
-                            <Text type="bold" classes="text-[30px] text-hpi-blue-dark">
-                                Peace of mind
-                            </Text>
-                        </article>
-                        <article className="flex flex-col items-center justify-center border-4 border-hpi-blue-dark rounded-2xl w-[35%] gap-6 py-16">
-                            <Image src={GROW} alt="Mind Icon" />
-                            <Text type="bold" classes="text-[30px] text-hpi-blue-dark">
-                                Expand-As-You-Grow
-                            </Text>
-                        </article>
-                        <article className="flex flex-col items-center justify-center border-4 border-hpi-blue-dark rounded-2xl w-[35%] gap-6 py-16">
-                            <Image src={SOLUTION} alt="Mind Icon" />
-                            <Text type="bold" classes="text-[30px] text-hpi-blue-dark">
-                                Centralised Solution
-                            </Text>
-                        </article>
-                        <article className="flex flex-col items-center justify-center border-4 border-hpi-blue-dark rounded-2xl w-[35%] gap-6 py-16">
-                            <Image src={EYE} alt="Mind Icon" />
-                            <Text type="bold" classes="text-[30px] text-hpi-blue-dark">
-                                See All and Know All
-                            </Text>
-                        </article>
+                    <section className="grid grid-cols-2 grid-rows-2 justify-center items-center gap-10 mt-14 mx-72">
+                        <HoverComponent
+                            mouseEnterComponent={
+                                <article className="flex flex-col items-center justify-center border-4 border-hpi-blue-dark rounded-2xl gap-6 py-16 h-72">
+                                    <p className="text-[20px] text-hpi-white text-center">
+                                        Plug-and-Play to the standardised and proven operational practice (SOP) - uplifting the service level in no time!
+                                    </p>
+                                </article>
+                            }>
+                            <PeaceSolution />
+                        </HoverComponent>
+                        <HoverComponent
+                            mouseEnterComponent={
+                                <article className="flex flex-col items-center justify-center border-4 border-hpi-blue-dark rounded-2xl gap-6 py-16 h-72">
+                                    <p className="text-[20px] text-hpi-white text-center">
+                                        A scalable solution that ensures the growth of your terminal without the burden of significant upfront investments.
+                                    </p>
+                                </article>
+                            }>
+                            <GrowSolution />
+                        </HoverComponent>
+                        <HoverComponent
+                            mouseEnterComponent={
+                                <article className="flex flex-col items-center justify-center border-4 border-hpi-blue-dark rounded-2xl gap-6 py-16 h-72">
+                                    <p className="text-[20px] text-hpi-white text-center">
+                                        A hassle-free solution! Let ROC do all the work, while your terminal focuses on strategy.
+                                    </p>
+                                </article>
+                            }>
+                            <CentralisedSolution />
+                        </HoverComponent>
+                        <HoverComponent
+                            mouseEnterComponent={
+                                <article className="flex flex-col items-center justify-center border-4 border-hpi-blue-dark rounded-2xl gap-6 py-16 h-72">
+                                    <p className="text-[20px] text-hpi-white text-center">
+                                        Progress is fully visible to your terminal, allowing for complete oversight and transparency
+                                    </p>
+                                </article>
+                            }>
+                            <EyeSolution />
+                        </HoverComponent>
                     </section>
                 </section>
             </RevealOnScrollComponent>
