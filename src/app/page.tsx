@@ -11,7 +11,7 @@ export default function HomePage() {
     <section>
       {/* Video Section */}
       <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Home%20Banner.mp4" bgColor="">
-        <Text type="medium" classes="absolute text-center text-[60px] text-hpi-white">
+        <Text type="bold" classes="absolute text-center text-[60px] text-hpi-white">
           Innovative Solutions <br />
           for Next-Generation <br />
           Port Operations
@@ -21,10 +21,10 @@ export default function HomePage() {
 
       <RevealOnScrollComponent className="text-center mt-28">
         <article className="snap-center bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
-          <Text type="bold" classes="text-[40px]">
+          <Text type="bold" classes="text-[30px]">
             HUTCHISON PORTS IS AT THE FOREFRONT OF THE INFUSTRY, DRIVING EFFICIENCY
           </Text>
-          <Text type="bold" classes="text-[40px]">
+          <Text type="bold" classes="text-[30px]">
             WITH ONGOING INVESTMENTS AND INNOVATION IN PORT TECHNOLOGY.
           </Text>
         </article>
@@ -44,7 +44,7 @@ export default function HomePage() {
               Discover our latest technological advances
             </Text>
             <Text type="bold" classes="text-[40px] bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
-              What’s New at Hutchison Ports
+              WHAT'S NEW AT HUTCHISON PORTS
             </Text>
           </header>
           <section className="flex gap-6 mx-36 mt-24">

@@ -25,7 +25,7 @@ export default function HomePage() {
         <section>
             {/* Video Section */}
             <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Shared%20Services%20Banner.mp4" bgColor="">
-                <Text type="medium" classes="absolute text-center text-[60px] text-hpi-white">
+                <Text type="bold" classes="absolute text-center text-[60px] text-hpi-white">
                     UNLEASHING GROWTH <br />
                     WITH SHARED SERVICES
                 </Text>
@@ -56,10 +56,10 @@ export default function HomePage() {
                             </Text>
                         </article>
                         <article>
-                            <Text type="medium" classes="text-[25px] text-hpi-grey-dark mt-14">
+                            <p className="text-[20px] text-[#494949]">
                                 We are committed to achieving operational excellence, offering a configurable solution to drive port terminals
-                                <span className="text-hpi-blue-light cursor-pointer"> efficiency, scalability, and value generation.</span>
-                            </Text>
+                                <span className="text-hpi-blue-light cursor-pointer font-bold"> efficiency, scalability, and value generation.</span>
+                            </p>
                         </article>
                     </section>
                     <article className="px-20 py-12 rounded-3xl">
