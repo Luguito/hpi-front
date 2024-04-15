@@ -14,6 +14,8 @@ import COMPARATION from '../../../public/shared-services/scale-comparison.svg';
 import PLAN from '../../../public/shared-services/plan.svg';
 import FTP from '../../../public/shared-services/ftp.svg';
 
+import EFFICIENCY from '../../../public/shared-services/efficiency.png';
+
 
 
 import { RevealOnScrollComponent } from '../animations/reveal';
@@ -46,8 +48,8 @@ export default function HomePage() {
 
             {/* Efficiency */}
             <RevealOnScrollComponent>
-                <section className="flex mx-36 justify-center gap-10 snap-center items-center">
-                    <section className="flex flex-col w-8/12">
+                <section className="flex mx-36 justify-center gap-20 snap-center items-center">
+                    <section className="flex flex-col w-4/12">
                         <article>
                             <Text type="bold" classes="text-[30px] text-hpi-blue-dark">
                                 EFFICIENCY AT EVERY TURN
@@ -60,8 +62,8 @@ export default function HomePage() {
                             </Text>
                         </article>
                     </section>
-                    <article className="bg-hpi-celeste px-20 py-12 rounded-3xl">
-                        <Image src={ROSA} alt="ROSA " />
+                    <article className="px-20 py-12 rounded-3xl">
+                        <Image src={EFFICIENCY} alt="ROSA " />
                     </article>
                 </section>
             </RevealOnScrollComponent>

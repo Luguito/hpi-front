@@ -12,7 +12,7 @@ export default function Footer() {
             <footer className="snap-center">
                 <section className="text-center mb-24 mt-32">
                     <article className="bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
-                        <Text type="bold" classes="text-[25px]">
+                        <Text type="bold" classes="text-[30px]">
                             EXPLORE HOW WE CAN TRANSFORM CONTAINER TERMINAL OPERATIONS TOGETHER 
                         </Text>
                     </article>
