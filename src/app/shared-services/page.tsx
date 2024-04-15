@@ -24,7 +24,7 @@ export default function HomePage() {
     return (
         <section>
             {/* Video Section */}
-            <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/landing.mp4" bgColor="bg-hpi-opacity-video">
+            <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Shared%20Services%20Banner.mp4" bgColor="">
                 <Text type="medium" classes="absolute text-center text-[60px] text-hpi-white">
                     UNLEASHING GROWTH <br />
                     WITH SHARED SERVICES
@@ -118,26 +118,26 @@ export default function HomePage() {
                             ROC offers a flexible subscription model enabling terminals to seamlessly transition to a new operational model.
                         </p>
                     </header>
-                    <section className="flex justify-center flex-wrap gap-10 mt-16">
-                        <article className="flex flex-col items-center border-4 border-hpi-blue-dark py-20 rounded-2xl w-[35%] gap-6">
+                    <section className="flex justify-center flex-wrap gap-10 mt-14">
+                        <article className="flex flex-col items-center justify-center border-4 border-hpi-blue-dark  rounded-2xl w-[35%] gap-6 py-16">
                             <Image src={MIND} alt="Mind Icon" />
                             <Text type="bold" classes="text-[30px] text-hpi-blue-dark">
                                 Peace of mind
                             </Text>
                         </article>
-                        <article className="flex flex-col items-center border-4 border-hpi-blue-dark py-20 rounded-2xl w-[35%] gap-6">
+                        <article className="flex flex-col items-center justify-center border-4 border-hpi-blue-dark rounded-2xl w-[35%] gap-6 py-16">
                             <Image src={GROW} alt="Mind Icon" />
                             <Text type="bold" classes="text-[30px] text-hpi-blue-dark">
                                 Expand-As-You-Grow
                             </Text>
                         </article>
-                        <article className="flex flex-col items-center border-4 border-hpi-blue-dark py-20 rounded-2xl w-[35%] gap-6">
+                        <article className="flex flex-col items-center justify-center border-4 border-hpi-blue-dark rounded-2xl w-[35%] gap-6 py-16">
                             <Image src={SOLUTION} alt="Mind Icon" />
                             <Text type="bold" classes="text-[30px] text-hpi-blue-dark">
                                 Centralised Solution
                             </Text>
                         </article>
-                        <article className="flex flex-col items-center border-4 border-hpi-blue-dark py-20 rounded-2xl w-[35%] gap-6">
+                        <article className="flex flex-col items-center justify-center border-4 border-hpi-blue-dark rounded-2xl w-[35%] gap-6 py-16">
                             <Image src={EYE} alt="Mind Icon" />
                             <Text type="bold" classes="text-[30px] text-hpi-blue-dark">
                                 See All and Know All

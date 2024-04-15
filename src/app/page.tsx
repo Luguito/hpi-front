@@ -10,7 +10,7 @@ export default function HomePage() {
   return (
     <section>
       {/* Video Section */}
-      <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/landing.mp4" bgColor="bg-hpi-opacity-video">
+      <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Home%20Banner.mp4" bgColor="">
         <Text type="medium" classes="absolute text-center text-[60px] text-hpi-white">
           Innovative Solutions <br />
           for Next-Generation <br />
