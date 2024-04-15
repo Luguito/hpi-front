@@ -56,7 +56,7 @@ export const SwipeCarousel = () => {
   };
 
   return (
-    <div className="relative overflow-hidden py-8">
+    <div className="relative overflow-hidden">
       <motion.div
         drag="x"
         dragConstraints={{
@@ -121,7 +121,7 @@ const Dots = ({
   setImgIndex: Dispatch<SetStateAction<number>>;
 }) => {
   return (
-    <div className="mt-20 flex w-full justify-center gap-2">
+    <div className="mt-16 flex w-full justify-center gap-2">
       {['', ''].map((_, idx) => {
         return (
           <button

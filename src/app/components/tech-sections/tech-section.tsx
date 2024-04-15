@@ -22,15 +22,18 @@ export const TechSolutionsComponent = () => {
     const CurrentSection = sections[currentSection];
 
     return (
-        <section className="mt-20 snap-center">
+        <section className="mt-16 snap-center">
             <header className="text-center py-12">
-                <Text type="medium" classes="text-[40px] text-hpi-blue-light">Our Technological Solutions</Text>
+                <span className="text-hpi-blue-light text-center text-[26px]">Port Innovation</span>
+                <div className="bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
+                    <Text type="bold" classes="text-[40px]">TECHNOLOGICAL SOLUTIONS</Text>
+                </div>
             </header>
-            <section className="pb-28">
+            <section className="pb-16">
                 <nav className="flex justify-evenly gap-4">
-                    <Text type="bold" classes={currentSection === 'automation' ? 'text-[40px] text-hpi-blue-dark cursor-pointer' : 'text-[40px] text-hpi-grey-light cursor-pointer'} onMouseEnter={() => setSection('automation')}>Automation</Text>
-                    <Text type="bold" classes={currentSection === 'shared-services' ? 'text-[40px] text-hpi-blue-dark cursor-pointer' : 'text-[40px] text-hpi-grey-light cursor-pointer'} onMouseEnter={() => setSection('shared-services')}>Shared Services</Text>
-                    <Text type="bold" classes={currentSection === 'digital-solutions' ? 'text-[40px] text-hpi-blue-dark cursor-pointer' : 'text-[40px] text-hpi-grey-light cursor-pointer'} onMouseEnter={() => setSection('digital-solutions')}>Digital Solutions</Text>
+                    <Text type="bold" classes={currentSection === 'automation' ? 'text-[30px] text-hpi-blue-dark cursor-pointer' : 'text-[30px] text-hpi-grey-light cursor-pointer'} onMouseEnter={() => setSection('automation')}>AUTOMATION</Text>
+                    <Text type="bold" classes={currentSection === 'shared-services' ? 'text-[30px] text-hpi-blue-dark cursor-pointer' : 'text-[30px] text-hpi-grey-light cursor-pointer'} onMouseEnter={() => setSection('shared-services')}>SHARED SERVICES</Text>
+                    <Text type="bold" classes={currentSection === 'digital-solutions' ? 'text-[30px] text-hpi-blue-dark cursor-pointer' : 'text-[30px] text-hpi-grey-light cursor-pointer'} onMouseEnter={() => setSection('digital-solutions')}>DIGITAL SOLUTIONS</Text>
                 </nav>
                 <CurrentSection />
             </section>
@@ -44,15 +47,15 @@ export const TechSolutionsComponent = () => {
 
 export const AutomationSection = () => {
     return (
-        <motion.section className="flex justify-between mt-28 px-28" initial={{ opacity: 0 }} animate={{ opacity: 1 }}  transition={{ duration: .5 }}>
+        <motion.section className="flex justify-between mt-28 px-28" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
             <article className="w-1/3">
                 {/* p, button*/}
-                <Text type="medium" classes="text-[25px] text-hpi-grey-dark">
+                <Text type="medium" classes="text-[20px] text-hpi-grey-dark">
                     Implementing AI and automation technologies, we elevate terminal productivity, safety, and quality through optimized scheduling, autonomous operations, and gate automation, leading to operational excellence.
                 </Text>
                 <div className="mt-14">
                     <Button>
-                        <Text type="bold" classes="text-[30px] text-hpi-white">
+                        <Text type="bold" classes="text-[20px] text-hpi-white">
                             Learn More
                         </Text>
                     </Button>
@@ -68,10 +71,10 @@ export const AutomationSection = () => {
 
 export const SharedSection = () => {
     return (
-        <motion.section className="flex justify-between mt-28 px-28" initial={{ opacity: 0 }} animate={{ opacity: 1 }}  transition={{ duration: .5 }}>
+        <motion.section className="flex justify-between mt-28 px-28" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
             <article className="w-1/3">
                 {/* p, button*/}
-                <Text type="medium" classes="text-[25px] text-hpi-grey-dark">
+                <Text type="medium" classes="text-[20px] text-hpi-grey-dark">
                     Our RaaS model streamlines <br />
                     logistics operations, leveraging end- <br />
                     to-end management solutions to <br />
@@ -81,7 +84,7 @@ export const SharedSection = () => {
                 <div className="mt-14">
                     <Button>
                         <Link href="/shared-services">
-                            <Text type="bold" classes="text-[30px] text-hpi-white">
+                            <Text type="bold" classes="text-[20px] text-hpi-white">
                                 Learn More
                             </Text>
                         </Link>
@@ -98,17 +101,17 @@ export const SharedSection = () => {
 
 export const DigitalSection = () => {
     return (
-        <motion.section className="flex justify-between mt-28 px-28" initial={{ opacity: 0 }} animate={{ opacity: 1 }}  transition={{ duration: .5 }}>
+        <motion.section className="flex justify-between mt-28 px-28" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
             <article className="w-1/3">
                 {/* p, button*/}
-                <Text type="medium" classes="text-[25px] text-hpi-grey-dark">
+                <Text type="medium" classes="text-[20px] text-hpi-grey-dark">
                     Harnessing innovative, cost-efficient digital solutions,
                     we offer standardized services enhancing terminal processes,
                     data analytics, and machine learning for optimal operational visibility and control.
                 </Text>
                 <div className="mt-14">
                     <Button>
-                        <Text type="bold" classes="text-[30px] text-hpi-white">
+                        <Text type="bold" classes="text-[20px] text-hpi-white">
                             Learn More
                         </Text>
                     </Button>
