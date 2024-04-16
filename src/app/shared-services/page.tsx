@@ -19,6 +19,7 @@ import EFFICIENCY from '../../../public/shared-services/efficiency.png';
 import { RevealOnScrollComponent } from '../animations/reveal';
 import { HoverComponent } from "../components/hover/hover";
 import { CentralisedSolution, EyeSolution, GrowSolution, PeaceSolution } from "./ui/operations";
+import { Maps } from "../components/maps/maps";
 
 export default function HomePage() {
     return (
@@ -325,7 +326,7 @@ export default function HomePage() {
                         </p>
                     </header>
                     <section>
-                        MAPA
+                            <Maps />
                     </section>
                 </section>
             </RevealOnScrollComponent>
