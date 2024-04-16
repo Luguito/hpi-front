@@ -24,7 +24,7 @@ export default function Navbar() {
                     {
                         navOptions.map((option, key) => (
                             <Link href={option.link} key={key}>
-                                <Text type="medium" classes="text-[20px] text-hpi-blue-dark cursor-pointer">
+                                <Text type="medium" classes="text-[14px] text-hpi-blue-dark cursor-pointer">
                                     {option.name}
                                 </Text>
                             </Link>
