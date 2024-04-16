@@ -22,17 +22,18 @@ export default function HomePage() {
       <RevealOnScrollComponent className="text-center mt-28">
         <article className="snap-center bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
           <Text type="bold" classes="text-[30px]">
-            HUTCHISON PORTS IS AT THE FOREFRONT OF THE INFUSTRY, DRIVING EFFICIENCY
-          </Text>
-          <Text type="bold" classes="text-[30px]">
-            WITH ONGOING INVESTMENTS AND INNOVATION IN PORT TECHNOLOGY.
+            HUTCHISON PORTS IS AT THE FOREFRONT OF THE INFUSTRY, <br />
+            DRIVING EFFICIENCY WITH ONGOING INVESTMENTS AND <br />
+            INNOVATION IN PORT TECHNOLOGY.
           </Text>
         </article>
       </RevealOnScrollComponent>
       {/* Technological solutions */}
       {/* @ts-ignore */}
-      <RevealOnScrollComponent className="bg-hpi-celeste mx-56 rounded-3xl">
-        <TechSolutionsComponent />
+      <RevealOnScrollComponent className="flex justify-center">
+        <section className="bg-hpi-celeste rounded-3xl mt-20 w-[60%]">
+          <TechSolutionsComponent />
+        </section>
       </RevealOnScrollComponent>
 
       {/* What's new ... section */}
@@ -40,10 +41,10 @@ export default function HomePage() {
       <RevealOnScrollComponent className="mt-56">
         <section className="snap-center">
           <header className="text-center">
-            <Text type="medium" classes="text-[26px] text-hpi-blue-light">
+            <Text type="medium" classes="text-[16px] text-hpi-blue-light">
               Discover our latest technological advances
             </Text>
-            <Text type="bold" classes="text-[40px] bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
+            <Text type="bold" classes="text-[30px] bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
               WHAT'S NEW AT HUTCHISON PORTS
             </Text>
           </header>

@@ -91,21 +91,21 @@ const Images = ({ imgIndex }: { imgIndex: number }) => {
 
             key={idx}
             transition={SPRING_OPTIONS}
-            className="shrink-0 rounded-xl w-[49.5em]"
+            className="shrink-0 rounded-xl w-[35em]"
           >
             <section className="flex justify-between shadow rounded-3xl py-7 px-9" key={idx}>
-              <section className="flex flex-col gap-3">
-                <Text type="bold" classes="text-[30px] text-hpi-blue-light">
+              <section className="flex flex-col justify-center gap-3 w-2/4">
+                <Text type="bold" classes="text-[20px] text-hpi-blue-light">
                   NEW MOBILE APP UBI FOR TRUCK DRIVERS
                 </Text>
-                <p className="text-[25px] text-[#494949]">
+                <p className="text-[16px] text-[#494949]">
                   Check whether the container is on the vessel, or ready for pickup or collected.
                 </p>
                 {/* <Text type="medium" classes="text-[25px] text-hpi-grey-dark">
                 </Text> */}
               </section>
-              <article className="w-2/4">
-                <Image src={imgSrc} alt="Blog Image" />
+              <article className="">
+                <Image src={imgSrc} width={200} alt="Blog Image" />
               </article>
             </section>
           </motion.div>
