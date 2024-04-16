@@ -87,10 +87,10 @@ function map() {
 
     pointSeries.bullets.push(function () {
         let circle = am5.Circle.new(root, {
-            radius: 8,
+            radius: 5,
             fill: am5.color("#FFFFFF"),
             stroke: am5.color("#002E6D"),
-            strokeWidth: 2,
+            strokeWidth: 1,
             tooltipHTML: `
             <section style="text-align: center;">
                 <header>
@@ -103,6 +103,18 @@ function map() {
 
         return am5.Bullet.new(root, { sprite: circle });
     });
+
+    // pointSeries.bullets.push(function() {
+    //     var container = am5.Container.new(root, {});
+    //     container.children.push(am5.Graphics.new(root, {
+    //       svgPath: "M16,28c-6.62,0-12-5.38-12-12s5.38-12,12-12,12,5.38,12,12-5.38,12-12,12ZM16,6c-5.51,0-10,4.49-10,10s4.49,10,10,10,10-4.49,10-10-4.49-10-10-10Z",
+    //       scale: 0.06,
+    //       centerY: am5.p50,
+    //       centerX: am5.p50,
+    //       fill: am5.color(0x000000)
+    //     }));
+    //     return am5.Bullet.new(root, { sprite: container });
+    //   });
 
     pointSeries.data.setAll(cities);
 
@@ -129,7 +141,9 @@ export const Maps = () => {
 
     return (
         <>
-            <div id="chartdiv" ref={ref} className="h-[30em]"></div>
+            <div id="chartdiv" ref={ref} className="h-[40em]"></div>
         </>
     )
 }
+
+// M16,0C7.16,0,0,7.16,0,16s7.16,16,16,16,16-7.16,16-16S24.84,0,16,0ZM16,31c-8.28,0-15-6.72-15-15S7.72,1,16,1s15,6.72,15,15-6.72,15-15,15ZM16,11c-2.76,0-5,2.24-5,5s2.24,5,5,5,5-2.24,5-5-2.24-5-5-5ZM16,20c-2.21,0-4-1.79-4-4s1.79-4,4-4,4,1.79,4,4-1.79,4-4,4ZM16,4c-6.63,0-12,5.37-12,12s5.37,12,12,12,12-5.37,12-12-5.37-12-12-12ZM16,27c-6.08,0-11-4.92-11-11s4.92-11,11-11,11,4.92,11,11-4.92,11-11,11Z

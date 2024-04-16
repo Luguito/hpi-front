@@ -11,11 +11,14 @@ export default function HomePage() {
     <section>
       {/* Video Section */}
       <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Home%20Banner.mp4" bgColor="">
-        <Text type="bold" classes="absolute text-center text-[60px] text-hpi-white">
-          Innovative Solutions <br />
-          for Next-Generation <br />
-          Port Operations
-        </Text>
+        {/* <Text type="bold" classes="absolute text-center text-[60px] text-hpi-white">
+          
+        </Text> */}
+        <p className="absolute text-center text-[60px] text-hpi-white font-extrabold">
+          INNOVATIVE SOLUTIONS <br />
+          FOR NEXT-GENERATION <br />
+          PORT OPERATIONS
+        </p>
       </VideoContainer>
       {/* @ts-ignore */}
 
