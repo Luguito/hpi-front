@@ -48,7 +48,7 @@ export default function HomePage() {
               Discover our latest technological advances
             </Text>
             <Text type="bold" classes="text-[30px] bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
-              WHAT'S NEW AT HUTCHISON PORTS
+               WHAT`S NEW AT HUTCHISON PORTS
             </Text>
           </header>
           <section className="flex gap-6 mx-36 mt-24">
