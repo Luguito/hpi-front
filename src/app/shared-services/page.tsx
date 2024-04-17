@@ -23,6 +23,7 @@ import { Regional } from "./ui/regional-operations";
 import { EfficiencyComponent } from "./ui/efficiency";
 import { ServicesKeysComponent } from "./ui/services-key";
 import { RaasModelComponent } from "./ui/raas-model";
+import { TimelineComponent } from "./ui/timeline";
 
 export default function HomePage() {
     return (
@@ -212,8 +213,8 @@ export default function HomePage() {
                             pursuit of redefining terminal operations.
                         </Text>
                     </header>
-                    <section className="bg-hpi-celeste mx-48 rounded-md mt-36">
-                        Timeline Here
+                    <section className="bg-hpi-celeste mx-72 py-16 px-36 rounded-lg mt-36">
+                        <TimelineComponent />
                     </section>
                 </section>
             </RevealOnScrollComponent>
