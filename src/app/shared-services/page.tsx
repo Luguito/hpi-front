@@ -12,26 +12,23 @@ import COMPARATION from '../../../public/shared-services/scale-comparison.svg';
 import PLAN from '../../../public/shared-services/plan.svg';
 import FTP from '../../../public/shared-services/ftp.svg';
 
-import EFFICIENCY from '../../../public/shared-services/efficiency.png';
 
 
-
-import { RevealOnScrollComponent } from '../animations/reveal';
 import { HoverComponent } from "../components/hover/hover";
 import { CentralisedSolution, EyeSolution, GrowSolution, PeaceSolution } from "./ui/operations";
+import { RevealOnScrollComponent } from '../animations/reveal';
 import { Maps } from "../components/maps/maps";
 import { InnovativeSection } from "./ui/innovative";
 import { Regional } from "./ui/regional-operations";
+import { EfficiencyComponent } from "./ui/efficiency";
+import { ServicesKeysComponent } from "./ui/services-key";
+import { RaasModelComponent } from "./ui/raas-model";
 
 export default function HomePage() {
     return (
         <section>
             {/* Video Section */}
             <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Shared%20Services%20Banner.mp4" bgColor="">
-                {/* <Text type="bold" classes="absolute text-center text-[60px] text-hpi-white">
-                    UNLEASHING GROWTH <br />
-                    WITH SHARED SERVICES
-                </Text> */}
                 <p className="absolute text-center text-[60px] text-hpi-white font-extrabold text-shadow-md">
                     UNLEASHING GROWTH <br />
                     WITH SHARED SERVICES
@@ -55,79 +52,17 @@ export default function HomePage() {
 
             {/* Efficiency */}
             <RevealOnScrollComponent>
-                <section className="flex mx-36 justify-center snap-center items-center gap-10">
-                    <section className="flex flex-col w-3/12">
-                        <article>
-                            <Text type="bold" classes="text-[20px] text-hpi-blue-light">
-                                EFFICIENCY AT EVERY TURN
-                            </Text>
-                        </article>
-                        <article className="mt-10">
-                            <p className="text-[16px] text-[#494949]">
-                                We are committed to achieving operational <br />
-                                excellence, offering a configurable solution to <br />
-                                drive port terminals <span className="text-hpi-blue-light font-bold"> efficiency, scalability, <br />
-                                    and value generation.
-                                </span>
-                            </p>
-                        </article>
-                    </section>
-                    <article className="py-12 rounded-3xl">
-                        <Image src={EFFICIENCY} width={500} alt="ROSA " />
-                    </article>
-                </section>
+                <EfficiencyComponent />
             </RevealOnScrollComponent>
 
             {/* Key Achievements */}
             <RevealOnScrollComponent>
-                <section className="text-center mt-20 mb-32 snap-center">
-                    <header className="bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
-                        <Text type="bold" classes="text-[20px]">
-                            SHARE SERVICES KEY ACHIEVEMENTS
-                        </Text>
-                    </header>
-
-                    <section className="flex justify-between bg-hpi-celeste mx-96 px-40 py-12 rounded-3xl text-center mt-9">
-                        <article className="flex flex-col items-center">
-                            <Text type="bold" classes="text-hpi-blue-light text-[40px]">
-                                6,700
-                            </Text>
-                            <Text type="medium" classes="text-hpi-blue-light text-[20px]">
-                                Managed Vessels/yr
-                            </Text>
-                        </article>
-                        <article className="flex flex-col items-center">
-                            <Text type="bold" classes="text-hpi-blue-light text-[40px]">
-                                8Million
-                            </Text>
-                            <Text type="medium" classes="text-hpi-blue-light text-[20px]">
-                                TEUs/yr
-                            </Text>
-                        </article>
-                        <article className="flex flex-col items-center">
-                            <Text type="bold" classes="text-hpi-blue-light text-[40px]">
-                                50%
-                            </Text>
-                            <Text type="medium" classes="text-hpi-blue-light text-[20px]">
-                                More Efficient
-                            </Text>
-                        </article>
-                    </section>
-                </section>
+                <ServicesKeysComponent />
             </RevealOnScrollComponent>
 
             {/* RaaS Model */}
             <RevealOnScrollComponent>
-                <section className="snap-center mt-64">
-                    <header className="text-center">
-                        <p className="text-hpi-blue-light text-[16px]">Flexible Model</p>
-                        <Text type="bold" classes="text-[30px] bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
-                            OUR REGIONAL OPERATIONS CENTRE (ROC)
-                        </Text>
-                        <Text type="medium" classes="text-[18px] text-hpi-blue-dark mt-6">
-                            ROC offers a flexible subscription model enabling terminals to seamlessly transition to a new operational model.
-                        </Text>
-                    </header>
+                <RaasModelComponent>
                     <section className="grid grid-cols-2 grid-rows-2 justify-center items-center gap-10 mt-14 mx-96">
                         <HoverComponent
                             mouseEnterComponent={
@@ -178,7 +113,7 @@ export default function HomePage() {
                             <EyeSolution />
                         </HoverComponent>
                     </section>
-                </section>
+                </RaasModelComponent>
             </RevealOnScrollComponent>
 
             {/* Core Services */}

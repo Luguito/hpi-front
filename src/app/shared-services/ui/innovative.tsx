@@ -7,7 +7,7 @@ import Button from '../../components/button/button';
 import ROSA from '../../../../public/home/rosa.png'
 import DD from '../../../../public/shared-services/DD Graphic.png'
 import { motion } from 'framer-motion'
-import { RevealTextAfterSection } from "@/app/animations/animation";
+import { RevealSectionInitial, RevealTextAfterSection } from "@/app/animations/animation";
 
 
 const RosaComponent = () => {
@@ -68,7 +68,7 @@ const DDComponent = () => {
                 </article>
             </section>
             <article className="py-12 rounded-3xl">
-                <Image src={DD} alt="DD" height={420} />
+                <Image src={DD} alt="DD" height={400} />
             </article>
         </motion.section>
     )
@@ -79,9 +79,10 @@ const arrComponent = [RosaComponent, DDComponent];
 export const InnovativeSection = () => {
     const [component, setIndexComponent] = useState(0);
 
-    return (
+    const CurrentSection = arrComponent[component];
 
-        <section>
+    return (
+        <motion.section initial="hidden" whileInView="visible" variants={RevealSectionInitial}>
             <header className="snap-center text-center bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
                 <motion.div initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                     <Text type="bold" classes="text-[30px]">
@@ -96,12 +97,12 @@ export const InnovativeSection = () => {
                 </motion.div>
             </header>
             <section className="mx-[25em] mt-14">
-                <section className="bg-hpi-celeste rounded-3xl px-14">
-                    {arrComponent[component]()}
-                </section>
+                <motion.section className="bg-hpi-celeste rounded-3xl px-14" initial="hidden" whileInView="visible" variants={RevealSectionInitial}>
+                    <CurrentSection />
+                </motion.section>
                 <Dots index={component} setIndex={setIndexComponent}></Dots>
             </section>
-        </section>
+        </motion.section>
     )
 }
 
