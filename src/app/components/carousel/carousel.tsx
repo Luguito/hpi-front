@@ -71,11 +71,13 @@ export const SwipeCarousel = () => {
         }}
         transition={SPRING_OPTIONS}
         onDragEnd={onDragEnd}
-        className="flex cursor-grab items-center gap-5 active:cursor-grabbing"
-      >
+        className="flex cursor-grab items-center gap-5 active:cursor-grabbing ml-20 mt-4">
+
         <Images imgIndex={imgIndex} />
       </motion.div>
-
+      <div className="absolute left-[98%] inset-0 bg-gradient-to-l from-white via-white to-transparent w-14"></div>
+      <div className="absolute left-0 inset-0 bg-gradient-to-r from-white via-white to-transparent w-14"></div>
+      <span className="mt-16 flex w-full justify-center gap-2 text-[16px] text-[#009BDE] cursor-pointer font-medium">See All -></span>
       <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} />
       {/* <GradientEdges /> */}
     </div>
@@ -88,24 +90,24 @@ const Images = ({ imgIndex }: { imgIndex: number }) => {
       {imgs.map((imgSrc, idx) => {
         return (
           <motion.div
-
             key={idx}
             transition={SPRING_OPTIONS}
-            className="shrink-0 rounded-xl w-[35em]"
+            className="shrink-0 rounded-xl w-[40em]"
           >
-            <section className="flex justify-between shadow rounded-3xl py-7 px-9" key={idx}>
-              <section className="flex flex-col justify-center gap-3 w-2/4">
+            <section className="flex justify-between shadow-custom rounded-3xl py-7 px-9 gap-4" key={idx}>
+              <section className="flex flex-col justify-center gap-7 w-2/4 text-left">
                 <Text type="bold" classes="text-[20px] text-hpi-blue-light">
                   NEW MOBILE APP UBI FOR TRUCK DRIVERS
                 </Text>
-                <p className="text-[16px] text-[#494949]">
+                <p className="text-[16px] text-[#494949] font-light">
                   Check whether the container is on the vessel, or ready for pickup or collected.
                 </p>
-                {/* <Text type="medium" classes="text-[25px] text-hpi-grey-dark">
-                </Text> */}
+                <p className="font-semibold text-[#009BDE] text-[16px] cursor-pointer">
+                  Read More
+                </p>
               </section>
               <article className="">
-                <Image src={imgSrc} width={200} alt="Blog Image" />
+                <Image src={imgSrc} className="w-80 h-60 object-fill" alt="Blog Image" />
               </article>
             </section>
           </motion.div>
