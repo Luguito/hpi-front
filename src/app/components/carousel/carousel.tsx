@@ -77,7 +77,7 @@ export const SwipeCarousel = () => {
       </motion.div>
       <div className="absolute left-[98%] inset-0 bg-gradient-to-l from-white via-white to-transparent w-14"></div>
       <div className="absolute left-0 inset-0 bg-gradient-to-r from-white via-white to-transparent w-14"></div>
-      <span className="mt-16 flex w-full justify-center gap-2 text-[16px] text-[#009BDE] cursor-pointer font-medium">See All -></span>
+      <span className="mt-16 flex w-full justify-center gap-2 text-[16px] text-[#009BDE] cursor-pointer font-medium">See All </span>
       <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} />
       {/* <GradientEdges /> */}
     </div>
