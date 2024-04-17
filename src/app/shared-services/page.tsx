@@ -21,6 +21,7 @@ import { HoverComponent } from "../components/hover/hover";
 import { CentralisedSolution, EyeSolution, GrowSolution, PeaceSolution } from "./ui/operations";
 import { Maps } from "../components/maps/maps";
 import { InnovativeSection } from "./ui/innovative";
+import { Regional } from "./ui/regional-operations";
 
 export default function HomePage() {
     return (
@@ -261,27 +262,7 @@ export default function HomePage() {
 
             {/* ROC NOC */}
             <RevealOnScrollComponent>
-                <section className="my-40 snap-start">
-                    <header className="text-center">
-                        <span className="text-hpi-blue-light text-[16px] mb-4">
-                            Our Framework
-                        </span>
-                        <Text type="bold" classes="text-[30px] bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
-                            REGIONAL OPERATIONS CENTRE AND <br />
-                            NACIONAL OPERATIONS CENTRE
-                        </Text>
-                    </header>
-                    <section className="flex justify-center mt-12">
-                        <Image src={Group} alt="Image" />
-                    </section>
-                    <footer className="mt-10 text-center px-52 snap-center">
-                        <p className="text-[16px] text-[#494949]">
-                            Our Regional Operations Centre (ROC) and National Operations Centre (NOC) embody our commitment to global <br />
-                            collaboration and standardised, high-quality services. From their inception, they have facilitated planning and control <br />
-                            as well as backoffice functions to terminals worldwide.
-                        </p>
-                    </footer>
-                </section>
+                <Regional />
             </RevealOnScrollComponent>
 
             {/* Journey */}
