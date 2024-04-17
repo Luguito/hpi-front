@@ -4,6 +4,14 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import { motion } from 'framer-motion'
 import { RevealTextAfterSection } from '@/app/animations/animation';
+import Image from 'next/image';
+// Icons
+import Icon1 from '../../../../public/shared-services/timeline/tap.svg'
+import Icon2 from '../../../../public/shared-services/timeline/productivity.svg'
+import Icon3 from '../../../../public/shared-services/timeline/lightbulb-setting.svg'
+import Icon4 from '../../../../public/shared-services/timeline/expand-arrows.svg'
+import Icon5 from '../../../../public/shared-services/timeline/arrow-progress.svg'
+
 
 export const TimelineComponent = () => {
     const iconStyle = { background: '#002E6D', color: '#fff', boxShadow: 'none', transform: 'translate(-4.5em, 2em)', width: '7em', height: '7em', display: 'flex', justifyContent: 'center', alignItems: 'center' };
@@ -15,7 +23,10 @@ export const TimelineComponent = () => {
                     iconStyle={iconStyle}
                     contentStyle={contentStyle}
                     contentArrowStyle={{ border: 'none' }}
-                    icon={<>i</>}
+                    icon={
+                        <Image src={Icon3} alt=""/>
+
+                    }
                 >
                     <section>
                         <article className="flex flex-col">
@@ -33,7 +44,9 @@ export const TimelineComponent = () => {
                     iconStyle={iconStyle}
                     contentStyle={contentStyle}
                     contentArrowStyle={{ border: 'none' }}
-                    icon={<>i</>}
+                    icon={
+                        <Image src={Icon1} alt=""/>
+                    }
                 >
                     <section>
                         <article className="flex flex-col">
@@ -49,7 +62,9 @@ export const TimelineComponent = () => {
                     iconStyle={iconStyle}
                     contentStyle={contentStyle}
                     contentArrowStyle={{ border: 'none' }}
-                    icon={<>i</>}
+                    icon={
+                        <Image src={Icon2} alt=""/>
+                    }
                 >
                     <section>
                         <article className="flex flex-col">
@@ -65,7 +80,9 @@ export const TimelineComponent = () => {
                     iconStyle={iconStyle}
                     contentStyle={contentStyle}
                     contentArrowStyle={{ border: 'none' }}
-                    icon={<>i</>}
+                    icon={
+                        <Image src={Icon4} alt=""/>
+                    }
                 >
                     <section>
                         <article className="flex flex-col">
@@ -81,7 +98,9 @@ export const TimelineComponent = () => {
                     iconStyle={iconStyle}
                     contentStyle={contentStyle}
                     contentArrowStyle={{ border: 'none' }}
-                    icon={<>i</>}
+                    icon={
+                        <Image src={Icon5} alt=""/>
+                    }
                 >
                     <section>
                         <article className="flex flex-col">

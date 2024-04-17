@@ -30,7 +30,7 @@ export default function HomePage() {
         <section>
             {/* Video Section */}
             <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Shared%20Services%20Banner.mp4" bgColor="">
-                <p className="absolute text-center text-[60px] text-hpi-white font-extrabold text-shadow-md">
+                <p className="absolute text-center text-[60px] text-hpi-white font-bold text-shadow-md">
                     UNLEASHING GROWTH <br />
                     WITH SHARED SERVICES
                 </p>

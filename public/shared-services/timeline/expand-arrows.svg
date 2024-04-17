@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75.234" height="75.234" viewBox="0 0 75.234 75.234">
+  <defs>
+    <filter id="expand-arrows" x="0" y="0" width="75.234" height="75.234" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-color="#fff"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#expand-arrows)">
+    <path id="expand-arrows-2" data-name="expand-arrows" d="M27.758,0H20.011a.646.646,0,0,0,0,1.291h7.746a1.928,1.928,0,0,1,.83.194l-13.1,13.1L2.4,1.485a1.909,1.909,0,0,1,.83-.194h7.746a.646.646,0,1,0,0-1.291H3.228A3.231,3.231,0,0,0,0,3.228v7.746a.646.646,0,1,0,1.291,0V3.228a1.928,1.928,0,0,1,.194-.83l13.1,13.1-13.1,13.1a1.909,1.909,0,0,1-.194-.83V20.011a.646.646,0,0,0-1.291,0v7.746a3.231,3.231,0,0,0,3.228,3.228h7.746a.646.646,0,1,0,0-1.291H3.228A1.928,1.928,0,0,1,2.4,29.5l13.1-13.1,13.1,13.1a1.909,1.909,0,0,1-.83.194H20.011a.646.646,0,0,0,0,1.291h7.746a3.231,3.231,0,0,0,3.228-3.228V20.011a.646.646,0,0,0-1.291,0v7.746a1.928,1.928,0,0,1-.194.83l-13.1-13.1L29.5,2.4a1.909,1.909,0,0,1,.194.83v7.746a.646.646,0,1,0,1.291,0V3.228A3.231,3.231,0,0,0,27.758,0Z" transform="translate(37.62 15.71) rotate(45)" fill="#fff" stroke="#fff" stroke-width="1"/>
+  </g>
+</svg>

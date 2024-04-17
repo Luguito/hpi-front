@@ -58,17 +58,17 @@ export const TechSolutionsComponent = () => {
 
 export const AutomationSection = () => {
     return (
-        <motion.section className="flex items-start gap-36 mt-20" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
+        <motion.section className="flex items-center gap-36 mt-20" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
             <article className="w-2/4">
                 {/* p, button*/}
-                <Text type="medium" classes="text-[16px] text-hpi-grey-dark">
+                <p  className="text-[16px] text-hpi-grey-dark font-light">
                     Implementing AI and automation <br />
                     technologies, we elevate terminal <br />
                     productivity, safety, and quality through <br />
                     optimized scheduling, autonomous <br />
                     operations, and gate automation, leading <br />
                     to operational excellence.
-                </Text>
+                </p>
                 <div className="mt-5">
                     <Button>
                         <Text type="bold" classes="text-[16px] text-hpi-white">
@@ -87,17 +87,17 @@ export const AutomationSection = () => {
 
 export const SharedSection = () => {
     return (
-        <motion.section className="flex items-start gap-36 mt-20" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
+        <motion.section className="flex items-center gap-36 mt-20" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
             <article className="w-2/4">
                 {/* p, button*/}
-                <Text type="medium" classes="text-[16px] text-hpi-grey-dark">
+                <p  className="text-[16px] text-hpi-grey-dark font-light">
                     Our Regional Operations Centre (ROC) <br />
                     model streamlines logistics operations, <br />
                     leveraging end-to-end management <br />
                     solutions to enhance scalability, <br />
                     consolidation, standardisation, and  <br />
                     automation of operations.
-                </Text>
+                </p>
                 <div className="mt-5">
                     <Button>
                         <Link href="/shared-services">
@@ -118,16 +118,16 @@ export const SharedSection = () => {
 
 export const DigitalSection = () => {
     return (
-        <motion.section className="flex items-start gap-36 mt-20" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
+        <motion.section className="flex items-center gap-36 mt-20" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
             <article className="w-2/4">
                 {/* p, button*/}
-                <Text type="medium" classes="text-[16px] text-hpi-grey-dark">
+                <p className="text-[16px] text-hpi-grey-dark font-light">
                     Harnessing innovative, cost-efficient <br />
                     digital solutions, we offer standardized <br />
                     services enhancing terminal processes, <br />
                     data analytics, and machine learning for <br />
                     optimal operational visibility and control.
-                </Text>
+                </p>
                 <div className="mt-5">
                     <Button>
                         <Text type="bold" classes="text-[16px] text-hpi-white">

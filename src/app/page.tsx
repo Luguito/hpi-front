@@ -11,7 +11,7 @@ export default function HomePage() {
     <section>
       {/* Video Section */}
       <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Home%20Banner.mp4" bgColor="">
-        <p className="absolute text-center text-[60px] text-hpi-white font-extrabold text-shadow-md">
+        <p className="absolute text-center text-[60px] text-hpi-white font-bold text-shadow-md">
           INNOVATIVE SOLUTIONS <br />
           FOR NEXT-GENERATION <br />
           PORT OPERATIONS
