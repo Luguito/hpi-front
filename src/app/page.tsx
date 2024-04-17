@@ -38,7 +38,7 @@ export default function HomePage() {
 
       {/* What's new ... section */}
       {/* @ts-ignore */}
-      <RevealOnScrollComponent className="mt-56">
+      <RevealOnScrollComponent className="mt-56 mb-32">
         <section className="snap-center">
           <header className="text-center">
             <Text type="medium" classes="text-[16px] text-hpi-blue-light">

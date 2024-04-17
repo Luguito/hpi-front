@@ -285,17 +285,17 @@ export default function HomePage() {
 
             {/* MAPA */}
             <RevealOnScrollComponent>
-                <section className="my-44 bg-hpi-blue-dark snap-center">
+                <section className="mt-44 mb-20 bg-hpi-blue-dark snap-center">
                     <header className="text-center py-[4.8em]">
                         <Text type="bold" classes="text-[30px] text-hpi-white">
-                            Success Showcases
+                            SUCCESS SHOWCASES
                         </Text>
-                        <p className="text-[16px] text-hpi-white">
-                            Our success stories across the globe—from Karachi to Hong Kong and <br />
-                            beyond—illustrate the transformative impact of our ROC solutions.
+                        <p className="text-[16px] text-hpi-white mt-4 font-light">
+                            Our success stories across the globe—from Karachi to Hong Kong and beyond, <br />
+                            illustrate the transformative impact of our ROC solutions.
                         </p>
                     </header>
-                    <section>
+                    <section className="pb-12">
                         <Maps />
                     </section>
                 </section>

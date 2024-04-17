@@ -10,7 +10,7 @@ export default function Footer() {
         <>
             {/* Contact ... section */}
             <footer className="snap-center">
-                <section className="text-center mb-24 mt-32">
+                <section className="text-center mb-24">
                     <article className="bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
                         <Text type="bold" classes="text-[20px]">
                             EXPLORE HOW WE CAN TRANSFORM CONTAINER TERMINAL OPERATIONS TOGETHER 

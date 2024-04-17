@@ -45,42 +45,42 @@ function map() {
         {
             id: "Karachi",
             title: "Pakistan, Karachi",
-            description: "ROC transforms struggling \n terminals into highly efficient \n operations, increasing \n productivity by 30% and \n reducing costs by 25%.",
+            description: "ROC transforms struggling  terminals into highly efficient \n operations, increasing  productivity by 30% and  reducing costs by 25%.",
             geometry: { type: "Point", coordinates: [67.01040000, 24.86080000] }
         },
         {
             id: "Jizan",
             title: "Saudi Arabia, Jazan",
-            description: "From day one, ROC enabled \n the terminal to commence \n commercial operations 50% \n faster than traditional methods.",
+            description: "From day one, ROC enabled  the terminal to  \n commence  commercial operations 50%  faster than traditional methods.",
             geometry: { type: "Point", coordinates: [42.70761070, 17.17381760] }
         },
         {
             id: "Spark",
             title: "Saudi Arabia, SPARK",
-            description: "ROC is to serve both \n seaport terminals and \n intermodal hubs, with \n services expected to commence in Q2 2024.",
+            description: "ROC is to serve both  seaport terminals and \n intermodal hubs, with  services expected to commence in Q2 2024.",
             geometry: { type: "Point", coordinates: [48.6207111, 26.106702] }
         },
         {
             id: "Shenzhen",
             title: "China, Hong Kong/Shenzhen",
-            description: "Advanced solutions \n implemented through ROC \n not only enhanced efficiency \n and productivity, but also \n reduced human error by 60%.",
+            description: "Advanced solutions  implemented through ROC \n not only enhanced efficiency  and productivity, but also  reduced human error by 60%.",
             geometry: { type: "Point", coordinates: [112.7082672, 22.881177] }
         },
         {
             id: "Mexico",
             title: "Mexico (ICAVE/EIT/LCT)",
-            description: "The NOC consolidated \n operational planning functions,\n standardising and enhancing \n stowage planning services.",
+            description: "The NOC consolidated  operational planning functions,\n standardising and enhancing  stowage planning services.",
             geometry: { type: "Point", coordinates: [-96.1332, 19.2116] }
         },
         {
             id: "Abu Qir",
             title: "Egypt (Abu Qir/Alexandria/Ain Sokhna)",
-            description: "The forthcoming application \n of ROC promises to extend \n services and transform \n operations in the coming years.",
+            description: "The forthcoming application  of ROC promises to extend \n services and transform  operations in the coming years.",
             geometry: { type: "Point", coordinates: [31.3166, 30.0666] }
         },
     ];
 
-    
+
     let pointSeries = chart.series.push(
         am5map.MapPointSeries.new(root, {})
     );
@@ -90,13 +90,16 @@ function map() {
             radius: 5,
             fill: am5.color("#FFFFFF"),
             stroke: am5.color("#002E6D"),
+            cursorOverStyle: "pointer",
             strokeWidth: 1,
             tooltipHTML: `
-            <section style="text-align: center;">
+            <section style="text-align: center; width: 100%;">
                 <header>
-                    <b>{title}</b>
+                    <b style="font-size: 16px;">{title}</b>
                 </header>
-                <p style="white-space: pre-line;">{description}</p>
+                <section style="display:flex; justify-content: center; align-items: center; font-weight: medium;">
+                    <p style="white-space: pre-line; font-size: 16px; text-wrap:wrap;">{description}</p>
+                </section>
             </section>
         `,
         });
@@ -117,7 +120,10 @@ function map() {
     //   });
 
     pointSeries.data.setAll(cities);
-
+    pointSeries.getTooltip()?.setAll({
+        paddingLeft: 20,
+        paddingRight: 20,
+    })
     // Make stuff animate on load
     chart.appear(1000, 100);
 }
