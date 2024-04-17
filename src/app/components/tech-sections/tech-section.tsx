@@ -5,11 +5,12 @@ import React, { useState } from "react"
 import Button from "../button/button";
 import Text from "../text/text";
 import AutomationImage from '../../../../public/home/Automation.png'
-import DigitalImage from '../../../../public/home/Digital.png'
-import SharedImage from '../../../../public/home/Shared.svg'
+import DigitalImage from '../../../../public/home/veronica.png'
+import SharedImage from '../../../../public/home/rosa.png'
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from 'framer-motion';
+import { RevealFromLeftToRight, RevealFromRightToLeft, RevealSectionInitial, RevealTextAfterSection } from "@/app/animations/animation";
 
 export const TechSolutionsComponent = () => {
     const [currentSection, setSection] = useState('automation');
@@ -22,22 +23,32 @@ export const TechSolutionsComponent = () => {
     const CurrentSection = sections[currentSection];
 
     return (
-        <section className="snap-center px-16">
-            <header className="text-left py-12">
-                <span className="text-hpi-blue-light text-center text-[16px]">Port Innovation</span>
-                <div className="bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
+        <motion.section className="snap-center px-16" initial="hidden" whileInView="visible" variants={RevealSectionInitial}>
+            <header className="text-center py-12">
+                <motion.span className="text-hpi-blue-light text-center text-[16px]" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>Port Innovation</motion.span>
+                <motion.div className="bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text"
+                    initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                     <Text type="bold" classes="text-[30px]">TECHNOLOGICAL SOLUTIONS</Text>
-                </div>
+                </motion.div>
             </header>
             <section className="pb-10 max-h-[27em]">
                 <nav className="flex justify-between gap-4">
-                    <Text type="bold" classes={currentSection === 'automation' ? 'text-[20px] text-hpi-blue-dark cursor-pointer' : 'text-[20px] text-hpi-grey-light cursor-pointer'} onMouseEnter={() => setSection('automation')}>AUTOMATION</Text>
-                    <Text type="bold" classes={currentSection === 'shared-services' ? 'text-[20px] text-hpi-blue-dark cursor-pointer' : 'text-[20px] text-hpi-grey-light cursor-pointer'} onMouseEnter={() => setSection('shared-services')}>SHARED SERVICES</Text>
-                    <Text type="bold" classes={currentSection === 'digital-solutions' ? 'text-[20px] text-hpi-blue-dark cursor-pointer' : 'text-[20px] text-hpi-grey-light cursor-pointer'} onMouseEnter={() => setSection('digital-solutions')}>DIGITAL SOLUTIONS</Text>
+                    <motion.div initial="hidden" whileInView="visible" variants={RevealFromLeftToRight}>
+                        <Text type="bold" classes={currentSection === 'automation' ? 'text-[20px] text-hpi-blue-dark cursor-pointer' : 'text-[20px] text-hpi-grey-light cursor-pointer'} onMouseEnter={() => setSection('automation')}>AUTOMATION</Text>
+                    </motion.div>
+                    <motion.div initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+                        <Text type="bold" classes={currentSection === 'shared-services' ? 'text-[20px] text-hpi-blue-dark cursor-pointer' : 'text-[20px] text-hpi-grey-light cursor-pointer'} onMouseEnter={() => setSection('shared-services')}>SHARED SERVICES</Text>
+                    </motion.div>
+                    <motion.div initial="hidden" whileInView="visible" variants={RevealFromRightToLeft}>
+                        <Text type="bold" classes={currentSection === 'digital-solutions' ? 'text-[20px] text-hpi-blue-dark cursor-pointer' : 'text-[20px] text-hpi-grey-light cursor-pointer'} onMouseEnter={() => setSection('digital-solutions')}>DIGITAL SOLUTIONS</Text>
+                    </motion.div>
                 </nav>
-                <CurrentSection />
+                <motion.div initial="hidden" whileInView="visible" variants={RevealSectionInitial}>
+                    <CurrentSection />
+                </motion.div>
             </section>
-        </section>
+        </motion.section>
+
     )
 }
 
@@ -58,10 +69,10 @@ export const AutomationSection = () => {
                     operations, and gate automation, leading <br />
                     to operational excellence.
                 </Text>
-                <div className="mt-14">
+                <div className="mt-5">
                     <Button>
                         <Text type="bold" classes="text-[16px] text-hpi-white">
-                            Learn More
+                            Learn more
                         </Text>
                     </Button>
                 </div>
@@ -87,11 +98,11 @@ export const SharedSection = () => {
                     consolidation, standardisation, and  <br />
                     automation of operations.
                 </Text>
-                <div className="mt-14">
+                <div className="mt-5">
                     <Button>
                         <Link href="/shared-services">
                             <Text type="bold" classes="text-[16px] text-hpi-white">
-                                Learn More
+                                Learn more
                             </Text>
                         </Link>
                     </Button>
@@ -99,7 +110,7 @@ export const SharedSection = () => {
             </article>
             <article className="flex justify-center w-2/4">
                 {/* img */}
-                <Image src={SharedImage} width={250} alt="Img Here" />
+                <Image src={SharedImage} width={500} alt="Img Here" />
             </article>
         </motion.section>
     )
@@ -117,17 +128,17 @@ export const DigitalSection = () => {
                     data analytics, and machine learning for <br />
                     optimal operational visibility and control.
                 </Text>
-                <div className="mt-14">
+                <div className="mt-5">
                     <Button>
                         <Text type="bold" classes="text-[16px] text-hpi-white">
-                            Learn More
+                            Learn more
                         </Text>
                     </Button>
                 </div>
             </article>
             <article className="flex justify-center w-2/4">
                 {/* img */}
-                <Image src={DigitalImage} width={500}  alt="Img Here" className="rounded-2xl" />
+                <Image src={DigitalImage} width={500} alt="Img Here" className="rounded-2xl" />
             </article>
         </motion.section>
     )

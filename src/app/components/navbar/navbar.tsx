@@ -13,10 +13,10 @@ export default function Navbar() {
         { name: 'CONTACT US', link: '/'},
     ]
     return (
-        <nav className="flex justify-between bg-hpi-white py-14 px-24 snap-end">
+        <nav className="flex items-center justify-around bg-hpi-white py-4 px-24 snap-end fixed w-full z-10 shadow-md">
             <section>
                 <article>
-                    <Image src={profilePic} alt="Hutchison Port" width="250" height="20" priority></Image>
+                    <Image src={profilePic} alt="Hutchison Port" width="200" height="20" priority></Image>
                 </article>
             </section>
             <section className="flex gap-10">

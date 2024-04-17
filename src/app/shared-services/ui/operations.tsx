@@ -6,14 +6,14 @@ import Image from 'next/image';
 import Text from '../../components/text/text';
 
 
-const STYLE = "flex flex-col items-center justify-center border-4 border-hpi-blue-dark rounded-2xl gap-6 py-16 h-64";
+const STYLE = "flex flex-col items-center justify-center shadow-custom rounded-2xl gap-6 py-16 h-64";
 
 export const PeaceSolution = () => {
     return (
         <article className={STYLE}>
-            <Image src={MIND} alt="Mind Icon" />
+            <Image src={MIND} alt="Mind Icon" height={50} />
             <Text type="bold" classes="text-[20px] text-hpi-blue-dark">
-                Peace of mind
+                PEACE OF MIND
             </Text>
         </article>
     )
@@ -22,9 +22,9 @@ export const PeaceSolution = () => {
 export const GrowSolution = () => {
     return (
         <article className={STYLE}>
-            <Image src={GROW} alt="Mind Icon" />
+            <Image src={GROW} alt="Mind Icon" height={50} />
             <Text type="bold" classes="text-[20px] text-hpi-blue-dark">
-                Expand-As-You-Grow
+                EXPAND-AS-YOU-GROW
             </Text>
         </article>
     )
@@ -33,9 +33,9 @@ export const GrowSolution = () => {
 export const CentralisedSolution = () => {
     return (
         <article className={STYLE}>
-            <Image src={SOLUTION} alt="Mind Icon" />
+            <Image src={SOLUTION} alt="Mind Icon" height={60} />
             <Text type="bold" classes="text-[20px] text-hpi-blue-dark">
-                Centralised Solution
+                CENTRALISED SOLUTION
             </Text>
         </article>
     )
@@ -44,9 +44,9 @@ export const CentralisedSolution = () => {
 export const EyeSolution = () => {
     return (
         <article className={STYLE}>
-            <Image src={EYE} alt="Mind Icon" />
+            <Image src={EYE} alt="Mind Icon" height={50} />
             <Text type="bold" classes="text-[20px] text-hpi-blue-dark">
-                See All and Know All
+                SEE ALL AND KNOW ALL
             </Text>
         </article>
     )

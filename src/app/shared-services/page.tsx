@@ -30,7 +30,7 @@ export default function HomePage() {
                     UNLEASHING GROWTH <br />
                     WITH SHARED SERVICES
                 </Text> */}
-                <p className="absolute text-center text-[60px] text-hpi-white font-extrabold">
+                <p className="absolute text-center text-[60px] text-hpi-white font-extrabold text-shadow-md">
                     UNLEASHING GROWTH <br />
                     WITH SHARED SERVICES
                 </p>
@@ -41,7 +41,7 @@ export default function HomePage() {
                 <section className="text-center mt-28 mb-8 snap-center">
                     <article>
                         <Text type="bold" classes="text-[30px] bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
-                            HUTCHISON PORTS SHATED SERVICES
+                            HUTCHISON PORTS SHARED SERVICES
                         </Text>
                         <Text type="medium" classes="text-[18px] text-hpi-blue-dark">
                             Our Regional Operations Centre-as-a-Service (RaaS) approach integrates <br />
@@ -64,7 +64,7 @@ export default function HomePage() {
                             <p className="text-[16px] text-[#494949]">
                                 We are committed to achieving operational <br />
                                 excellence, offering a configurable solution to <br />
-                                drive port terminals <span className="text-hpi-blue-light cursor-pointer font-bold"> efficiency, scalability, <br />
+                                drive port terminals <span className="text-hpi-blue-light font-bold"> efficiency, scalability, <br />
                                     and value generation.
                                 </span>
                             </p>
@@ -118,18 +118,18 @@ export default function HomePage() {
             <RevealOnScrollComponent>
                 <section className="snap-center mt-64">
                     <header className="text-center">
-                        <span className="text-hpi-blue-light text-[16px]">Flexible Model</span>
+                        <p className="text-hpi-blue-light text-[16px]">Flexible Model</p>
                         <Text type="bold" classes="text-[30px] bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
                             OUR REGIONAL OPERATIONS CENTRE (ROC)
                         </Text>
-                        <p className="text-[18px] text-hpi-grey-dark">
+                        <Text type="medium" classes="text-[18px] text-hpi-blue-dark mt-6">
                             ROC offers a flexible subscription model enabling terminals to seamlessly transition to a new operational model.
-                        </p>
+                        </Text>
                     </header>
                     <section className="grid grid-cols-2 grid-rows-2 justify-center items-center gap-10 mt-14 mx-96">
                         <HoverComponent
                             mouseEnterComponent={
-                                <article className="flex flex-col items-center justify-center border-4 border-hpi-blue-dark rounded-2xl gap-6 py-16 h-64">
+                                <article className="flex flex-col items-center justify-center shadow-custom rounded-2xl gap-6 py-16 h-64">
                                     <p className="text-[16px] text-hpi-white text-center w-3/5">
                                         Plug-and-Play to the standardised and <br />
                                         proven operational practice (SOP) - <br />
@@ -141,10 +141,10 @@ export default function HomePage() {
                         </HoverComponent>
                         <HoverComponent
                             mouseEnterComponent={
-                                <article className="flex flex-col items-center justify-center border-4 border-hpi-blue-dark rounded-2xl gap-6 py-16 h-64">
+                                <article className="flex flex-col items-center justify-center shadow-custom rounded-2xl gap-6 py-16 h-64">
                                     <p className="text-[16px] text-hpi-white text-center w-3/5">
-                                        A scalable solution that ensures the growth <br />
-                                        of your terminal without the burden of <br />
+                                        A scalable solution that ensures the growth
+                                        of your terminal without the burden of
                                         significant upfront investments.
                                     </p>
                                 </article>
@@ -153,7 +153,7 @@ export default function HomePage() {
                         </HoverComponent>
                         <HoverComponent
                             mouseEnterComponent={
-                                <article className="flex flex-col items-center justify-center border-4 border-hpi-blue-dark rounded-2xl gap-6 py-16 h-64">
+                                <article className="flex flex-col items-center justify-center shadow-custom rounded-2xl gap-6 py-16 h-64">
                                     <p className="text-[16px] text-hpi-white text-center w-3/5">
                                         A hassle-free solution! Let ROC do <br />
                                         all the work, while your terminal <br />
@@ -165,7 +165,7 @@ export default function HomePage() {
                         </HoverComponent>
                         <HoverComponent
                             mouseEnterComponent={
-                                <article className="flex flex-col items-center justify-center border-4 border-hpi-blue-dark rounded-2xl gap-6 py-16 h-64">
+                                <article className="flex flex-col items-center justify-center shadow-custom rounded-2xl gap-6 py-16 h-64">
                                     <p className="text-[16px] text-hpi-white text-center w-3/5">
                                         Progress is fully visible to your <br />
                                         terminal, allowing for complete <br />
@@ -183,8 +183,8 @@ export default function HomePage() {
             <RevealOnScrollComponent>
                 <section className="bg-hpi-blue-dark mt-36 mb-32 snap-center">
                     <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Shared%20services%20Radar.mp4" bgColor="hpi-opacity-video">
-                        <section className="absolute">
-                            <header className="text-center snap-start pt-20">
+                        <section className="absolute top-40">
+                            <header className="text-center snap-start mb-40">
                                 <Text type="bold" classes="text-[30px] text-hpi-white">
                                     OUR CORE SERVICES
                                 </Text>
@@ -193,51 +193,59 @@ export default function HomePage() {
                                     operational best practices and cutting-edge technology:
                                 </p>
                             </header>
-                            <section className="flex justify-center flex-wrap gap-28 snap-center mt-32">
-                                <article className="flex flex-col rounded-md w-[35%]">
-                                    <Text type="bold" classes="text-[20px] text-hpi-white flex items-center">
-                                        <Image src={DOCUMENT} alt="" />
-                                        Document-Made-Easy
-                                    </Text>
-                                    <Text type="medium" classes="text-[16px] text-hpi-white">
-                                        Centralised documentation centre powered <br />
-                                        by AI, streamlining communications with <br />
-                                        the logistics community
-                                    </Text>
-                                </article>
-                                <article className="flex flex-col rounded-md w-[35%]">
-                                    <Text type="bold" classes="text-[20px] text-hpi-white flex items-center">
-                                        <Image src={COMPARATION} alt="" />
-                                        Berth-Life-Balance
-                                    </Text>
-                                    <Text type="medium" classes="text-[16px] text-hpi-white">
-                                        Optimising vessel traffic with our <br />
-                                        intelligent berth planning system <br />
-                                        (Veronica)
-                                    </Text>
-                                </article>
-                                <article className="flex flex-col rounded-md w-[35%]">
-                                    <Text type="bold" classes="text-[20px] text-hpi-white flex items-center">
-                                        <Image src={PLAN} alt="" />
-                                        Let-It-Stow
-                                    </Text>
-                                    <Text type="medium" classes="text-[16px] text-hpi-white">
-                                        Enhancing vessel stowage planning <br />
-                                        for operational efficiency without <br />
-                                        compromising safety
-                                    </Text>
-                                </article>
-                                <article className="flex flex-col rounded-md w-[35%]">
-                                    <Text type="bold" classes="text-[20px] text-hpi-white flex items-center">
-                                        <Image src={FTP} alt="" />
-                                        Stack-By-Stack
-                                    </Text>
-                                    <Text type="medium" classes="text-[16px] text-hpi-white">
-                                        Utilising real-time data-driven <br />
-                                        algorithms for optimal yard <br />
-                                        resource use
-                                    </Text>
-                                </article>
+                            <section className="grid grid-cols-2 grid-rows-2 justify-center items-center gap-48 snap-center">
+                                <section className="flex gap-4 items-start rounded-md">
+                                    <Image src={DOCUMENT} alt="" width={50} />
+                                    <article className="flex flex-col">
+                                        <Text type="bold" classes="text-[20px] text-hpi-white flex items-center">
+                                            DOCUMENT-MADE-EASY
+                                        </Text>
+                                        <Text type="medium" classes="text-[16px] text-hpi-white">
+                                            Centralised documentation centre powered <br />
+                                            by AI, streamlining communications with <br />
+                                            the logistics community
+                                        </Text>
+                                    </article>
+                                </section>
+                                <section className="flex gap-4 items-start rounded-md">
+                                    <Image src={COMPARATION} alt="" width={50} />
+                                    <article className="flex flex-col">
+                                        <Text type="bold" classes="text-[20px] text-hpi-white flex items-center">
+                                            BERTH-LIFE-BALANCE
+                                        </Text>
+                                        <Text type="medium" classes="text-[16px] text-hpi-white">
+                                            Optimising vessel traffic with our <br />
+                                            intelligent berth planning system <br />
+                                            (Veronica)
+                                        </Text>
+                                    </article>
+                                </section>
+                                <section className="flex gap-4 items-start rounded-md">
+                                    <Image src={PLAN} alt="" width={50} />
+                                    <article className="flex flex-col">
+                                        <Text type="bold" classes="text-[20px] text-hpi-white flex items-center">
+                                            LET-IT-STOW
+                                        </Text>
+                                        <Text type="medium" classes="text-[16px] text-hpi-white">
+                                            Enhancing vessel stowage planning <br />
+                                            for operational efficiency without <br />
+                                            compromising safety
+                                        </Text>
+                                    </article>
+                                </section>
+                                <section className="flex gap-4 items-start rounded-md">
+                                    <Image src={FTP} alt="" width={50} />
+                                    <article className="flex flex-col">
+                                        <Text type="bold" classes="text-[20px] text-hpi-white flex items-center">
+                                            STACK-BY-STACK
+                                        </Text>
+                                        <Text type="medium" classes="text-[16px] text-hpi-white">
+                                            Utilising real-time data-driven <br />
+                                            algorithms for optimal yard <br />
+                                            resource use
+                                        </Text>
+                                    </article>
+                                </section>
                             </section>
                         </section>
                     </VideoContainer>

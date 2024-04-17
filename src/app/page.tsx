@@ -11,21 +11,18 @@ export default function HomePage() {
     <section>
       {/* Video Section */}
       <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Home%20Banner.mp4" bgColor="">
-        {/* <Text type="bold" classes="absolute text-center text-[60px] text-hpi-white">
-          
-        </Text> */}
-        <p className="absolute text-center text-[60px] text-hpi-white font-extrabold">
+        <p className="absolute text-center text-[60px] text-hpi-white font-extrabold text-shadow-md">
           INNOVATIVE SOLUTIONS <br />
           FOR NEXT-GENERATION <br />
           PORT OPERATIONS
         </p>
       </VideoContainer>
+      
       {/* @ts-ignore */}
-
       <RevealOnScrollComponent className="text-center mt-28">
         <article className="snap-center bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
           <Text type="bold" classes="text-[30px]">
-            HUTCHISON PORTS IS AT THE FOREFRONT OF THE INFUSTRY, <br />
+            HUTCHISON PORTS IS AT THE FOREFRONT OF THE INDUSTRY, <br />
             DRIVING EFFICIENCY WITH ONGOING INVESTMENTS AND <br />
             INNOVATION IN PORT TECHNOLOGY.
           </Text>
@@ -48,28 +45,11 @@ export default function HomePage() {
               Discover our latest technological advances
             </Text>
             <Text type="bold" classes="text-[30px] bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
-               WHAT`S NEW AT HUTCHISON PORTS
+               WHAT IS NEW AT HUTCHISON PORTS
             </Text>
           </header>
           <section className="flex gap-6 mx-36 mt-24">
             <SwipeCarousel></SwipeCarousel>
-            {/* {
-              ['', ''].map((op, index) => (
-                <section className="flex justify-between shadow rounded-3xl py-7 px-9" key={index}>
-                  <section className="flex flex-col gap-3">
-                    <Text type="bold" classes="text-[30px] text-hpi-blue-light">
-                      New mobile app UBI for truck drivers
-                    </Text>
-                    <Text type="bold" classes="text-[20px] text-hpi-grey-dark">
-                      Check whether the container is on the vessel, or ready for pickup or collected.
-                    </Text>
-                  </section>
-                  <article className="w-2/4">
-                    <Image src={BlogImages} alt="Blog Image" />
-                  </article>
-                </section>
-              ))
-            } */}
           </section>
         </section>
       </RevealOnScrollComponent>
