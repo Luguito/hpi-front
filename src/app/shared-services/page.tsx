@@ -20,6 +20,7 @@ import { RevealOnScrollComponent } from '../animations/reveal';
 import { HoverComponent } from "../components/hover/hover";
 import { CentralisedSolution, EyeSolution, GrowSolution, PeaceSolution } from "./ui/operations";
 import { Maps } from "../components/maps/maps";
+import { InnovativeSection } from "./ui/innovative";
 
 export default function HomePage() {
     return (
@@ -255,44 +256,7 @@ export default function HomePage() {
 
             {/* Innovate RaaS Tech */}
             <RevealOnScrollComponent>
-                <section>
-                    <header className="snap-center text-center bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
-                        <Text type="bold" classes="text-[30px]">
-                            INNOVATIVE TECHNOLOGIES BEHIND ROC
-                        </Text>
-                        <Text type="medium" classes="text-[18px] text-hpi-blue-dark mt-5">
-                            Two groundbreaking technologies reinforce ROC’s backbone, pushing the boundaries of <br />
-                            terminal operations and redefining the shipping industry’s standards.
-                        </Text>
-                    </header>
-                    <section className="flex mx-36 justify-center items-center gap-10 snap-center">
-                        <section className="flex flex-col">
-                            <article>
-                                <Text type="bold" classes="text-[20px] text-hpi-blue-light">
-                                    REMOTE OPERATIONS SERVICES <br />
-                                    AND ARCHITECTURE (ROSA)
-                                </Text>
-                            </article>
-                            <article>
-                                <p className="text-[16px] text-hpi-grey-dark mt-14 mb-1">
-                                    ROSA brings terminal operations into the digital <br />
-                                    age, enabling end-to-end remote management <br />
-                                    of multiple terminals with real-time transparency. <br />
-                                    This technology simplifies complex operations, <br />
-                                    making them more efficient and competitive.
-                                </p>
-                                <Button>
-                                    <Text type="bold" classes="text-[14px] text-hpi-white">
-                                        Learn More
-                                    </Text>
-                                </Button>
-                            </article>
-                        </section>
-                        <article className="px-40 py-12 rounded-3xl">
-                            <Image src={ROSA} alt="ROSA " height={500} />
-                        </article>
-                    </section>
-                </section>
+                <InnovativeSection />
             </RevealOnScrollComponent>
 
             {/* ROC NOC */}
