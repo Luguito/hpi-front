@@ -88,7 +88,7 @@ function map() {
             cursorOverStyle: "pointer",
             strokeWidth: 1,
             tooltipHTML: `
-            <section style="text-align: center; width: 100%;">
+            <section style="text-align: center; width: 100%; color: white;">
                 <header>
                     <b style="font-size: 16px;">{title}</b>
                 </header>
@@ -109,7 +109,7 @@ function map() {
             cursorOverStyle: "pointer",
             strokeWidth: 1,
             tooltipHTML: `
-            <section style="text-align: center; width: 100%;">
+            <section style="text-align: center; width: 100%; color: white">
                 <header>
                     <b style="font-size: 16px;">{title}</b>
                 </header>
@@ -150,6 +150,8 @@ function map() {
         paddingRight: 20,
     })
     pointSeries.getTooltip()?.setAll({
+        getFillFromSprite: false,
+        getStrokeFromSprite: false,
         paddingLeft: 20,
         paddingRight: 20,
     })

@@ -60,7 +60,7 @@ export default function Navbar() {
                     }
                 </article>
                 <article>
-                    <Text type="medium" classes="text-[14px] text-hpi-blue-dark">EN</Text>
+                    {/* <Text type="medium" classes="text-[14px] text-hpi-blue-dark">EN</Text> */}
                 </article>
             </section>
         </nav>
