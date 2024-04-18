@@ -92,7 +92,7 @@ export const TimelineComponent = () => {
                             <motion.h3 className="text-[50px] text-[#002E6D] font-extrabold" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>2020</motion.h3>
                         </article>
                         <motion.p className="text-[16px] text-[#494949] font-light" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                            ROC's success leads to its implementation at HIT, Hutchison Ports' flagship terminal in Hong Kong.
+                            ROC{"'"}s success leads to its implementation at HIT, Hutchison Ports{"'"} flagship terminal in Hong Kong.
                             Managing thousands of vessels monthly, the ROC implementation led to a 60% reduction in human error.
                         </motion.p>
                     </section>
