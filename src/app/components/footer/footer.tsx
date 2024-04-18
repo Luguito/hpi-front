@@ -3,7 +3,7 @@ import Button from "../button/button";
 import Text from "../text/text";
 import Logo from '../../../../public/logo-hutchison-en.svg'
 
-export default function Footer() {
+function Footer() {
     const footOptions = ['CONTACT US', 'PRIVACY POLICY', 'TERMS & CONDITIONS'];
 
     return (
@@ -13,13 +13,13 @@ export default function Footer() {
                 <section className="text-center mb-24">
                     <article className="bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
                         <Text type="bold" classes="text-[20px]">
-                            EXPLORE HOW WE CAN TRANSFORM CONTAINER TERMINAL OPERATIONS TOGETHER 
+                            EXPLORE HOW WE CAN TRANSFORM CONTAINER TERMINAL OPERATIONS TOGETHER
                         </Text>
                     </article>
                     <article>
                         <Button>
                             <Text type="bold" classes="text-[16px] text-hpi-white">
-                                <a href="mailto:fgomez@dexfreight.io">Contact Us</a>
+                                <a href="mailto:grp_ops_product_management_team@hutchisonports.com">Contact Us</a>
                             </Text>
                         </Button>
                     </article>
@@ -51,3 +51,6 @@ export default function Footer() {
         </>
     );
 }
+
+
+export default Footer;
