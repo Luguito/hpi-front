@@ -18,13 +18,14 @@ export const TimelineComponent = () => {
     const contentStyle = { background: 'transparent', boxShadow: 'none', padding: '1em 2em' };
     return (
         <>
-            <VerticalTimeline animate={false} layout="1-column-left" lineColor="#002E6D" className="bg-transparent p-0 pl-10 m-0 w-full max-w-max">
+            <VerticalTimeline animate={false} layout="1-column-left" lineColor="#002E6D"
+                className="bg-transparent p-0 pl-10 m-0 w-full max-w-max before:top-8 before:left-5 before:h-[90%]">
                 <VerticalTimelineElement
                     iconStyle={iconStyle}
                     contentStyle={contentStyle}
                     contentArrowStyle={{ border: 'none' }}
                     icon={
-                        <Image src={Icon3} alt=""/>
+                        <Image src={Icon3} alt="" />
 
                     }
                 >
@@ -45,7 +46,7 @@ export const TimelineComponent = () => {
                     contentStyle={contentStyle}
                     contentArrowStyle={{ border: 'none' }}
                     icon={
-                        <Image src={Icon1} alt=""/>
+                        <Image src={Icon1} alt="" />
                     }
                 >
                     <section>
@@ -63,7 +64,7 @@ export const TimelineComponent = () => {
                     contentStyle={contentStyle}
                     contentArrowStyle={{ border: 'none' }}
                     icon={
-                        <Image src={Icon2} alt=""/>
+                        <Image src={Icon2} alt="" />
                     }
                 >
                     <section>
@@ -72,7 +73,8 @@ export const TimelineComponent = () => {
                             <motion.h3 className="text-[50px] text-[#002E6D] font-extrabold" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>2014</motion.h3>
                         </article>
                         <motion.p className="text-[16px] text-[#494949] font-light" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                            ROC Centre begins providing support for all planning activities at terminals in Pakistan (SAPT/KICT), expanding services to the Middle East and Africa (MEA) region within a year.
+                            ROC Centre begins providing support for all planning activities at terminals in Pakistan (SAPT/KICT), resulting in a 30% increase in productivity.
+                            ROC expands services to the Middle East and Africa (MEA) region within a year.
                         </motion.p>
                     </section>
                 </VerticalTimelineElement>
@@ -81,7 +83,7 @@ export const TimelineComponent = () => {
                     contentStyle={contentStyle}
                     contentArrowStyle={{ border: 'none' }}
                     icon={
-                        <Image src={Icon4} alt=""/>
+                        <Image src={Icon4} alt="" />
                     }
                 >
                     <section>
@@ -90,7 +92,8 @@ export const TimelineComponent = () => {
                             <motion.h3 className="text-[50px] text-[#002E6D] font-extrabold" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>2020</motion.h3>
                         </article>
                         <motion.p className="text-[16px] text-[#494949] font-light" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                            ROC’s success leads to its implementation at HIT, Hutchison Ports’ flagship terminal in Hong Kong, managing thousands of vessels monthly.
+                            ROC's success leads to its implementation at HIT, Hutchison Ports' flagship terminal in Hong Kong.
+                            Managing thousands of vessels monthly, the ROC implementation led to a 60% reduction in human error.
                         </motion.p>
                     </section>
                 </VerticalTimelineElement>
@@ -99,7 +102,7 @@ export const TimelineComponent = () => {
                     contentStyle={contentStyle}
                     contentArrowStyle={{ border: 'none' }}
                     icon={
-                        <Image src={Icon5} alt=""/>
+                        <Image src={Icon5} alt="" />
                     }
                 >
                     <section>

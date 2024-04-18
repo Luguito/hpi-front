@@ -16,8 +16,8 @@ const RosaComponent = () => {
             <section className="flex flex-col">
                 <article>
                     <Text type="bold" classes="text-[20px] text-hpi-blue-light leading-[22px]">
-                        REMOTE OPERATIONS SERVICES AND <br />
-                        ARCHITECTURE (ROSA)
+                        REMOTE OPERATIONS SERVICES <br />
+                        AND ARCHITECTURE (ROSA)
                     </Text>
                 </article>
                 <article>

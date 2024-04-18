@@ -10,7 +10,7 @@ export const ServicesKeysComponent = () => {
             <motion.header className="bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text"
             initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                 <Text type="bold" classes="text-[20px]">
-                    SHARE SERVICES KEY ACHIEVEMENTS
+                    SHARED SERVICES KEY ACHIEVEMENTS
                 </Text>
             </motion.header>
 

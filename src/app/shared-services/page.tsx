@@ -44,7 +44,7 @@ export default function HomePage() {
                             HUTCHISON PORTS SHARED SERVICES
                         </Text>
                         <Text type="medium" classes="text-[18px] text-hpi-blue-dark">
-                            Our Regional Operations Centre-as-a-Service (RaaS) approach integrates <br />
+                            Our Regional Operations Centre-as-a-Service (ROC) approach integrates <br />
                             standardisation, digitalisation, and automation of port terminal operations.
                         </Text>
                     </article>
@@ -128,7 +128,7 @@ export default function HomePage() {
                                 </Text>
                                 <Text type="medium" classes="text-[16px] text-hpi-white">
                                     Our ROC model encompasses four core components, leveraging Hutchison Ports’ <br />
-                                    operational best practices and cutting-edge technology:
+                                    operational best practices and cutting-edge technology to ensure an unparalleled and uncompromised service level to our shipping community:
                                 </Text>
                             </header>
                             <section className="grid grid-cols-2 grid-rows-2 justify-center items-center gap-48 snap-center">

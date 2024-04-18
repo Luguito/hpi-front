@@ -19,7 +19,7 @@ export const Regional = () => {
                 <motion.div initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                     <Text type="bold" classes="text-[30px] bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
                         REGIONAL OPERATIONS CENTRE AND <br />
-                        NACIONAL OPERATIONS CENTRE
+                        NATIONAL OPERATIONS CENTRE
                     </Text>
                 </motion.div>
             </header>
@@ -45,9 +45,14 @@ export const Regional = () => {
                     Localized Execution {'&'} Monitoring
                 </motion.p>
                 <motion.p className="text-[16px] text-[#494949] mt-12" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                    Our Regional Operations Centre (ROC) and National Operations Centre (NOC) embody our commitment to global <br />
-                    collaboration and standardised, high-quality services. From their inception, they have facilitated planning and control <br />
-                    as well as backoffice functions to terminals worldwide.
+                    Our Regional Operations Centre (ROC) embodies our commitment to global <br />
+                    collaboration and standardised, high-quality services. The centre was empowered by <br />
+                    a state-of-the-art TOS to ensure consistent services to be delivered to any terminal worldwide.
+                </motion.p>
+                <motion.p className="text-[16px] text-[#494949] mt-12" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+                    Our National Operations Centre (NOC) is a spin-off of ROC, but in a country-level scale. <br />
+                    With the same DNA of ROC, NOC consolidates all operational planning, <br />
+                    control and back-office functions to all Hutchison Ports terminals
                 </motion.p>
             </footer>
         </section>
