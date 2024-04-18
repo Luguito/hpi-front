@@ -61,12 +61,6 @@ function map() {
             geometry: { type: "Point", coordinates: [48.6207111, 26.106702] }
         },
         {
-            id: "Shenzhen",
-            title: "China, Hong Kong/Shenzhen",
-            description: "Advanced solutions  implemented through ROC \n not only enhanced efficiency  and productivity, but also  reduced human error by 60%.",
-            geometry: { type: "Point", coordinates: [112.7082672, 22.881177] }
-        },
-        {
             id: "Mexico",
             title: "Mexico (ICAVE/EIT/LCT)",
             description: "The NOC consolidated  operational planning functions,\n standardising and enhancing  stowage planning services.",
@@ -80,11 +74,33 @@ function map() {
         },
     ];
 
-
     let pointSeries = chart.series.push(
         am5map.MapPointSeries.new(root, {})
     );
+    let pointChina = chart.series.push(
+        am5map.MapPointSeries.new(root, {})
+    )
+    pointChina.bullets.push(function () {
+        let circle = am5.Circle.new(root, {
+            radius: 5,
+            fill: am5.color("#FFFFFF"),
+            stroke: am5.color("#002E6D"),
+            cursorOverStyle: "pointer",
+            strokeWidth: 1,
+            tooltipHTML: `
+            <section style="text-align: center; width: 100%;">
+                <header>
+                    <b style="font-size: 16px;">{title}</b>
+                </header>
+                <section style="display:flex; justify-content: center; align-items: center; font-weight: medium;">
+                    <p style="white-space: pre-line; font-size: 16px; text-wrap:wrap;">{description}</p>
+                </section>
+            </section>
+        `,
+        });
 
+        return am5.Bullet.new(root, { sprite: circle });
+    });
     pointSeries.bullets.push(function () {
         let circle = am5.Circle.new(root, {
             radius: 5,
@@ -119,7 +135,20 @@ function map() {
     //     return am5.Bullet.new(root, { sprite: container });
     //   });
 
+    // @ts-ignore
+    pointChina.data.setAll([{
+        id: "Shenzhen",
+        title: "China, Hong Kong/Shenzhen",
+        description: "Advanced solutions  implemented through ROC \n not only enhanced efficiency  and productivity, but also  reduced human error by 60%.",
+        geometry: { type: "Point", coordinates: [112.7082672, 22.881177] }
+    }])
+
+    // pointChina.getTooltip()?.
     pointSeries.data.setAll(cities);
+    pointChina.getTooltip()?.setAll({
+        paddingLeft: 20,
+        paddingRight: 20,
+    })
     pointSeries.getTooltip()?.setAll({
         paddingLeft: 20,
         paddingRight: 20,

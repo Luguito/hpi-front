@@ -11,7 +11,7 @@ export default function HomePage() {
     <section>
       {/* Video Section */}
       <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Home%20Banner.mp4" bgColor="">
-        <p className="absolute text-center text-[60px] text-hpi-white font-bold text-shadow-md">
+        <p className="absolute text-center text-[60px] text-hpi-white font-bold text-shadow-md leading-[80px]">
           INNOVATIVE SOLUTIONS <br />
           FOR NEXT-GENERATION <br />
           PORT OPERATIONS
@@ -20,11 +20,11 @@ export default function HomePage() {
       
       {/* @ts-ignore */}
       <RevealOnScrollComponent className="text-center mt-28">
-        <article className="snap-center bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
-          <Text type="bold" classes="text-[30px]">
+        <article className="snap-center bg-gradient-to-r from-[#0054AC] via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
+          <Text type="bold" classes="text-[30px] leading-[33px]">
             HUTCHISON PORTS IS AT THE FOREFRONT OF THE INDUSTRY, <br />
             DRIVING EFFICIENCY WITH ONGOING INVESTMENTS AND <br />
-            INNOVATION IN PORT TECHNOLOGY.
+            INNOVATION IN PORT TECHNOLOGY
           </Text>
         </article>
       </RevealOnScrollComponent>

@@ -15,7 +15,7 @@ export const EfficiencyComponent = () => {
                     </Text>
                 </motion.article>
                 <article className="mt-10">
-                    <motion.p className="text-[16px] text-[#494949]" initial="hidden" whileInView="visible" variants={RevealFromLeftToRight}>
+                    <motion.p className="text-[16px] text-[#494949] font-normal" initial="hidden" whileInView="visible" variants={RevealFromLeftToRight}>
                         We are committed to achieving operational <br />
                         excellence, offering a configurable solution to <br />
                         drive port terminals <span className="text-hpi-blue-light font-bold"> efficiency, scalability, <br />

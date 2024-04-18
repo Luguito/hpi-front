@@ -5,8 +5,8 @@ import React, { useState } from "react"
 import Button from "../button/button";
 import Text from "../text/text";
 import AutomationImage from '../../../../public/home/Automation.png'
-import DigitalImage from '../../../../public/home/veronica.png'
-import SharedImage from '../../../../public/home/rosa.png'
+import SharedImage from '../../../../public/home/imagen home-02.png'
+import DigitalImage from '../../../../public/home/imagen home-03.png'
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from 'framer-motion';
@@ -31,7 +31,7 @@ export const TechSolutionsComponent = () => {
                     <Text type="bold" classes="text-[30px]">TECHNOLOGICAL SOLUTIONS</Text>
                 </motion.div>
             </header>
-            <section className="pb-10 max-h-[27em]">
+            <section className="pb-16 max-h-[29em]">
                 <nav className="flex justify-between gap-4">
                     <motion.div initial="hidden" whileInView="visible" variants={RevealFromLeftToRight}>
                         <Text type="bold" classes={currentSection === 'automation' ? 'text-[20px] text-hpi-blue-dark cursor-pointer' : 'text-[20px] text-hpi-grey-light cursor-pointer'} onMouseEnter={() => setSection('automation')}>AUTOMATION</Text>
@@ -58,10 +58,10 @@ export const TechSolutionsComponent = () => {
 
 export const AutomationSection = () => {
     return (
-        <motion.section className="flex items-center gap-36 mt-20" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
-            <article className="w-2/4">
+        <motion.section className="flex mt-10" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
+            <article className="w-2/4 mt-8">
                 {/* p, button*/}
-                <p  className="text-[16px] text-hpi-grey-dark font-light">
+                <p  className="text-[16px] text-hpi-grey-dark font-normal">
                     Implementing AI and automation <br />
                     technologies, we elevate terminal <br />
                     productivity, safety, and quality through <br />
@@ -79,7 +79,7 @@ export const AutomationSection = () => {
             </article>
             <article className="flex justify-center w-2/4">
                 {/* img */}
-                <Image src={AutomationImage} width={500} alt="Img Here" />
+                <Image src={AutomationImage} width={500} height={350} alt="Img Here" className="rounded-lg max-w-[none] h-[350px]"/>
             </article>
         </motion.section>
     )
@@ -87,10 +87,10 @@ export const AutomationSection = () => {
 
 export const SharedSection = () => {
     return (
-        <motion.section className="flex items-center gap-36 mt-20" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
-            <article className="w-2/4">
+        <motion.section className="flex mt-10" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
+            <article className="w-2/4 mt-8">
                 {/* p, button*/}
-                <p  className="text-[16px] text-hpi-grey-dark font-light">
+                <p  className="text-[16px] text-hpi-grey-dark font-normal">
                     Our Regional Operations Centre (ROC) <br />
                     model streamlines logistics operations, <br />
                     leveraging end-to-end management <br />
@@ -108,9 +108,9 @@ export const SharedSection = () => {
                     </Button>
                 </div>
             </article>
-            <article className="flex justify-center w-2/4">
+            <article className="flex justify-center w-2/4 rounded-lg">
                 {/* img */}
-                <Image src={SharedImage} width={500} alt="Img Here" />
+                <Image src={SharedImage} width={900} height={350} alt="Img Here" className="max-w-[none] h-[350px]" />
             </article>
         </motion.section>
     )
@@ -118,17 +118,17 @@ export const SharedSection = () => {
 
 export const DigitalSection = () => {
     return (
-        <motion.section className="flex items-center gap-36 mt-20" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
-            <article className="w-2/4">
+        <motion.section className="flex mt-10" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
+            <article className="w-2/4 mt-8">
                 {/* p, button*/}
-                <p className="text-[16px] text-hpi-grey-dark font-light">
+                <p className="text-[16px] text-hpi-grey-dark font-normal">
                     Harnessing innovative, cost-efficient <br />
                     digital solutions, we offer standardized <br />
                     services enhancing terminal processes, <br />
                     data analytics, and machine learning for <br />
                     optimal operational visibility and control.
                 </p>
-                <div className="mt-5">
+                <div className="mt-[2.6em]">
                     <Button>
                         <Text type="bold" classes="text-[16px] text-hpi-white">
                             Learn more
@@ -136,10 +136,14 @@ export const DigitalSection = () => {
                     </Button>
                 </div>
             </article>
-            <article className="flex justify-center w-2/4">
+            <article className="flex justify-center w-2/4 rounded-lg">
                 {/* img */}
-                <Image src={DigitalImage} width={500} alt="Img Here" className="rounded-2xl" />
+                <Image src={DigitalImage} width={900} height={350} alt="Img Here" className="rounded-2xl max-w-[none] h-[350px]" />
             </article>
         </motion.section>
     )
 }
+
+// margin-top 2em
+// width : 900
+// height: 350

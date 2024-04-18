@@ -15,24 +15,24 @@ const RosaComponent = () => {
         <motion.section className="flex justify-center items-center gap-10 snap-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
             <section className="flex flex-col">
                 <article>
-                    <Text type="bold" classes="text-[20px] text-hpi-blue-light">
+                    <Text type="bold" classes="text-[20px] text-hpi-blue-light leading-[22px]">
                         REMOTE OPERATIONS SERVICES AND <br />
                         ARCHITECTURE (ROSA)
                     </Text>
                 </article>
                 <article>
-                    <p className="text-[16px] text-hpi-grey-dark mt-14 mb-1">
+                    <p className="text-[16px] text-hpi-grey-dark mt-5 mb-1">
                         ROSA brings terminal operations into the digital <br />
                         age, enabling end-to-end remote management <br />
                         of multiple terminals with real-time transparency. <br />
                         This technology simplifies complex operations, <br />
                         making them more efficient and competitive.
                     </p>
-                    <Button>
+                    {/* <Button>
                         <Text type="bold" classes="text-[14px] text-hpi-white">
                             Learn More
                         </Text>
-                    </Button>
+                    </Button> */}
                 </article>
             </section>
             <article className="py-12 rounded-3xl">
@@ -47,12 +47,12 @@ const DDComponent = () => {
         <motion.section className="flex justify-center items-center gap-10 snap-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
             <section className="flex flex-col">
                 <article>
-                    <Text type="bold" classes="text-[20px] text-hpi-blue-light">
+                    <Text type="bold" classes="text-[20px] text-hpi-blue-light leading-[22px]">
                         DOCUMENT DIGITALISATION (DD)
                     </Text>
                 </article>
                 <article>
-                    <p className="text-[16px] text-hpi-grey-dark mt-14 mb-1">
+                    <p className="text-[16px] text-hpi-grey-dark mt-5 mb-1">
                         This AI-driven platform simplifies <br />
                         document handling by standardising <br />
                         and automating the classification and <br />
@@ -60,11 +60,11 @@ const DDComponent = () => {
                         emails, making processes faster <br />
                         without human intervention.
                     </p>
-                    <Button>
+                    {/* <Button>
                         <Text type="bold" classes="text-[14px] text-hpi-white">
                             Learn More
                         </Text>
-                    </Button>
+                    </Button> */}
                 </article>
             </section>
             <article className="py-12 rounded-3xl">

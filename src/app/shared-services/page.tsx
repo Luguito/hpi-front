@@ -126,62 +126,62 @@ export default function HomePage() {
                                 <Text type="bold" classes="text-[30px] text-hpi-white">
                                     OUR CORE SERVICES
                                 </Text>
-                                <p className="text-hpi-white text-[16px] mt-5">
+                                <Text type="medium" classes="text-[16px] text-hpi-white">
                                     Our ROC model encompasses four core components, leveraging Hutchison Ports’ <br />
                                     operational best practices and cutting-edge technology:
-                                </p>
+                                </Text>
                             </header>
                             <section className="grid grid-cols-2 grid-rows-2 justify-center items-center gap-48 snap-center">
                                 <section className="flex gap-4 items-start rounded-md">
-                                    <Image src={DOCUMENT} alt="" width={50} />
+                                    <Image src={DOCUMENT} alt="" width={50} className="mt-[-0.5em]"/>
                                     <article className="flex flex-col">
                                         <Text type="bold" classes="text-[20px] text-hpi-white flex items-center">
                                             DOCUMENT-MADE-EASY
                                         </Text>
-                                        <Text type="medium" classes="text-[16px] text-hpi-white">
+                                        <p className="text-[16px] text-white font-normal mt-7">
                                             Centralised documentation centre powered <br />
                                             by AI, streamlining communications with <br />
-                                            the logistics community
-                                        </Text>
+                                            the logistics community.
+                                        </p>
                                     </article>
                                 </section>
                                 <section className="flex gap-4 items-start rounded-md">
-                                    <Image src={COMPARATION} alt="" width={50} />
+                                    <Image src={COMPARATION} alt="" width={50} className="mt-[-0.5em]"/>
                                     <article className="flex flex-col">
                                         <Text type="bold" classes="text-[20px] text-hpi-white flex items-center">
                                             BERTH-LIFE-BALANCE
                                         </Text>
-                                        <Text type="medium" classes="text-[16px] text-hpi-white">
-                                            Optimising vessel traffic with our <br />
+                                        <p className="text-[16px] text-white font-normal mt-7">
+                                        Optimising vessel traffic with our <br />
                                             intelligent berth planning system <br />
-                                            (Veronica)
-                                        </Text>
+                                            (Veronica).
+                                        </p>
                                     </article>
                                 </section>
                                 <section className="flex gap-4 items-start rounded-md">
-                                    <Image src={PLAN} alt="" width={50} />
+                                    <Image src={PLAN} alt="" width={50} className="mt-[-0.5em]"/>
                                     <article className="flex flex-col">
                                         <Text type="bold" classes="text-[20px] text-hpi-white flex items-center">
                                             LET-IT-STOW
                                         </Text>
-                                        <Text type="medium" classes="text-[16px] text-hpi-white">
+                                        <p className="text-[16px] text-white font-normal mt-7">
                                             Enhancing vessel stowage planning <br />
                                             for operational efficiency without <br />
-                                            compromising safety
-                                        </Text>
+                                            compromising safety.
+                                        </p>
                                     </article>
                                 </section>
                                 <section className="flex gap-4 items-start rounded-md">
-                                    <Image src={FTP} alt="" width={50} />
+                                    <Image src={FTP} alt="" width={50} className="mt-[-0.5em]"/>
                                     <article className="flex flex-col">
                                         <Text type="bold" classes="text-[20px] text-hpi-white flex items-center">
                                             STACK-BY-STACK
                                         </Text>
-                                        <Text type="medium" classes="text-[16px] text-hpi-white">
+                                        <p className="text-[16px] text-white font-normal mt-7">
                                             Utilising real-time data-driven <br />
                                             algorithms for optimal yard <br />
-                                            resource use
-                                        </Text>
+                                            resource use.
+                                        </p>
                                     </article>
                                 </section>
                             </section>

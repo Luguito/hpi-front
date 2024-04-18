@@ -3,8 +3,10 @@
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
 import Blogs from "../../../../public/home/blogs-image.png";
+import Arrow from "../../../../public/home/arrow.svg";
 import Text from "../text/text"
 import Image from "next/image";
+
 const imgs = [
   Blogs,
   Blogs,
@@ -77,7 +79,10 @@ export const SwipeCarousel = () => {
       </motion.div>
       <div className="absolute left-[98%] inset-0 bg-gradient-to-l from-white via-white to-transparent w-14"></div>
       <div className="absolute left-0 inset-0 bg-gradient-to-r from-white via-white to-transparent w-14"></div>
-      <span className="mt-16 flex w-full justify-center gap-2 text-[16px] text-[#009BDE] cursor-pointer font-medium">See All </span>
+      <span className="mt-16 flex w-full justify-center gap-2 text-[16px] text-[#009BDE] cursor-pointer font-medium">
+        See All 
+        <Image src={Arrow} alt="" />
+        </span>
       <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} />
       {/* <GradientEdges /> */}
     </div>
@@ -99,7 +104,7 @@ const Images = ({ imgIndex }: { imgIndex: number }) => {
                 <Text type="bold" classes="text-[20px] text-hpi-blue-light">
                   NEW MOBILE APP UBI FOR TRUCK DRIVERS
                 </Text>
-                <p className="text-[16px] text-[#494949] font-light">
+                <p className="text-[16px] text-[#494949] font-normal">
                   Check whether the container is on the vessel, or ready for pickup or collected.
                 </p>
                 <p className="font-semibold text-[#009BDE] text-[16px] cursor-pointer">
