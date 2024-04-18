@@ -27,7 +27,7 @@ const SPRING_OPTIONS = {
 
 export const SwipeCarousel = () => {
   const [imgIndex, setImgIndex] = useState(0);
-
+  const [animateArrow, setAnimateArrow] = useState(false)
   const dragX = useMotionValue(0);
 
   useEffect(() => {
@@ -57,6 +57,11 @@ export const SwipeCarousel = () => {
     }
   };
 
+  const onHover = ({ type }: any) => {
+    if (type === 'mouseleave') setAnimateArrow(false);
+    if (type === 'mouseenter') setAnimateArrow(true);
+  }
+
   return (
     <div className="relative overflow-hidden">
       <motion.div
@@ -79,10 +84,12 @@ export const SwipeCarousel = () => {
       </motion.div>
       <div className="absolute left-[98%] inset-0 bg-gradient-to-l from-white via-white to-transparent w-14"></div>
       <div className="absolute left-0 inset-0 bg-gradient-to-r from-white via-white to-transparent w-14"></div>
-      <span className="mt-16 flex w-full justify-center gap-2 text-[16px] text-[#009BDE] cursor-pointer font-medium">
-        See All 
-        <Image src={Arrow} alt="" />
-        </span>
+      <span className="mt-16 flex w-full justify-center gap-2 text-[16px] text-[#009BDE] cursor-pointer font-medium" onMouseEnter={onHover} onMouseLeave={onHover}>
+        See All
+        <motion.div animate={ animateArrow ? { x: 10 } : {} } className="flex items-center">
+          <Image src={Arrow} alt="" />
+        </motion.div>
+      </span>
       <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} />
       {/* <GradientEdges /> */}
     </div>
