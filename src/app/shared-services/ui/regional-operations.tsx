@@ -45,13 +45,11 @@ export const Regional = () => {
                     Localized Execution {'&'} Monitoring
                 </motion.p>
                 <motion.p className="text-[16px] text-[#494949] mt-12" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                    Our Regional Operations Centre (ROC) embodies our commitment to global <br />
-                    collaboration and standardised, high-quality services. The centre was empowered by <br />
+                    Our <b>Regional Operations Centre (ROC)</b> embodies our commitment to global collaboration and standardised, high-quality services. The centre was empowered by <br />
                     a state-of-the-art TOS to ensure consistent services to be delivered to any terminal worldwide.
                 </motion.p>
                 <motion.p className="text-[16px] text-[#494949] mt-12" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                    Our National Operations Centre (NOC) is a spin-off of ROC, but in a country-level scale. <br />
-                    With the same DNA of ROC, NOC consolidates all operational planning, <br />
+                    Our <b>National Operations Centre (NOC)</b> is a spin-off of ROC, but in a country-level scale. With the same DNA of ROC, NOC consolidates all operational planning, <br />
                     control and back-office functions to all Hutchison Ports terminals
                 </motion.p>
             </footer>

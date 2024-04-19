@@ -73,7 +73,7 @@ export const TimelineComponent = () => {
                             <motion.h3 className="text-[50px] text-[#002E6D] font-extrabold" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>2014</motion.h3>
                         </article>
                         <motion.p className="text-[16px] text-[#494949] font-normal" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                            ROC Centre begins providing support for all planning activities at terminals in Pakistan (SAPT/KICT), resulting in a 30% increase in productivity.
+                            ROC Centre begins providing support for all planning activities at terminals in Pakistan (SAPT/KICT), resulting in a <b>30% increase in productivity</b>.
                             ROC expands services to the Middle East and Africa (MEA) region within a year.
                         </motion.p>
                     </section>
@@ -93,7 +93,7 @@ export const TimelineComponent = () => {
                         </article>
                         <motion.p className="text-[16px] text-[#494949] font-normal" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                             ROC{"'"}s success leads to its implementation at HIT, Hutchison Ports{"'"} flagship terminal in Hong Kong.
-                            Managing thousands of vessels monthly, the ROC implementation led to a 60% reduction in human error.
+                            Managing thousands of vessels monthly, the ROC implementation led to a <b>60% reduction in human error</b>.
                         </motion.p>
                     </section>
                 </VerticalTimelineElement>
