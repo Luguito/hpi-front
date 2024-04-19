@@ -127,8 +127,8 @@ export default function HomePage() {
                                     OUR CORE SERVICES
                                 </Text>
                                 <Text type="medium" classes="text-[16px] text-hpi-white">
-                                    Our ROC model encompasses four core components, leveraging Hutchison Ports’ <br />
-                                    operational best practices and cutting-edge technology to ensure an unparalleled and uncompromised service level to our shipping community:
+                                    Our ROC model encompasses four core components, leveraging Hutchison Ports’ operational best practices and <br />
+                                    cutting-edge technology to ensure an unparalleled and uncompromised service level to our shipping community:
                                 </Text>
                             </header>
                             <section className="grid grid-cols-2 grid-rows-2 justify-center items-center gap-48 snap-center">
@@ -226,7 +226,7 @@ export default function HomePage() {
                         <Text type="bold" classes="text-[30px] text-hpi-white">
                             SUCCESS SHOWCASES
                         </Text>
-                        <p className="text-[16px] text-hpi-white mt-4 font-light">
+                        <p className="text-[16px] text-hpi-white mt-4 font-medium">
                             Our success stories across the globe—from Karachi to Hong Kong and beyond, <br />
                             illustrate the transformative impact of our ROC solutions.
                         </p>
