@@ -8,7 +8,7 @@ import Image from 'next/image';
 // Icons
 import Icon1 from '../../../../public/shared-services/timeline/tap.svg'
 import Icon2 from '../../../../public/shared-services/timeline/productivity.svg'
-import Icon3 from '../../../../public/shared-services/timeline/normalbulb-setting.svg'
+import Icon3 from '../../../../public/shared-services/timeline/lightbulb-setting.svg'
 import Icon4 from '../../../../public/shared-services/timeline/expand-arrows.svg'
 import Icon5 from '../../../../public/shared-services/timeline/arrow-progress.svg'
 
