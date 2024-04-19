@@ -19,7 +19,7 @@ export const TimelineComponent = () => {
     return (
         <>
             <VerticalTimeline animate={false} layout="1-column-left" lineColor="#002E6D"
-                className="bg-transparent p-0 pl-10 m-0 w-full max-w-max before:top-8 before:left-5 before:h-[90%]">
+                className="bg-transparent p-0 pl-10 m-0 w-full max-w-max before:top-8 before:left-[1.4em] before:h-[90%]">
                 <VerticalTimelineElement
                     iconStyle={iconStyle}
                     contentStyle={contentStyle}
