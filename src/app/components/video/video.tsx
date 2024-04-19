@@ -12,7 +12,7 @@ const VideoPlayer = ({ videoSrc, bgColor }: { videoSrc: string, bgColor: string 
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false)
-    }, 300)
+    }, 500)
   }, []);
 
   const handleLoadStart = () => {
