@@ -233,6 +233,7 @@ export default function HomePage() {
                     </header>
                     <section className="pb-12">
                         <Maps />
+                        <div className="relative bg-hpi-blue-dark w-24 h-[-2em] left-0 top-[-2em]"></div>
                     </section>
                 </section>
             </RevealOnScrollComponent>
