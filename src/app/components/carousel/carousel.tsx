@@ -114,7 +114,7 @@ const Images = ({ imgIndex }: { imgIndex: number }) => {
                 <p className="text-[16px] text-[#494949] font-normal">
                   Check whether the container is on the vessel, or ready for pickup or collected.
                 </p>
-                <p className="font-semibold text-[#009BDE] text-[16px] cursor-pointer">
+                <p className="font-semibold text-[#009BDE] text-[16px] cursor-pointer hover:text-hpi-blue-dark">
                   Read More
                 </p>
               </section>

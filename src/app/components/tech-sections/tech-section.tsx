@@ -65,7 +65,7 @@ export const AutomationSection = () => {
                     Implementing AI and automation <br />
                     technologies, we elevate terminal <br />
                     productivity, safety, and quality through <br />
-                    optimized scheduling, autonomous <br />
+                    optimised scheduling, autonomous <br />
                     operations, and gate automation, leading <br />
                     to operational excellence.
                 </p>
@@ -123,7 +123,7 @@ export const DigitalSection = () => {
                 {/* p, button*/}
                 <p className="text-[16px] text-hpi-grey-dark font-normal">
                     Harnessing innovative, cost-efficient <br />
-                    digital solutions, we offer standardized <br />
+                    digital solutions, we offer standardised <br />
                     services enhancing terminal processes, <br />
                     data analytics, and machine learning for <br />
                     optimal operational visibility and control.
@@ -143,7 +143,3 @@ export const DigitalSection = () => {
         </motion.section>
     )
 }
-
-// margin-top 2em
-// width : 900
-// height: 350
