@@ -213,7 +213,7 @@ export default function HomePage() {
                             pursuit of redefining terminal operations.
                         </Text>
                     </header>
-                    <section className="bg-hpi-celeste mx-72 py-16 px-36 rounded-lg mt-36">
+                    <section className="bg-hpi-celeste mx-72 py-16 px-36 rounded-lg mt-36" id="content">
                         <TimelineComponent />
                     </section>
                 </section>
@@ -233,7 +233,7 @@ export default function HomePage() {
                     </header>
                     <section className="pb-12">
                         <Maps />
-                        <div className="relative bg-hpi-blue-dark w-24 h-[-2em] left-0 top-[-2em]"></div>
+                        <div className="relative bg-hpi-blue-dark w-24 h-[2em] left-0 top-[-2em]"></div>
                     </section>
                 </section>
             </RevealOnScrollComponent>
