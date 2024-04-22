@@ -24,7 +24,7 @@ function Footer() {
                         </Button>
                     </article>
                 </section>
-                <nav className="flex justify-between bg-hpi-blue-sea py-14 px-24">
+                <nav className="flex items-center justify-between bg-hpi-blue-sea py-14 px-24">
                     <section>
                         <article>
                             <Image src={Logo} alt="Logo" />
@@ -34,7 +34,7 @@ function Footer() {
                         <article className="flex gap-10">
                             {
                                 footOptions.map((option, key) => (
-                                    <Text type="medium" classes="text-[16px] text-hpi-white" key={key}>
+                                    <Text type="medium" classes="text-[14px] text-hpi-white" key={key}>
                                         {option}
                                     </Text>
                                 ))
