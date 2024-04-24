@@ -49,9 +49,9 @@ export default function DigitalSolutionsPage() {
                             <section className="pl-28">
                                 <p className="text-[16px] font-medium text-[#707070]">
                                     A comprehensive solution designed to streamline terminal processes by providing real-time data for enhanced visibility and control, forecasting capabilities, data-driven decision support, and a consolidated data platform for analytics and machine learning. <br />
-                                    <b className="mt-10">TOS for Container Terminal Operations:</b>  nGen/Veronica
+                                    <b className="mt-10 font-semibold">TOS for Container Terminal Operations:</b>  nGen/Veronica
                                     <br />
-                                    <b className="mt-10">TOS for General Cargo Operations:</b>  GCMS
+                                    <b className="mt-10 font-semibold">TOS for General Cargo Operations:</b>  GCMS
                                 </p>
                             </section>
                         </details>
@@ -67,9 +67,9 @@ export default function DigitalSolutionsPage() {
                                     We have developed a set of digital tools to stay connected with the logistics community.
                                 </p>
                                 <p>
-                                    <b>Hutchison Ports Data Exchange (HPDX):</b> A centralised data exchange gateway for the shipping community. <br />
-                                    <b>Document Digitalisation (DD):</b> A state-of-the-art AI application for digitising communication with customers and documenting processes, scalable to support multiple ports globally. <br />
-                                    <b>Ubi: </b> A mobile app strategically designed to enhance hinterland connectivity, offering customers improved insights and faster access to landside terminal processes.
+                                    <b className="font-semibold">Hutchison Ports Data Exchange (HPDX):</b> A centralised data exchange gateway for the shipping community. <br />
+                                    <b className="font-semibold">Document Digitalisation (DD):</b> A state-of-the-art AI application for digitising communication with customers and documenting processes, scalable to support multiple ports globally. <br />
+                                    <b className="font-semibold">Ubi: </b> A mobile app strategically designed to enhance hinterland connectivity, offering customers improved insights and faster access to landside terminal processes.
                                 </p>
                             </section>
                         </details>
@@ -85,10 +85,10 @@ export default function DigitalSolutionsPage() {
                                     Our solutions leverage AI technology for yard utilisation optimisation, and a holistic mathematical model for equipment and job scheduling algorithms. This ensures higher productivity, operational cost savings, improved safety and quality at the terminal.
                                 </p>
                                 <p>
-                                    <b>Autonomous Truck (AT)</b> operations management <br />
-                                    <b>Equipment Agnostic Yard Crane Scheduling:</b>  ASC, ARTG <br />
-                                    <b> Auto-Strad</b>   Operations Management <br />
-                                    <b>Gate Automation</b>
+                                    <b className="font-semibold">Autonomous Truck (AT)</b> operations management <br />
+                                    <b className="font-semibold">Equipment Agnostic Yard Crane Scheduling:</b>  ASC, ARTG <br />
+                                    <b className="font-semibold"> Auto-Strad</b>   Operations Management <br />
+                                    <b className="font-semibold">Gate Automation</b>
                                 </p>
                             </section>
                         </details>
@@ -104,8 +104,8 @@ export default function DigitalSolutionsPage() {
                                     Our end-to-end logistics management services streamline operations from start to finish, maximising efficiency and minimising costs.
                                 </p>
                                 <p>
-                                    PARIS - <b>Multi-modal Optimisation App.</b> To optimise external truck logistics deployment. <br />
-                                    WMS - <b>Warehouse Management System.</b>  To streamline the operations of cargo handling.
+                                    PARIS - <b className="font-semibold">Multi-modal Optimisation App.</b> To optimise external truck logistics deployment. <br />
+                                    WMS - <b className="font-semibold">Warehouse Management System.</b>  To streamline the operations of cargo handling.
                                 </p>
                             </section>
                         </details>
