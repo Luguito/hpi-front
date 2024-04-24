@@ -19,7 +19,7 @@ export const RaasModelComponent = ({ children }: any) => {
                 </motion.div>
                 <motion.div initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                     <Text type="medium" classes="text-[18px] text-hpi-blue-dark mt-6">
-                        ROC offers a flexible subscription model enabling terminals to seamlessly transition to a new operational model in a seamless way.
+                        ROC offers a flexible subscription model enabling terminals to transition to a new operational model in a seamless way.
                     </Text>
                 </motion.div>
             </header>

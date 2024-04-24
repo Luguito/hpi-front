@@ -11,15 +11,30 @@ import Icon2 from '../../../../public/shared-services/timeline/productivity.svg'
 import Icon3 from '../../../../public/shared-services/timeline/lightbulb-setting.svg'
 import Icon4 from '../../../../public/shared-services/timeline/expand-arrows.svg'
 import Icon5 from '../../../../public/shared-services/timeline/arrow-progress.svg'
+import { useEffect } from 'react';
 
 
 export const TimelineComponent = () => {
+
+    useEffect(() => {
+        let observer = new IntersectionObserver(entries => {
+            console.log(entries)
+        })
+
+        let element = document.querySelectorAll('.vertical-timeline-element');
+
+        // @ts-ignore
+        element.forEach((el) => {
+            observer.observe(el)
+        })
+    }, [])
+
     const iconStyle = { background: '#002E6D', color: '#fff', boxShadow: 'none', transform: 'translate(-4.5em, 2em)', width: '7em', height: '7em', display: 'flex', justifyContent: 'center', alignItems: 'center' };
     const contentStyle = { background: 'transparent', boxShadow: 'none', padding: '1em 2em' };
     return (
         <>
-            <VerticalTimeline animate={false} layout="1-column-left" lineColor="#002E6D"
-                className="bg-transparent p-0 pl-10 m-0 w-full max-w-max before:top-8 before:left-[1.4em] before:h-[90%]">
+            <VerticalTimeline animate={false} layout="1-column-left" lineColor="#707070"
+                className="bg-transparent p-0 pl-10 m-0 w-full max-w-max before:z-[-2] before:top-8 before:left-[1.4em] before:h-[90%] after:top-8 after:left-[1.4em] after:h-[90%] after:w-[5px] after:absolute after:z-[-1]">
                 <VerticalTimelineElement
                     iconStyle={iconStyle}
                     contentStyle={contentStyle}
@@ -55,7 +70,7 @@ export const TimelineComponent = () => {
                             <motion.h3 className="text-[50px] text-[#002E6D] font-extrabold" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>2013</motion.h3>
                         </article>
                         <motion.p className="text-[16px] text-[#494949] font-normal" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                            The first ROC is established in Asia, marking the beginning of a new era in port operations management.
+                            The first ROC is established in Asia, marking the beginning of a new era in port operations management at Hutchison Ports.
                         </motion.p>
                     </section>
                 </VerticalTimelineElement>
@@ -73,7 +88,7 @@ export const TimelineComponent = () => {
                             <motion.h3 className="text-[50px] text-[#002E6D] font-extrabold" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>2014</motion.h3>
                         </article>
                         <motion.p className="text-[16px] text-[#494949] font-normal" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                            ROC Centre begins providing support for all planning activities at terminals in Pakistan (SAPT/KICT), resulting in a <b>30% increase in productivity</b>.
+                            ROC begins providing support for all planning activities at terminals in Pakistan (SAPT/KICT), resulting in a <b>30% increase in productivity</b>.
                             ROC expands services to the Middle East and Africa (MEA) region within a year.
                         </motion.p>
                     </section>
@@ -119,9 +134,3 @@ export const TimelineComponent = () => {
         </>
     )
 }
-
-// translate(-0.5em, 2em)
-// width
-// height
-
-

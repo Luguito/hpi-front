@@ -3,7 +3,7 @@ import EFFICIENCY from '../../../../public/shared-services/efficiency.png';
 import Text from "../../components/text/text";
 import Image from 'next/image'
 import { motion } from 'framer-motion';
-import { RevealFromLeftToRight, RevealFromRightToLeft, RevealTextAfterSection} from '@/app/animations/animation';
+import { RevealFromLeftToRight, RevealFromRightToLeft, RevealTextAfterSection } from '@/app/animations/animation';
 
 export const EfficiencyComponent = () => {
     return (
@@ -18,9 +18,8 @@ export const EfficiencyComponent = () => {
                     <motion.p className="text-[16px] text-[#494949] font-normal" initial="hidden" whileInView="visible" variants={RevealFromLeftToRight}>
                         We are committed to achieving operational <br />
                         excellence, offering a configurable solution to <br />
-                        drive port terminals <span className="text-hpi-blue-light font-bold"> efficiency, scalability, <br />
-                            and value generation.
-                        </span>
+                        drive port terminals efficiency, scalability, <br />
+                        and value generation.
                     </motion.p>
                 </article>
             </section>

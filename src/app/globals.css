@@ -25,3 +25,12 @@ html, body {
     text-wrap: balance;
   }
 }
+
+@layer base{
+  ul {
+   @apply list-disc pl-4 pt-2;
+  }
+  li {
+    @apply pt-6;
+  }
+ }

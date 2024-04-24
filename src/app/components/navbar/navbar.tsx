@@ -13,9 +13,9 @@ export default function Navbar() {
     // const navOptions = ['HOME', 'AUTOMATION', 'SHARED SERVICES', 'DIGITAL SOLUTIONS', 'CONTACT US'];
     const navOptions = [
         { name: 'HOME', link: '/' },
-        { name: 'AUTOMATION', link: '/' },
+        { name: 'AUTOMATION', link: '/automation' },
         { name: 'SHARED SERVICES', link: '/shared-services' },
-        { name: 'DIGITAL SOLUTIONS', link: '/' },
+        { name: 'DIGITAL SOLUTIONS', link: '/digital-solutions' },
         { name: 'CONTACT US', link: '/' },
     ]
 

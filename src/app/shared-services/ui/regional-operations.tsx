@@ -23,6 +23,15 @@ export const Regional = () => {
                     </Text>
                 </motion.div>
             </header>
+            <section className="mb-10 text-center px-96 snap-center">
+                <motion.p className="text-[16px] text-[#494949] mt-12 text-left" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+                    Our <b>Regional Operations Centre (ROC)</b> embodies our commitment to global collaboration and standardised, high-quality services.
+                    The centre was empowered by a state-of-the-art TOS to ensure consistent services to be delivered to any terminal worldwide.
+                    <br />
+                    Our <b>National Operations Centre (NOC)</b> is a spin-off of ROC, but in a country-level scale.
+                    With the same DNA of ROC, NOC consolidates all operational planning, control and back-office functions to all Hutchison Ports terminals
+                </motion.p>
+            </section>
             <section className="flex flex-col justify-center items-center mt-12">
                 <motion.article initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                     <Image src={ROC1} alt="Image" width={1200} />
@@ -40,17 +49,9 @@ export const Regional = () => {
                     </motion.article>
                 </motion.section>
             </section>
-            <footer className="mt-10 text-center px-52 snap-center">
+            <footer className='text-center mt-10'>
                 <motion.p className="text-[20px] text-hpi-blue-dark font-medium" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                    Localized Execution {'&'} Monitoring
-                </motion.p>
-                <motion.p className="text-[16px] text-[#494949] mt-12" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                    Our <b>Regional Operations Centre (ROC)</b> embodies our commitment to global collaboration and standardised, high-quality services. The centre was empowered by <br />
-                    a state-of-the-art TOS to ensure consistent services to be delivered to any terminal worldwide.
-                </motion.p>
-                <motion.p className="text-[16px] text-[#494949] mt-12" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                    Our <b>National Operations Centre (NOC)</b> is a spin-off of ROC, but in a country-level scale. With the same DNA of ROC, NOC consolidates all operational planning, <br />
-                    control and back-office functions to all Hutchison Ports terminals
+                    Localised Execution {'&'} Monitoring
                 </motion.p>
             </footer>
         </section>
