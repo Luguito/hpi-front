@@ -164,7 +164,7 @@ export default function AutomationPage() {
     const unselect = "text-[20px] text-hpi-grey-light cursor-pointer flex gap-5"
     return (
         <section>
-            <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Home%20Banner.mp4" bgColor="">
+            <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Automation%20Banner.mp4" bgColor="">
                 <p className="absolute text-center text-[60px] text-hpi-white font-bold text-shadow-md leading-[80px]">
                     MASTERING THE ART OF <br />
                     TERMINAL AUTOMATION
