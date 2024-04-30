@@ -11,7 +11,8 @@ import IconGlow4 from '../../../../public/digital-solutions/4 glow.svg'
 
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
-
+import { motion } from 'framer-motion';
+import { RevealFromLeftToRight, RevealFromRightToLeft, RevealSectionInitial, RevealTextAfterSection } from '@/app/animations/animation';
 
 export default function PowerSolutionUI() {
     const ref = useRef(null);
@@ -23,7 +24,7 @@ export default function PowerSolutionUI() {
     });
 
     useEffect(() => {
-        if(ref.current) {
+        if (ref.current) {
             // @ts-ignore
             ref.current.click();
         }
@@ -44,15 +45,15 @@ export default function PowerSolutionUI() {
     return (
         <>
             <header className="text-center">
-                <small className="font-medium text-hpi-blue-light text-[16px]">Our Vision</small>
-                <h2 className="bg-gradient-to-r from-[#0054AC] via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text text-[30px] font-bold">
+                <motion.small className="font-medium text-hpi-blue-light text-[16px]" initial="hidden" whileInView="visible" variants={RevealSectionInitial}>Our Vision</motion.small>
+                <motion.h2 className="bg-gradient-to-r from-[#0054AC] via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text text-[30px] font-bold" initial="hidden" whileInView="visible" variants={RevealSectionInitial}>
                     UNLEASHING THE POWER OF DIGITAL SOLUTIONS
-                </h2>
+                </motion.h2>
             </header>
-            <p className="text-hpi-blue-dark text-[18px] text-center mt-12">
+            <motion.p className="text-hpi-blue-dark text-[18px] text-center mt-12" initial="hidden" whileInView="visible" variants={RevealSectionInitial}>
                 Hutchison Ports is dedicated to offering standardised, cost-efficient, and innovative solutions that add value across all our terminals and logistics community.
                 We aim to empower individuals and businesses to transform the logistics world into a more efficient and sustainable one through innovative technologies.
-            </p>
+            </motion.p>
             <section className="flex flex-col gap-6 mt-16">
                 <ExpandedComponent icon={Icon1} blowIcon={IconGlow1} title={"TERMINAL OPERATING SYSTEM (TOS)"} onClick={getRef} id="e-1" isExpanded={expanded['e-1']} ref={ref}>
                     <p className="text-[16px] font-medium text-[#707070]">
@@ -102,17 +103,17 @@ const ExpandedComponent = ({ icon, title, isExpanded, blowIcon, children, ...pro
 
     return (
         <>
-            <details {...props}>
+            <motion.details {...props} initial="hidden" whileInView="visible" variants={RevealFromLeftToRight}>
                 <summary className="expansion-summary flex items-center gap-16 cursor-pointer">
                     <article className={`h-12 w-12 rounded-3xl flex justify-center items-center ${styleWhenIsActive}`}>
-                        <Image src={!isExpanded ? icon : blowIcon} alt="Icon" priority/>
+                        <Image src={!isExpanded ? icon : blowIcon} alt="Icon" priority />
                     </article>
                     <p className="font-bold text-hpi-blue-dark text-[20px]">{title}</p>
                 </summary>
                 <section className="pl-28 text-[16px] font-medium text-[#707070]">
                     {children}
                 </section>
-            </details>
+            </motion.details>
         </>
     )
 }

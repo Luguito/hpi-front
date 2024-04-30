@@ -117,7 +117,7 @@ const RosaComponent = () => {
     )
 }
 
-const arrComponent = [VeronicaComponent,RosaComponent];
+const arrComponent = [VeronicaComponent, RosaComponent];
 
 export const FeatureUI = () => {
     const [component, setIndexComponent] = useState(0);
@@ -125,14 +125,22 @@ export const FeatureUI = () => {
     const CurrentSection = arrComponent[component];
 
     return (
-        <motion.section initial="hidden" whileInView="visible" variants={RevealSectionInitial}>
-            <section className="mt-14">
-                <motion.section className="bg-hpi-celeste rounded-3xl h-[30em]" initial="hidden" whileInView="visible" variants={RevealSectionInitial}>
-                    <CurrentSection />
-                </motion.section>
-                <Dots index={component} setIndex={setIndexComponent}></Dots>
-            </section>
-        </motion.section>
+        <>
+            <header className="text-center">
+                <motion.small className="font-medium text-hpi-blue-light text-[16px]" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>Empowering Terminals</motion.small>
+                <motion.h2 className="bg-gradient-to-r from-[#0054AC] via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text text-[30px] font-bold" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+                    FEATURING STORIES
+                </motion.h2>
+            </header>
+            <motion.section initial="hidden" whileInView="visible" variants={RevealSectionInitial}>
+                <section className="mt-14">
+                    <motion.section className="bg-hpi-celeste rounded-3xl h-[30em]" initial="hidden" whileInView="visible" variants={RevealSectionInitial}>
+                        <CurrentSection />
+                    </motion.section>
+                    <Dots index={component} setIndex={setIndexComponent}></Dots>
+                </section>
+            </motion.section>
+        </>
     )
 }
 

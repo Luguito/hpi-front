@@ -4,12 +4,12 @@ import { InnovationUI } from "./ui/innovation";
 
 // Icons 
 
-import MapGlobe from "./ui/globe";
 import { FeatureUI } from "./ui/feature";
 import { SwipeCarousel } from "../components/carousel/carousel";
 
 import PowerSolutionUI from "./ui/power";
 import ForeFrontUI from "./ui/forefront";
+import MapImpactUI from "./ui/global-impact";
 
 
 export default function DigitalSolutionsPage() {
@@ -32,33 +32,7 @@ export default function DigitalSolutionsPage() {
                 </article>
                 {/* MAPS */}
                 <article className="bg-hpi-blue-dark mt-36 mb-32 py-20">
-                    <header className="text-center text-white">
-                        <h2 className="font-bold text-[30px] ">GLOBAL IMPACT OF OUR DIGITAL SOLUTIONS</h2>
-                        <p className="font-normal text-[16px]">
-                            We are committed to expanding our reach and continuing to innovate at full speed.
-                        </p>
-                    </header>
-                    <section className="mt-8">
-                        <MapGlobe />
-                    </section>
-                    <footer className="flex justify-center items-center text-white gap-20 mt-8">
-                        <article className="flex flex-col items-center">
-                            <b className="text-[50px] font-bold">6</b>
-                            <p className="text-[20px] font-bold">CONTINENTS</p>
-                        </article>
-                        <article className="flex flex-col items-center">
-                            <b className="text-[50px] font-bold">16</b>
-                            <p className="text-[20px] font-bold">COUNTRIES</p>
-                        </article>
-                        <article className="flex flex-col items-center">
-                            <b className="text-[50px] font-bold">28</b>
-                            <p className="text-[20px] font-bold">MAJOR PORTS</p>
-                        </article>
-                        <article className="flex flex-col items-center">
-                            <b className="text-[50px] font-bold">60M</b>
-                            <p className="text-[20px] font-bold">TEU PER YEAR</p>
-                        </article>
-                    </footer>
+                   <MapImpactUI />
                 </article>
                 {/* Forefront */}
                 <article className="px-80">
@@ -66,12 +40,6 @@ export default function DigitalSolutionsPage() {
                 </article>
                 {/*  */}
                 <article className="px-80 mt-72">
-                    <header className="text-center">
-                        <small className="font-medium text-hpi-blue-light text-[16px]">Empowering Terminals</small>
-                        <h2 className="bg-gradient-to-r from-[#0054AC] via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text text-[30px] font-bold">
-                            FEATURING STORIES
-                        </h2>
-                    </header>
                     <FeatureUI />
                 </article>
                 {/*  */}

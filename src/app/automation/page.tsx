@@ -80,7 +80,7 @@ const Strategy = () => {
                 </p>
                 <ul>
                     <li>
-                        We developed and deployed Remote-Controlled Quay Cranes (RCQCs) in 2015, and within one year, we familiarized, reinforced, and standardized them. Within five years, we have successfully deployed RCQCs to 10 terminals around the world.
+                        We developed and deployed Remote-Controlled Quay Cranes (RCQCs) in 2015, and within one year, we familiarised, reinforced, and standardised them. Within five years, we have successfully deployed RCQCs to 10 terminals around the world.
                     </li>
                     <li>
                         We began the Autonomous Truck (AT) journey in 2018, and the first batch of ATs came to daily operations within 2 years.
@@ -132,7 +132,7 @@ const Collaboration = () => {
                         We partner with traffic experts to perform traffic policy–junctions management to study driver behavior in AT projects.
                     </li>
                     <li>
-                        We partner with equipment management experts to co-develop solutions to optimize equipment utilization.
+                        We partner with equipment management experts to co-develop solutions to optimise equipment utilisation.
                     </li>
                     <li>
                         We partner with crane manufacturers to develop tailor-made equipment to suit our design.

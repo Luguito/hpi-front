@@ -12,6 +12,7 @@ import I6 from '../../../../public/digital-solutions/parking.png'
 import I7 from '../../../../public/digital-solutions/truck.png'
 import I8 from '../../../../public/digital-solutions/ROSA_logo.png'
 import { Dispatch, SetStateAction, useState } from 'react';
+import { RevealFromLeftToRight, RevealTextAfterSection } from '@/app/animations/animation';
 
 const SPRING_OPTIONS = {
     type: "spring",
@@ -41,12 +42,12 @@ export default function ForeFrontUI() {
     return (
         <>
             <header className="text-center">
-                <small className="font-medium text-hpi-blue-light text-[16px]">Our Solutions</small>
-                <h2 className="bg-gradient-to-r from-[#0054AC] via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text text-[30px] font-bold">
+                <motion.small className="font-medium text-hpi-blue-light text-[16px]" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>Our Solutions</motion.small>
+                <motion.h2 className="bg-gradient-to-r from-[#0054AC] via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text text-[30px] font-bold" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                     AT THE FOREFRONT OF PORT INNOVATION
-                </h2>
+                </motion.h2>
             </header>
-            <section className="relative overflow-hidden cursor-grab ">
+            <motion.section className="relative overflow-hidden cursor-grab" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                 <motion.div
                     drag="x"
                     dragConstraints={{
@@ -173,7 +174,7 @@ export default function ForeFrontUI() {
                 <div className="absolute left-[98%] inset-0 bg-gradient-to-l from-white via-white to-transparent w-14"></div>
                 <div className="absolute left-0 inset-0 bg-gradient-to-r from-white via-white to-transparent w-14"></div>
                 <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} />
-            </section>
+            </motion.section>
         </>
     )
 }
