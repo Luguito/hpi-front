@@ -41,7 +41,7 @@ function Footer() {
                             }
                         </article>
                         <article>
-                            <Text type="medium" classes="text-[16px] text-hpi-white">
+                            <Text type="medium" classes="text-[14px] text-hpi-white">
                                 2024 HUTCHISON PORT HOLDINGS LIMITED. ALL RIGHTS RESERVED.
                             </Text>
                         </article>

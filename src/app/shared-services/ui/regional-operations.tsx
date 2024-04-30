@@ -3,6 +3,7 @@ import ROC1 from '../../../../public/shared-services/ROC 1.png'
 import ROC2 from '../../../../public/shared-services/ROC 2.png'
 import ROC3 from '../../../../public/shared-services/ROC 3.png'
 import ROC4 from '../../../../public/shared-services/ROC 4.png'
+import ROC5 from '../../../../public/shared-services/ROC 5.png'
 
 import { motion } from 'framer-motion';
 import Text from '../../components/text/text';
@@ -49,11 +50,13 @@ export const Regional = () => {
                     </motion.article>
                 </motion.section>
             </section>
-            <footer className='text-center mt-10'>
-                <motion.p className="text-[20px] text-hpi-blue-dark font-medium" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+            <motion.footer className='flex justify-center mt-10' initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+                {/* <motion.p className="text-[20px] text-hpi-blue-dark font-medium" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                     Localised Execution {'&'} Monitoring
-                </motion.p>
-            </footer>
+
+                </motion.p> */}
+                    <Image src={ROC5} alt="Image" width={1130} />
+            </motion.footer>
         </section>
     )
 }

@@ -4,7 +4,7 @@ import { Dispatch, SetStateAction, useState } from "react";
 import VideoContainer from "../components/video-container/video-container";
 import { MapSlider } from "./ui/mapSlider";
 import Image from 'next/image'
-import Arrow from "../../../public/home/arrow.svg";
+import Arrow from "../../../public/automation/blue-arrow.svg";
 
 
 const Innovation = () => {
