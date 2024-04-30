@@ -33,20 +33,22 @@ export const InnovationUI = () => {
     return (
         <section className="flex flex-col justify-center snap-center items-center gap-10 mt-28">
             <section className="flex flex-col text-center">
-                <motion.article initial="hidden" whileInView="visible" variants={RevealFromLeftToRight}>
-                    <Text type="bold" classes="text-[30px] text-hpi-blue-dark">
-                        INNOVATION AND TECHNOLOGICAL <br />
-                        SOPHISTICATION ARE AT OUR CORE.
-                    </Text>
-                </motion.article>
+                <motion.p className="font-bold text-[30px] text-hpi-blue-dark" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+                    INNOVATION AND TECHNOLOGICAL
+                </motion.p>
+                <motion.p className="font-bold text-[30px] text-hpi-blue-dark" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+                    SOPHISTICATION ARE AT OUR CORE.
+                </motion.p>
                 <article className="mt-3">
-                    <motion.p className="text-[18px] text-hpi-blue-dark font-normal" initial="hidden" whileInView="visible" variants={RevealFromLeftToRight}>
-                        We relentlessly pursue advancements to remain leaders in the shipping industry,<br />
+                    <motion.p className="text-[18px] text-hpi-blue-dark font-normal" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+                        We relentlessly pursue advancements to remain leaders in the shipping industry,
+                    </motion.p>
+                    <motion.p className="text-[18px] text-hpi-blue-dark font-normal" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                         adopting Digital Solutions to redefine logistics operations worldwide.
                     </motion.p>
                 </article>
             </section>
-            <motion.article className="py-12 rounded-3xl relative" initial="hidden" whileInView="visible" variants={RevealFromRightToLeft}>
+            <motion.article className="py-12 rounded-3xl relative" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                 <video poster="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/F-frame-Sweden.png"
                     width={1000}
                     className="rounded-3xl cursor-pointer"
