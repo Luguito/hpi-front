@@ -4,12 +4,13 @@ import Text from "../text/text";
 import Image from 'next/image';
 import profilePic from '../../../../public/hp-logo.svg';
 import Link from 'next/link';
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
     const ref = useRef(null);
     const [isTop, setTop] = useState(false);
-
+    const currentPath = usePathname();
     // const navOptions = ['HOME', 'AUTOMATION', 'SHARED SERVICES', 'DIGITAL SOLUTIONS', 'CONTACT US'];
     const navOptions = [
         { name: 'HOME', link: '/' },
@@ -20,7 +21,6 @@ export default function Navbar() {
     ]
 
     useEffect(() => {
-
         if (ref.current) {
             window.addEventListener('scroll', () => {
                 if (window.scrollY === 0) {
@@ -52,9 +52,9 @@ export default function Navbar() {
                     {
                         navOptions.map((option, key) => (
                             <Link href={option.link} key={key}>
-                                <Text type="medium" classes="text-[14px] text-hpi-blue-dark cursor-pointer">
+                                <p className={`text-[14px] text-hpi-blue-dark cursor-pointer ${currentPath == option.link ? 'font-bold' : 'font-medium'}`}>
                                     {option.name}
-                                </Text>
+                                </p>
                             </Link>
                         ))
                     }

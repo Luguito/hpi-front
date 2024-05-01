@@ -36,7 +36,7 @@ export const TechSolutionsComponent = () => {
                     <motion.div initial="hidden" whileInView="visible" variants={RevealFromLeftToRight}>
                         <Text type="bold" classes={currentSection === 'automation' ? 'text-[20px] text-hpi-blue-dark cursor-pointer' : 'text-[20px] text-hpi-grey-light cursor-pointer'} onMouseEnter={() => setSection('automation')}>AUTOMATION</Text>
                     </motion.div>
-                    <motion.div initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+                    <motion.div initial="hidden" whileInView="visible" variants={RevealTextAfterSection} className="ml-16">
                         <Text type="bold" classes={currentSection === 'shared-services' ? 'text-[20px] text-hpi-blue-dark cursor-pointer' : 'text-[20px] text-hpi-grey-light cursor-pointer'} onMouseEnter={() => setSection('shared-services')}>SHARED SERVICES</Text>
                     </motion.div>
                     <motion.div initial="hidden" whileInView="visible" variants={RevealFromRightToLeft}>
