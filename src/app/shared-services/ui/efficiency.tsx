@@ -18,8 +18,8 @@ export const EfficiencyComponent = () => {
                     <motion.p className="text-[16px] text-[#494949] font-normal" initial="hidden" whileInView="visible" variants={RevealFromLeftToRight}>
                         We are committed to achieving operational <br />
                         excellence, offering a configurable solution to <br />
-                        drive port terminals efficiency, scalability, <br />
-                        and value generation.
+                        drive port terminals <b>efficiency, scalability,</b>  <br />
+                        <b>and value generation.</b>
                     </motion.p>
                 </article>
             </section>

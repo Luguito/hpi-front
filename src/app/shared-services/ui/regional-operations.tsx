@@ -27,36 +27,30 @@ export const Regional = () => {
             <section className="mb-10 text-center px-96 snap-center">
                 <motion.p className="text-[16px] text-[#494949] mt-12 text-center" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                     Our <b>Regional Operations Centre (ROC)</b> embodies our commitment to global collaboration and standardised, high-quality services.
-                    The centre was empowered by a state-of-the-art TOS to ensure consistent services to be delivered to any terminal worldwide.
-                </motion.p>
-                <motion.p className="text-[16px] text-[#494949] text-center" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+                    The centre was empowered by a state-of-the-art TOS to ensure consistent services to be delivered to any terminal worldwide. 
                     Our <b>National Operations Centre (NOC)</b> is a spin-off of ROC, but in a country-level scale.
                     With the same DNA of ROC, NOC consolidates all operational planning, control and back-office functions to all Hutchison Ports terminals
                 </motion.p>
             </section>
             <section className="flex flex-col justify-center items-center mt-12">
                 <motion.article initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                    <Image src={ROC1} alt="Image" width={1200} />
+                    <Image src={ROC1} alt="Image" width={1150} />
                 </motion.article>
                 {/* @ts-ignore */}
                 <motion.section className="flex gap-10" initial="hidden" whileInView="visible" variants={{ ...RevealTextAfterSection, transition: { ...RevealTextAfterSection.visible.transition, delay: .4 } }}>
                     <motion.article initial="hidden" whileInView="visible" variants={RevealFromLeftToRight}>
-                        <Image src={ROC2} alt="Image" width={350} />
+                        <Image src={ROC2} alt="Image" width={355} />
                     </motion.article>
                     <motion.article initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                        <Image src={ROC3} alt="Image" width={350} />
+                        <Image src={ROC3} alt="Image" width={355} />
                     </motion.article>
                     <motion.article initial="hidden" whileInView="visible" variants={RevealFromRightToLeft}>
-                        <Image src={ROC4} alt="Image" width={350} />
+                        <Image src={ROC4} alt="Image" width={355} />
                     </motion.article>
                 </motion.section>
             </section>
-            <motion.footer className='flex justify-center mt-10' initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                {/* <motion.p className="text-[20px] text-hpi-blue-dark font-medium" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                    Localised Execution {'&'} Monitoring
-
-                </motion.p> */}
-                    <Image src={ROC5} alt="Image" width={1130} />
+            <motion.footer className='flex justify-center mt-5' initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+                <Image src={ROC5} alt="Image" width={1150} />
             </motion.footer>
         </section>
     )

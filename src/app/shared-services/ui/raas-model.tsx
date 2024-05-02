@@ -23,7 +23,68 @@ export const RaasModelComponent = ({ children }: any) => {
                     </Text>
                 </motion.div>
             </header>
-            {children}
+            <section className="grid grid-cols-2 grid-rows-2 justify-center items-center gap-10 mt-14 mx-96">
+                <HoverComponent
+                    mouseEnterComponent={
+                        <motion.article initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }} 
+                        className="flex flex-col items-center justify-center shadow-custom rounded-2xl gap-6 py-16 h-64 bg-hpi-blue-dark">
+                            <p className="text-[16px] text-hpi-white text-center w-3/5">
+                                Plug-and-Play to the standardised and <br />
+                                proven operational practice (SOP) - <br />
+                                uplifting the service level in no time! <br />
+                            </p>
+                        </motion.article>
+                    }>
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
+                        <PeaceSolution />
+                    </motion.div>
+                </HoverComponent>
+                <HoverComponent
+                    mouseEnterComponent={
+                        <motion.article initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}  
+                        className="flex flex-col items-center justify-center shadow-custom rounded-2xl gap-6 py-16 h-64 bg-hpi-blue-dark">
+                            <p className="text-[16px] text-hpi-white text-center w-3/5">
+                                A scalable solution that ensures the growth
+                                of your terminal without the burden of
+                                significant upfront investments.
+                            </p>
+                        </motion.article>
+                    }>
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
+                        <GrowSolution />
+                    </motion.div>
+                </HoverComponent>
+                <HoverComponent
+                    mouseEnterComponent={
+                        <motion.article initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}  
+                        className="flex flex-col items-center justify-center shadow-custom rounded-2xl gap-6 py-16 h-64 bg-hpi-blue-dark">
+                            <p className="text-[16px] text-hpi-white text-center w-3/5">
+                                A hassle-free solution! Let ROC do <br />
+                                all the work, while your terminal <br />
+                                focuses on strategy.
+                            </p>
+                        </motion.article>
+                    }>
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
+                        <CentralisedSolution />
+                    </motion.div>
+                </HoverComponent>
+                <HoverComponent
+                    mouseEnterComponent={
+                        <motion.article initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}  
+                        className="flex flex-col items-center justify-center shadow-custom rounded-2xl gap-6 py-16 h-64 bg-hpi-blue-dark">
+                            <p className="text-[16px] text-hpi-white text-center w-3/5">
+                                Progress is fully visible to your <br />
+                                terminal, allowing for complete <br />
+                                oversight and transparency
+                            </p>
+                        </motion.article>
+                    }>
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
+                        <EyeSolution />
+                    </motion.div>
+                </HoverComponent>
+            </section>
         </section>
     )
 }

@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Text from '../../components/text/text';
 
 
-const STYLE = "flex flex-col items-center justify-center shadow-custom rounded-2xl gap-6 py-16 h-64";
+const STYLE = "flex flex-col items-center justify-center shadow-custom rounded-2xl gap-6 py-16 h-64 bg-hpi-white";
 
 export const PeaceSolution = () => {
     return (

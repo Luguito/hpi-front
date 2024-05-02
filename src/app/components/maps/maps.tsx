@@ -45,62 +45,45 @@ function map() {
         {
             id: "Karachi",
             title: "Pakistan, Karachi",
-            description: "ROC transforms struggling  terminals into highly efficient \n operations, increasing  productivity by 30% and  reducing costs by 25%.",
+            description: "ROC transforms struggling  terminals into highly efficient operations, increasing  productivity by 30% and  reducing costs by 25%.",
             geometry: { type: "Point", coordinates: [67.01040000, 24.86080000] }
         },
         {
             id: "Jizan",
             title: "Saudi Arabia, Jazan",
-            description: "From day one, ROC enabled  the terminal to  \n commence  commercial operations 50%  faster than traditional methods.",
+            description: "From day one, ROC enabled  the terminal to commence  commercial operations 50%  faster than traditional methods.",
             geometry: { type: "Point", coordinates: [42.70761070, 17.17381760] }
         },
         {
             id: "Spark",
             title: "Saudi Arabia, SPARK",
-            description: "ROC is to serve both  seaport terminals and \n intermodal hubs, with  services expected to commence in Q2 2024.",
+            description: "ROC is to serve both  seaport terminals and intermodal hubs, with  services expected to commence in Q2 2024.",
             geometry: { type: "Point", coordinates: [48.6207111, 26.106702] }
         },
         {
             id: "Mexico",
             title: "Mexico (ICAVE/EIT/LCT)",
-            description: "The NOC consolidated  operational planning functions,\n standardising and enhancing  stowage planning services.",
+            description: "The NOC consolidated  operational planning functions, standardising and enhancing  stowage planning services.",
             geometry: { type: "Point", coordinates: [-96.1332, 19.2116] }
         },
         {
             id: "Abu Qir",
             title: "Egypt (Abu Qir/Alexandria/Ain Sokhna)",
-            description: "The forthcoming application  of ROC promises to extend \n services and transform  operations in the coming years.",
+            description: "The forthcoming application  of ROC promises to extend services and transform  operations in the coming years.",
             geometry: { type: "Point", coordinates: [31.3166, 30.0666] }
         },
+        {
+            id: "Shenzhen",
+            title: "China, Hong Kong/Shenzhen",
+            description: "Advanced solutions  implemented through ROC not only enhanced efficiency  and productivity, but also  reduced human error by 60%.",
+            geometry: { type: "Point", coordinates: [112.7082672, 22.881177] }
+        }
     ];
 
     let pointSeries = chart.series.push(
         am5map.MapPointSeries.new(root, {})
     );
-    let pointChina = chart.series.push(
-        am5map.MapPointSeries.new(root, {})
-    )
-    pointChina.bullets.push(function () {
-        let circle = am5.Circle.new(root, {
-            radius: 5,
-            fill: am5.color("#FFFFFF"),
-            stroke: am5.color("#002E6D"),
-            cursorOverStyle: "pointer",
-            strokeWidth: 1,
-            tooltipHTML: `
-            <section style="text-align: center; width: 100%; color: white;">
-                <header>
-                    <b style="font-size: 16px;">{title}</b>
-                </header>
-                <section style="display:flex; justify-content: center; align-items: center; font-weight: medium;">
-                    <p style="white-space: pre-line; font-size: 16px; text-wrap:wrap;">{description}</p>
-                </section>
-            </section>
-        `,
-        });
 
-        return am5.Bullet.new(root, { sprite: circle });
-    });
     pointSeries.bullets.push(function () {
         let circle = am5.Circle.new(root, {
             radius: 5,
@@ -109,11 +92,11 @@ function map() {
             cursorOverStyle: "pointer",
             strokeWidth: 1,
             tooltipHTML: `
-            <section style="text-align: center; width: 100%; color: white">
-                <header>
+            <section style="text-align: center; width: 35%;">
+                <header style="color: #002E6D; font-weight: semi-bold;">
                     <b style="font-size: 16px;">{title}</b>
                 </header>
-                <section style="display:flex; justify-content: center; align-items: center; font-weight: medium;">
+                <section style="display:flex; justify-content: center; align-items: center; font-weight: medium; color: #002E6D;">
                     <p style="white-space: pre-line; font-size: 16px; text-wrap:wrap;">{description}</p>
                 </section>
             </section>
@@ -123,42 +106,11 @@ function map() {
         return am5.Bullet.new(root, { sprite: circle });
     });
 
-    // pointSeries.bullets.push(function() {
-    //     var container = am5.Container.new(root, {});
-    //     container.children.push(am5.Graphics.new(root, {
-    //       svgPath: "M16,28c-6.62,0-12-5.38-12-12s5.38-12,12-12,12,5.38,12,12-5.38,12-12,12ZM16,6c-5.51,0-10,4.49-10,10s4.49,10,10,10,10-4.49,10-10-4.49-10-10-10Z",
-    //       scale: 0.06,
-    //       centerY: am5.p50,
-    //       centerX: am5.p50,
-    //       fill: am5.color(0x000000)
-    //     }));
-    //     return am5.Bullet.new(root, { sprite: container });
-    //   });
-
-    // @ts-ignore
-    pointChina.data.setAll([{
-        id: "Shenzhen",
-        title: "China, Hong Kong/Shenzhen",
-        description: "Advanced solutions  implemented through ROC \n not only enhanced efficiency  and productivity, but also  reduced human error by 60%.",
-        geometry: { type: "Point", coordinates: [112.7082672, 22.881177] }
-    }])
-
-    // pointChina.getTooltip()?.
     pointSeries.data.setAll(cities);
-    pointChina.getTooltip()?.setAll({
-        getFillFromSprite: false,
-        getStrokeFromSprite: false,
-        paddingLeft: 20,
-        paddingRight: 20,
-    })
-    pointSeries.getTooltip()?.setAll({
-        getFillFromSprite: false,
-        getStrokeFromSprite: false,
-        paddingLeft: 20,
-        paddingRight: 20,
-    })
+    pointSeries.getTooltip()?.setAll({ width: am5.percent(18) })   
+    
     // Make stuff animate on load
-    chart.appear(1000, 100);
+    chart.appear(1000, 100)
 }
 
 
