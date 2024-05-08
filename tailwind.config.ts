@@ -17,7 +17,9 @@ const config: Config = {
         'hpi-grey-light':"#C9C9C9",
         'hpi-blue-sea':"#10205F",
         'hpi-celeste':"#9ACAEB17",
-        'hpi-opacity-video': 'rgba(0, 0, 0, 0.5)'
+        'hpi-opacity-video': 'rgba(0, 0, 0, 0.5)',
+        'hpi-light-bg': "#F5FAFF",
+        'hpi-body-grey': "#494949",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -26,7 +28,7 @@ const config: Config = {
       },
       boxShadow: {
         'custom': '0px 1px 7px 1px rgba(206, 206, 206, 0.28)', // Customize the values as per your requirement
-      },
+      }
     },
   },
   important: true,
