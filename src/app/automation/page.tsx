@@ -5,6 +5,7 @@ import VideoContainer from "../components/video-container/video-container";
 import { MapSlider } from "./ui/mapSlider";
 import Image from 'next/image'
 import Arrow from "../../../public/automation/blue-arrow.svg";
+import { U1999I } from "./ui/info-map";
 
 
 const Innovation = () => {
@@ -150,6 +151,7 @@ const Collaboration = () => {
 
 export default function AutomationPage() {
     const [currentSection, setSection] = useState('innovation');
+    const [currentSectionMap, setSectionMap] = useState("U1997I")
     const sections: Record<string, any> = {
         'innovation': Innovation,
         'risk': Risk,
@@ -205,24 +207,12 @@ export default function AutomationPage() {
                         <h2 className="text-hpi-blue-dark text-[30px] font-bold">OUR FORWARD-THINKING PLANS</h2>
                     </header>
                     <section>
-                        <MapSlider />
+                        <MapSlider changeSection={setSectionMap}/>
                     </section>
                 </section>
-                <section className="bg-hpi-celeste rounded-lg h-[30em] my-40 px-16 py-20">
-                    <header className="text-hpi-blue-dark text-center">
-                        <p>
-                            Hutchison Ports London Thamesport pioneers Remote-Controlled Rail Mounted Gantry Cranes (RMGCs), marking Hutchison Ports’ first project in this innovative domain.
-                        </p>
-                    </header>
-                    <section className="flex text-[16px] text-[#494949] font-normal">
-                        <article>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, nostrum dignissimos velit hic aspernatur aut nesciunt molestiae itaque similique
-                                cum eius veritatis neque omnis sunt quasi vitae quam quae minus?
-                            </p>
-                        </article>
-                        <article></article>
-                    </section>
+                <section className="bg-hpi-celeste rounded-lg h-[30em] my-10 px-16 py-20">
+                    <U1999I />
+                    {currentSectionMap}
                 </section>
             </section>
         </section>

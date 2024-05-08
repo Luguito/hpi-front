@@ -84,13 +84,15 @@ function map() {
         am5map.MapPointSeries.new(root, {})
     );
 
-    pointSeries.bullets.push(function () {
+
+    pointSeries.bullets.push(function (root, series, item) {
         let circle = am5.Circle.new(root, {
             radius: 5,
             fill: am5.color("#FFFFFF"),
             stroke: am5.color("#002E6D"),
             cursorOverStyle: "pointer",
             strokeWidth: 1,
+            showTooltipOn: 'hover',
             tooltipHTML: `
             <section style="text-align: center; width: 35%;">
                 <header style="color: #002E6D; font-weight: semi-bold;">
@@ -103,12 +105,19 @@ function map() {
         `,
         });
 
-        return am5.Bullet.new(root, { sprite: circle });
+        return am5.Bullet.new(root, { sprite: circle })
     });
 
+    pointSeries.events.once('datavalidated', (e) => {
+        let l = pointSeries.dataItems.length
+        let china = pointSeries.dataItems.at(l - 1);
+
+        china?.show()
+        // @ts-ignore
+        // china?.bullets?.at(0).propertyFields.showTooltipOn = 'showTooltip'
+    })
     pointSeries.data.setAll(cities);
-    pointSeries.getTooltip()?.setAll({ width: am5.percent(18) })   
-    
+    pointSeries.getTooltip()?.setAll({ width: am5.percent(18) })
     // Make stuff animate on load
     chart.appear(1000, 100)
 }

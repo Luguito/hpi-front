@@ -38,7 +38,7 @@ export default function HomePage() {
 
             {/* Description */}
             <RevealOnScrollComponent>
-                <section className="text-center mt-28 mb-8 snap-center">
+                <section className="text-center mt-16 mb-8 snap-center">
                     <article>
                         <Text type="bold" classes="text-[30px] bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
                             HUTCHISON PORTS SHARED SERVICES
@@ -68,7 +68,7 @@ export default function HomePage() {
 
             {/* Core Services */}
             <RevealOnScrollComponent>
-                <section className="bg-hpi-blue-dark mt-36 mb-32 snap-center">
+                <section className="bg-hpi-blue-dark mt-36 mb-40 snap-center">
                     <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Shared%20services%20Radar.mp4" bgColor="hpi-opacity-video">
                         <section className="absolute top-40">
                             <header className="text-center snap-start mb-40">
@@ -152,7 +152,7 @@ export default function HomePage() {
 
             {/* Journey */}
             <RevealOnScrollComponent>
-                <section className="snap-center mt-44">
+                <section className="snap-center mt-36">
                     <header className="text-center">
                         <Text type="bold" classes="text-[30px] bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
                             OUR JOURNEY TO EXCELLENCE
@@ -170,7 +170,7 @@ export default function HomePage() {
 
             {/* MAPA */}
             <RevealOnScrollComponent>
-                <section className="mt-44 mb-20 bg-hpi-blue-dark snap-center">
+                <section className="mt-24 mb-20 bg-hpi-blue-dark snap-center">
                     <header className="text-center py-[4.8em]">
                         <Text type="bold" classes="text-[30px] text-hpi-white">
                             SUCCESS SHOWCASES

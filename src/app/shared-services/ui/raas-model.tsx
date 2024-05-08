@@ -7,7 +7,7 @@ import { CentralisedSolution, EyeSolution, GrowSolution, PeaceSolution } from ".
 
 export const RaasModelComponent = ({ children }: any) => {
     return (
-        <section className="snap-center mt-64">
+        <section className="snap-center mt-8">
             <header className="text-center">
                 <motion.p className="text-hpi-blue-light text-[16px]" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                     Flexible Model

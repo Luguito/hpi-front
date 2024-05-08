@@ -37,7 +37,7 @@ export const InnovationUI = () => {
                     INNOVATION AND TECHNOLOGICAL
                 </motion.p>
                 <motion.p className="font-bold text-[30px] text-hpi-blue-dark" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                    SOPHISTICATION ARE AT OUR CORE.
+                    SOPHISTICATION ARE AT OUR CORE
                 </motion.p>
                 <article className="mt-3">
                     <motion.p className="text-[18px] text-hpi-blue-dark font-normal" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>

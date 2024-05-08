@@ -12,7 +12,7 @@ import { RevealFromLeftToRight, RevealFromRightToLeft, RevealTextAfterSection } 
 
 export const Regional = () => {
     return (
-        <section className="my-40 snap-start">
+        <section className="mt-40 mb-32 snap-start">
             <header className="text-center">
                 <motion.span className="text-hpi-blue-light text-[16px] mb-4" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                     Our Framework

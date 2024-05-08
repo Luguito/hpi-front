@@ -54,7 +54,7 @@ let data = [
     { year: 2030, geometry: { type: "Point", coordinates: [31.3166, 30.0666] } },
 ]
 
-function map() {
+function map(trigger: any) {
     // Create root element
     // https://www.amcharts.com/docs/v5/getting-started/#Root_element
     let root = am5.Root.new("chartdiv");
@@ -90,7 +90,10 @@ function map() {
         am5map.MapPointSeries.new(root, {})
     );
 
-    pointSeries.bullets.push(createPoint)
+    pointSeries.bullets.push(createPoint);
+    pointSeries.data.events.on('push', function (e) {
+        console.log(e)
+    })
     // polygonSeries.mapPolygons.template.setAll({
     //     tooltipText: "{name}",
     //     toggleKey: "active",
@@ -118,6 +121,7 @@ function map() {
     let years = {};
     let firstYear = 2030;
     let lastYear = 1991;
+
     for (var i = 0; i < data.length; i++) {
         let row = data[i];
         let year = row.year;
@@ -150,7 +154,7 @@ function map() {
 
 
     let slider = container.children.push(am5.Slider.new(root, {
-        width: am5.percent(30),
+        width: am5.percent(80),
         orientation: "horizontal",
         start: 0,
         centerY: am5.p50,
@@ -158,15 +162,17 @@ function map() {
 
     slider.startGrip.get('background')?.set('fill', am5.color('#002E6D'))
     slider.thumb.setAll({
-        fill: am5.color('#FFFF')
+        fill: am5.color('#FFFF'),
     })
-
+    slider.startGrip.events.on('focus', function (e) {
+        console.log("AGARRADO")
+    })
     slider.startGrip.set("label", am5.Label.new(root, {
         text: firstYear + "",
         paddingTop: 0,
         paddingRight: 0,
         paddingBottom: 0,
-        paddingLeft: 0
+        paddingLeft: 0,
     }));
 
 
@@ -175,21 +181,35 @@ function map() {
     slider.events.on("rangechanged", function (e) {
         let year = firstYear + Math.round(slider.get("start", 0) * (lastYear - firstYear));
         //   @ts-ignore
-        slider.startGrip.get("label").set("text", year + "");
+        if (!years[year]) return;
+
+        //   @ts-ignore
+        slider.startGrip.get("label")?.setAll({
+            text: year + '',
+            fontSize: 20
+        });
+
+        setTimeout(() => {
+            //   @ts-ignore
+            slider.startGrip.get("label").set('fontSize', 15);
+        }, 1000);
+        
         updateCountries(year);
-        // updateSeriesData(
-        //   firstYear + Math.round(slider.get("start", 0) * (lastYear - firstYear))
-        // );
-    });
+    })
+    // slider.events.on("released", function (e) {
+    //     let year = firstYear + Math.round(slider.get("start", 0) * (lastYear - firstYear));
+
+    //     console.log(year)
+    //     updateCountries(year);
+    // });
 
     function updateCountries(year: any) {
-        // @ts-ignore
-        if (!years[year]) return;
         // @ts-ignore
         am5.object.each(years[year], function (joinYear, country) {
             if (!pointSeries.data.contains(country)) {
                 console.log(year)
                 pointSeries.data.push(country)
+                trigger(year)
             } else {
                 console.log(year)
                 pointSeries.data.removeValue(country)
@@ -200,8 +220,8 @@ function map() {
     function createPoint() {
         let circle = am5.Circle.new(root, {
             radius: 5,
-            fill: am5.color("#FFFFFF"),
-            stroke: am5.color("#002E6D"),
+            fill: am5.color("#009BDE"),
+            stroke: am5.color("#FFFFFF"),
             cursorOverStyle: "pointer",
             strokeWidth: 1,
         });
@@ -210,7 +230,7 @@ function map() {
     }
 }
 
-export const MapSlider = () => {
+export const MapSlider = ({ changeSection }: any) => {
     const ref = useRef(null);
 
     useEffect(() => {
@@ -222,7 +242,7 @@ export const MapSlider = () => {
                     }
                 }
             });
-            map();
+            map(changeSection);
         }
     }, []);
 

@@ -7,7 +7,7 @@ import CountUp from 'react-countup';
 
 export const ServicesKeysComponent = () => {
     return (
-        <section className="text-center mt-20 mb-32 snap-center">
+        <section className="text-center mt-5 mb-20 snap-center">
             <motion.header className="bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text"
                 initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                 <Text type="bold" classes="text-[20px]">
