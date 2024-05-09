@@ -13,7 +13,6 @@ export const HoverComponent = ({
     children
 }: IComponent) => {
     const [isHover, setHover] = useState(false)
-    const ref = useRef(null);
 
     function onHover() {
         setHover(true)
@@ -25,9 +24,9 @@ export const HoverComponent = ({
 
     return (
         isHover ?
-            React.cloneElement(mouseEnterComponent, { ref: ref, onMouseEnter: onHover, onMouseLeave: onBlur})
+            React.cloneElement(mouseEnterComponent, { onMouseEnter: onHover, onMouseLeave: onBlur})
             :
-            React.cloneElement(children, { ref: ref, onMouseEnter: onHover, onMouseLeave: onBlur })
+            React.cloneElement(children, { onMouseEnter: onHover, onMouseLeave: onBlur })
 
     )
 }

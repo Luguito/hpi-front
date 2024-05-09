@@ -1,62 +1,61 @@
 'use client';
 
-import Text from "../../components/text/text";
+import Text, { H2, H3 } from "../../components/text/text";
 import { motion } from 'framer-motion';
 import { RevealTextAfterSection } from '@/app/animations/animation';
 import CountUp from 'react-countup';
 
 export const ServicesKeysComponent = () => {
     return (
-        <section className="text-center mt-5 mb-20 snap-center">
-            <motion.header className="bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text"
-                initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                <Text type="bold" classes="text-[20px]">
-                    SHARED SERVICES KEY ACHIEVEMENTS
-                </Text>
-            </motion.header>
-
-            <section className="flex justify-between mx-96 py-12 text-center gap-4 mt-9">
-                <motion.article className="flex flex-col items-center justify-center bg-hpi-celeste w-2/6 rounded-3xl h-44" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                    <Text type="bold" classes="text-hpi-blue-light text-[40px]">
-                        {/* <CountUp start={0} end={6700} delay={5}>
-                            {({ countUpRef }) => (
-                                <div>
-                                    <span ref={countUpRef} />
-                                </div>
-                            )}
-                        </CountUp> */}
-                    </Text>
-                    <Text type="medium" classes="text-hpi-blue-light text-[20px]">
+        <section className="text-center mt-5">
+            <H2 color="text-hpi-blue-dark">
+                SHARED SERVICES KEY ACHIEVEMENTS
+            </H2>
+            <section className="flex flex-col justify-between items-center py-12 text-center gap-4 mt-9">
+                <motion.article viewport={{ once: true }} className="flex justify-between gap-10 items-center h-44" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+                    <CountUp start={0} end={6700} delay={5}>
+                        {({ countUpRef }) => (
+                            // @ts-ignore
+                            <p className="text-hpi-blue-light text-[80px] font-extrabold" ref={countUpRef} ></p>
+                        )}
+                    </CountUp>
+                    <H3 color="text-hpi-blue-light font-bold">
                         Managed Vessels/yr
-                    </Text>
+                    </H3>
                 </motion.article>
-                <motion.article className="flex flex-col items-center justify-center bg-hpi-celeste w-2/6 rounded-3xl h-44" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                    <Text type="bold" classes="text-hpi-blue-light text-[40px] flex">
-                        {/* <CountUp start={0} end={8} delay={5}>
-                            {({ countUpRef }) => (
-                                <div>
-                                    <span ref={countUpRef} />
-                                </div>
-                            )}
-                        </CountUp>Million */}
-                    </Text>
-                    <Text type="medium" classes="text-hpi-blue-light text-[20px]">
+                <hr />
+                <motion.article viewport={{ once: true }} className="flex justify-between gap-10 items-center h-44" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+                    <CountUp start={0} end={8} delay={5}>
+                        {({ countUpRef }) => (
+                            <>
+                                {/* @ts-ignore */}
+                                <p className="text-hpi-blue-light text-[80px] font-extrabold">
+                                    <span ref={countUpRef}></span>
+                                    Million
+                                </p>
+                            </>
+                        )}
+                    </CountUp>
+                    <H3 color="text-hpi-blue-light font-bold">
                         TEUs/yr
-                    </Text>
+                    </H3>
                 </motion.article>
-                <motion.article className="flex flex-col items-center justify-center bg-hpi-celeste w-2/6 rounded-3xl h-44" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                    <Text type="bold" classes="text-hpi-blue-light text-[40px] flex">
-                        {/* <CountUp start={0} end={50} delay={5}>
-                            {({ countUpRef }) => (
-                                <div>
-                                    <span ref={countUpRef} />
-                                </div>
-                            )}
-                        </CountUp>% */}
-                    </Text>
-                    <Text type="medium" classes="text-hpi-blue-light text-[20px]">
+                <hr />
+                <motion.article viewport={{ once: true }} className="flex justify-between gap-10 items-center h-44" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+                    <CountUp start={0} end={50} delay={5}>
+                        {({ countUpRef }) => (
+                            <>
+                                {/* @ts-ignore */}
+                                <p className="text-hpi-blue-light text-[80px] font-extrabold">
+                                    <span ref={countUpRef}></span>
+                                    %
+                                </p>
+                            </>
+                        )}
+                    </CountUp>
+                    <H3 color="text-hpi-blue-light font-bold">
                         More Efficient
-                    </Text>
+                    </H3>
                 </motion.article>
             </section>
         </section>

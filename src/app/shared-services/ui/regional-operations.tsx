@@ -6,52 +6,48 @@ import ROC4 from '../../../../public/shared-services/ROC 4.png'
 import ROC5 from '../../../../public/shared-services/ROC 5.png'
 
 import { motion } from 'framer-motion';
-import Text from '../../components/text/text';
+import Text, { B2, H2, H3 } from '../../components/text/text';
 import Image from 'next/image';
 import { RevealFromLeftToRight, RevealFromRightToLeft, RevealTextAfterSection } from '@/app/animations/animation';
 
 export const Regional = () => {
     return (
-        <section className="mt-40 mb-32 snap-start">
-            <header className="text-center">
-                <motion.span className="text-hpi-blue-light text-[16px] mb-4" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                    Our Framework
-                </motion.span>
-                <motion.div initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                    <Text type="bold" classes="text-[30px] bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
-                        REGIONAL OPERATIONS CENTRE AND <br />
-                        NATIONAL OPERATIONS CENTRE
-                    </Text>
-                </motion.div>
+        <section className="mt-40 mb-32 mx-80">
+            <header className="text-left">
+                <H3 color="text-hpi-blue-light font-medium">Our Framework</H3>
+                <H2 color="text-gradient">
+                    REGIONAL OPERATIONS CENTRE AND <br />
+                    NATIONAL OPERATIONS CENTRE
+                </H2>
             </header>
-            <section className="mb-10 text-center px-96 snap-center">
-                <motion.p className="text-[16px] text-[#494949] mt-12 text-center" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+            <section className="bg-hpi-white p-20 rounded-3xl mt-8">
+                <B2 color="font-normal text-hpi-body-grey">
                     Our <b>Regional Operations Centre (ROC)</b> embodies our commitment to global collaboration and standardised, high-quality services.
-                    The centre was empowered by a state-of-the-art TOS to ensure consistent services to be delivered to any terminal worldwide. 
+                    The centre was empowered by a state-of-the-art TOS to ensure consistent services to be delivered to any terminal worldwide.
                     Our <b>National Operations Centre (NOC)</b> is a spin-off of ROC, but in a country-level scale.
                     With the same DNA of ROC, NOC consolidates all operational planning, control and back-office functions to all Hutchison Ports terminals
-                </motion.p>
-            </section>
-            <section className="flex flex-col justify-center items-center mt-12">
-                <motion.article initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                    <Image src={ROC1} alt="Image" width={1150} />
-                </motion.article>
-                {/* @ts-ignore */}
-                <motion.section className="flex gap-10" initial="hidden" whileInView="visible" variants={{ ...RevealTextAfterSection, transition: { ...RevealTextAfterSection.visible.transition, delay: .4 } }}>
-                    <motion.article initial="hidden" whileInView="visible" variants={RevealFromLeftToRight}>
-                        <Image src={ROC2} alt="Image" width={355} />
-                    </motion.article>
+                </B2>
+                <section className="flex flex-col justify-center items-center mt-12">
                     <motion.article initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                        <Image src={ROC3} alt="Image" width={355} />
+                        <Image src={ROC1} alt="Image" width={1150} />
                     </motion.article>
-                    <motion.article initial="hidden" whileInView="visible" variants={RevealFromRightToLeft}>
-                        <Image src={ROC4} alt="Image" width={355} />
-                    </motion.article>
-                </motion.section>
+                    {/* @ts-ignore */}
+                    <motion.section className="flex gap-10" initial="hidden" whileInView="visible" variants={{ ...RevealTextAfterSection, transition: { ...RevealTextAfterSection.visible.transition, delay: .4 } }}>
+                        <motion.article initial="hidden" whileInView="visible" variants={RevealFromLeftToRight}>
+                            <Image src={ROC2} alt="Image" width={355} />
+                        </motion.article>
+                        <motion.article initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+                            <Image src={ROC3} alt="Image" width={355} />
+                        </motion.article>
+                        <motion.article initial="hidden" whileInView="visible" variants={RevealFromRightToLeft}>
+                            <Image src={ROC4} alt="Image" width={355} />
+                        </motion.article>
+                    </motion.section>
+                </section>
+                <motion.footer className='flex justify-center mt-5' initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+                    <Image src={ROC5} alt="Image" width={1150} />
+                </motion.footer>
             </section>
-            <motion.footer className='flex justify-center mt-5' initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                <Image src={ROC5} alt="Image" width={1150} />
-            </motion.footer>
         </section>
     )
 }

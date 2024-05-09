@@ -27,7 +27,7 @@ function map() {
         panY: "none",
         wheelX: 'none',
         wheelY: 'none',
-        projection: am5map.geoMercator(),
+        projection: am5map.geoNaturalEarth1(),
     }));
 
 
@@ -88,13 +88,13 @@ function map() {
     pointSeries.bullets.push(function (root, series, item) {
         let circle = am5.Circle.new(root, {
             radius: 5,
-            fill: am5.color("#FFFFFF"),
-            stroke: am5.color("#002E6D"),
+            fill: am5.color("#FFC627"),
+            stroke: am5.color("#FFFFFF"),
             cursorOverStyle: "pointer",
-            strokeWidth: 1,
+            strokeWidth: 2,
             showTooltipOn: 'hover',
             tooltipHTML: `
-            <section style="text-align: center; width: 35%;">
+            <section style="text-align: center; width: 45%;">
                 <header style="color: #002E6D; font-weight: semi-bold;">
                     <b style="font-size: 16px;">{title}</b>
                 </header>
@@ -117,7 +117,10 @@ function map() {
         // china?.bullets?.at(0).propertyFields.showTooltipOn = 'showTooltip'
     })
     pointSeries.data.setAll(cities);
-    pointSeries.getTooltip()?.setAll({ width: am5.percent(18) })
+    pointSeries.getTooltip()?.setAll({ width: am5.percent(38), getFillFromSprite: false })
+    pointSeries.getTooltip()?.get('background')?.setAll({ 
+        fill: am5.color('#FFFFFF') 
+    })
     // Make stuff animate on load
     chart.appear(1000, 100)
 }
@@ -141,7 +144,7 @@ export const Maps = () => {
 
     return (
         <>
-            <div id="chartdiv" ref={ref} className="h-[40em]"></div>
+            <div id="chartdiv" ref={ref} className="h-[30em]"></div>
         </>
     )
 }

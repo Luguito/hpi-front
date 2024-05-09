@@ -1,7 +1,5 @@
 'use client'
 /* Imports */
-import am5_index from "@amcharts/amcharts5/index";
-import am5_map from "@amcharts/amcharts5/map";
 import am5geodata_worldLow from "@amcharts/amcharts5-geodata/worldLow";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 import * as am5 from "@amcharts/amcharts5";
@@ -160,13 +158,11 @@ function map(trigger: any) {
         centerY: am5.p50,
     }));
 
-    slider.startGrip.get('background')?.set('fill', am5.color('#002E6D'))
+    slider.startGrip.get('background')?.set('fill', am5.color('#009BDE'))
     slider.thumb.setAll({
         fill: am5.color('#FFFF'),
     })
-    slider.startGrip.events.on('focus', function (e) {
-        console.log("AGARRADO")
-    })
+
     slider.startGrip.set("label", am5.Label.new(root, {
         text: firstYear + "",
         paddingTop: 0,
@@ -196,23 +192,16 @@ function map(trigger: any) {
         
         updateCountries(year);
     })
-    // slider.events.on("released", function (e) {
-    //     let year = firstYear + Math.round(slider.get("start", 0) * (lastYear - firstYear));
-
-    //     console.log(year)
-    //     updateCountries(year);
-    // });
 
     function updateCountries(year: any) {
         // @ts-ignore
         am5.object.each(years[year], function (joinYear, country) {
             if (!pointSeries.data.contains(country)) {
-                console.log(year)
                 pointSeries.data.push(country)
                 trigger(year)
             } else {
-                console.log(year)
                 pointSeries.data.removeValue(country)
+                trigger(year)
             }
         })
     }
@@ -220,10 +209,10 @@ function map(trigger: any) {
     function createPoint() {
         let circle = am5.Circle.new(root, {
             radius: 5,
-            fill: am5.color("#009BDE"),
+            fill: am5.color("#FFC627"),
             stroke: am5.color("#FFFFFF"),
             cursorOverStyle: "pointer",
-            strokeWidth: 1,
+            strokeWidth: 2,
         });
 
         return am5.Bullet.new(root, { sprite: circle });

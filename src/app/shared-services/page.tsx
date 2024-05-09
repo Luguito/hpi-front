@@ -1,5 +1,5 @@
 import Button from "../components/button/button";
-import Text from "../components/text/text";
+import Text, { B1, B2, H1, H2, H3 } from "../components/text/text";
 import VideoContainer from "../components/video-container/video-container";
 import Image from 'next/image'
 import Group from '../../../public/Group 62.png'
@@ -7,10 +7,10 @@ import ROSA from '../../../public/home/Shared.svg'
 
 
 
-import DOCUMENT from '../../../public/shared-services/document-signed.svg';
-import COMPARATION from '../../../public/shared-services/scale-comparison.svg';
-import PLAN from '../../../public/shared-services/plan.svg';
-import FTP from '../../../public/shared-services/ftp.svg';
+import DOCUMENT from '../../../public/shared-services/document-signed.png';
+import COMPARATION from '../../../public/shared-services/grow.svg';
+import PLAN from '../../../public/shared-services/ship.png';
+import FTP from '../../../public/shared-services/stack.png';
 
 
 
@@ -30,37 +30,34 @@ export default function HomePage() {
         <section>
             {/* Video Section */}
             <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Shared%20Services%20Banner.mp4" bgColor="">
-                <p className="absolute text-center text-[60px] text-hpi-white font-bold text-shadow-md">
+                <H1 color="absolute text-center text-[60px] text-hpi-white font-bold text-shadow-md">
                     UNLEASHING GROWTH <br />
                     WITH SHARED SERVICES
-                </p>
+                </H1>
             </VideoContainer>
 
             {/* Description */}
             <RevealOnScrollComponent>
                 <section className="text-center mt-16 mb-8 snap-center">
-                    <article>
-                        <Text type="bold" classes="text-[30px] bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
-                            HUTCHISON PORTS SHARED SERVICES
-                        </Text>
-                        <Text type="medium" classes="text-[18px] text-hpi-blue-dark">
-                            Our Regional Operations Centre-as-a-Service (ROC) approach integrates <br />
-                            standardisation, digitalisation, and automation of port terminal operations.
-                        </Text>
-                    </article>
+                    <H2 color="text-gradient">
+                        HUTCHISON PORTS SHARED SERVICES
+                    </H2>
+                    <B1 color="text-hpi-blue-dark font-medium">
+                        Our Regional Operations Centre-as-a-Service (ROC) approach integrates standardisation, <br />
+                        digitalisation, and automation of port terminal operations.
+                    </B1>
                 </section>
             </RevealOnScrollComponent>
 
             {/* Efficiency */}
-            <RevealOnScrollComponent>
+            {/* @ts-ignore  */}
+            <RevealOnScrollComponent className="flex justify-center">
                 <EfficiencyComponent />
             </RevealOnScrollComponent>
-
-            {/* Key Achievements */}
+            {/* ROC NOC */}
             <RevealOnScrollComponent>
-                <ServicesKeysComponent />
+                <Regional />
             </RevealOnScrollComponent>
-
             {/* RaaS Model */}
             <RevealOnScrollComponent>
                 <RaasModelComponent />
@@ -68,74 +65,74 @@ export default function HomePage() {
 
             {/* Core Services */}
             <RevealOnScrollComponent>
-                <section className="bg-hpi-blue-dark mt-36 mb-40 snap-center">
-                    <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Shared%20services%20Radar.mp4" bgColor="hpi-opacity-video">
-                        <section className="absolute top-40">
-                            <header className="text-center snap-start mb-40">
-                                <Text type="bold" classes="text-[30px] text-hpi-white">
-                                    OUR CORE SERVICES
-                                </Text>
-                                <Text type="medium" classes="text-[16px] text-hpi-white">
-                                    Our ROC model encompasses four core components, leveraging Hutchison Ports’ operational best practices and <br />
-                                    cutting-edge technology to ensure an unparalleled and uncompromised service level to our shipping community:
-                                </Text>
-                            </header>
-                            <section className="grid grid-cols-2 grid-rows-2 justify-center items-center gap-48 snap-center">
-                                <section className="flex gap-4 items-start rounded-md">
-                                    <Image src={DOCUMENT} alt="" width={50} className="mt-[-0.5em]"/>
-                                    <article className="flex flex-col">
-                                        <Text type="bold" classes="text-[20px] text-hpi-white flex items-center">
-                                            DOCUMENT-MADE-EASY
-                                        </Text>
-                                        <p className="text-[16px] text-white font-normal mt-7">
-                                            Centralised documentation centre powered <br />
-                                            by AI, streamlining communications with <br />
-                                            the logistics community.
-                                        </p>
-                                    </article>
-                                </section>
-                                <section className="flex gap-4 items-start rounded-md">
-                                    <Image src={COMPARATION} alt="" width={50} className="mt-[-0.5em]"/>
-                                    <article className="flex flex-col">
-                                        <Text type="bold" classes="text-[20px] text-hpi-white flex items-center">
-                                            BERTH-LIFE-BALANCE
-                                        </Text>
-                                        <p className="text-[16px] text-white font-normal mt-7">
-                                        Optimising vessel traffic with our <br />
-                                            intelligent berth planning system <br />
-                                            (Veronica).
-                                        </p>
-                                    </article>
-                                </section>
-                                <section className="flex gap-4 items-start rounded-md">
-                                    <Image src={PLAN} alt="" width={50} className="mt-[-0.5em]"/>
-                                    <article className="flex flex-col">
-                                        <Text type="bold" classes="text-[20px] text-hpi-white flex items-center">
-                                            LET-IT-STOW
-                                        </Text>
-                                        <p className="text-[16px] text-white font-normal mt-7">
-                                            Enhancing vessel stowage planning <br />
-                                            for operational efficiency without <br />
-                                            compromising safety.
-                                        </p>
-                                    </article>
-                                </section>
-                                <section className="flex gap-4 items-start rounded-md">
-                                    <Image src={FTP} alt="" width={50} className="mt-[-0.5em]"/>
-                                    <article className="flex flex-col">
-                                        <Text type="bold" classes="text-[20px] text-hpi-white flex items-center">
-                                            STACK-BY-STACK
-                                        </Text>
-                                        <p className="text-[16px] text-white font-normal mt-7">
-                                            Utilising real-time data-driven <br />
-                                            algorithms for optimal yard <br />
-                                            resource use.
-                                        </p>
-                                    </article>
+                <section className="mt-36 mb-40 mx-80">
+                    <header className="text-left snap-start mb-10">
+                        <H2 color="text-gradient">OUR CORE SERVICES</H2>
+                        <B1 color="text-hpi-blue-dark font-medium">
+                            Our ROC model encompasses four core components, leveraging <br />
+                            Hutchison Ports’ operational best practices and cutting-edge technology:
+                        </B1>
+                    </header>
+                    <section className="bg-hpi-blue-dark rounded-3xl h-full pb-10">
+                        <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Shared%20services%20Radar.mp4" bgColor="hpi-opacity-video">
+                            <section className="absolute top-24">
+                                <section className="grid grid-cols-2 grid-rows-2 justify-center items-center gap-x-32 gap-y-20">
+                                    <section className="flex flex-col items-center gap-4 rounded-md">
+                                        <Image src={DOCUMENT} alt="" className="mt-[-0.5em]" />
+                                        <article className="flex flex-col text-center">
+                                            <H3 color="font-bold text-hpi-white">
+                                                DOCUMENT-MADE-EASY
+                                            </H3>
+                                            <B2 color="font-medium text-hpi-white">
+                                                Centralised documentation centre powered <br />
+                                                by AI, streamlining communications with <br />
+                                                the logistics community.
+                                            </B2>
+                                        </article>
+                                    </section>
+                                    <section className="flex flex-col items-center gap-4 rounded-md">
+                                        <Image src={PLAN} alt="" className="mt-[-0.5em]" />
+                                        <article className="flex flex-col text-center">
+                                            <H3 color="font-bold text-hpi-white">
+                                                LET-IT-STOW
+                                            </H3>
+                                            <B2 color="font-medium text-hpi-white">
+                                                Enhancing vessel stowage planning <br />
+                                                for operational efficiency without <br />
+                                                compromising safety.
+                                            </B2>
+                                        </article>
+                                    </section>
+                                    <section className="flex flex-col items-center gap-4  rounded-md">
+                                        <Image src={COMPARATION} alt="" className="mt-[-0.5em]" />
+                                        <article className="flex flex-col text-center">
+                                            <H3 color="font-bold text-hpi-white">
+                                                BERTH-LIFE-BALANCE
+                                            </H3>
+                                            <B2 color="font-medium text-hpi-white">
+                                                Optimising vessel traffic with our <br />
+                                                intelligent berth planning system <br />
+                                                (Veronica).
+                                            </B2>
+                                        </article>
+                                    </section>
+                                    <section className="flex flex-col gap-4 items-center rounded-md">
+                                        <Image src={FTP} alt="" className="mt-[-0.5em]" />
+                                        <article className="flex flex-col text-center">
+                                            <H3 color="font-bold text-hpi-white">
+                                                STACK-BY-STACK
+                                            </H3>
+                                            <B2 color="font-medium text-hpi-white">
+                                                Utilising real-time data-driven <br />
+                                                algorithms for optimal yard <br />
+                                                resource use.
+                                            </B2>
+                                        </article>
+                                    </section>
                                 </section>
                             </section>
-                        </section>
-                    </VideoContainer>
+                        </VideoContainer>
+                    </section>
                 </section>
             </RevealOnScrollComponent>
 
@@ -145,24 +142,17 @@ export default function HomePage() {
                 <InnovativeSection />
             </RevealOnScrollComponent>
 
-            {/* ROC NOC */}
-            <RevealOnScrollComponent>
-                <Regional />
-            </RevealOnScrollComponent>
-
             {/* Journey */}
             <RevealOnScrollComponent>
-                <section className="snap-center mt-36">
-                    <header className="text-center">
-                        <Text type="bold" classes="text-[30px] bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
-                            OUR JOURNEY TO EXCELLENCE
-                        </Text>
-                        <Text type="medium" classes="text-[18px] text-hpi-blue-dark mt-3">
+                <section className="mt-36 mx-80">
+                    <header className="text-left">
+                        <H2 color="text-gradient">OUR JOURNEY TO EXCELLENCE</H2>
+                        <B1 color="text-hpi-blue-dark font-medium">
                             From ideation to expansion, our journey underscores a relentless <br />
                             pursuit of redefining terminal operations.
-                        </Text>
+                        </B1>
                     </header>
-                    <section className="bg-hpi-celeste mx-72 py-16 px-36 rounded-lg mt-36" id="content">
+                    <section className="bg-hpi-white py-16 px-36 rounded-3xl mt-20" id="content">
                         <TimelineComponent />
                     </section>
                 </section>
@@ -170,15 +160,13 @@ export default function HomePage() {
 
             {/* MAPA */}
             <RevealOnScrollComponent>
-                <section className="mt-24 mb-20 bg-hpi-blue-dark snap-center">
-                    <header className="text-center py-[4.8em]">
-                        <Text type="bold" classes="text-[30px] text-hpi-white">
-                            SUCCESS SHOWCASES
-                        </Text>
-                        <p className="text-[16px] text-hpi-white mt-4 font-medium">
-                            Our success stories across the globe—from Karachi to Hong Kong and beyond, <br />
-                            illustrate the transformative impact of our ROC solutions.
-                        </p>
+                <section className="mt-24 mb-20 bg-hpi-blue-dark mx-80 rounded-3xl">
+                    <header className="text-left p-[4.8em]">
+                        <H2 color="text-hpi-white">SUCCESS SHOWCASES</H2>
+                        <B2 color="text-hpi-white font-medium mt-5">
+                            Our success stories across the globe, from Karachi to Hong Kong and beyond, illustrate the transformative impact
+                            of our ROC solutions.
+                        </B2>
                     </header>
                     <section className="pb-12">
                         <Maps />

@@ -28,7 +28,7 @@ const VideoPlayer = ({ videoSrc, bgColor }: { videoSrc: string, bgColor: string 
       {
         isLoading && <Image src={LoadingImage} alt="Loading" priority={true} />
       }
-      <video width="auto" height="100" autoPlay loop muted playsInline className={`${bgColor ? 'opacity-90' : ''} `}
+      <video width="auto" height="100" autoPlay loop muted playsInline className={`${bgColor ? 'opacity-90 rounded-3xl' : ''} `}
         onLoadedMetadata={handleLoadedData}
         onLoadedData={handleLoadedData}
         onLoadStart={handleLoadStart}>
