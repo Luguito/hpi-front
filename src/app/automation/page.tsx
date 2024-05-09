@@ -5,7 +5,7 @@ import VideoContainer from "../components/video-container/video-container";
 import { MapSlider } from "./ui/mapSlider";
 import Image from 'next/image'
 import Arrow from "../../../public/automation/blue-arrow.svg";
-import { U1999I } from "./ui/info-map";
+import { ContainerDatesInformation } from "./ui/info-map";
 
 
 const Innovation = () => {
@@ -151,13 +151,17 @@ const Collaboration = () => {
 
 export default function AutomationPage() {
     const [currentSection, setSection] = useState('innovation');
-    const [currentSectionMap, setSectionMap] = useState("U1997I")
+    const [currentSectionMap, setSectionMap] = useState("1991")
     const sections: Record<string, any> = {
         'innovation': Innovation,
         'risk': Risk,
         'strategy': Strategy,
         'people': People,
         'collab': Collaboration
+    }
+
+    function changeSectionByMap(x: any) {
+        setSectionMap(x)
     }
 
     const CurrentSection = sections[currentSection];
@@ -207,12 +211,11 @@ export default function AutomationPage() {
                         <h2 className="text-hpi-blue-dark text-[30px] font-bold">OUR FORWARD-THINKING PLANS</h2>
                     </header>
                     <section>
-                        <MapSlider changeSection={setSectionMap}/>
+                        <MapSlider changeSection={changeSectionByMap} />
                     </section>
                 </section>
                 <section className="bg-hpi-celeste rounded-lg h-[30em] my-10 px-16 py-20">
-                    <U1999I />
-                    {currentSectionMap}
+                    <ContainerDatesInformation date={currentSectionMap} />
                 </section>
             </section>
         </section>

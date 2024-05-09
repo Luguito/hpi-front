@@ -1,3 +1,6 @@
+'use client'
+import { useEffect, useState } from "react"
+
 export const U1999I = () => {
     return (
         <>
@@ -28,7 +31,7 @@ export const U1995I = () => {
 export const U2007I = () => {
     return (
         <>
-            Hutchison Ports ECT Euromax sees the implementation of Automated Stacking Cranes, 
+            Hutchison Ports ECT Euromax sees the implementation of Automated Stacking Cranes,
             Automated Guided Vehicles, and Remote-Controlled manual truck handling.
         </>
     )
@@ -94,5 +97,30 @@ export const U2030I = () => {
     // 6 images
     return (
         <></>
+    )
+}
+
+export const ContainerDatesInformation = ({ date }: any) => {
+    const hashMap = {
+        '1991': U1999I,
+        '1993': U1993I,
+        '1995': U1995I,
+        '2007': U2007I,
+        '2012': U2012I,
+        '2013': U2013I,
+        '2015': U2015I,
+        '2018': U2018I,
+        '2019': U2019I,
+        '2020': U2020I,
+        '2021': U2021I,
+        '2022': U2022I,
+        '2023': U2023I,
+        '2030': U2030I
+    }
+
+    // @ts-ignore
+    const CurrentSection = hashMap[date];
+    return (
+        <CurrentSection />
     )
 }
