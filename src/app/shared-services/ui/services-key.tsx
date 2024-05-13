@@ -4,6 +4,7 @@ import Text, { H2, H3 } from "../../components/text/text";
 import { motion } from 'framer-motion';
 import { RevealTextAfterSection } from '@/app/animations/animation';
 import CountUp from 'react-countup';
+import { Counter } from "@/app/components/counter/counter";
 
 export const ServicesKeysComponent = () => {
     return (
@@ -12,19 +13,21 @@ export const ServicesKeysComponent = () => {
                 SHARED SERVICES KEY ACHIEVEMENTS
             </H2>
             <section className="flex flex-col justify-between items-center py-12 text-center gap-4 mt-9">
-                <motion.article viewport={{ once: true }} className="flex justify-between gap-10 items-center h-44" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                    <CountUp start={0} end={6700} delay={5}>
+                <motion.article viewport={{ once: true }} className="flex gap-20 justify-evenly items-center h-44 w-[100%]" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+                    <CountUp start={0} end={6700} delay={2}>
                         {({ countUpRef }) => (
                             // @ts-ignore
                             <p className="text-hpi-blue-light text-[80px] font-extrabold" ref={countUpRef} ></p>
                         )}
                     </CountUp>
-                    <H3 color="text-hpi-blue-light font-bold">
-                        Managed Vessels/yr
-                    </H3>
+                    <div className="text-center">
+                        <H3 color="text-hpi-blue-light font-bold">
+                            Managed Vessels/yr
+                        </H3>
+                    </div>
                 </motion.article>
-                <hr />
-                <motion.article viewport={{ once: true }} className="flex justify-between gap-10 items-center h-44" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+                <hr className="border-b-2 w-[90%] border-hpi-grey-light rounded-[80%] opacity-75" />
+                <motion.article viewport={{ once: true }} className="flex gap-36 items-center justify-evenly h-44 w-[100%]" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                     <CountUp start={0} end={8} delay={5}>
                         {({ countUpRef }) => (
                             <>
@@ -36,12 +39,14 @@ export const ServicesKeysComponent = () => {
                             </>
                         )}
                     </CountUp>
-                    <H3 color="text-hpi-blue-light font-bold">
-                        TEUs/yr
-                    </H3>
+                    <div className="text-left w-1/4">
+                        <H3 color="text-hpi-blue-light font-bold">
+                            TEUs/yr
+                        </H3>
+                    </div>
                 </motion.article>
-                <hr />
-                <motion.article viewport={{ once: true }} className="flex justify-between gap-10 items-center h-44" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+                <hr className="border-b-2 w-[90%] border-hpi-grey-light rounded-[80%] opacity-75" />
+                <motion.article viewport={{ once: true }} className="flex gap-20 items-center  justify-evenly h-44 w-[100%]" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                     <CountUp start={0} end={50} delay={5}>
                         {({ countUpRef }) => (
                             <>
@@ -53,9 +58,11 @@ export const ServicesKeysComponent = () => {
                             </>
                         )}
                     </CountUp>
-                    <H3 color="text-hpi-blue-light font-bold">
-                        More Efficient
-                    </H3>
+                    <div className="text-center w-1/4">
+                        <H3 color="text-hpi-blue-light font-bold">
+                            More Efficient
+                        </H3>
+                    </div>
                 </motion.article>
             </section>
         </section>

@@ -1,6 +1,6 @@
 'use client';
 import EFFICIENCY from '../../../../public/shared-services/efficiency.png';
-import PLANET from '../../../../public/shared-services/planet.png';
+import PLANET from '../../../../public/shared-services/planet.svg';
 import Text, { B1, H2 } from "../../components/text/text";
 import Image from 'next/image'
 import { motion } from 'framer-motion';
@@ -24,7 +24,9 @@ export const EfficiencyComponent = () => {
                         <b>value generation.</b>
                     </B1>
                 </section>
-                <motion.article className="py-24 rounded-3xl" initial="hidden" whileInView="visible" variants={RevealFromRightToLeft}>
+                <motion.article className="py-24 rounded-3xl"
+                    variants={RevealFromRightToLeft}
+                    viewport={{ once: true }}>
                     <Image src={PLANET} width={400} alt="PLANET " />
                 </motion.article>
             </section>

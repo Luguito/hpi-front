@@ -16,8 +16,38 @@ import { B2, H3, H5 } from '@/app/components/text/text';
 export const TimelineComponent = () => {
 
     useEffect(() => {
+        let index = 0;
         let observer = new IntersectionObserver(entries => {
-            console.log(entries)
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+
+                let icon = entry.target.firstChild;
+                let parent = entry.target.parentElement as HTMLElement;
+
+                // Change color icon.
+                (icon as HTMLElement).style.backgroundColor = "#002E6D";
+
+                const regex = /after:h-\[(100|\d{1,2}(?:\.\d+)?)(?:\.\d+)?%\]/;
+                const parentClassList = parent.classList;
+                const currentClass = Array.from(parentClassList).find(cls => regex.test(cls));
+
+
+                function replace() {
+                    let x = [33, 40, 50, 85, 85]
+
+                    console.log(`after:h-[${x[index]}%]`)
+
+                    parentClassList.replace(currentClass as string, `after:h-[${x[index]}%]`);
+                }
+
+                if (currentClass) {
+                    observer.unobserve(entry.target)
+                    // replace()
+                    // index++
+                }
+            })
+        }, {
+            threshold: 0.5
         })
 
         let element = document.querySelectorAll('.vertical-timeline-element');
@@ -28,21 +58,20 @@ export const TimelineComponent = () => {
         })
     }, [])
 
-    const iconStyle = { background: '#EFEFEF', color: '#fff', boxShadow: 'none', transform: 'translate(-4.5em, 2em)', width: '7em', height: '7em', display: 'flex', justifyContent: 'center', alignItems: 'center' };
+    const iconStyle = { background: '#EFEFEF', color: '#fff', boxShadow: 'none', transform: 'translate(-4.5em, 2em)', width: '7em', height: '7em', display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 1 };
     const contentStyle = { background: 'transparent', boxShadow: 'none', padding: '1em 2em' };
     return (
         <>
             <VerticalTimeline animate={false} layout="1-column-left" lineColor="#EBEBEB"
                 className="bg-transparent p-0 pl-10 m-0 w-full max-w-max 
                 before:top-8 before:left-[1.4em] before:h-[85%] 
-                after:top-8 after:left-[1.4em] after:h-[90%] after:w-[5px] after:absolute after:z-[-1]">
+                after:top-8 after:left-[1.4em] after:h-[85%] after:w-[5px] after:absolute after:bg-hpi-blue-dark after:transition-all">
                 <VerticalTimelineElement
                     iconStyle={iconStyle}
                     contentStyle={contentStyle}
                     contentArrowStyle={{ border: 'none' }}
                     icon={
                         <Image src={Icon1} alt="" />
-
                     }
                 >
                     <section>
@@ -124,6 +153,7 @@ export const TimelineComponent = () => {
                     <section>
                         <article className="flex flex-col">
                             <H5 color="text-hpi-blue-light font-medium">Future Directions</H5>
+                            
                             <p className='text-[50px] font-extrabold text-hpi-blue-dark mt-0'>2024</p>
                         </article>
                         <B2 color="font-medium text-hpi-body-grey">

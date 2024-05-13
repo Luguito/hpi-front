@@ -8,7 +8,7 @@ import Image from 'next/image';
 import Text, { H3 } from '../../components/text/text';
 
 
-const STYLE = "flex items-center justify-center shadow-custom rounded-2xl gap-10 py-40 h-72 bg-hpi-white relative";
+const STYLE = "flex items-center justify-center shadow-custom rounded-2xl gap-10 py-40 h-72 relative";
 const STYLE2 = "flex items-center justify-center shadow-custom rounded-2xl gap-10 py-40 h-72 bg-hpi-blue-dark text-hpi-white relative";
 
 export const PeaceSolution = () => {

@@ -8,7 +8,7 @@ import ROSA from '../../../public/home/Shared.svg'
 
 
 import DOCUMENT from '../../../public/shared-services/document-signed.png';
-import COMPARATION from '../../../public/shared-services/grow.svg';
+import COMPARATION from '../../../public/shared-services/balance.svg';
 import PLAN from '../../../public/shared-services/ship.png';
 import FTP from '../../../public/shared-services/stack.png';
 
@@ -91,7 +91,7 @@ export default function HomePage() {
                                         </article>
                                     </section>
                                     <section className="flex flex-col items-center gap-4 rounded-md">
-                                        <Image src={PLAN} alt="" className="mt-[-0.5em]" />
+                                        <Image src={PLAN} alt="" className="mt-[-2em]" />
                                         <article className="flex flex-col text-center">
                                             <H3 color="font-bold text-hpi-white">
                                                 LET-IT-STOW
@@ -117,7 +117,7 @@ export default function HomePage() {
                                         </article>
                                     </section>
                                     <section className="flex flex-col gap-4 items-center rounded-md">
-                                        <Image src={FTP} alt="" className="mt-[-0.5em]" />
+                                        <Image src={FTP} alt="" className="mt-[0.1em]" />
                                         <article className="flex flex-col text-center">
                                             <H3 color="font-bold text-hpi-white">
                                                 STACK-BY-STACK

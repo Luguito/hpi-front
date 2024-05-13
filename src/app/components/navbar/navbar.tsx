@@ -17,7 +17,6 @@ export default function Navbar() {
         { name: 'AUTOMATION', link: '/automation' },
         { name: 'SHARED SERVICES', link: '/shared-services' },
         { name: 'DIGITAL SOLUTIONS', link: '/digital-solutions' },
-        { name: 'CONTACT US', link: '/' },
     ]
 
     useEffect(() => {
@@ -58,6 +57,9 @@ export default function Navbar() {
                             </Link>
                         ))
                     }
+                    <p className={`text-[14px] text-hpi-blue-dark cursor-pointer font-medium`}>
+                        CONTACT US
+                    </p>
                 </article>
                 <article>
                     {/* <Text type="medium" classes="text-[14px] text-hpi-blue-dark">EN</Text> */}

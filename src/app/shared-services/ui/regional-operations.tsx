@@ -21,7 +21,7 @@ export const Regional = () => {
                 </H2>
             </header>
             <section className="bg-hpi-white p-20 rounded-3xl mt-8">
-                <B2 color="font-normal text-hpi-body-grey">
+                <B2 color="font-medium text-hpi-body-grey">
                     Our <b>Regional Operations Centre (ROC)</b> embodies our commitment to global collaboration and standardised, high-quality services.
                     The centre was empowered by a state-of-the-art TOS to ensure consistent services to be delivered to any terminal worldwide.
                     Our <b>National Operations Centre (NOC)</b> is a spin-off of ROC, but in a country-level scale.
@@ -44,7 +44,7 @@ export const Regional = () => {
                         </motion.article>
                     </motion.section>
                 </section>
-                <motion.footer className='flex justify-center mt-5' initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+                <motion.footer className='flex justify-center' initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                     <Image src={ROC5} alt="Image" width={1150} />
                 </motion.footer>
             </section>
