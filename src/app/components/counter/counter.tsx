@@ -1,16 +1,37 @@
 'use client';
-import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
-export const Counter = ({ number }: any) => {
-    const count = useMotionValue(0);
-    const rounded = useTransform(count, Math.round);
+import { LazyMotion, domAnimation, m, useAnimate, useInView, useMotionValue, useTransform } from "framer-motion";
+
+export function ComponentName({ num, next }: any) {
+    const ref = useRef(null);
+
+    const isInView = useInView(ref, {
+        once: true,
+        margin: "0px 0px -100px 0px"
+    });
+
+    const [_, animate] = useAnimate();
+    const startingValue = useMotionValue(0);
+
+    const currentValue = useTransform(startingValue, (value) => (
+        Math.round(value).toLocaleString() + next)
+    );
 
     useEffect(() => {
-        const animation = animate(count, 6700, { duration: 2 });
-        
-    }, []);
+        if (isInView) {
+            animate(startingValue, num, {
+                duration: 5,
+                ease: "circIn"
+            });
+        }
+    }, [animate, isInView, num, startingValue]);
 
-    return <motion.h1>{rounded}</motion.h1>;
+    return (
+        <LazyMotion features={domAnimation}>
+            <m.p className="text-hpi-blue-light text-[80px] font-extrabold" ref={ref}>
+                {currentValue}
+                </m.p>
+        </LazyMotion>
+    );
 }
-// REVISAR ESTO

@@ -4,7 +4,7 @@ import Text, { H2, H3 } from "../../components/text/text";
 import { motion } from 'framer-motion';
 import { RevealTextAfterSection } from '@/app/animations/animation';
 import CountUp from 'react-countup';
-import { Counter } from "@/app/components/counter/counter";
+import { ComponentName } from "@/app/components/counter/counter";
 
 export const ServicesKeysComponent = () => {
     return (
@@ -14,12 +14,7 @@ export const ServicesKeysComponent = () => {
             </H2>
             <section className="flex flex-col justify-between items-center py-12 text-center gap-4 mt-9">
                 <motion.article viewport={{ once: true }} className="flex gap-20 justify-evenly items-center h-44 w-[100%]" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                    <CountUp start={0} end={6700} delay={2}>
-                        {({ countUpRef }) => (
-                            // @ts-ignore
-                            <p className="text-hpi-blue-light text-[80px] font-extrabold" ref={countUpRef} ></p>
-                        )}
-                    </CountUp>
+                    <ComponentName num={6700} next="" />
                     <div className="text-center">
                         <H3 color="text-hpi-blue-light font-bold">
                             MANAGED VESSELS/YR
@@ -28,17 +23,7 @@ export const ServicesKeysComponent = () => {
                 </motion.article>
                 <hr className="border-b-2 w-[90%] border-hpi-grey-light rounded-[80%] opacity-75" />
                 <motion.article viewport={{ once: true }} className="flex gap-36 items-center justify-evenly h-44 w-[100%]" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                    <CountUp start={0} end={8} delay={5}>
-                        {({ countUpRef }) => (
-                            <>
-                                {/* @ts-ignore */}
-                                <p className="text-hpi-blue-light text-[80px] font-extrabold">
-                                    <span ref={countUpRef}></span>
-                                    Million
-                                </p>
-                            </>
-                        )}
-                    </CountUp>
+                    <ComponentName num={8} next="Million" />
                     <div className="text-left w-1/4">
                         <H3 color="text-hpi-blue-light font-bold">
                             TEUS/YR
@@ -47,17 +32,7 @@ export const ServicesKeysComponent = () => {
                 </motion.article>
                 <hr className="border-b-2 w-[90%] border-hpi-grey-light rounded-[80%] opacity-75" />
                 <motion.article viewport={{ once: true }} className="flex gap-20 items-center  justify-evenly h-44 w-[100%]" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                    <CountUp start={0} end={50} delay={5}>
-                        {({ countUpRef }) => (
-                            <>
-                                {/* @ts-ignore */}
-                                <p className="text-hpi-blue-light text-[80px] font-extrabold">
-                                    <span ref={countUpRef}></span>
-                                    %
-                                </p>
-                            </>
-                        )}
-                    </CountUp>
+                    <ComponentName num={50} next="%" />
                     <div className="text-center w-[30%]">
                         <H3 color="text-hpi-blue-light font-bold">
                             MORE EFFICIENT
