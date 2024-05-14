@@ -36,7 +36,7 @@ export const TechSolutionsComponent = () => {
             }
         })
     }
-
+    // @ts-ignore
     const foundDetails = (node: any) => {
         if (node.nodeName !== "DETAILS") return foundDetails(node.parentElement);
 
