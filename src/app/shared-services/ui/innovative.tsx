@@ -71,11 +71,11 @@ export const InnovativeSection = () => {
 
     return (
         <motion.section className="mx-80" initial="hidden" whileInView="visible" variants={RevealSectionInitial}>
-            <header className="text-left">
+            <header className="text-left ml-7">
                 <H2 color="text-gradient">INNOVATIVE TECHNOLOGIES BEHIND ROC</H2>
                 <B1 color="text-hpi-blue-dark font-medium">
-                    Two groundbreaking technologies reinforce ROC’s backbone, pushing the boundaries of <br />
-                    terminal operations and redefining the shipping industry’s standards.
+                    Two groundbreaking technologies reinforce ROC{'’'}s backbone, pushing the boundaries of
+                    terminal operations and redefining the shipping industry{'’'}s standards.
                 </B1>
             </header>
 

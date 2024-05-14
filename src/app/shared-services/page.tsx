@@ -30,7 +30,7 @@ export default function HomePage() {
         <section>
             {/* Video Section */}
             <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Shared%20Services%20Banner.mp4" bgColor="">
-                <H1 color="absolute text-center text-[60px] text-hpi-white font-bold text-shadow-md">
+                <H1 initial="hidden" animate="visible" color="absolute text-center text-[60px] text-hpi-white font-bold text-shadow-md">
                     UNLEASHING GROWTH <br />
                     WITH SHARED SERVICES
                 </H1>
@@ -38,7 +38,7 @@ export default function HomePage() {
 
             {/* Description */}
             <RevealOnScrollComponent>
-                <section className="text-center mt-16 mb-8 snap-center">
+                <section className="text-center mt-16 mb-32 snap-center">
                     <H2 color="text-gradient">
                         HUTCHISON PORTS SHARED SERVICES
                     </H2>
@@ -54,10 +54,12 @@ export default function HomePage() {
             <RevealOnScrollComponent className="flex justify-center">
                 <EfficiencyComponent />
             </RevealOnScrollComponent>
+
+            
             {/* ROC NOC */}
-            <RevealOnScrollComponent>
-                <Regional />
-            </RevealOnScrollComponent>
+            <Regional />
+
+
             {/* RaaS Model */}
             <RevealOnScrollComponent>
                 <RaasModelComponent />
@@ -66,7 +68,7 @@ export default function HomePage() {
             {/* Core Services */}
             <RevealOnScrollComponent>
                 <section className="mt-36 mb-40 mx-80">
-                    <header className="text-left snap-start mb-10">
+                    <header className="text-left snap-start mb-10 ml-7">
                         <H2 color="text-gradient">OUR CORE SERVICES</H2>
                         <B1 color="text-hpi-blue-dark font-medium">
                             Our ROC model encompasses four core components, leveraging <br />
@@ -145,7 +147,7 @@ export default function HomePage() {
             {/* Journey */}
             <RevealOnScrollComponent>
                 <section className="mt-36 mx-80">
-                    <header className="text-left">
+                    <header className="text-left ml-7">
                         <H2 color="text-gradient">OUR JOURNEY TO EXCELLENCE</H2>
                         <B1 color="text-hpi-blue-dark font-medium">
                             From ideation to expansion, our journey underscores a relentless <br />

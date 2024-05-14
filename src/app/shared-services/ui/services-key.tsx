@@ -8,8 +8,8 @@ import { Counter } from "@/app/components/counter/counter";
 
 export const ServicesKeysComponent = () => {
     return (
-        <section className="text-center mt-5">
-            <H2 color="text-hpi-blue-dark">
+        <section className="text-center">
+            <H2 color="text-gradient">
                 SHARED SERVICES KEY ACHIEVEMENTS
             </H2>
             <section className="flex flex-col justify-between items-center py-12 text-center gap-4 mt-9">
@@ -22,7 +22,7 @@ export const ServicesKeysComponent = () => {
                     </CountUp>
                     <div className="text-center">
                         <H3 color="text-hpi-blue-light font-bold">
-                            Managed Vessels/yr
+                            MANAGED VESSELS/YR
                         </H3>
                     </div>
                 </motion.article>
@@ -41,7 +41,7 @@ export const ServicesKeysComponent = () => {
                     </CountUp>
                     <div className="text-left w-1/4">
                         <H3 color="text-hpi-blue-light font-bold">
-                            TEUs/yr
+                            TEUS/YR
                         </H3>
                     </div>
                 </motion.article>
@@ -58,9 +58,9 @@ export const ServicesKeysComponent = () => {
                             </>
                         )}
                     </CountUp>
-                    <div className="text-center w-1/4">
+                    <div className="text-center w-[30%]">
                         <H3 color="text-hpi-blue-light font-bold">
-                            More Efficient
+                            MORE EFFICIENT
                         </H3>
                     </div>
                 </motion.article>

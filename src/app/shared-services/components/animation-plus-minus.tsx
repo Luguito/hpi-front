@@ -12,15 +12,13 @@ export const Icon1 = () => {
                             "banner": {
                                 fill: "#002e6d",
                                 transition: {
-                                    duration: 1,
-                                    ease: "easeInOut",
+                                    duration: 0.3,
                                 }
                             },
                             "content": {
                                 fill: "#fff",
                                 transition: {
-                                    duration: 1,
-                                    ease: "easeInOut",
+                                    duration: 0.3,
                                 }
                             }
                         }}
@@ -38,9 +36,7 @@ export const Icon1 = () => {
                                 fill: "none",
                                 stroke: "#002e6d",
                                 transition: {
-                                    duration: 0.5,
-                                    ease: "easeInOut",
-
+                                    duration: 0.3,
                                 }
                             },
                             'banner': {
@@ -48,8 +44,7 @@ export const Icon1 = () => {
                                 fill: "none",
                                 stroke: "#fff",
                                 transition: {
-                                    duration: 0.5,
-                                    ease: "easeInOut",
+                                    duration: 0.3,
                                 }
                             },
                         }}

@@ -56,8 +56,8 @@ export const TechSolutionsComponent = () => {
             <section className="h-[33em] bg-white rounded-3xl shadow-lg flex justify-between px-24 py-20">
                 <nav className="flex flex-col gap-4 w-[30em]">
                     <details onClick={checkDetails}>
-                        <summary className="flex justify-between">
-                            <H3 color={`${currentSection === 'automation' ? 'text-hpi-blue-light' : 'text-hpi-grey-light'} font-bold`} onClick={() => setSection('automation')}>
+                        <summary className="flex justify-between cursor-pointer" onClick={() => setSection('automation')}>
+                            <H3 color={`${currentSection === 'automation' ? 'text-hpi-blue-light' : 'text-hpi-grey-light'} font-bold`}>
                                 AUTOMATION
                             </H3>
                             {
@@ -69,27 +69,21 @@ export const TechSolutionsComponent = () => {
                                     <Image src={Plus} alt="" />
                             }
                         </summary>
-                        <AnimatePresence mode="wait">
-                            <motion.div
-                                initial={{ scale: 0.8 }}
-                                animate={{ scale: 1 }}
-                                exit={{ y: 20, opacity: 0}}
-                                transition={{ duration: 2}}>
-                                <B2 color="text-hpi-body-color font-medium" >
-                                    Implementing AI and automation
-                                    technologies, we elevate terminal
-                                    productivity, safety, and quality through
-                                    optimised scheduling, autonomous
-                                    operations, and gate automation, leading
-                                    to operational excellence.
-                                </B2>
-                            </motion.div>
+                        <AnimatePresence>
+                            <B2 color="text-hpi-body-color font-medium" exit={{ y: 20, opacity: 0 }}>
+                                Implementing AI and automation
+                                technologies, we elevate terminal
+                                productivity, safety, and quality through
+                                optimised scheduling, autonomous
+                                operations, and gate automation, leading
+                                to operational excellence.
+                            </B2>
                         </AnimatePresence>
                     </details>
                     <hr />
-                    <motion.details onClick={checkDetails}>
-                        <summary className="flex justify-between">
-                            <H3 color={`${currentSection === 'shared-services' ? 'text-hpi-blue-light' : 'text-hpi-grey-light'} font-bold`} onClick={() => setSection('shared-services')}>
+                    <details onClick={checkDetails}>
+                        <summary className="flex justify-between cursor-pointer" onClick={() => setSection('shared-services')}>
+                            <H3 color={`${currentSection === 'shared-services' ? 'text-hpi-blue-light' : 'text-hpi-grey-light'} font-bold`}>
                                 SHARED SERVICES
                             </H3>
                             {
@@ -109,11 +103,11 @@ export const TechSolutionsComponent = () => {
                             consolidation, standardisation, and
                             automation of operations.
                         </B2>
-                    </motion.details>
+                    </details>
                     <hr />
-                    <motion.details onClick={checkDetails}>
-                        <summary className="flex justify-between">
-                            <H3 color={`${currentSection === 'digital-solutions' ? 'text-hpi-blue-light' : 'text-hpi-grey-light'} font-bold`} onClick={() => setSection('digital-solutions')}>
+                    <details onClick={checkDetails}>
+                        <summary className="flex justify-between cursor-pointer" onClick={() => setSection('digital-solutions')}>
+                            <H3 color={`${currentSection === 'digital-solutions' ? 'text-hpi-blue-light' : 'text-hpi-grey-light'} font-bold`}>
                                 DIGITAL SOLUTIONS
                             </H3>
                             {
@@ -132,7 +126,7 @@ export const TechSolutionsComponent = () => {
                             data analytics, and machine learning for
                             optimal operational visibility and control.
                         </B2>
-                    </motion.details>
+                    </details>
                 </nav>
                 <CurrentSection />
             </section>

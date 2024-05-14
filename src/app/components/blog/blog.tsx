@@ -6,16 +6,31 @@ import { H3, B2 } from '../text/text';
 import UBI from '../../../../public/home/ubi.png'
 import Graphic from '../../../../public/home/graphic.png'
 import Truck from '../../../../public/home/13.jpg'
+import Arrow from "../../../../public/home/arrow.svg";
+
 import Image from 'next/image';
 
+import { RevealTextAfterSection } from '../../animations/animation'
+
+// ITS WORKING THIS STAGGER
+const variantParent = {
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            staggerChildren: 0.4,
+        }
+    }
+}
 export const BlogsUI = () => {
     return (
         <>
-            <section className="flex flex-col gap-10 mt-32">
+            <motion.section className="flex flex-col gap-10 mt-10" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                 <section className="flex justify-center gap-10">
                     <motion.article
                         className="bg-white rounded-3xl shadow-lg flex"
-                        whileHover={{ scale: 1.05 }}>
+                        whileHover={{ scale: 1.04 }}
+                        variants={variantParent}>
                         <article className="py-10 px-14">
                             <H3 color="text-hpi-blue-light font-bold">
                                 UBI, THE <br />
@@ -33,11 +48,12 @@ export const BlogsUI = () => {
                                 Read More
                             </B2>
                         </article>
-                        <Image src={UBI} alt={""} width={350} />
+                        <Image src={UBI} alt={""} width={400} />
                     </motion.article>
                     <motion.article
                         className="bg-white rounded-3xl shadow-lg flex"
-                        whileHover={{ scale: 1.05 }}>
+                        whileHover={{ scale: 1.04 }}
+                        variants={variantParent}>
                         <article className="p-10">
                             <H3 color="text-hpi-blue-light font-bold">
                                 VERONICA <br />
@@ -58,9 +74,10 @@ export const BlogsUI = () => {
                         <Image src={Graphic} alt={""} width={350} />
                     </motion.article>
                 </section>
-                <motion.article 
-                className="h-[30em] bg-white rounded-3xl shadow-lg flex justify-between"
-                whileHover={{ scale: 1.05 }}>
+                <motion.article
+                    className="h-[30em] bg-white rounded-3xl shadow-lg flex justify-between"
+                    whileHover={{ scale: 1.04 }}
+                    variants={variantParent}>
                     <article className="p-10">
                         <H3 color="text-hpi-blue-light font-bold">
                             GATE OPERATIONS ARE <br />
@@ -80,7 +97,19 @@ export const BlogsUI = () => {
                     </article>
                     <Image src={Truck} alt={""} width={800} className="object-fill rounded-tr-2xl rounded-br-2xl" />
                 </motion.article>
-            </section>
+                <motion.div whileHover="animate" className="flex w-full justify-center gap-2">
+                    <B2 color="text-[#009BDE] cursor-pointer font-medium">
+                        See All
+                    </B2>
+                    <motion.div variants={{
+                        animate: {
+                            x: 10
+                        }
+                    }} className="flex items-center">
+                        <Image src={Arrow} alt="" />
+                    </motion.div>
+                </motion.div>
+            </motion.section>
         </>
     )
 }

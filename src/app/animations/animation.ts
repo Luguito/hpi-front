@@ -7,9 +7,7 @@ export const RevealSectionInitial = {
         opacity: 1,
         y: 0,
         transition: {
-            duration: 0.4,
-            delay: 0.2,
-            ease: "easeInOut"
+            staggerChildren: 0.3,
         }
     },
 }
@@ -23,9 +21,7 @@ export const RevealTextAfterSection = {
         opacity: 1,
         y: 0,
         transition: {
-            duration: 0.4,
-            delay: 0.4,
-            ease: "easeInOut"
+            stiffness: 0
         }
     },
 }

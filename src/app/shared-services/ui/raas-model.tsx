@@ -1,5 +1,5 @@
 'use client';
-import Text, { B1, H2, H3 } from "../../components/text/text";
+import Text, { B1, H2, H3, H5} from "../../components/text/text";
 import { motion, AnimatePresence } from 'framer-motion';
 import { RevealTextAfterSection } from '@/app/animations/animation';
 import { HoverComponent } from "../../components/hover/hover";
@@ -54,16 +54,16 @@ export const RaasModelComponent = ({ children }: any) => {
 
     return (
         <section className="snap-center mt-8 mx-80">
-            <motion.header className="text-left" variants={{
+            <motion.header className="text-left ml-7" variants={{
                 visible: {
                     transition: {
-                        staggerChildren: 0.7
+                        staggerChildren: 0.4
                     }
                 }
             }}>
-                <H3 color="text-hpi-blue-light font-medium">Flexible Model</H3>
+                <H5 color="text-hpi-blue-light font-medium">Flexible Model</H5>
                 <H2 color="text-gradient">OUR REGIONAL OPERATIONS CENTRE (ROC)</H2>
-                <B1 color="text-hpi-blue-dark font-medium">
+                <B1 color="text-hpi-blue-dark font-medium mt-3">
                     ROC offers a flexible subscription model enabling terminals to transition to a new <br />
                     operational model in a seamless way.
                 </B1>
@@ -82,7 +82,10 @@ export const RaasModelComponent = ({ children }: any) => {
                                         key="content"
                                         exit={{
                                             y: -50,
-                                            opacity: 0
+                                            opacity: 0,
+                                            transition: {
+                                                duration: 0.2
+                                            }
                                         }}>
                                         <p className="text-[16px] text-hpi-white text-center">
                                             Plug-and-Play to the standardised and <br />
@@ -93,7 +96,12 @@ export const RaasModelComponent = ({ children }: any) => {
                                     :
                                     <motion.div
                                         key="banner"
-                                        exit={{ opacity: 0 }}
+                                        exit={{
+                                            opacity: 0,
+                                            transition: {
+                                                duration: 0.4
+                                            }
+                                        }}
                                         className="flex items-center gap-12 px-10">
                                         <H3 color="font-bold text-hpi-blue-light">
                                             PEACE OF <br />
@@ -118,7 +126,10 @@ export const RaasModelComponent = ({ children }: any) => {
                                         key="content"
                                         exit={{
                                             y: -50,
-                                            opacity: 0
+                                            opacity: 0,
+                                            transition: {
+                                                duration: 0.4
+                                            }
                                         }}>
                                         <p className="text-[16px] text-hpi-white text-center">
                                             A scalable solution that ensures the growth
@@ -129,13 +140,17 @@ export const RaasModelComponent = ({ children }: any) => {
                                     :
                                     <motion.div
                                         key="banner"
-                                        exit={{ opacity: 0 }}
+                                        exit={{
+                                            opacity: 0, transition: {
+                                                duration: 0.4
+                                            }
+                                        }}
                                         className="flex items-center gap-12 px-10">
                                         <H3 color="font-bold text-hpi-blue-light">
                                             EXPAND-AS- <br />
                                             YOU-GROW
                                         </H3>
-                                        <Image src={GROW} alt="Mind Icon" height={200}/>
+                                        <Image src={GROW} alt="Mind Icon" height={200} />
                                     </motion.div>
                             }
                         </AnimatePresence>
@@ -154,7 +169,10 @@ export const RaasModelComponent = ({ children }: any) => {
                                         key="content"
                                         exit={{
                                             y: -50,
-                                            opacity: 0
+                                            opacity: 0,
+                                            transition: {
+                                                duration: 0.4
+                                            }
                                         }}>
                                         <p className="text-[16px] text-hpi-white text-center">
                                             A hassle-free solution! Let ROC do <br />
@@ -165,13 +183,18 @@ export const RaasModelComponent = ({ children }: any) => {
                                     :
                                     <motion.div
                                         key="banner"
-                                        exit={{ opacity: 0 }}
+                                        exit={{
+                                            opacity: 0,
+                                            transition: {
+                                                duration: 0.4
+                                            }
+                                        }}
                                         className="flex items-center gap-12 px-10">
                                         <H3 color="font-bold text-hpi-blue-light">
                                             CENTRALISED <br />
                                             SOLUTION
                                         </H3>
-                                        <Image src={SOLUTION} alt="Mind Icon" height={200}/>
+                                        <Image src={SOLUTION} alt="Mind Icon" height={200} />
                                     </motion.div>
                             }
                         </AnimatePresence>
@@ -190,7 +213,10 @@ export const RaasModelComponent = ({ children }: any) => {
                                         key="content"
                                         exit={{
                                             y: -50,
-                                            opacity: 0
+                                            opacity: 0,
+                                            transition: {
+                                                duration: 0.4
+                                            }
                                         }}>
                                         <p className="text-[16px] text-hpi-white text-center">
                                             Progress is fully visible to your <br />
@@ -201,13 +227,17 @@ export const RaasModelComponent = ({ children }: any) => {
                                     :
                                     <motion.div
                                         key="banner"
-                                        exit={{ opacity: 0 }}
+                                        exit={{
+                                            opacity: 0, transition: {
+                                                duration: 0.4
+                                            }
+                                        }}
                                         className="flex items-center gap-12 px-10">
                                         <H3 color="font-bold text-hpi-blue-light">
                                             SEE ALL AND <br />
                                             KNOW ALL
                                         </H3>
-                                        <Image src={EYE} alt="Mind Icon" height={200}/>
+                                        <Image src={EYE} alt="Mind Icon" height={200} />
                                     </motion.div>
                             }
                         </AnimatePresence>
