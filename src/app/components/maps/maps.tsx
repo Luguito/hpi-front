@@ -94,7 +94,7 @@ function map() {
             strokeWidth: 2,
             showTooltipOn: 'hover',
             tooltipHTML: `
-            <section style="text-align: center; width: 45%;">
+            <section style="text-align: center; width: 25%;">
                 <header style="color: #002E6D; font-weight: semi-bold;">
                     <b style="font-size: 16px;">{title}</b>
                 </header>
@@ -112,12 +112,11 @@ function map() {
         let l = pointSeries.dataItems.length
         let china = pointSeries.dataItems.at(l - 1);
 
-        china?.show()
         // @ts-ignore
-        // china?.bullets?.at(0).propertyFields.showTooltipOn = 'showTooltip'
+        china?.bullets[0]?.get('sprite')?.showTooltip()
     })
     pointSeries.data.setAll(cities);
-    pointSeries.getTooltip()?.setAll({ width: am5.percent(38), getFillFromSprite: false })
+    pointSeries.getTooltip()?.setAll({ width: am5.percent(23), getFillFromSprite: false })
     pointSeries.getTooltip()?.get('background')?.setAll({ 
         fill: am5.color('#FFFFFF') 
     })
