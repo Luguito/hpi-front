@@ -7,7 +7,7 @@ export const U1999I = () => {
         <>
             <B2 color="text-hpi-body-grey font-medium">
                 Hutchison Ports London Thamesport pioneers Remote-Controlled Rail Mounted Gantry Cranes (RMGCs),
-                marking Hutchison Ports’ first project in this innovative domain.
+                marking Hutchison Ports{"`"} first project in this innovative domain.
             </B2>
         </>
     )
@@ -59,7 +59,7 @@ export const U2012I = () => {
                 </li>
                 <li>
                     <B2 color="text-hpi-body-grey font-medium">
-                        Average crane performance over 40 movements per hour, among the world{"'"}s highest.
+                        Average crane performance over 40 movements per hour, among the world{"`"}s highest.
                     </B2>
                 </li>
             </ul>
@@ -128,7 +128,7 @@ export const U2018I = () => {
             <ul>
                 <li>
                     <B2 color="text-hpi-body-grey font-medium">
-                        Hutchison Ports Thailand Terminal D becomes the world{"'"}s first fully remote-controlled terminal, employing both Remote-Controlled QCs and Remote-Controlled Rubber-Tyred Gantry Cranes (RTGCs).
+                        Hutchison Ports Thailand Terminal D becomes the world{"`"}s first fully remote-controlled terminal, employing both Remote-Controlled QCs and Remote-Controlled Rubber-Tyred Gantry Cranes (RTGCs).
                     </B2>
                 </li>
             </ul>
@@ -192,12 +192,12 @@ export const U2022I = () => {
     return (
         <>
             <B2 color="text-hpi-body-grey font-medium">
-                Hutchison Ports Thailand Terminal D pioneers 'true' mixed traffic mode operations with Autonomous Trucks.
+                Hutchison Ports Thailand Terminal D pioneers {"`"}true{"`"} mixed traffic mode operations with Autonomous Trucks.
             </B2>
             <ul>
                 <li>
                     <B2 color="text-hpi-body-grey font-medium">
-                        World's first terminal operator to achieve {"'"}true{"'"} mixed traffic mode terminal operations.
+                        World{"`"}s first terminal operator to achieve {"'"}true{"'"} mixed traffic mode terminal operations.
                     </B2>
                 </li>
             </ul>
