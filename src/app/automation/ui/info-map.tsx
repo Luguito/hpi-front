@@ -113,6 +113,15 @@ export const U2016I = () => {
     )
 }
 
+export const U2017I = () => {
+    return (
+        <>
+            <B2 color="text-hpi-body-grey font-medium">
+                Remote-Controlled Quay Cranes are implemented in Hutchison Ports Pakistan and Hutchison Ports FCP
+            </B2>
+        </>
+    )
+}
 export const U2018I = () => {
     return (
         <>
@@ -129,37 +138,147 @@ export const U2018I = () => {
 
 export const U2019I = () => {
     return (
-        <></>
+        <>
+            <B2 color="text-hpi-body-grey font-medium">
+                Introduced Remote-Controlled Quay Cranes across several locations including:
+            </B2>
+            <ul>
+                <li>
+                    <B2 color="text-hpi-body-grey font-medium">
+                        Hutchison Ports Port of Felixstowe
+                    </B2>
+                </li>
+                <li>
+                    <B2 color="text-hpi-body-grey font-medium">
+                        Hutchison Ports ICAVE
+                    </B2>
+                </li>
+                <li>
+                    <B2 color="text-hpi-body-grey font-medium">
+                        Hutchison Ports YANTIAN
+                    </B2>
+                </li>
+            </ul>
+            <B2 color="text-hpi-body-grey font-medium mt-10">
+                The Port of Felixstowe introduced Remote-Controlled Rubber-Tyred Gantry Cranes (RTGCs),
+                aiming to reduce its ecological footprint through electrification and to boost yard automation.
+            </B2>
+        </>
     )
 }
 export const U2020I = () => {
     return (
-        <></>
+        <>
+            <B2 color="text-hpi-body-grey font-medium">
+                Remote-Controlled Quay Cranes begin operations in Hutchison Ports Stockholm,
+                setting new efficiency standards.
+            </B2>
+        </>
     )
 }
 
 export const U2021I = () => {
     return (
-        <></>
+        <>
+            <B2 color="text-hpi-body-grey font-medium">
+                Automated Straddle Carriers are introduced in Hutchison Ports Stockholm,
+                optimising container handling.
+            </B2>
+        </>
     )
 }
 
 export const U2022I = () => {
     return (
-        <></>
+        <>
+            <B2 color="text-hpi-body-grey font-medium">
+                Hutchison Ports Thailand Terminal D pioneers 'true' mixed traffic mode operations with Autonomous Trucks.
+            </B2>
+            <ul>
+                <li>
+                    <B2 color="text-hpi-body-grey font-medium">
+                        World's first terminal operator to achieve {"'"}true{"'"} mixed traffic mode terminal operations.
+                    </B2>
+                </li>
+            </ul>
+        </>
     )
 }
 
 export const U2023I = () => {
     return (
-        <></>
+        <>
+            <B2 color="text-hpi-body-grey font-medium">
+                Autonomous Trucks (AT) are implemented at key locations including:
+            </B2>
+            <ul>
+                <li>
+                    <B2 color="text-hpi-body-grey font-medium">
+                        Hutchison Ports Port of Felixstowe
+                    </B2>
+                </li>
+                <li>
+                    <B2 color="text-hpi-body-grey font-medium">
+                        Hutchison Ports IC AVE
+                    </B2>
+                </li>
+                <li>
+                    <B2 color="text-hpi-body-grey font-medium">
+                        Hutchison Ports Abu Qir
+                    </B2>
+                </li>
+            </ul>
+        </>
     )
 }
 
 export const U2030I = () => {
     // 6 images
     return (
-        <></>
+        <>
+            <B2 color="text-hpi-body-grey font-medium">
+                Hutchison Ports is set to continue leading the way in port operation
+                automation through cutting-edge solutions under our visionary Smart Port Strategy.
+                By 2030, over half of its terminals are set to deploy automated solutions, including:
+            </B2>
+            <ul>
+                <li>
+                    <B2 color="text-hpi-body-grey font-medium">
+                        Autonomous Truck (AT)  (Media {"&"} Description)
+                    </B2>
+                </li>
+                <li>
+                    <B2 color="text-hpi-body-grey font-medium">
+                        Automated Straddle Carrier (Auto-SC)
+                    </B2>
+                </li>
+                <li>
+                    <B2 color="text-hpi-body-grey font-medium">
+                        Automated Stacking Cranes (ASCs)
+                    </B2>
+                </li>
+                <li>
+                    <B2 color="text-hpi-body-grey font-medium">
+                        Automated Guided Vehicles (AGVs)
+                    </B2>
+                </li>
+                <li>
+                    <B2 color="text-hpi-body-grey font-medium">
+                        Remote-Controlled Rail-Mounted Gantry Cranes (RMGCs)
+                    </B2>
+                </li>
+                <li>
+                    <B2 color="text-hpi-body-grey font-medium">
+                        Remote-Controlled Quay Cranes (QCs)
+                    </B2>
+                </li>
+                <li>
+                    <B2 color="text-hpi-body-grey font-medium">
+                        Gate Automation
+                    </B2>
+                </li>
+            </ul>
+        </>
     )
 }
 
@@ -172,6 +291,8 @@ export const ContainerDatesInformation = ({ date }: any) => {
         '2012': U2012I,
         '2013': U2013I,
         '2015': U2015I,
+        '2016': U2016I,
+        '2017': U2017I,
         '2018': U2018I,
         '2019': U2019I,
         '2020': U2020I,
