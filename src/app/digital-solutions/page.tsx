@@ -10,11 +10,14 @@ import { SwipeCarousel } from "../components/carousel/carousel";
 import PowerSolutionUI from "./ui/power";
 import ForeFrontUI from "./ui/forefront";
 import MapImpactUI from "./ui/global-impact";
+import { BlogsUI } from "../components/blog/blog";
+import { H2, H5 } from "../components/text/text";
+import { BlogsDSUI } from "./ui/blogs";
 
 
 export default function DigitalSolutionsPage() {
     return (
-        <section className="mb-32">
+        <section className="mb-32 overflow-hidden">
             <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Digital%20Solutions%20Banner.mp4" bgColor="">
                 <p className="absolute text-center text-[60px] text-hpi-white font-bold text-shadow-md leading-[80px]">
                     REVOLUTIONISING CONTAINER <br />
@@ -23,36 +26,36 @@ export default function DigitalSolutionsPage() {
                 </p>
             </VideoContainer>
             <section>
-                <article className="px-80">
+                <article className="mx-56">
                     <InnovationUI />
                 </article>
                 {/* Unleash power solutions */}
-                <article className="px-80 mt-72">
+                <article className="mx-56 mt-20">
                     <PowerSolutionUI />
                 </article>
                 {/* MAPS */}
-                <article className="bg-hpi-blue-dark mt-36 mb-32 py-20">
-                   <MapImpactUI />
+                <article className="mx-56 mb-32 py-20">
+                    <MapImpactUI />
                 </article>
                 {/* Forefront */}
-                <article className="px-80">
+                <article className="mx-56">
                     <ForeFrontUI />
                 </article>
                 {/*  */}
-                <article className="px-80 mt-72">
+                <article className="mx-56 mt-20">
                     <FeatureUI />
                 </article>
                 {/*  */}
-                <section className="mt-80">
-                    <header className="text-center">
-                        <small className="font-medium text-hpi-blue-light text-[16px]">Explore More</small>
-                        <h2 className="bg-gradient-to-r from-[#0054AC] via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text text-[30px] font-bold">
+                <section className="mx-56 mt-20">
+                    <header className="text-left">
+                        <H5 color="text-hpi-blue-light font-medium">
+                            Explore More
+                        </H5>
+                        <H2 color="text-gradient">
                             STAY INFORMED WITH OUR BLOGS
-                        </h2>
+                        </H2>
                     </header>
-                    <section className="flex gap-6 mx-36 mt-24">
-                        <SwipeCarousel></SwipeCarousel>
-                    </section>
+                    <BlogsDSUI />
                 </section>
             </section>
         </section >

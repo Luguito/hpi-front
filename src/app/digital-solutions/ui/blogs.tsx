@@ -1,17 +1,13 @@
 'use client'
+
+import { H3, B2, } from '../../components/text/text';
 import { motion } from 'framer-motion';
-import { H3, B2 } from '../text/text';
-
-
-import UBI from '../../../../public/home/ubi.png'
-import Graphic from '../../../../public/home/graphic.png'
-import Truck from '../../../../public/home/13.jpg'
-import Arrow from "../../../../public/home/arrow.svg";
-
-import Image from 'next/image';
-
-import { RevealTextAfterSection } from '../../animations/animation'
-
+import Image from 'next/image'
+import { RevealTextAfterSection } from '@/app/animations/animation';
+import Table from '../../../../public/digital-solutions/tablet.png'
+import Veronica from '../../../../public/digital-solutions/veronica-port.png'
+import Sphere from '../../../../public/digital-solutions/sphere.png'
+import Arrow from '../../../../public/home/arrow.svg'
 
 const variantParent = {
     visible: {
@@ -22,7 +18,7 @@ const variantParent = {
         }
     }
 }
-export const BlogsUI = () => {
+export const BlogsDSUI = () => {
     return (
         <>
             <motion.section className="flex flex-col items-center gap-10 mt-10" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
@@ -33,22 +29,18 @@ export const BlogsUI = () => {
                         variants={variantParent}>
                         <article className="py-10 px-14">
                             <H3 color="text-hpi-blue-light font-bold">
-                                UBI, THE <br />
-                                NEW APP <br />
-                                FOR TRUCK <br />
-                                DRIVERS
+                                STAYING AHEAD BY REVOLUTIO…
                             </H3>
                             <B2 color="text-hpi-body-grey font-medium mt-5">
-                                Check whether the <br />
-                                container is on the <br />
-                                vessel, or ready for <br />
-                                pickup or collected.
+                                Discover how Hutchison Ports has continued
+                                to push the boundaries of automation and
+                                Terminal Operating…
                             </B2>
                             <B2 color="text-hpi-blue-light font-semibold cursor-pointer mt-6">
                                 Read More
                             </B2>
                         </article>
-                        <Image src={UBI} alt={""} width={400} />
+                        <Image src={Table} alt={""} width={400} className="object-cover" />
                     </motion.article>
                     <motion.article
                         className="bg-white rounded-3xl shadow-lg flex"
@@ -56,22 +48,18 @@ export const BlogsUI = () => {
                         variants={variantParent}>
                         <article className="p-10">
                             <H3 color="text-hpi-blue-light font-bold">
-                                VERONICA <br />
-                                WILL GET <br />
-                                SMARTER
+                                INTRODUCING VERONICA
                             </H3>
                             <B2 color="text-hpi-body-grey font-medium mt-5">
-                                New decision <br />
-                                engines driven by <br />
-                                real-time data <br />
-                                provide flexibility to <br />
-                                accommodate changes.
+                                Discover an exclusive feature dedicated to Veronica,
+                                highlighting its capabilities, showcasing its smart
+                                functionalities, and…
                             </B2>
                             <B2 color="text-hpi-blue-light font-semibold cursor-pointer mt-6">
                                 Read More
                             </B2>
                         </article>
-                        <Image src={Graphic} alt={""} width={350} />
+                        <Image src={Veronica} alt={""} width={350} className="object-contain"/>
                     </motion.article>
                 </section>
                 <motion.article
@@ -80,22 +68,19 @@ export const BlogsUI = () => {
                     variants={variantParent}>
                     <article className="p-10">
                         <H3 color="text-hpi-blue-light font-bold">
-                            GATE OPERATIONS ARE <br />
-                            POSSIBLE THROUGH <br />
-                            GATE AUTOMATION
+                            THE PORTS AI REVOLUTION IS HERE…
                         </H3>
                         <B2 color="text-hpi-body-grey font-medium mt-5">
-                            These systems integrate advanced <br />
-                            technologies such as Optical Characters <br />
-                            Recognition (OCR), License Plate <br />
-                            Recognition (LPR), CCTV, RFID tractor card  <br />
-                            reader and remote reefer monitoring system.
+                        Hutchison Ports is revolutionising port operations by 
+                        welcoming a new family - Veronica and her offspring. Together, 
+                        they will replace the world{"'"}s leading Terminal Operating System, nGen, 
+                        with an AI-driven sensing and planning system in alignment with autonomous vehicles.
                         </B2>
                         <B2 color="text-hpi-blue-light font-semibold cursor-pointer mt-6">
                             Read More
                         </B2>
                     </article>
-                    <Image src={Truck} alt={""} width={800} className="object-fill rounded-tr-2xl rounded-br-2xl" />
+                    <Image src={Sphere} alt={""} width={800} className="object-fill rounded-tr-2xl rounded-br-2xl" />
                 </motion.article>
                 <motion.div whileHover="animate" className="flex w-full justify-center gap-2">
                     <B2 color="text-[#009BDE] cursor-pointer font-medium">

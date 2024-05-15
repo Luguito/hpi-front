@@ -111,8 +111,8 @@ function map() {
         return am5.Bullet.new(root, {
             sprite: am5.Circle.new(root, {
                 radius: 5,
-                fill: am5.color("#FFFFFF"),
-                stroke: am5.color("#002E6D")
+                fill: am5.color("#FFC627"),
+                stroke: am5.color("#FFFFFF"),
             })
         });
     });
@@ -154,7 +154,7 @@ export default function MapGlobe() {
 
     return (
         <>
-            <div id="chartdiv" className="h-[30em]"></div>
+            <div id="chartdiv" className="w-2/3"></div>
         </>
     )
 }

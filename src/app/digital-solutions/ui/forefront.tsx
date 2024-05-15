@@ -11,8 +11,10 @@ import I5 from '../../../../public/digital-solutions/blueprint.png'
 import I6 from '../../../../public/digital-solutions/parking.png'
 import I7 from '../../../../public/digital-solutions/truck.png'
 import I8 from '../../../../public/digital-solutions/ROSA_logo.png'
+import Arrow from '../../../../public/digital-solutions/arrow-right-direction.svg'
 import { Dispatch, SetStateAction, useState } from 'react';
 import { RevealFromLeftToRight, RevealTextAfterSection } from '@/app/animations/animation';
+import { B2, H2, H3 } from '@/app/components/text/text';
 
 const SPRING_OPTIONS = {
     type: "spring",
@@ -41,13 +43,11 @@ export default function ForeFrontUI() {
 
     return (
         <>
-            <header className="text-center">
-                <motion.small className="font-medium text-hpi-blue-light text-[16px]" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>Our Solutions</motion.small>
-                <motion.h2 className="bg-gradient-to-r from-[#0054AC] via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text text-[30px] font-bold" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                    AT THE FOREFRONT OF PORT INNOVATION
-                </motion.h2>
+            <header className="text-left ml-7">
+                <H3 color="text-hpi-blue-light">Our Solutions</H3>
+                <H2 color="text-gradient">AT THE FOREFRONT OF PORT INNOVATION</H2>
             </header>
-            <motion.section className="relative overflow-hidden cursor-grab" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+            <motion.section className="relative" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                 <motion.div
                     drag="x"
                     dragConstraints={{
@@ -60,145 +60,138 @@ export default function ForeFrontUI() {
                     animate={{
                         translateX: `-${imgIndex * 100}%`,
                     }}
-                    className="flex cursor-grab items-center gap-5 active:cursor-grabbing ml-20 mt-4"
+                    className="flex cursor-grab items-center gap-10 active:cursor-grabbing mt-4"
                     transition={SPRING_OPTIONS}
                     onDragEnd={onDragEnd}>
-                    <section className="grid grid-cols-2 grid-rows-2 justify-center items-center gap-4 mt-11 shrink-0 rounded-xl w-full">
-                        <section className="flex flex-col justify-center bg-hpi-celeste gap-4 rounded-2xl px-14 py-8 h-[27em]">
-                            <article className="flex justify-center items-center w-full">
-                                <Image src={I3} alt="" className="mt-[-0.5em]" />
-                            </article>
-                            <article className="flex flex-col">
-                                <b className="text-hpi-blue-dark font-bold text-[20px]">ONE TOS, ONE WORLD</b>
-                                <p className="text-[16px] text-[#494949] font-normal mt-7">
-                                    The 1st global port group to provide a cloud-based <br />
-                                    TOS in SaaS model, and to standardise operations <br />
-                                    across 30 terminals in 16 countries with our home- <br />
+                    <section className="grid grid-cols-2 grid-rows-2 justify-center items-center gap-10 mt-11 shrink-0 rounded-xl w-full">
+                        <SectionUI
+                            Img={
+                                <Image src={I3} alt="" className='max-w-none' />
+                            }
+                            title={"ONE TOS, ONE WORLD"}
+                            content={
+                                `
+                                    The 1st global port group to provide a cloud-based
+                                    TOS in SaaS model, and to standardise operations
+                                    across 30 terminals in 16 countries with our home-
                                     grown TOS (nGen/Veronica).
-                                </p>
-                            </article>
-                        </section>
-                        <section className="flex flex-col justify-center bg-hpi-celeste gap-4 items-start rounded-2xl px-14 py-8 h-[27em]">
-                            <article className="flex justify-center items-center w-full">
-                                <Image src={I} alt="" className="mt-[-0.5em]" height={210} />
-                            </article>
-                            <article className="flex flex-col">
-                                <b className="text-hpi-blue-dark font-bold text-[20px]">ONCE-FOR-ALL CONNECTION</b>
-                                <p className="text-[16px] text-[#494949] font-normal mt-7">
-                                    HPDX offers a single data exchange for connecting <br />
-                                    all terminals with the logistics world, including the <br />
-                                    blockchain-based Global Shipping Business <br />
+                                `
+                            } />
+                        <SectionUI
+                            Img={
+                                <Image src={I} alt="" height={200} />
+                            }
+                            title={"ONCE-FOR-ALL CONNECTION"}
+                            content={
+                                `
+                                    HPDX offers a single data exchange for connecting
+                                    all terminals with the logistics world, including the 
+                                    blockchain-based Global Shipping Business
                                     Network (GSBN).
-                                </p>
-                            </article>
-                        </section>
-                        <section className="flex flex-col justify-center bg-hpi-celeste gap-4 items-start rounded-2xl px-14 py-8 h-[27em]">
-                            <article className="flex justify-center items-center w-full">
-                                <Image src={I8} alt="" className="mt-[-0.5em]" />
-                            </article>
-                            <article className="flex flex-col">
-                                <b className="text-hpi-blue-dark font-bold text-[20px]">OPERATIONS ANYTIME, ANYWHERE</b>
-                                <p className="text-[16px] text-[#494949] font-normal mt-7">
-                                    Revolutionising remote operations management <br />
-                                    with our Remote Operations Services and <br />
-                                    Architecture (ROSA), enabling efficient multi-port <br />
+                                `
+                            } />
+                        <SectionUI
+                            Img={
+                                <Image src={I8} alt="" height={250} />
+                            }
+                            title={"OPERATIONS ANYTIME, ANYWHERE"}
+                            content={
+                                `
+                                    Revolutionising remote operations management
+                                    with our Remote Operations Services and
+                                    Architecture (ROSA), enabling efficient multi-port
                                     management.
-                                </p>
-                            </article>
-                        </section>
-                        <section className="flex flex-col justify-center bg-hpi-celeste gap-4 items-start rounded-2xl px-14 py-8 h-[27em]">
-                            <article className="flex justify-center items-center w-full">
-                                <Image src={I7} alt="" className="mt-[-0.5em]" />
-                            </article>
-                            <article className="flex flex-col">
-                                <b className="text-hpi-blue-dark font-bold text-[20px]">UNLOCKING EFFICIENCY THROUGH AUTOMATION</b>
-                                <p className="text-[16px] text-[#494949] font-normal mt-7">
-                                    Our advanced scheduling system optimises the <br />
-                                    management of all types of automation <br />
-                                    equipment and job scheduling.
-                                </p>
-                            </article>
-                        </section>
+                                `
+                            } />
+                        <SectionUI
+                            Img={
+                                <Image src={I7} alt="" height={400} />
+                            }
+                            title={"UNLOCKING EFFICIENCY THROUGH AUTOMATION"}
+                            content={
+                                `
+                                    Our advanced scheduling system optimises the management 
+                                    of all types of automation equipment and job scheduling.
+                                `
+                            } />
                     </section>
-                    <section className="grid grid-cols-2 grid-rows-2 justify-center items-center gap-4 mt-11 shrink-0 rounded-xl w-full">
-                        <section className="flex flex-col justify-center bg-hpi-celeste gap-4 items-start rounded-2xl px-14 py-8 h-[27em]">
-                            <article className="flex justify-center items-center w-full">
-                                <Image src={I2} alt="" className="mt-[-0.5em]" height={200} />
-                            </article>
-                            <article className="flex flex-col">
-                                <b className="text-hpi-blue-dark font-bold text-[20px]">GO BEYOND PAPERLESS</b>
-                                <p className="text-[16px] text-[#494949] font-normal mt-7">
-                                    Elevate digital communication and process documentation using DD (Document Digitalisation), our advanced AI application, for global port operations data processing.
-                                </p>
-                            </article>
-                        </section>
-                        <section className="flex flex-col justify-center bg-hpi-celeste gap-4 items-start rounded-2xl px-14 py-8 h-[27em]">
-                            <article className="flex justify-center items-center w-full">
-                                <Image src={I6} alt="" className="mt-[-0.5em]" height={200} />
-                            </article>
-                            <article className="flex flex-col">
-                                <b className="text-hpi-blue-dark font-bold text-[20px]">KEEP-IT-FLOW</b>
-                                <p className="text-[16px] text-[#494949] font-normal mt-7">
+                    <section className="grid grid-cols-2 grid-rows-2 justify-center items-center gap-10 mt-11 shrink-0 rounded-xl w-full ">
+                        <SectionUI
+                            Img={
+                                <Image src={I2} alt="" width={200} />
+                            }
+                            title={"GO BEYOND PAPERLESS"}
+                            content={
+                                `
+                                Elevate digital communication and process documentation 
+                                using DD (Document Digitalisation), our advanced AI application, 
+                                for global port operations data processing.
+                                `
+                            } />
+                        <SectionUI
+                            Img={
+                                <Image src={I6} alt="" className='max-w-none' height={200} />
+                            }
+                            title={"KEEP-IT-FLOW"}
+                            content={
+                                `
                                     Our Auto Gate Operating System (AGOS), designed for faster container flow,
                                     boosts container movements and enhances terminal efficiency by 50%.
+                                `
+                            } />
 
-                                </p>
-                            </article>
-                        </section>
-                        <section className="flex flex-col justify-center bg-hpi-celeste gap-4 items-start rounded-2xl px-14 py-8 h-[27em]">
-                            <article className="flex justify-center items-center w-full">
-                                <Image src={I5} alt="" className="mt-[-0.5em]" height={200} />
-                            </article>
-                            <article className="flex flex-col">
-                                <b className="text-hpi-blue-dark font-bold text-[20px]">KNOW BEFORE IT HAPPENS</b>
-                                <p className="text-[16px] text-[#494949] font-normal mt-7">
+                        <SectionUI
+                            Img={
+                                <Image src={I5} alt=""  />
+                            }
+                            title={"KNOW BEFORE IT HAPPENS"}
+                            content={
+                                `
                                     With our EMULATION technology, you can foresee and optimise operational outcomes.
                                     Ensure efficient refinements across your TOS, Equipment Control System, and Fleet Management System without trial and error.
-                                </p>
-                            </article>
-                        </section>
-                        <section className="flex flex-col justify-center bg-hpi-celeste gap-4 items-start rounded-2xl px-14 py-8 h-[27em]">
-                            <article className="flex justify-center items-center w-full">
-                                <Image src={I4} alt="" className="mt-[-0.5em]" height={200} />
-                            </article>
-                            <article className="flex flex-col">
-                                <b className="text-hpi-blue-dark font-bold text-[20px]">PORT ACCESSIBILITY</b>
-                                <p className="text-[16px] text-[#494949] font-normal mt-7">
+                                `
+                            } />
+                        <SectionUI
+                            Img={
+                                <Image src={I4} alt="" />
+                            }
+                            title={"PORT ACCESSIBILITY"}
+                            content={
+                                `
                                     Experience unparalleled access to real-time logistics insights and services with Ubi,
                                     the first app to standardise mobile access across our global ports.
-                                </p>
-                            </article>
-                        </section>
+                                `
+                            } />
                     </section>
                 </motion.div>
-                <div className="absolute left-[98%] inset-0 bg-gradient-to-l from-white via-white to-transparent w-14"></div>
-                <div className="absolute left-0 inset-0 bg-gradient-to-r from-white via-white to-transparent w-14"></div>
-                <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} />
+                <div className="absolute left-[100%] w-14 top-[50%] cursor-pointer">
+                    <Image src={Arrow} alt="" onClick={() => setImgIndex(1)} />
+                </div>
+                <div className="absolute -left-28 w-14 rotate-180 top-[50%] cursor-pointer">
+                    <Image src={Arrow} alt="" onClick={() => setImgIndex(0)} />
+                </div>
             </motion.section>
         </>
     )
-}
+} 
 
-
-const Dots = ({
-    imgIndex,
-    setImgIndex,
-  }: {
-    imgIndex: number;
-    setImgIndex: Dispatch<SetStateAction<number>>;
-  }) => {
+const SectionUI = ({ Img, title, content }: any) => {
     return (
-      <div className="mt-16 flex w-full justify-center gap-2">
-        {['', ''].map((_, idx) => {
-          return (
-            <button
-              key={idx}
-              onClick={() => setImgIndex(idx)}
-              className={`h-3 w-3 rounded-full transition-colors ${idx === imgIndex ? "bg-hpi-blue-dark" : "bg-hpi-white border-hpi-blue-dark border-2"
-                }`}
-            />
-          );
-        })}
-      </div>
-    );
-  };
+        <motion.section
+            className="flex flex-col justify-evenly bg-hpi-white gap-4 rounded-3xl px-14 py-8 h-[38.5em] shadow-lg"
+            whileHover={{ scale: 1.04 }}
+        >
+            <article className="flex justify-center items-center w-full h-2/4">
+                {Img}
+            </article>
+            <article className="flex flex-col">
+                <H3 color="text-hpi-blue-dark font-bold">
+                    {title}
+                </H3>
+                <B2 color="text-hpi-body-grey font-medium mt-5">
+                    {content}
+                </B2>
+            </article>
+        </motion.section>
+    )
+}
