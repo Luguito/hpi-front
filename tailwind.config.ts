@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-
+import defaultTheme from 'tailwindcss/defaultTheme'
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,12 +11,12 @@ const config: Config = {
       colors: {
         'hpi-white': "#FFFFFF",
         'hpi-blue-dark': "#002E6D",
-        'hpi-dark-gradient':"#000102",
-        'hpi-blue-light':"#009BDE",
-        'hpi-grey-dark':"#707070",
-        'hpi-grey-light':"#C9C9C9",
-        'hpi-blue-sea':"#10205F",
-        'hpi-celeste':"#9ACAEB17",
+        'hpi-dark-gradient': "#000102",
+        'hpi-blue-light': "#009BDE",
+        'hpi-grey-dark': "#707070",
+        'hpi-grey-light': "#C9C9C9",
+        'hpi-blue-sea': "#10205F",
+        'hpi-celeste': "#9ACAEB17",
         'hpi-opacity-video': 'rgba(0, 0, 0, 0.5)',
         'hpi-light-bg': "#F5FAFF",
         'hpi-body-grey': "#494949",
@@ -28,6 +28,10 @@ const config: Config = {
       },
       boxShadow: {
         'custom': '0px 1px 7px 1px rgba(206, 206, 206, 0.28)', // Customize the values as per your requirement
+      },
+      screens: {
+        'xs': { min: '400px', max: '640px' },
+        ...defaultTheme.screens
       }
     },
   },
@@ -35,3 +39,7 @@ const config: Config = {
   plugins: [],
 };
 export default config;
+
+
+// Parrafo fuera de marger
+// contador en el mapa

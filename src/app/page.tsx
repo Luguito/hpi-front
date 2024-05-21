@@ -12,7 +12,7 @@ export default function HomePage() {
     <section >
       {/* Video Section */}
       <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Home%20Banner.mp4" bgColor="">
-        <H1 color="absolute text-center text-[60px] text-hpi-white font-bold text-shadow-md leading-[80px]">
+        <H1 color="absolute text-center text-hpi-white font-bold text-shadow-md leading-[80px] xs:leading-[26px]">
           INNOVATIVE SOLUTIONS <br />
           FOR NEXT-GENERATION <br />
           PORT OPERATIONS
@@ -20,8 +20,8 @@ export default function HomePage() {
       </VideoContainer>
 
       {/* @ts-ignore */}
-      <RevealOnScrollComponent className="text-center mt-28">
-        <H2 color="text-gradient leading-[65px]">
+      <RevealOnScrollComponent className="text-center xs:mt-10 lg:mt-28">
+        <H2 color="text-gradient leading-[65px] xs:leading-[20px]">
           HUTCHISON PORTS IS AT THE <br />
           FOREFRONT OF THE INDUSTRY
         </H2>
@@ -38,8 +38,8 @@ export default function HomePage() {
 
       {/* What's new ... section */}
       {/* @ts-ignore */}
-      <RevealOnScrollComponent className="flex justify-center mt-56 mb-32">
-        <section className="snap-center">
+      <RevealOnScrollComponent className="flex justify-center lg:mt-56 lg:mb-32">
+        <section className="w-[80%] xs:mt-10">
           <header className="text-left">
             <H5 color="text-hpi-blue-light font-medium">
               Discover our latest technological advances

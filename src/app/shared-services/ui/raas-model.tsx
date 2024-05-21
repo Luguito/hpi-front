@@ -87,6 +87,7 @@ export const RaasModelComponent = ({ children }: any) => {
                                                 duration: 0.2
                                             }
                                         }}>
+                                            {/* 21 */}
                                         <p className="text-[16px] text-hpi-white text-center">
                                             Plug-and-Play to the standardised and <br />
                                             proven operational practice (SOP) - <br />

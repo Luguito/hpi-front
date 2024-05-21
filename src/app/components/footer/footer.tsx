@@ -13,7 +13,7 @@ function Footer() {
                 <section className="text-center mb-24">
                     <H3 color="text-gradient font-bold">
                         EXPLORE HOW WE CAN TRANSFORM CONTAINER <br />
-                         TERMINAL OPERATIONS TOGETHER
+                        TERMINAL OPERATIONS TOGETHER
                     </H3>
                     <article>
                         <Button>
@@ -23,14 +23,22 @@ function Footer() {
                         </Button>
                     </article>
                 </section>
-                <nav className="flex items-center justify-between bg-hpi-blue-sea py-14 px-24">
-                    <section>
+                <nav className="
+                flex items-center justify-between bg-hpi-blue-sea py-14 px-24
+                ">
+                    <section className="xs:hidden">
                         <article>
                             <Image src={Logo} alt="Logo" />
                         </article>
                     </section>
-                    <section className="flex gap-10">
-                        <article className="flex gap-10">
+                    <section className="
+                    flex gap-10
+                    xs:flex-col xs:items-center
+                    ">
+                        <article className="
+                        flex gap-10
+                        xs:flex-col-reverse xs:items-center 
+                        ">
                             {
                                 footOptions.map((option, key) => (
                                     <Text type="medium" classes="text-[14px] text-hpi-white" key={key}>
