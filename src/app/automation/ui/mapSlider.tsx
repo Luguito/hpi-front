@@ -89,9 +89,6 @@ function map(trigger: any) {
     );
 
     pointSeries.bullets.push(createPoint);
-    pointSeries.data.events.on('push', function (e) {
-        console.log(e)
-    })
     // polygonSeries.mapPolygons.template.setAll({
     //     tooltipText: "{name}",
     //     toggleKey: "active",
@@ -154,8 +151,8 @@ function map(trigger: any) {
     let slider = container.children.push(am5.Slider.new(root, {
         width: am5.percent(80),
         orientation: "horizontal",
-        start: 0,
-        centerY: am5.p50,
+        start: 1,
+        centerY: am5.p50
     }));
 
     slider.startGrip.get('background')?.set('fill', am5.color('#009BDE'))
@@ -164,7 +161,7 @@ function map(trigger: any) {
     })
 
     slider.startGrip.set("label", am5.Label.new(root, {
-        text: firstYear + "",
+        text: lastYear + "",
         paddingTop: 0,
         paddingRight: 0,
         paddingBottom: 0,
@@ -180,29 +177,23 @@ function map(trigger: any) {
         if (!years[year]) return;
 
         //   @ts-ignore
-        slider.startGrip.get("label")?.setAll({
-            text: year + '',
-            fontSize: 20
-        });
+        slider.startGrip.get("label")?.setAll({ text: year + '' });
 
-        setTimeout(() => {
-            //   @ts-ignore
-            slider.startGrip.get("label").set('fontSize', 15);
-        }, 1000);
-        
         updateCountries(year);
     })
 
     function updateCountries(year: any) {
         // @ts-ignore
         am5.object.each(years[year], function (joinYear, country) {
+            let shouldDelete = getFollowingYears(year);
+
+            shouldDelete.map(p => pointSeries.data.contains(p) && pointSeries.data.removeValue(p));
+
             if (!pointSeries.data.contains(country)) {
                 pointSeries.data.push(country)
-                trigger(year)
-            } else {
-                pointSeries.data.removeValue(country)
-                trigger(year)
             }
+            
+            trigger(year)
         })
     }
 
@@ -216,6 +207,17 @@ function map(trigger: any) {
         });
 
         return am5.Bullet.new(root, { sprite: circle });
+    }
+
+    function getFollowingYears(actualYear: any) {
+        const keys = Object.keys(years).map(year => parseInt(year)).sort((a, b) => a - b);
+
+        const followingYears = keys.filter(year => year > parseInt(actualYear));
+
+        // @ts-ignore
+        const followingProperties = followingYears.flatMap(year => years[year]);
+
+        return followingProperties;
     }
 }
 

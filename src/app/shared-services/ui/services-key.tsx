@@ -13,7 +13,7 @@ export const ServicesKeysComponent = () => {
                 SHARED SERVICES KEY ACHIEVEMENTS
             </H2>
             <section className="flex flex-col justify-between items-center py-12 text-center gap-4 mt-9">
-                <motion.article viewport={{ once: true }} className="flex gap-20 justify-evenly items-center h-44 w-[100%]" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+                <motion.article viewport={{ once: true }} className="flex gap-20 justify-evenly items-center h-44 w-[100%] text-hpi-blue-light" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                     <ComponentName num={6700} next="" />
                     <div className="text-center">
                         <H3 color="text-hpi-blue-light font-bold">
@@ -22,7 +22,7 @@ export const ServicesKeysComponent = () => {
                     </div>
                 </motion.article>
                 <hr className="border-b-2 w-[90%] border-hpi-grey-light rounded-[80%] opacity-75" />
-                <motion.article viewport={{ once: true }} className="flex gap-36 items-center justify-evenly h-44 w-[100%]" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+                <motion.article viewport={{ once: true }} className="flex gap-36 items-center justify-evenly h-44 w-[100%] text-hpi-blue-light" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                     <ComponentName num={8} next="Million" />
                     <div className="text-left w-1/4">
                         <H3 color="text-hpi-blue-light font-bold">
@@ -31,7 +31,7 @@ export const ServicesKeysComponent = () => {
                     </div>
                 </motion.article>
                 <hr className="border-b-2 w-[90%] border-hpi-grey-light rounded-[80%] opacity-75" />
-                <motion.article viewport={{ once: true }} className="flex gap-20 items-center  justify-evenly h-44 w-[100%]" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+                <motion.article viewport={{ once: true }} className="flex gap-20 items-center  justify-evenly h-44 w-[100%] text-hpi-blue-light" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                     <ComponentName num={50} next="%" />
                     <div className="text-center w-[30%]">
                         <H3 color="text-hpi-blue-light font-bold">

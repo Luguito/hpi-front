@@ -11,7 +11,7 @@ import Icon4 from '../../../../public/shared-services/timeline/boxes.svg'
 import Icon5 from '../../../../public/shared-services/timeline/future-flag.svg'
 import { useEffect } from 'react';
 import { B2, H3, H5 } from '@/app/components/text/text';
-
+import { motion } from 'framer-motion'
 
 export const TimelineComponent = () => {
 
@@ -77,7 +77,7 @@ export const TimelineComponent = () => {
                     <section>
                         <article className="flex flex-col">
                             <H5 color="text-hpi-blue-light font-medium">Ideation</H5>
-                            <p className='text-[50px] font-extrabold text-hpi-blue-dark mt-0'>2012</p>
+                            <motion.p whileHover={{ scale: 1.02 }} className='text-[50px] font-extrabold text-hpi-blue-dark mt-0'>2012</motion.p>
                         </article>
                         <B2 color="font-medium text-hpi-body-grey">
                             Hutchison Ports forms a task force of operations professionals and technology experts to rethink
@@ -97,7 +97,7 @@ export const TimelineComponent = () => {
                     <section>
                         <article className="flex flex-col">
                             <H5 color="text-hpi-blue-light font-medium">Embarkment</H5>
-                            <p className='text-[50px] font-extrabold text-hpi-blue-dark mt-0'>2013</p>
+                            <motion.p whileHover={{ scale: 1.02 }} className='text-[50px] font-extrabold text-hpi-blue-dark mt-0'>2013</motion.p>
                         </article>
                         <B2 color="font-medium text-hpi-body-grey">
                             The first ROC is established in Asia, marking the beginning of a new era in port operations management at Hutchison Ports.
@@ -115,7 +115,7 @@ export const TimelineComponent = () => {
                     <section>
                         <article className="flex flex-col">
                             <H5 color="text-hpi-blue-light font-medium">Growth</H5>
-                            <p className='text-[50px] font-extrabold text-hpi-blue-dark mt-0'>2014</p>
+                            <motion.p whileHover={{ scale: 1.02 }} className='text-[50px] font-extrabold text-hpi-blue-dark mt-0'>2014</motion.p>
                         </article>
                         <B2 color="font-medium text-hpi-body-grey">
                             ROC begins providing support for all planning activities at terminals in Pakistan (SAPT/KICT), resulting in a <b>30% increase in productivity</b>.
@@ -134,7 +134,7 @@ export const TimelineComponent = () => {
                     <section>
                         <article className="flex flex-col">
                             <H5 color="text-hpi-blue-light font-medium">Expansion</H5>
-                            <p className='text-[50px] font-extrabold text-hpi-blue-dark mt-0'>2020</p>
+                            <motion.p whileHover={{ scale: 1.02 }} className='text-[50px] font-extrabold text-hpi-blue-dark mt-0'>2020</motion.p>
                         </article>
                         <B2 color="font-medium text-hpi-body-grey">
                             ROC{"'"}s success leads to its implementation at HIT, Hutchison Ports{"'"} flagship terminal in Hong Kong.
@@ -153,8 +153,7 @@ export const TimelineComponent = () => {
                     <section>
                         <article className="flex flex-col">
                             <H5 color="text-hpi-blue-light font-medium">Future Directions</H5>
-                            
-                            <p className='text-[50px] font-extrabold text-hpi-blue-dark mt-0'>2024</p>
+                            <motion.p whileHover={{ scale: 1.02 }} className='text-[50px] font-extrabold text-hpi-blue-dark mt-0'>2024</motion.p>
                         </article>
                         <B2 color="font-medium text-hpi-body-grey">
                             Hutchison Ports will introduce NOC in Egypt, set to manage all its operational planning and back-office operations, showcasing our commitment to pushing the boundaries.

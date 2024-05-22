@@ -4,6 +4,7 @@ import MapGlobe from "./globe";
 import { motion } from 'framer-motion';
 import { RevealFromBottomToTop, RevealFromTopToBottom, RevealTextAfterSection } from '@/app/animations/animation';
 import { B2, H2, H3, MapNumber } from "@/app/components/text/text";
+import { ComponentName } from "@/app/components/counter/counter";
 
 export default function MapImpactUI() {
     return (
@@ -21,7 +22,7 @@ export default function MapImpactUI() {
                 <section className="flex flex-col gap-16">
                     <article className="flex flex-col items-center">
                         <MapNumber color="text-hpi-white font-bold">
-                            6
+                            <ComponentName num={6} next="" />
                         </MapNumber>
                         <H3 color="text-hpi-white font-bold">
                             CONTINENTS
@@ -29,7 +30,7 @@ export default function MapImpactUI() {
                     </article>
                     <article className="flex flex-col items-center">
                         <MapNumber color="text-hpi-white font-bold">
-                            16
+                            <ComponentName num={16} next="" />
                         </MapNumber>
                         <H3 color="text-hpi-white font-bold">
                             COUNTRIES
@@ -37,7 +38,7 @@ export default function MapImpactUI() {
                     </article>
                     <article className="flex flex-col items-center">
                         <MapNumber color="text-hpi-white font-bold">
-                            30
+                            <ComponentName num={30} next="" />
                         </MapNumber>
                         <H3 color="text-hpi-white font-bold">
                             MAJOR PORTS
@@ -45,7 +46,7 @@ export default function MapImpactUI() {
                     </article>
                     <article className="flex flex-col items-center">
                         <MapNumber color="text-hpi-white font-bold">
-                            60M
+                            <ComponentName num={60} next="M" />
                         </MapNumber>
                         <H3 color="text-hpi-white font-bold">
                             TEU PER YEAR

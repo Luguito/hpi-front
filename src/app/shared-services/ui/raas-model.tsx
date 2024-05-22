@@ -88,7 +88,7 @@ export const RaasModelComponent = ({ children }: any) => {
                                             }
                                         }}>
                                             {/* 21 */}
-                                        <p className="text-[16px] text-hpi-white text-center">
+                                        <p className="text-[21px] text-hpi-white text-center">
                                             Plug-and-Play to the standardised and <br />
                                             proven operational practice (SOP) - <br />
                                             uplifting the service level in no time! <br />
@@ -132,7 +132,7 @@ export const RaasModelComponent = ({ children }: any) => {
                                                 duration: 0.4
                                             }
                                         }}>
-                                        <p className="text-[16px] text-hpi-white text-center">
+                                        <p className="text-[21px] text-hpi-white text-center">
                                             A scalable solution that ensures the growth
                                             of your terminal without the burden of
                                             significant upfront investments.
@@ -175,7 +175,7 @@ export const RaasModelComponent = ({ children }: any) => {
                                                 duration: 0.4
                                             }
                                         }}>
-                                        <p className="text-[16px] text-hpi-white text-center">
+                                        <p className="text-[21px] text-hpi-white text-center">
                                             A hassle-free solution! Let ROC do <br />
                                             all the work, while your terminal <br />
                                             focuses on strategy.
@@ -219,7 +219,7 @@ export const RaasModelComponent = ({ children }: any) => {
                                                 duration: 0.4
                                             }
                                         }}>
-                                        <p className="text-[16px] text-hpi-white text-center">
+                                        <p className="text-[21px] text-hpi-white text-center">
                                             Progress is fully visible to your <br />
                                             terminal, allowing for complete <br />
                                             oversight and transparency

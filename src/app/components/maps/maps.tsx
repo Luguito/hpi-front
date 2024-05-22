@@ -94,7 +94,7 @@ function map() {
             strokeWidth: 2,
             showTooltipOn: 'hover',
             tooltipHTML: `
-            <section style="text-align: center; width: 25%;">
+            <section style="text-align: center; width: 27%;">
                 <header style="color: #002E6D; font-weight: semi-bold;">
                     <b style="font-size: 16px;">{title}</b>
                 </header>
@@ -113,13 +113,27 @@ function map() {
         let china = pointSeries.dataItems.at(l - 1);
 
         // @ts-ignore
-        china?.bullets[0]?.get('sprite')?.showTooltip()
+        let chinaPoint = china?.bullets[0]?.get('sprite');
+
+        // @ts-ignore
+        chinaPoint?.setAll({
+            tooltipHTML: `
+            <section style="text-align: center; width: 25%;">
+                <header style="color: #002E6D; font-weight: semi-bold;">
+                    <b style="font-size: 16px;">{title}</b>
+                </header>
+                <section style="display:flex; justify-content: center; align-items: center; font-weight: medium; color: #002E6D;">
+                    <p style="white-space: pre-line; font-size: 16px; text-wrap:wrap;">{description}</p>
+                </section>
+            </section>
+            `
+        })
+        // @ts-ignore
+        chinaPoint?.showTooltip();
     })
     pointSeries.data.setAll(cities);
     pointSeries.getTooltip()?.setAll({ width: am5.percent(23), getFillFromSprite: false })
-    pointSeries.getTooltip()?.get('background')?.setAll({ 
-        fill: am5.color('#FFFFFF') 
-    })
+    pointSeries.getTooltip()?.get('background')?.setAll({ fill: am5.color('#FFFFFF') })
     // Make stuff animate on load
     chart.appear(1000, 100)
 }

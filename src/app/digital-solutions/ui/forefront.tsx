@@ -3,9 +3,9 @@ import Image from 'next/image';
 import { motion, useMotionValue } from "framer-motion";
 
 // IMAGES
-import I from '../../../../public/digital-solutions/HPDX_logo.png'
+import I from '../../../../public/digital-solutions/HPDX_logo.svg'
 import I2 from '../../../../public/digital-solutions/DD_logo.png'
-import I3 from '../../../../public/digital-solutions/VERONICA_logo.png'
+import I3 from '../../../../public/digital-solutions/VERONICA_LOGO.png'
 import I4 from '../../../../public/digital-solutions/UBI_logo.png'
 import I5 from '../../../../public/digital-solutions/blueprint.png'
 import I6 from '../../../../public/digital-solutions/parking.png'
@@ -164,10 +164,10 @@ export default function ForeFrontUI() {
                             } />
                     </section>
                 </motion.div>
-                <div className="absolute left-[100%] w-14 top-[50%] cursor-pointer">
+                <div className="absolute flex justify-start inset-0 items-center left-[105%] w-[14.5em] top-[3%] cursor-pointer bg-gradient-to-l from-hpi-light-bg via-hpi-light-bg to-hpi-light-bg h-[80em]">
                     <Image src={Arrow} alt="" onClick={() => setImgIndex(1)} />
                 </div>
-                <div className="absolute -left-28 w-14 rotate-180 top-[50%] cursor-pointer">
+                <div className="absolute rotate-180 flex justify-start items-center left-[-15%] w-[14.5em] top-[3%] cursor-pointer bg-gradient-to-r from-transparent via-hpi-light-bg to-hpi-light-bg h-[80em]">
                     <Image src={Arrow} alt="" onClick={() => setImgIndex(0)} />
                 </div>
             </motion.section>
