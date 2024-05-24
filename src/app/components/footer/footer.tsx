@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Button from "../button/button";
-import Text from "../text/text";
+import Text, { H3 } from "../text/text";
 import Logo from '../../../../public/logo-hutchison-en.svg'
 
 function Footer() {
@@ -11,11 +11,10 @@ function Footer() {
             {/* Contact ... section */}
             <footer className="snap-center">
                 <section className="text-center mb-24">
-                    <article className="bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
-                        <Text type="bold" classes="text-[20px]">
-                            EXPLORE HOW WE CAN TRANSFORM CONTAINER TERMINAL OPERATIONS TOGETHER
-                        </Text>
-                    </article>
+                    <H3 color="text-gradient font-bold">
+                        EXPLORE HOW WE CAN TRANSFORM CONTAINER <br />
+                        TERMINAL OPERATIONS TOGETHER
+                    </H3>
                     <article>
                         <Button>
                             <Text type="bold" classes="text-[16px] text-hpi-white">
@@ -24,14 +23,22 @@ function Footer() {
                         </Button>
                     </article>
                 </section>
-                <nav className="flex items-center justify-between bg-hpi-blue-sea py-14 px-24">
-                    <section>
+                <nav className="
+                flex items-center justify-between bg-hpi-blue-sea py-14 px-24
+                ">
+                    <section className="xs:hidden">
                         <article>
                             <Image src={Logo} alt="Logo" />
                         </article>
                     </section>
-                    <section className="flex gap-10">
-                        <article className="flex gap-10">
+                    <section className="
+                    flex gap-10
+                    xs:flex-col xs:items-center
+                    ">
+                        <article className="
+                        flex gap-10
+                        xs:flex-col-reverse xs:items-center 
+                        ">
                             {
                                 footOptions.map((option, key) => (
                                     <Text type="medium" classes="text-[14px] text-hpi-white" key={key}>
@@ -41,7 +48,7 @@ function Footer() {
                             }
                         </article>
                         <article>
-                            <Text type="medium" classes="text-[16px] text-hpi-white">
+                            <Text type="medium" classes="text-[14px] text-hpi-white">
                                 2024 HUTCHISON PORT HOLDINGS LIMITED. ALL RIGHTS RESERVED.
                             </Text>
                         </article>

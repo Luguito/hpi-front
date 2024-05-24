@@ -104,7 +104,7 @@ const Images = ({ imgIndex }: { imgIndex: number }) => {
           <motion.div
             key={idx}
             transition={SPRING_OPTIONS}
-            className="shrink-0 rounded-xl w-[40em]"
+            className="shrink-0 rounded-xl w-[40em] hover:scale-105 transition"
           >
             <section className="flex justify-between shadow-custom rounded-3xl py-7 px-9 gap-4" key={idx}>
               <section className="flex flex-col justify-center gap-7 w-2/4 text-left">

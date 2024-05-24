@@ -1,56 +1,54 @@
 import { RevealOnScrollComponent } from "./animations/reveal";
-import Text from "./components/text/text";
+import Text, { B1, B2, H1, H2, H3, H5 } from "./components/text/text";
 import VideoContainer from "./components/video-container/video-container";
 import { SwipeCarousel } from "./components/carousel/carousel";
 import { TechSolutionsComponent } from "./components/tech-sections/tech-section";
 
+import { BlogsUI } from "./components/blog/blog";
 
 export default function HomePage() {
 
   return (
-    <section>
+    <section >
       {/* Video Section */}
       <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Home%20Banner.mp4" bgColor="">
-        <p className="absolute text-center text-[60px] text-hpi-white font-bold text-shadow-md leading-[80px]">
+        <H1 color="absolute text-center text-hpi-white font-bold text-shadow-md leading-[80px] xs:leading-[26px]">
           INNOVATIVE SOLUTIONS <br />
           FOR NEXT-GENERATION <br />
           PORT OPERATIONS
-        </p>
+        </H1>
       </VideoContainer>
-      
+
       {/* @ts-ignore */}
-      <RevealOnScrollComponent className="text-center mt-28">
-        <article className="snap-center bg-gradient-to-r from-[#0054AC] via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
-          <Text type="bold" classes="text-[30px] leading-[33px]">
-            HUTCHISON PORTS IS AT THE FOREFRONT OF THE INDUSTRY, <br />
-            DRIVING EFFICIENCY WITH ONGOING INVESTMENTS AND <br />
-            INNOVATION IN PORT TECHNOLOGY
-          </Text>
-        </article>
+      <RevealOnScrollComponent className="text-center xs:mt-10 lg:mt-28">
+        <H2 color="text-gradient leading-[65px] xs:leading-[20px]">
+          HUTCHISON PORTS IS AT THE <br />
+          FOREFRONT OF THE INDUSTRY
+        </H2>
+        <B1 color="text-hpi-blue-dark text-center font-medium mt-3">
+          driving efficiency with ongoing investments and <br />
+          innovation in port technology
+        </B1>
       </RevealOnScrollComponent>
       {/* Technological solutions */}
       {/* @ts-ignore */}
       <RevealOnScrollComponent className="flex justify-center">
-        <section className="bg-hpi-celeste rounded-3xl mt-20 w-[60%]">
-          <TechSolutionsComponent />
-        </section>
+        <TechSolutionsComponent />
       </RevealOnScrollComponent>
 
       {/* What's new ... section */}
       {/* @ts-ignore */}
-      <RevealOnScrollComponent className="mt-56 mb-32">
-        <section className="snap-center">
-          <header className="text-center">
-            <Text type="medium" classes="text-[16px] text-hpi-blue-light">
+      <RevealOnScrollComponent className="flex justify-center lg:mt-56 lg:mb-32">
+        <section className="w-[80%] xs:mt-10">
+          <header className="text-left">
+            <H5 color="text-hpi-blue-light font-medium">
               Discover our latest technological advances
-            </Text>
-            <Text type="bold" classes="text-[30px] bg-gradient-to-r from-hpi-blue-dark via-hpi-blue-dark to-[#000102] text-transparent bg-clip-text">
-               WHAT IS NEW AT HUTCHISON PORTS
-            </Text>
+            </H5>
+            <H2 color="text-gradient">
+              WHAT IS NEW AT HUTCHISON PORTS
+            </H2>
           </header>
-          <section className="flex gap-6 mx-36 mt-24">
-            <SwipeCarousel></SwipeCarousel>
-          </section>
+          <BlogsUI />
         </section>
       </RevealOnScrollComponent>
     </section>

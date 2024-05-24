@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55.747" height="55.747" viewBox="0 0 55.747 55.747">
+  <defs>
+    <filter id="Path_23" x="0" y="0" width="55.747" height="55.747" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-color="#fff"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_23)">
+    <path id="Path_23-2" data-name="Path 23" d="M14.389,7.71h2.968M14.389,24.779h2.968M6.968,17.358V14.389m17.81,2.968V14.389M5.484,9.937H8.453A1.484,1.484,0,0,0,9.937,8.453V5.484A1.484,1.484,0,0,0,8.453,4H5.484A1.484,1.484,0,0,0,4,5.484V8.453A1.484,1.484,0,0,0,5.484,9.937Zm0,17.81H8.453a1.484,1.484,0,0,0,1.484-1.484V23.294A1.484,1.484,0,0,0,8.453,21.81H5.484A1.484,1.484,0,0,0,4,23.294v2.968A1.484,1.484,0,0,0,5.484,27.747Zm17.81,0h2.968a1.484,1.484,0,0,0,1.484-1.484V23.294a1.484,1.484,0,0,0-1.484-1.484H23.294a1.484,1.484,0,0,0-1.484,1.484v2.968A1.484,1.484,0,0,0,23.294,27.747Zm0-17.81h2.968a1.484,1.484,0,0,0,1.484-1.484V5.484A1.484,1.484,0,0,0,26.263,4H23.294A1.484,1.484,0,0,0,21.81,5.484V8.453A1.484,1.484,0,0,0,23.294,9.937Z" transform="translate(12 12)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>

@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={mont.className}>
+      <body className={mont.className + " bg-hpi-light-bg"}>
         <Navbar />
         {children}
         <Footer />
