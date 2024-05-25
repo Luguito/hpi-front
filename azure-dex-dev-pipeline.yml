@@ -1,3 +1,5 @@
+pr: none
+trigger: none
 
 pool:
   name: Default
