@@ -4,8 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 
-pool:
-  vmImage: ubuntu-latest
+pool: Self
 
 variables:
   VM_HOST: $(DEX_VM_HOST)          # Update with your VM's host
