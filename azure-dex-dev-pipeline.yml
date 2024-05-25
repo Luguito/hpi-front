@@ -13,14 +13,17 @@ variables:
   SSH_PRIVATE_KEY: $(SSH_PRIVATE_KEY) # Define this as a secret variable in the pipeline settings
   PROJECT_PATH: $(PROJECT_RELATIVE_PATH) # Relative path to project directory
 
-steps:
-- script: |
-    echo "$SSH_PRIVATE_KEY" > id_rsa
-    chmod 600 id_rsa
-    ssh -o StrictHostKeyChecking=no -i id_rsa $(VM_USER)@$(VM_HOST) << 'EOF'
-    cd /home/$(VM_USER)/$(PROJECT_PATH) # Update with the correct path on your VM
-    git pull origin main # Pull the latest changes from the repo
-    docker-compose up -d --build
-    EOF
-    rm id_rsa
+jobs:
+- job: DeployChangesAndCompose
   displayName: 'Deploy Changes and Updating Composer'
+  steps:
+  - script: |
+      echo "$SSH_PRIVATE_KEY" > id_rsa
+      chmod 600 id_rsa
+      ssh -o StrictHostKeyChecking=no -i id_rsa $(VM_USER)@$(VM_HOST) << 'EOF'
+      cd /home/$(VM_USER)/$(PROJECT_PATH) # Update with the correct path on your VM
+      git pull origin main # Pull the latest changes from the repo
+      docker-compose up -d --build
+      EOF
+      rm id_rsa
+    displayName: 'Deploy Changes and Updating Composer'
