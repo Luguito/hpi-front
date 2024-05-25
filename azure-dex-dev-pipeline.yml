@@ -10,7 +10,7 @@ pool:
 variables:
   VM_HOST: $(DEX_VM_HOST)          # Update with your VM's host
   VM_USER: $(DEX_VM_USER)      # Update with your VM's username
-  SSH_PRIVATE_KEY: $(SSH_PRIVATE_KEY) # Define this as a secret variable in the pipeline settings
+  SSH_PRIVATE_KEY: $(DEX_SSH_VM_PRIVATE_KEY) # Define this as a secret variable in the pipeline settings
   PROJECT_PATH: $(PROJECT_RELATIVE_PATH) # Relative path to project directory
 
 jobs:
