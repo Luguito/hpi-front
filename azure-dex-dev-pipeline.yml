@@ -24,6 +24,6 @@ jobs:
       ssh -o StrictHostKeyChecking=no $(VM_USER)@$(VM_HOST) << 'EOF'
       cd /home/$(VM_USER)/$(PROJECT_PATH) # Update with the correct path on your VM
       git pull origin main # Pull the latest changes from the repo
-      docker-compose up -d --build
+      sudo docker-compose up -d --build
       EOF
     displayName: 'Deploy Changes and Updating Composer'
