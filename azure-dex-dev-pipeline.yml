@@ -4,7 +4,8 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 
-pool: Self
+pool:
+  name: Hosted Agent
 
 variables:
   VM_HOST: $(DEX_VM_HOST)          # Update with your VM's host
