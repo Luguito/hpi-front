@@ -18,7 +18,7 @@ jobs:
   displayName: 'Deploy Changes and Updating Composer'
   steps:
   - script: |
-      echo $(SSH_PRIVATE_KEY) > id_rsa
+      echo "$SSH_PRIVATE_KEY" > id_rsa
       chmod 600 id_rsa
       ssh -o StrictHostKeyChecking=no -i id_rsa $(VM_USER)@$(VM_HOST) << 'EOF'
       cd /home/$(VM_USER)/$(PROJECT_PATH) # Update with the correct path on your VM
