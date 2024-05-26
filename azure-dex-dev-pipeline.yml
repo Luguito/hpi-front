@@ -12,7 +12,7 @@ variables:
 
 jobs:
 - job: DeployChangesAndCompose
-  displayName: 'Setting Keys and Configurations'
+  displayName: 'Deploy Changes and Updating Website in VM'
   steps:
   - task: InstallSSHKey@0
     inputs:
@@ -28,4 +28,4 @@ jobs:
       git pull origin main # Pull the latest changes from the repo
       sudo docker compose up -d --build
       EOF
-    displayName: 'Deploy Changes and Updating Website in VM'
+    displayName: 'Building Docker Image'
