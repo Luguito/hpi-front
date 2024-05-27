@@ -37,28 +37,11 @@ steps:
     ArtifactName: 'docker-image'
   displayName: 'Publish Docker Image as an Artifact'
 
-- task: AzureCLI@2
+- task: AzureRmWebAppDeployment@4
   inputs:
-    azureSubscription: 'hki_automatic'
-    scriptType: 'bash'
-    scriptLocation: 'inlineScript'
-    inlineScript: |
-      publishProfile=$(cat $(Agent.TempDirectory)/$(publish_profile))
-      user=$(echo $publishProfile | grep -oP '(?<=userName=").*?(?=")')
-      pass=$(echo $publishProfile | grep -oP '(?<=userPWD=").*?(?=")')
-      site=$(echo $publishProfile | grep -oP '(?<=publishUrl=").*?(?=")' | sed 's/ftp:\/\///')
-
-      # Log in to Azure Web App using FTP credentials
-      curl -u $user:$pass --ftp-ssl -T $(Build.ArtifactStagingDirectory)/$(image_name).tar ftp://$site/
-
-      # Debug output
-      echo "User: $user"
-      echo "Pass: $pass"
-      echo "Site: $site"
-
-      # Log in to Azure Web App using FTP credentials
-      curl -u $user:$pass --ftp-ssl ftp://$site/
-      
-      # Update the web app configuration to use the new Docker image
-      # az webapp config container set --name '$(image_name)' --docker-custom-image-name $(image_name):$(Build.BuildId)
+    WebAppName: '$(image_name)'
+    ConnectionType: 'PublishProfile'
+    PublishProfilePath: AppServiceProfile.PublishSettings
+    PublishProfilePassword: '$(publishProfilePWD)'
+    packageForLinux: '$(Build.ArtifactStagingDirectory)/$(image_name).tar'
   displayName: 'Deploy Docker Image to Azure Web App'
