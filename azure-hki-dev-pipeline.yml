@@ -5,27 +5,36 @@ pool:
   name: Default
 
 variables:
-  VM_HOST: $(DEX_VM_HOST)          # Update with your VM's host
-  VM_USER: $(DEX_VM_USER)      # Update with your VM's username
-  PROJECT_PATH: $(PROJECT_RELATIVE_PATH) # Relative path to project directory
-  SSH_PUBLIC_KEY: $(DEX_SSH_VM_PUBLIC_KEY)
+  image_name: 'hpi-front-next'
+  image_tag: 'latest'
 
-jobs:
-- job: DeployChangesAndCompose
-  displayName: 'Deploy Changes and Updating Website in VM'
-  steps:
-  - task: InstallSSHKey@0
-    inputs:
-      knownHostsEntry: |
-        |1|XoIxBoyHXXyt5EWpJS9fQroDF00=|0ZsfkUI7/5xc2f7KXB6ojJM+xw0= ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEurS/eOwNVafquXm9u0MeCohCqxg6zN7cMOEymCtvoc
-        |1|+d+8LqEW0wF7Uahh8AwnTz60zb0=|iNBXN2lAxErHnh95QhYFMxPPcF0= ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC7Hr1oTWqNqOlzGJOfGJ4NakVyIzf1rXYd4d7wo6jBlkLvCA4odBlL0mDUyZ0/QUfTTqeu+tm22gOsv+VrVTMk6vwRU75gY/y9ut5Mb3bR5BV58dKXyq9A9UeB5Cakehn5Zgm6x1mKoVyf+FFn26iYqXJRgzIZZcZ5V6hrE0Qg39kZm4az48o0AUbf6Sp4SLdvnuMa2sVNwHBboS7EJkm57XQPVU3/QpyNLHbWDdzwtrlS+ez30S3AdYhLKEOxAG8weOnyrtLJAUen9mTkol8oII1edf7mWWbWVf0nBmly21+nZcmCTISQBtdcyPaEno7fFQMDD26/s0lfKob4Kw8H
-      sshPublicKey: '$(SSH_PUBLIC_KEY)'
-      sshKeySecureFile: 'HKI-website_key.pem'
+steps:
+# Checkout code from the Azure Repo
+- checkout: self
+  displayName: 'Checkout Code'
 
-  - script: |
-      ssh -o StrictHostKeyChecking=no $(VM_USER)@$(VM_HOST) << 'EOF'
-      cd /home/$(VM_USER)/$(PROJECT_PATH) # Update with the correct path on your VM
-      git pull origin main # Pull the latest changes from the repo
-      sudo docker compose up -d --build
-      EOF
-    displayName: 'Building Docker Image'
+- script: |
+    docker-compose -f docker-compose.yml build
+  displayName: 'Build Docker Image'
+
+- script: |
+    docker tag $(image_name):$(image_tag) $(image_name):$(Build.BuildId)
+  displayName: 'Tag Docker Image'
+
+- script: |
+    docker save $(image_name):$(Build.BuildId) -o $(Build.ArtifactStagingDirectory)/$(image_name).tar
+  displayName: 'Save Docker Image to Tar File'
+  
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/$(image_name).tar'
+    ArtifactName: 'docker-image'
+  displayName: 'Publish Docker Image as an Artifact'
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    WebAppName: '$(image_name)'
+    ConnectionType: 'PublishProfile'
+    PublishProfilePath: AppServiceProfile.PublishSettings
+    packageForLinux: '$(Build.ArtifactStagingDirectory)/$(image_name).tar'
+  displayName: 'Deploy Docker Image to Azure Web App'
