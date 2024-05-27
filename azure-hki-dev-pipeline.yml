@@ -14,6 +14,11 @@ steps:
 - checkout: self
   displayName: 'Checkout Code'
 
+- task: DownloadSecureFile@1
+  displayName: 'Download Publish Profile'
+  inputs:
+    secureFile: $(publish_profile)
+
 - script: |
     docker compose -f docker-compose.yml build
   displayName: 'Build Docker Image'
