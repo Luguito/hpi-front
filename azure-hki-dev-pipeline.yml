@@ -36,5 +36,6 @@ steps:
     WebAppName: '$(image_name)'
     ConnectionType: 'PublishProfile'
     PublishProfilePath: AppServiceProfile.PublishSettings
+    PublishProfilePassword: '$(publishProfilePWD)'
     packageForLinux: '$(Build.ArtifactStagingDirectory)/$(image_name).tar'
   displayName: 'Deploy Docker Image to Azure Web App'
