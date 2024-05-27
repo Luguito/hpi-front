@@ -51,6 +51,11 @@ steps:
       # Log in to Azure Web App using FTP credentials
       curl -u $user:$pass --ftp-ssl -T $(Build.ArtifactStagingDirectory)/$(image_name).tar ftp://$site/
 
+      # Debug output
+      echo "User: $user"
+      echo "Pass: $pass"
+      echo "Site: $site"
+      
       # Update the web app configuration to use the new Docker image
       az webapp config container set --name '$(image_name)' --docker-custom-image-name $(image_name):$(Build.BuildId)
   displayName: 'Deploy Docker Image to Azure Web App'
