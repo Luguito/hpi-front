@@ -43,7 +43,7 @@ steps:
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |
-      publishProfile=$(cat $(publish_profile))
+      publishProfile=$(cat $(Agent.TempDirectory)/$(publish_profile))
       user=$(echo $publishProfile | grep -oP '(?<=userName=").*?(?=")')
       pass=$(echo $publishProfile | grep -oP '(?<=userPWD=").*?(?=")')
       site=$(echo $publishProfile | grep -oP '(?<=publishUrl=").*?(?=")' | sed 's/ftp:\/\///')
