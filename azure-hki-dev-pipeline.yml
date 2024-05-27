@@ -7,6 +7,7 @@ pool:
 variables:
   image_name: 'hpi-front-next'
   image_tag: 'latest'
+  publish_profile: 'AppServiceProfile.PublishSettings'
 
 steps:
 # Checkout code from the Azure Repo
@@ -38,4 +39,22 @@ steps:
     PublishProfilePath: AppServiceProfile.PublishSettings
     PublishProfilePassword: '$(publishProfilePWD)'
     packageForLinux: '$(Build.ArtifactStagingDirectory)/$(image_name).tar'
+  displayName: 'Deploy Docker Image to Azure Web App'
+
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'hki_automatic'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      publishProfile=$(cat $(publish_profile))
+      user=$(echo $publishProfile | grep -oP '(?<=userName=").*?(?=")')
+      pass=$(echo $publishProfile | grep -oP '(?<=userPWD=").*?(?=")')
+      site=$(echo $publishProfile | grep -oP '(?<=publishUrl=").*?(?=")' | sed 's/ftp:\/\///')
+
+      # Log in to Azure Web App using FTP credentials
+      curl -u $user:$pass --ftp-ssl -T $(Build.ArtifactStagingDirectory)/$(image_name).tar ftp://$site/
+
+      # Update the web app configuration to use the new Docker image
+      az webapp config container set --name '$(image_name)' --docker-custom-image-name $(image_name):$(Build.BuildId)
   displayName: 'Deploy Docker Image to Azure Web App'
