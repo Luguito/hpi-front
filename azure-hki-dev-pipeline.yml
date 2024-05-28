@@ -39,9 +39,11 @@ steps:
 
 - task: AzureRmWebAppDeployment@4
   inputs:
+    appType: 'webAppContainer'
     WebAppName: '$(image_name)'
     ConnectionType: 'PublishProfile'
     PublishProfilePath: '$(appProfile.secureFilePath)'
     PublishProfilePassword: '$(publishProfilePWD)'
     packageForLinux: '$(Build.ArtifactStagingDirectory)/$(image_name).tar'
+    DockerImageTag: 'latest'
   displayName: 'Deploy Docker Image to Azure Web App'
