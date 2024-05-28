@@ -2,7 +2,7 @@ pr: none
 trigger: none
 
 pool:
-  name: Default
+  name: Book
 
 variables:
   image_name: 'hpi-front-next'
