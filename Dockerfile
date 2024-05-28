@@ -14,7 +14,7 @@ RUN rm -rf .next
 # Build app
 RUN npx next build
 # Expose the listening port
-EXPOSE 3000
+EXPOSE 80 80
 # Run container as non-root (unprivileged) user
 # The node user is provided in the Node.js Alpine base image
 USER node
