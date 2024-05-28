@@ -127,26 +127,3 @@ export const InnovativeSection = () => {
         </motion.section>
     )
 }
-
-const Dots = ({
-    index,
-    setIndex,
-}: {
-    index: number;
-    setIndex: Dispatch<SetStateAction<number>>;
-}) => {
-    return (
-        <div className="mt-16 flex w-full justify-center gap-2">
-            {arrComponent.map((_, idx) => {
-                return (
-                    <button
-                        key={idx}
-                        onClick={() => setIndex(idx)}
-                        className={`h-3 w-3 rounded-full transition-colors ${idx === index ? "bg-hpi-blue-dark" : "bg-hpi-white border-hpi-blue-dark border-2"
-                            }`}
-                    />
-                );
-            })}
-        </div>
-    );
-};
