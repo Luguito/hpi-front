@@ -7,7 +7,6 @@ pool:
 variables:
   image_name: 'hpi-front-next'
   image_tag: 'latest'
-  publish_profile: 'AppServiceProfile.PublishSettings'
 
 steps:
 # Checkout code from the Azure Repo
@@ -17,7 +16,7 @@ steps:
 - task: DownloadSecureFile@1
   displayName: 'Download Publish Profile'
   inputs:
-    secureFile: $(publish_profile)
+    secureFile: 'AppServiceProfile.PublishSettings'
 
 - script: |
     docker compose -f docker-compose.yml build
@@ -41,7 +40,7 @@ steps:
   inputs:
     WebAppName: '$(image_name)'
     ConnectionType: 'PublishProfile'
-    PublishProfilePath: AppServiceProfile.PublishSettings
+    PublishProfilePath: 'AppServiceProfile.PublishSettings'
     PublishProfilePassword: '$(publishProfilePWD)'
     packageForLinux: '$(Build.ArtifactStagingDirectory)/$(image_name).tar'
   displayName: 'Deploy Docker Image to Azure Web App'
