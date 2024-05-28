@@ -18,7 +18,7 @@ import I2020 from '../../../../public/automation/2020.bmp'
 import I2021 from '../../../../public/automation/2021.png'
 // import I2022 from '../../../../public/automation/2020.bmp'
 // @ts-ignore
-import I2023 from '../../../../public/automation/2023.JPG'
+import I2023 from '../../../../public/automation/2023.jpg'
 
 
 
@@ -27,7 +27,7 @@ import I2030_2 from '../../../../public/automation/2030-2.jpg'
 import I2030_3 from '../../../../public/automation/2030-3.jpg'
 import I2030_4 from '../../../../public/automation/2030-4.jpg'
 // @ts-ignore
-import I2030_5 from '../../../../public/automation/2030-5.JPG'
+import I2030_5 from '../../../../public/automation/2030-5.jpg'
 
 
 export const U1999I = () => {
