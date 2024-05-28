@@ -15,6 +15,7 @@ steps:
 
 - task: DownloadSecureFile@1
   displayName: 'Download Publish Profile'
+  name: appProfile
   inputs:
     secureFile: 'AppServiceProfile.PublishSettings'
 
@@ -40,7 +41,7 @@ steps:
   inputs:
     WebAppName: '$(image_name)'
     ConnectionType: 'PublishProfile'
-    PublishProfilePath: 'AppServiceProfile.PublishSettings'
+    PublishProfilePath: '$(appProfile.secureFilePath)'
     PublishProfilePassword: '$(publishProfilePWD)'
     packageForLinux: '$(Build.ArtifactStagingDirectory)/$(image_name).tar'
   displayName: 'Deploy Docker Image to Azure Web App'
