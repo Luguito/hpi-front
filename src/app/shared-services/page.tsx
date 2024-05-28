@@ -1,5 +1,5 @@
 import Button from "../components/button/button";
-import Text, { B1, B2, H1, H2, H3 } from "../components/text/text";
+import Text, { B1, B2, H1, H2, H3, H5 } from "../components/text/text";
 import VideoContainer from "../components/video-container/video-container";
 import Image from 'next/image'
 import Group from '../../../public/Group 62.png'
@@ -27,7 +27,7 @@ import { TimelineComponent } from "./ui/timeline";
 
 export default function HomePage() {
     return (
-        <section>
+        <section className="overflow-hidden">
             {/* Video Section */}
             <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Shared%20Services%20Banner.mp4" bgColor="">
                 <H1 initial="hidden" animate="visible" color="absolute text-center text-[60px] text-hpi-white font-bold text-shadow-md">
@@ -51,11 +51,11 @@ export default function HomePage() {
 
             {/* Efficiency */}
             {/* @ts-ignore  */}
-            <RevealOnScrollComponent className="flex justify-center">
+            <RevealOnScrollComponent>
                 <EfficiencyComponent />
             </RevealOnScrollComponent>
 
-            
+
             {/* ROC NOC */}
             <Regional />
 
@@ -69,7 +69,10 @@ export default function HomePage() {
             <RevealOnScrollComponent>
                 <section className="mt-36 mb-40 mx-80">
                     <header className="text-left snap-start mb-10 ml-7">
-                        <H2 color="text-gradient">OUR CORE SERVICES</H2>
+                        <H5 color="text-hpi-blue-light font-medium">
+                            Our Services
+                        </H5>
+                        <H2 color="text-gradient">CORE COMPONENTS OF ROC</H2>
                         <B1 color="text-hpi-blue-dark font-medium">
                             Our ROC model encompasses four core components, leveraging <br />
                             Hutchison Ports’ operational best practices and cutting-edge technology:
@@ -148,9 +151,10 @@ export default function HomePage() {
             <RevealOnScrollComponent>
                 <section className="mt-36 mx-80">
                     <header className="text-left ml-7">
-                        <H2 color="text-gradient">OUR JOURNEY TO EXCELLENCE</H2>
+                        <H5 color="text-hpi-blue-light font-medium">Our Journey</H5>
+                        <H2 color="text-gradient">FROM IDEATION TO EXPANSION</H2>
                         <B1 color="text-hpi-blue-dark font-medium">
-                            From ideation to expansion, our journey underscores a relentless <br />
+                            Our journey underscores a relentless <br />
                             pursuit of redefining terminal operations.
                         </B1>
                     </header>

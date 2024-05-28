@@ -147,26 +147,78 @@ function map(trigger: any) {
         paddingBottom: 10,
     }));
 
-
+    // Crear el slider
     let slider = container.children.push(am5.Slider.new(root, {
-        width: am5.percent(80),
+        width: am5.percent(100),
         orientation: "horizontal",
-        start: 1,
+        start: 0,
+        end: 100,
         centerY: am5.p50
     }));
+
+    // Crear el contenedor de ticks y etiquetas
+    let ticksContainer = slider.children.push(am5.Container.new(root, {
+        width: am5.percent(100),
+        height: am5.percent(100),
+        layout: root.horizontalLayout,
+        centerY: am5.p50,
+        paddingLeft: 10,
+        paddingRight: 10
+    }));
+
+    // Años para las etiquetas
+    let yearTicks = ["1991","1993","1995","2007","2012","2013","2015","2016","2017","2019","2020","2021","2022","2023","2030"]
+
+    // Crear ticks y etiquetas
+    yearTicks.forEach((year, index) => {
+        // Posición del tick
+
+        let position = (index / (yearTicks.length - 1)) * 100;
+
+        // Crear tick
+        ticksContainer.children.push(am5.Graphics.new(root, {
+            centerX: am5.percent(position),
+            centerY: am5.percent(50),
+            stroke: am5.color(0x000000),
+            strokeWidth: 2,
+            draw: function (display) {
+                display.moveTo(0, 0);
+                display.lineTo(0, 10);
+            }
+        }));
+
+        console.log(position)
+        // Crear etiqueta
+        ticksContainer.children.push(am5.Label.new(root, {
+            text: year,
+            centerX: am5.percent(position),
+            centerY: am5.percent(50),
+            dy: -20,
+            fontSize: 21,
+            fill: am5.color("#002E6D"),
+            fontWeight: "bold"
+        }));
+    });
+
+    // Configurar el color del startGrip
+    slider.startGrip.get("background")?.setAll({
+        fill: am5.color("#009BDE")
+    });
+
 
     slider.startGrip.get('background')?.set('fill', am5.color('#009BDE'))
     slider.thumb.setAll({
         fill: am5.color('#FFFF'),
     })
 
-    slider.startGrip.set("label", am5.Label.new(root, {
-        text: lastYear + "",
-        paddingTop: 0,
-        paddingRight: 0,
-        paddingBottom: 0,
-        paddingLeft: 0,
-    }));
+    // slider.startGrip.set("label", am5.Label.new(root, {
+    //     text: lastYear + "",
+    //     paddingTop: 0,
+    //     paddingRight: 0,
+    //     paddingBottom: 0,
+    //     paddingLeft: 0,
+    // }));
+
 
 
     updateCountries(firstYear);
@@ -177,7 +229,7 @@ function map(trigger: any) {
         if (!years[year]) return;
 
         //   @ts-ignore
-        slider.startGrip.get("label")?.setAll({ text: year + '' });
+        // slider.startGrip.get("label")?.setAll({ text: year + '' });
 
         updateCountries(year);
     })
@@ -192,14 +244,14 @@ function map(trigger: any) {
             if (!pointSeries.data.contains(country)) {
                 pointSeries.data.push(country)
             }
-            
+
             trigger(year)
         })
     }
 
     function createPoint() {
         let circle = am5.Circle.new(root, {
-            radius: 5,
+            radius: 8,
             fill: am5.color("#FFC627"),
             stroke: am5.color("#FFFFFF"),
             cursorOverStyle: "pointer",

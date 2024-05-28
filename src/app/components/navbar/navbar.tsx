@@ -65,9 +65,9 @@ export default function Navbar() {
                             </Link>
                         ))
                     }
-                    <p className={`text-[14px] text-hpi-blue-dark cursor-pointer font-medium`}>
+                    {/* <p className={`text-[14px] text-hpi-blue-dark cursor-pointer font-medium`}>
                         CONTACT US
-                    </p>
+                    </p> */}
                 </article>
                 <article>
                     {/* <Text type="medium" classes="text-[14px] text-hpi-blue-dark">EN</Text> */}

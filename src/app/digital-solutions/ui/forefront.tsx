@@ -3,12 +3,12 @@ import Image from 'next/image';
 import { motion, useMotionValue } from "framer-motion";
 
 // IMAGES
-import I from '../../../../public/digital-solutions/HPDX_logo.svg'
+import I from '../../../../public/digital-solutions/HPDX_logo.png'
 import I2 from '../../../../public/digital-solutions/DD_logo.png'
 import I3 from '../../../../public/digital-solutions/VERONICA_logo.png'
 import I4 from '../../../../public/digital-solutions/UBI_logo.png'
-import I5 from '../../../../public/digital-solutions/blueprint.png'
-import I6 from '../../../../public/digital-solutions/parking.png'
+import I5 from '../../../../public/digital-solutions/know before it happens.png'
+import I6 from '../../../../public/digital-solutions/keep_flow.png'
 import I7 from '../../../../public/digital-solutions/truck.png'
 import I8 from '../../../../public/digital-solutions/ROSA_logo.png'
 import Arrow from '../../../../public/digital-solutions/arrow-right-direction.svg'
@@ -44,7 +44,7 @@ export default function ForeFrontUI() {
     return (
         <>
             <header className="text-left ml-7">
-                <H3 color="text-hpi-blue-light">Our Solutions</H3>
+                <H3 color="text-hpi-blue-light">Our Strength</H3>
                 <H2 color="text-gradient">AT THE FOREFRONT OF PORT INNOVATION</H2>
             </header>
             <motion.section className="relative" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
@@ -78,8 +78,11 @@ export default function ForeFrontUI() {
                                 `
                             } />
                         <SectionUI
+                            url="https://hpdx.io/"
                             Img={
-                                <Image src={I} alt="" height={200} />
+                                <section className="flex justify-center items-center w-full h-full">
+                                    <Image src={I} alt="" />
+                                </section>
                             }
                             title={"ONCE-FOR-ALL CONNECTION"}
                             content={
@@ -92,7 +95,9 @@ export default function ForeFrontUI() {
                             } />
                         <SectionUI
                             Img={
-                                <Image src={I8} alt="" height={250} />
+                                <section className="w-full h-full flex justify-center items-center">
+                                    <Image src={I8} alt="" height={250} className="" />
+                                </section>
                             }
                             title={"OPERATIONS ANYTIME, ANYWHERE"}
                             content={
@@ -105,7 +110,9 @@ export default function ForeFrontUI() {
                             } />
                         <SectionUI
                             Img={
-                                <Image src={I7} alt="" height={400} />
+                                <section className="flex justify-center items-center w-full h-full px-14 py-10">
+                                    <Image src={I7} alt="" className="h-[100%]" />
+                                </section>
                             }
                             title={"UNLOCKING EFFICIENCY THROUGH AUTOMATION"}
                             content={
@@ -118,7 +125,9 @@ export default function ForeFrontUI() {
                     <section className="grid grid-cols-2 grid-rows-2 justify-center items-center gap-10 mt-11 shrink-0 rounded-xl w-full ">
                         <SectionUI
                             Img={
-                                <Image src={I2} alt="" width={200} />
+                                <section className="flex justify-center items-center w-full h-full">
+                                    <Image src={I2} alt="" width={200} />
+                                </section>
                             }
                             title={"GO BEYOND PAPERLESS"}
                             content={
@@ -130,7 +139,9 @@ export default function ForeFrontUI() {
                             } />
                         <SectionUI
                             Img={
-                                <Image src={I6} alt="" className='max-w-none' height={200} />
+                                <section className="flex justify-center items-center w-full h-full">
+                                    <Image src={I6} alt="" />
+                                </section>
                             }
                             title={"KEEP-IT-FLOW"}
                             content={
@@ -142,7 +153,9 @@ export default function ForeFrontUI() {
 
                         <SectionUI
                             Img={
-                                <Image src={I5} alt=""  />
+                                <section className="flex justify-center items-center w-full h-full">
+                                    <Image src={I5} alt="" />
+                                </section>
                             }
                             title={"KNOW BEFORE IT HAPPENS"}
                             content={
@@ -152,8 +165,11 @@ export default function ForeFrontUI() {
                                 `
                             } />
                         <SectionUI
+                            url="https://hutchisonports.sharepoint.com/:v:/r/sites/ProductManagementTeam/Shared%20Documents/General/Product%20Management%20Center/4.Product%20Marketing/Product%20Website/Video/Hutchison%20Port%20ENG%20NM.mp4?csf=1&web=1&e=ljOY8d"
                             Img={
-                                <Image src={I4} alt="" />
+                                <section className="flex justify-center items-center w-full h-full">
+                                    <Image src={I4} alt="" />
+                                </section>
                             }
                             title={"PORT ACCESSIBILITY"}
                             content={
@@ -164,27 +180,45 @@ export default function ForeFrontUI() {
                             } />
                     </section>
                 </motion.div>
-                <div className="absolute flex justify-start inset-0 items-center left-[105%] w-[14.5em] top-[3%] cursor-pointer bg-gradient-to-l from-hpi-light-bg via-hpi-light-bg to-transparent h-[80em]">
-                    <Image src={Arrow} alt="" onClick={() => setImgIndex(1)} />
-                </div>
-                <div className="absolute rotate-180 flex justify-start items-center left-[-15%] w-[14.5em] top-[3%] cursor-pointer bg-gradient-to-r from-transparent via-hpi-light-bg to-hpi-light-bg h-[80em]">
-                    <Image src={Arrow} alt="" onClick={() => setImgIndex(0)} />
-                </div>
+                {imgIndex === 0 && <>
+                    <div className="absolute flex justify-start items-center left-[101%] w-[14.5em] top-[1%] cursor-pointer bg-hpi-light-bg h-[84em]">
+                        <Image src={Arrow} alt="" onClick={() => setImgIndex(1)} />
+                    </div>
+                </>}
+                {imgIndex === 1 && <>
+                    <div className="absolute rotate-180 flex justify-start items-center left-[-16%] w-[15.5em] top-[3%] cursor-pointer bg-hpi-light-bg h-[82em]">
+                        <Image src={Arrow} alt="" onClick={() => setImgIndex(0)} />
+                    </div>
+                </>}
             </motion.section>
         </>
     )
-} 
+}
 
-const SectionUI = ({ Img, title, content }: any) => {
+const SectionUI = ({ Img, title, content, url}: any) => {
+
+    function redirect() {
+        if(!url) return;
+
+        let redirectNode = document.createElement('a');
+
+        redirectNode.href = url;
+        redirectNode.target = "_blank";
+        redirectNode.rel = "noopener noreferrer";
+
+        redirectNode.click();
+    }
+
     return (
         <motion.section
-            className="flex flex-col justify-evenly bg-hpi-white gap-4 rounded-3xl px-14 py-8 h-[38.5em] shadow-lg"
+            className="flex flex-col bg-hpi-white gap-4 rounded-[3.5rem] h-[38.5em] shadow-lg"
             whileHover={{ scale: 1.04 }}
+            onClick={redirect}
         >
-            <article className="flex justify-center items-center w-full h-2/4">
+            <article className="w-full h-[55%]">
                 {Img}
             </article>
-            <article className="flex flex-col">
+            <article className="flex flex-col px-14 h-[35%]">
                 <H3 color="text-hpi-blue-dark font-bold">
                     {title}
                 </H3>
