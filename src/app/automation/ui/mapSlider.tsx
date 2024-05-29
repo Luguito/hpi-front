@@ -7,6 +7,10 @@ import * as am5map from "@amcharts/amcharts5/map";
 import { useRef, useEffect } from "react";
 /* Chart code */
 // Country data
+
+
+
+// SOLO LOS PUNTOS DEL AÑO
 let data = [
     { year: 1991, geometry: { type: "Point", coordinates: [0.6817, 51.4348] } },
     { year: 1993, geometry: { type: "Point", coordinates: [4.0588, 51.9511] } },
@@ -89,25 +93,6 @@ function map(trigger: any) {
     );
 
     pointSeries.bullets.push(createPoint);
-    // polygonSeries.mapPolygons.template.setAll({
-    //     tooltipText: "{name}",
-    //     toggleKey: "active",
-    //     interactive: true
-    // });
-
-    // polygonSeries.mapPolygons.template.states.create("hover", {
-    //     fill: root.interfaceColors.get("primaryButtonHover")
-    // });
-
-    // polygonSeries.mapPolygons.template.states.create("active", {
-    //     fill: root.interfaceColors.get("primaryButtonActive")
-    // });
-
-    // Set clicking on "water" to zoom out
-    //   @ts-ignore
-    // chart.chartContainer.get("background").events.on("click", function () {
-    //     chart.goHome();
-    // })
 
     // Make stuff animate on load
     chart.appear(1000, 100);
@@ -144,62 +129,82 @@ function map(trigger: any) {
         x: am5.p50,
         width: am5.percent(90),
         layout: root.horizontalLayout,
-        paddingBottom: 10,
+        paddingBottom: 20,
     }));
 
-
+    // Crear el slider
     let slider = container.children.push(am5.Slider.new(root, {
-        width: am5.percent(80),
+        width: am5.percent(100),
         orientation: "horizontal",
-        start: 1,
-        centerY: am5.p50
+        start: 0,
+        end: 100,
+        centerY: am5.p50,
     }));
 
-    slider.startGrip.get('background')?.set('fill', am5.color('#009BDE'))
-    slider.thumb.setAll({
-        fill: am5.color('#FFFF'),
-    })
+    
 
-    slider.startGrip.set("label", am5.Label.new(root, {
-        text: lastYear + "",
-        paddingTop: 0,
-        paddingRight: 0,
-        paddingBottom: 0,
-        paddingLeft: 0,
+    // Crear el contenedor de ticks y etiquetas
+    let ticksContainer = slider.children.push(am5.Container.new(root, {
+        width: am5.percent(100),
+        height: am5.percent(100),
+        layout: root.horizontalLayout,
+        centerY: am5.p50,
     }));
 
+    
+    // Años para las etiquetas
+    let yearTicks = ["1991", "1993", "1995", "2007", "2012", "2013", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2030"]
 
+    yearTicks.forEach((year, index) => {
+        let position = (index / (yearTicks.length - 1)) * 100;
+
+        ticksContainer.children.push(am5.Label.new(root, {
+            text: year,
+            centerX: am5.percent(position),
+            centerY: am5.percent(50),
+            dy: -20,
+            fontSize: 21,
+            fill: am5.color("#002E6D"),
+            fontWeight: "bold",
+            x: am5.percent(position)
+        }));
+    });
+
+    // Configurar el color del startGrip
+    slider.startGrip.get("background")?.setAll({ fill: am5.color("#009BDE") });
+    
     updateCountries(firstYear);
+    
+    let index = 0;
+    slider.events.on("rangechanged", function () {
+        let start = slider.get("end");
+        // @ts-ignore
+        let currentIndex = Math.round(start * (yearTicks.length - 1));
+        slider.startGrip.get("label")?.setAll({ text: yearTicks[currentIndex]});
 
-    slider.events.on("rangechanged", function (e) {
-        let year = firstYear + Math.round(slider.get("start", 0) * (lastYear - firstYear));
-        //   @ts-ignore
-        if (!years[year]) return;
+        if(index !== currentIndex){
+            updateCountries(yearTicks[currentIndex]);
+            index = currentIndex
+        } 
+    });
 
-        //   @ts-ignore
-        slider.startGrip.get("label")?.setAll({ text: year + '' });
-
-        updateCountries(year);
-    })
-
+    // REVISAR ESTO 
     function updateCountries(year: any) {
+        pointSeries.data.clear();
+
         // @ts-ignore
         am5.object.each(years[year], function (joinYear, country) {
-            let shouldDelete = getFollowingYears(year);
-
-            shouldDelete.map(p => pointSeries.data.contains(p) && pointSeries.data.removeValue(p));
-
             if (!pointSeries.data.contains(country)) {
                 pointSeries.data.push(country)
             }
-            
-            trigger(year)
         })
+
+        trigger(year)
     }
 
     function createPoint() {
         let circle = am5.Circle.new(root, {
-            radius: 5,
+            radius: 8,
             fill: am5.color("#FFC627"),
             stroke: am5.color("#FFFFFF"),
             cursorOverStyle: "pointer",
@@ -239,7 +244,7 @@ export const MapSlider = ({ changeSection }: any) => {
 
     return (
         <>
-            <div id="chartdiv" ref={ref} className="h-[40em]"></div>
+            <div id="chartdiv" ref={ref} className="h-[45em]"></div>
         </>
     )
 }

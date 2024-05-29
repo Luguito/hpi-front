@@ -20,7 +20,7 @@ const VeronicaComponent = () => {
 
         let video = ref.current as HTMLVideoElement;
 
-        video.src = "https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/ROSA_video.mp4"
+        video.src = "https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/VERONICA_video.mp4"
         video.controls = true;
         video.loop = false;
         video.load();
@@ -47,9 +47,9 @@ const VeronicaComponent = () => {
                     VERONICA-AS-A-SERVICE
                 </H3>
                 <B2 color="text-hpi-body-grey font-medium mt-10">
-                    Discover how Veronica, our suite of terminal  <br />
-                    services, is revolutionising logistics <br />
-                    operations, increasing efficiency, and <br />
+                    Discover how Veronica, our suite of terminal 
+                    services, is revolutionising logistics 
+                    operations, increasing efficiency, and
                     productivity through automation and real-time data management.
                 </B2>
             </section>
@@ -75,7 +75,7 @@ const RosaComponent = () => {
         if (!ref.current) return;
 
         let video = ref.current as HTMLVideoElement;
-
+        // change video 
         video.src = "https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/ROSA_video.mp4"
         video.controls = true;
         video.loop = false;
@@ -135,8 +135,8 @@ export const FeatureUI = () => {
     return (
         <motion.section  whileInView="visible" variants={RevealSectionInitial}>
             <header className="text-left ml-7">
-                <H3 color="text-hpi-blue-light">Empowering Terminals</H3>
-                <H2 color="text-gradient"> FEATURING STORIES</H2>
+                <H3 color="text-hpi-blue-light">Our Stories</H3>
+                <H2 color="text-gradient leading-[60px]">HOW WE STAY AHEAD WITH OUR INNOVATIVE SOLUTIONS</H2>
             </header>
             {/* <section className="mt-14 flex gap-5 justify-between">
                 <VeronicaComponent />

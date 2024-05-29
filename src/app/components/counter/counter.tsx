@@ -21,7 +21,7 @@ export function ComponentName({ num, next }: any) {
     useEffect(() => {
         if (isInView) {
             animate(startingValue, num, {
-                duration: 5,
+                duration: 2,
                 ease: "circIn"
             });
         }
@@ -35,3 +35,7 @@ export function ComponentName({ num, next }: any) {
         </LazyMotion>
     );
 }
+
+// Punto final Regioal operations
+// Scale se hace diagonal -> deberia ser centrado
+// limite de lienas titulo 4 - body 4 lineas  -> HOME

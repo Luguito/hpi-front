@@ -16,7 +16,8 @@
   }
 }
 
-html, body { 
+html,
+body {
   /* scroll-snap-type: y mandatory; */
 }
 
@@ -30,11 +31,18 @@ html, body {
   }
 }
 
-@layer base{
+@layer base {
   ul {
-   @apply list-disc pl-4 pt-2;
+    @apply list-disc pl-4 pt-2;
   }
+
   li {
     @apply pt-6;
   }
- }
+}
+
+@layer components {
+  .list-blue li::marker {
+    color: #009BDE;
+  }
+}

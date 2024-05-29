@@ -65,7 +65,7 @@ export const TechSolutionsComponent = () => {
                 md:px-24 md:py-20 md:rounded-3xl
             ">
                 <nav className="flex flex-col gap-4 w-[30em]">
-                    <details onClick={checkDetails}>
+                    <details onClick={checkDetails} open>
                         <summary className="flex justify-between cursor-pointer" onClick={() => setSection('automation')}>
                             <H3 color={`${currentSection === 'automation' ? 'text-hpi-blue-light' : 'text-hpi-grey-light'} font-bold`}>
                                 AUTOMATION

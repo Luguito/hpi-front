@@ -33,7 +33,7 @@ export const InnovationUI = () => {
     return (
         <section className="flex flex-col gap-10 mt-28">
             <section className="flex flex-col text-left">
-                <H2 color="text-gradient">
+                <H2 color="text-gradient leading-[65px]">
                     INNOVATION AND TECHNOLOGICAL <br />
                     SOPHISTICATION ARE AT OUR CORE
                 </H2>
@@ -48,7 +48,7 @@ export const InnovationUI = () => {
                 <video poster="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/F-frame-Sweden.png"
                     className="rounded-3xl cursor-pointer"
                     ref={ref} onClick={playVideo} onEnded={resetVideo}>
-                    <source src="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/HPI-Sweden.mp4" type="video/mp4" />
+                    <source src="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/veronica_final_v3%20(Original).mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
                 <Image src={Play} alt="" className={`absolute top-[40%] left-[45%] cursor-pointer ${playing ? 'hidden' : 'block'}`} onClick={playVideo} />

@@ -58,15 +58,16 @@ export const TimelineComponent = () => {
         })
     }, [])
 
-    const iconStyle = { background: '#EFEFEF', color: '#fff', boxShadow: 'none', transform: 'translate(-4.5em, 2em)', width: '7em', height: '7em', display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 1 };
+    const iconStyle = { backgroundColor: '#EFEFEF', color: '#fff', boxShadow: 'none', transform: 'translate(-4.5em, 2em)', width: '7em', height: '7em', display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 1, transition: 'all 1s'};
     const contentStyle = { background: 'transparent', boxShadow: 'none', padding: '1em 2em' };
     return (
         <>
             <VerticalTimeline animate={false} layout="1-column-left" lineColor="#EBEBEB"
                 className="bg-transparent p-0 pl-10 m-0 w-full max-w-max 
                 before:top-8 before:left-[1.4em] before:h-[85%] 
-                after:top-8 after:left-[1.4em] after:h-[85%] after:w-[5px] after:absolute after:bg-hpi-blue-dark after:transition-all">
+                after:top-8 after:left-[1.4em] after:h-[85%] after:w-[5px] after:absolute after:bg-hpi-blue-dark after:transition ">
                 <VerticalTimelineElement
+
                     iconStyle={iconStyle}
                     contentStyle={contentStyle}
                     contentArrowStyle={{ border: 'none' }}

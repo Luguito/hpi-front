@@ -35,7 +35,7 @@ export const Regional = () => {
         <section className="mt-40 mb-32 mx-80">
             <motion.header className="text-left ml-7" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={variantParent}>
                 <H5 color="text-hpi-blue-light font-medium">Our Framework</H5>
-                <H2 color="text-gradient">
+                <H2 color="text-gradient leading-[65px]">
                     REGIONAL OPERATIONS CENTRE AND <br />
                     NATIONAL OPERATIONS CENTRE
                 </H2>

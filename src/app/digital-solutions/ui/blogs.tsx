@@ -40,7 +40,7 @@ export const BlogsDSUI = () => {
                                 Read More
                             </B2>
                         </article>
-                        <Image src={Table} alt={""} width={400} className="object-cover" />
+                        <Image src={Table} alt={""} width={400} className="object-cover max-w-none" />
                     </motion.article>
                     <motion.article
                         className="bg-white rounded-3xl shadow-lg flex"
@@ -59,7 +59,7 @@ export const BlogsDSUI = () => {
                                 Read More
                             </B2>
                         </article>
-                        <Image src={Veronica} alt={""} width={350} className="object-contain"/>
+                        <Image src={Veronica} alt={""} width={350} className="object-contain mr-7"/>
                     </motion.article>
                 </section>
                 <motion.article
