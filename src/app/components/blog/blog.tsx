@@ -4,7 +4,7 @@ import { H3, B2 } from '../text/text';
 
 
 import UBI from '../../../../public/home/ubi.png'
-import Graphic from '../../../../public/home/graphic.png'
+import Graphic from '../../../../public/home/graphic.svg'
 import Truck from '../../../../public/home/13.jpg'
 import Arrow from "../../../../public/home/arrow.svg";
 
@@ -32,17 +32,19 @@ export const BlogsUI = () => {
                         xs:flex-col-reverse xs:rounded-2xl"
                         whileHover={{ scale: 1.04 }}
                         variants={variantParent}>
-                        <article className="xs:px-3 md:py-10 md:px-14">
+                        <article className="
+                            xs:px-3 
+                            md:py-10 md:px-14">
                             <H3 color="text-hpi-blue-light font-bold xs:mt-2">
-                                UBI, THE 
+                                UBI, THE
                                 NEW APP
-                                FOR TRUCK 
+                                FOR TRUCK
                                 DRIVERS
                             </H3>
                             <B2 color="text-hpi-body-grey font-medium md:mt-5 xs:text-hpi-grey-dark">
-                                Check whether the 
-                                container is on the 
-                                vessel, or ready for 
+                                Check whether the
+                                container is on the
+                                vessel, or ready for
                                 pickup or collected.
                             </B2>
                             <B2 color="text-hpi-blue-light font-semibold cursor-pointer md:mt-6 xs:py-2">
@@ -56,13 +58,16 @@ export const BlogsUI = () => {
                         xs:flex-col-reverse xs:rounded-2xl"
                         whileHover={{ scale: 1.04 }}
                         variants={variantParent}>
-                        <article className="xs:px-3 md:p-10">
-                            <H3 color="text-hpi-blue-light font-bold xs:mt-2">
-                                VERONICA 
-                                WILL GET 
+                        <article className="
+                            xs:px-3 
+                            md:pl-10 md:pt-10
+                            ">
+                            <H3 color="text-hpi-blue-light font-bold xs:mt-2 md:w-[80%]">
+                                VERONICA
+                                WILL GET
                                 SMARTER
                             </H3>
-                            <B2 color="text-hpi-body-grey font-medium md:mt-5 xs:text-hpi-grey-dark">
+                            <B2 color="text-hpi-body-grey font-medium md:mt-5 xs:text-hpi-grey-dark md:w-[60%]">
                                 New decision
                                 engines driven by
                                 real-time data
@@ -73,7 +78,13 @@ export const BlogsUI = () => {
                                 Read More
                             </B2>
                         </article>
-                        <Image src={Graphic} alt={""}  className="xs:h-[100px] xs:object-cover xs:rounded-t-2xl" />
+                        <article style={{ aspectRatio: "16/9" }} className="flex items-center">
+                            {/* Revisar Esta imageeeen */}
+                            <Image src={Graphic} alt={""} className="
+                            xs:h-[full] xs:object-cover xs:rounded-t-2xl
+                            md:w-full md:object-cover
+                            " />
+                        </article>
                     </motion.article>
                 </section>
                 <motion.article
@@ -90,7 +101,7 @@ export const BlogsUI = () => {
                             These systems integrate advanced
                             technologies such as Optical Characters
                             Recognition (OCR), License Plate
-                            Recognition (LPR), CCTV, RFID tractor card 
+                            Recognition (LPR), CCTV, RFID tractor card
                             reader and remote reefer monitoring system.
                         </B2>
                         <B2 color="text-hpi-blue-light font-semibold cursor-pointer md:mt-6 xs:py-2">

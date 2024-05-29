@@ -37,7 +37,8 @@ const RosaComponent = () => {
 
 const DDComponent = () => {
     return (
-        <motion.section className="flex flex-col w-[105%] shrink-0 justify-between items-center gap-10 bg-hpi-white rounded-3xl p-10" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
+        // revisar margenes - mismo tamaño
+        <motion.section className="flex flex-col w-[105%] shrink-0 justify-between items-center gap-10 bg-hpi-white rounded-3xl p-16" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
             <section className="flex flex-col justify-between">
                 <H3 color="text-hpi-blue-light font-bold leading-[35px]">
                     AUTOMATING ORDER PROCESSING WITH DOCUMENT DIGITALISATION (DD) {"&"} HUTCHISON PORT DATA EXCHANGE (HPDX)

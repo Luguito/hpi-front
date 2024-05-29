@@ -9,7 +9,7 @@ import { ServicesKeysComponent } from './services-key';
 
 export const EfficiencyComponent = () => {
     return (
-        <section className="flex flex-col px-20 justify-center snap-center items-center bg-hpi-white rounded-3xl mx-80">
+        <section className="flex flex-col px-20 justify-center bg-hpi-white rounded-3xl mx-80">
             <section className="flex gap-40">
                 <section className="flex flex-col justify-center">
                     <H5 color="text-hpi-blue-light font-medium">

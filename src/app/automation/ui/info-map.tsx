@@ -34,8 +34,8 @@ export const U1999I = () => {
     return (
         <>
             <B2 color="text-hpi-body-grey font-medium">
-                Hutchison Ports London Thamesport pioneers <strong>Remote-Controlled Rail Mounted Gantry Cranes (RMGCs)</strong> ,
-                marking Hutchison Ports{"`"} first project in this innovative domain.
+                Hutchison Ports London Thamesport pioneers <strong>Remote-Controlled Rail Mounted Gantry Cranes (RMGCs)</strong>,
+                marking Hutchison Ports{"'"} first project in this innovative domain.
             </B2>
         </>
     )
@@ -52,7 +52,7 @@ export const U1993I = () => {
             <Image src={I1993} alt="" priority fetchPriority="high"
                 className="
                     w-full 
-                    md:h-[50em] md:rounded-3xl md:mt-10 md:object-cover
+                    md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover
                 "
             />
         </section>
@@ -91,14 +91,14 @@ export const U2012I = () => {
                 </li>
                 <li>
                     <B2 color="text-hpi-blue-light font-bold">
-                        Average crane performance over 40 movements per hour, among the world{"`"}s highest.
+                        Average crane performance over 40 movements per hour, among the world{"'"}s highest.
                     </B2>
                 </li>
             </ul>
             <Image src={I2012} alt="" priority fetchPriority="high"
                 className="
                     w-full 
-                    md:h-[50em] md:rounded-3xl md:mt-10 md:object-cover
+                    md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover
                 "
             />
         </>
@@ -107,14 +107,14 @@ export const U2012I = () => {
 export const U2013I = () => {
     return (
         <>
-            <ul className="list-blue">
+            <ul>
                 <li>
-                    <B2 color="text-hpi-blue-light font-bold">
+                    <B2 color="text-hpi-body-grey font-medium">
                         Hutchison Ports Brisbane and Hutchison Ports Sydney adopt semi-automated models with <strong> Automated Stacking Cranes</strong> (ASCs) and Straddle Carrier operation.
                     </B2>
                 </li>
                 <li>
-                    <B2 color="text-hpi-blue-light font-bold">
+                    <B2 color="text-hpi-body-grey font-medium">
                         Hutchison Ports HIT implements a truck identification system using <strong>RFID tags</strong>, and a <strong>Retrofit Rail Mounted Gantry Crane (RMGC)</strong> with remote control capability to improve safety, efficiency and working conditions.
                     </B2>
                 </li>
@@ -125,14 +125,14 @@ export const U2013I = () => {
 export const U2015I = () => {
     return (
         <>
-            <ul className="list-blue">
+            <ul>
                 <li>
-                    <B2 color="text-hpi-blue-light font-bold">
+                    <B2 color="text-hpi-body-grey font-medium">
                         Hutchison Ports ECT becomes the first Hutchison Ports terminal to implement Remote-Controlled QCs, followed by Hutchison Ports Dammam and Hutchison Ports HIT Terminal 9 North.
                     </B2>
                 </li>
                 <li>
-                    <B2 color="text-hpi-blue-light font-bold">
+                    <B2 color="text-hpi-body-grey font-medium">
                         Hutchison Ports HIT Terminal 9 North reconfigured 29 RTGCs and becomes the <strong>first terminal to operate Remote-Controlled RTGCs with mixed traffic</strong>. This led to a 30-40% productivity increase and a 20% boost in operational efficiency, enabling the handling of high-volume cargoes from ultra-large container ships up to 20,000 TEUs.
                     </B2>
                 </li>
@@ -165,9 +165,9 @@ export const U2016I = () => {
             <section>
                 <Image src={arrImages[index].image} alt="" priority fetchPriority="high" className="
                     w-full 
-                    md:h-[50em] md:rounded-3xl md:mt-10 md:object-cover
+                    md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover
                 "/>
-                <B2 color="text-[#AAAAAA] text-center mt-10 font-normal">{arrImages[index].name}</B2>
+                {/* <B2 color="text-[#AAAAAA] text-center mt-10 font-normal">{arrImages[index].name}</B2> */}
                 <Dots index={index} setIndex={setIndex} arr={arrImages} />
             </section>
         </>
@@ -186,17 +186,17 @@ export const U2017I = () => {
 export const U2018I = () => {
     return (
         <>
-            <ul className="list-blue">
+            <ul>
                 <li>
-                    <B2 color="text-hpi-blue-light font-bold">
-                        Hutchison Ports Thailand Terminal D becomes the <strong>world{"`"}s first fully remote-controlled terminal</strong>, employing both Remote-Controlled QCs and Remote-Controlled Rubber-Tyred Gantry Cranes (RTGCs).
+                    <B2 color="text-hpi-body-grey font-medium">
+                        Hutchison Ports Thailand Terminal D becomes the <strong>world{"'"}s first fully remote-controlled terminal</strong>, employing both Remote-Controlled QCs and Remote-Controlled Rubber-Tyred Gantry Cranes (RTGCs).
                     </B2>
                 </li>
             </ul>
             <Image src={I2018} alt="" priority fetchPriority="high"
                 className="
                     w-full 
-                    md:h-[50em] md:rounded-3xl md:mt-10 md:object-cover
+                    md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover
                 "
             />
         </>
@@ -206,30 +206,39 @@ export const U2018I = () => {
 export const U2019I = () => {
     return (
         <>
-            <B2 color="text-hpi-body-grey font-medium">
-                Introduced <strong>Remote-Controlled Quay Cranes</strong> across several locations including:
-            </B2>
-            <ul className="list-blue">
+
+            <ul>
                 <li>
-                    <B2 color="text-hpi-blue-light font-bold">
-                        Hutchison Ports Port of Felixstowe
+                    <B2 color="text-hpi-body-grey font-medium">
+                        Introduced <strong>Remote-Controlled Quay Cranes</strong> across several locations including:
                     </B2>
+                    <ul className="list-blue">
+                        <li>
+                            <B2 color="text-hpi-blue-light font-bold">
+                                Hutchison Ports Port of Felixstowe
+                            </B2>
+                        </li>
+                        <li>
+                            <B2 color="text-hpi-blue-light font-bold">
+                                Hutchison Ports ICAVE
+                            </B2>
+                        </li>
+                        <li>
+                            <B2 color="text-hpi-blue-light font-bold">
+                                Hutchison Ports YANTIAN
+                            </B2>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <B2 color="text-hpi-blue-light font-bold">
-                        Hutchison Ports ICAVE
-                    </B2>
-                </li>
-                <li>
-                    <B2 color="text-hpi-blue-light font-bold">
-                        Hutchison Ports YANTIAN
+                    <B2 color="text-hpi-body-grey font-medium mt-7">
+                        The Port of Felixstowe introduced <strong>Remote-Controlled Rubber-Tyred Gantry Cranes (RTGCs)</strong>,
+                        aiming to reduce its ecological footprint through electrification and to boost yard automation.
                     </B2>
                 </li>
             </ul>
-            <B2 color="text-hpi-body-grey font-medium mt-10">
-                The Port of Felixstowe introduced <strong>Remote-Controlled Rubber-Tyred Gantry Cranes (RTGCs)</strong>,
-                aiming to reduce its ecological footprint through electrification and to boost yard automation.
-            </B2>
+
+
         </>
     )
 }
@@ -243,7 +252,7 @@ export const U2020I = () => {
             <Image src={I2020} alt="" priority fetchPriority="high"
                 className="
                     w-full 
-                    md:h-[50em] md:rounded-3xl md:mt-10 md:object-cover
+                    md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover
                 "
             />
         </>
@@ -260,7 +269,7 @@ export const U2021I = () => {
             <Image src={I2021} alt="" priority fetchPriority="high"
                 className="
                     w-full 
-                    md:h-[50em] md:rounded-3xl md:mt-10 md:object-cover
+                    md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover
                 "
             />
         </>
@@ -271,16 +280,16 @@ export const U2022I = () => {
     return (
         <>
             <B2 color="text-hpi-body-grey font-medium">
-                Hutchison Ports Thailand Terminal D pioneers <strong>{"`"}true{"`"} mixed traffic mode operations</strong> with Autonomous Trucks.
+                Hutchison Ports Thailand Terminal D pioneers <strong>{"'"}true{"'"} mixed traffic mode operations</strong> with Autonomous Trucks.
             </B2>
-            <ul className="list-blue">
+            <ul>
                 <li>
-                    <B2 color="text-hpi-blue-light font-bold">
-                        World{"`"}s first terminal operator to achieve {"'"}true{"'"} mixed traffic mode terminal operations.
+                    <B2 color="text-hpi-body-grey font-medium">
+                        World{"'"}s first terminal operator to achieve {"'"}true{"'"} mixed traffic mode terminal operations.
                     </B2>
                 </li>
             </ul>
-            <video width="auto" height="100" autoPlay loop muted playsInline className="w-full md:h-[50em] md:rounded-3xl md:mt-10 md:object-cover">
+            <video width="auto" height="100" autoPlay loop muted playsInline className="w-full md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover">
                 <source src="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/AT%20Mix%20Traffic.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
@@ -302,7 +311,7 @@ export const U2023I = () => {
                 </li>
                 <li>
                     <B2 color="text-hpi-blue-light font-bold">
-                        Hutchison Ports IC AVE
+                        Hutchison Ports ICAVE
                     </B2>
                 </li>
                 <li>
@@ -314,7 +323,7 @@ export const U2023I = () => {
             <Image src={I2023} alt="" priority fetchPriority="high"
                 className="
                     w-full 
-                    md:h-[50em] md:rounded-3xl md:mt-10 md:object-cover
+                    md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover
                 "
             />
         </>
@@ -325,7 +334,7 @@ export const U2030I = () => {
     const [index, setIndex] = useState(0);
     const arrImages = [
         {
-            name: 'Video',
+            name: '',
             video: "https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/New%20Autonomous%20Truck%20Ecosystem%20Reshapes%20Terminal%20Operations%20Video.mp4"
         },
         {
@@ -396,18 +405,18 @@ export const U2030I = () => {
             </ul>
             <section>
                 {
-                    arrImages[index].name !== "Video"
+                    arrImages[index].name !== ""
                         ?
                         <>
                             {/* @ts-ignore */}
                             <Image src={arrImages[index].image} alt="" priority fetchPriority="high" className="
                                 w-full 
-                                md:h-[50em] md:rounded-3xl md:mt-10 md:object-cover
+                                md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover
                             "/>
                         </>
                         :
                         <>
-                            <video width="auto" height="100" autoPlay loop muted playsInline className="w-full md:h-[50em] md:rounded-3xl md:mt-10 md:object-cover">
+                            <video width="auto" height="100" controls playsInline className="w-full md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover">
                                 <source src={arrImages[index].video} type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>

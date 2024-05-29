@@ -110,7 +110,7 @@ function map() {
     pointSeries.bullets.push(function () {
         return am5.Bullet.new(root, {
             sprite: am5.Circle.new(root, {
-                radius: 5,
+                radius: 8,
                 fill: am5.color("#FFC627"),
                 stroke: am5.color("#FFFFFF"),
             })

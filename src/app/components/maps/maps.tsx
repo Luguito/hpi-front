@@ -87,7 +87,7 @@ function map() {
 
     pointSeries.bullets.push(function (root, series, item) {
         let circle = am5.Circle.new(root, {
-            radius: 5,
+            radius: 8,
             fill: am5.color("#FFC627"),
             stroke: am5.color("#FFFFFF"),
             cursorOverStyle: "pointer",

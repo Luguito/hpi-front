@@ -78,7 +78,7 @@ export const TimelineComponent = () => {
                     <section>
                         <article className="flex flex-col">
                             <H5 color="text-hpi-blue-light font-medium">Ideation</H5>
-                            <motion.p whileHover={{ scale: 1.06, translateX: '0'}} className='text-[50px] font-extrabold text-hpi-blue-dark mt-0'>2012</motion.p>
+                            <motion.p whileHover={{ scale: 1.02 }} className='text-[50px] font-extrabold text-hpi-blue-dark mt-0'>2012</motion.p>
                         </article>
                         <B2 color="font-medium text-hpi-body-grey">
                             Hutchison Ports forms a task force of operations professionals and technology experts to rethink

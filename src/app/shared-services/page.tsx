@@ -154,11 +154,11 @@ export default function HomePage() {
                         <H5 color="text-hpi-blue-light font-medium">Our Journey</H5>
                         <H2 color="text-gradient">FROM IDEATION TO EXPANSION</H2>
                         <B1 color="text-hpi-blue-dark font-medium">
-                            Our journey underscores a relentless <br />
+                            Our journey underscores a relentless
                             pursuit of redefining terminal operations.
                         </B1>
                     </header>
-                    <section className="bg-hpi-white py-16 px-36 rounded-3xl mt-20" id="content">
+                    <section className="bg-hpi-white py-16 px-36 rounded-3xl mt-8" id="content">
                         <TimelineComponent />
                     </section>
                 </section>

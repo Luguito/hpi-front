@@ -148,7 +148,7 @@ const ExpandedComponent = ({ icon, title, isExpanded, children, ...props }: any)
 
     return (
         <>
-            <motion.details {...props} initial="hidden" whileInView="visible" variants={RevealFromLeftToRight} viewport={{ once: true }} open>
+            <motion.details className="mb-10" {...props} initial="hidden" whileInView="visible" variants={RevealFromLeftToRight} viewport={{ once: true }} open>
                 <summary className="expansion-summary flex items-center gap-20 cursor-pointer">
                     <article className='w-[5%] flex items-center justify-center'>
                         <Image src={icon} alt="Icon" width={props.id === 'e-1' ? 80 : 50} priority />

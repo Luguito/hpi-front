@@ -33,7 +33,7 @@ export const InnovationUI = () => {
     return (
         <section className="flex flex-col gap-10 mt-28">
             <section className="flex flex-col text-left">
-                <H2 color="text-gradient">
+                <H2 color="text-gradient leading-[65px]">
                     INNOVATION AND TECHNOLOGICAL <br />
                     SOPHISTICATION ARE AT OUR CORE
                 </H2>

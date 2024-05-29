@@ -47,7 +47,7 @@ const Innovation = () => {
                 </summary>
                 <section className="bg-hpi-white rounded-3xl shadow-lg mt-10">
                     <section className="flex">
-                        <article className="py-14 px-20 w-3/4">
+                        <article className="py-14 px-20">
                             <header>
                                 <H3 color="text-hpi-blue-light font-bold">PIONEER IN THE INDUSTRY</H3>
                             </header>
@@ -83,7 +83,9 @@ const Innovation = () => {
                                 </li>
                             </ul>
                         </article>
-                        <Image src={I_Innovation} alt="" width={500} className="object-fill rounded-tr-2xl rounded-br-2xl" />
+                        <article style={{ aspectRatio: "16/9" }}>
+                            <Image src={I_Innovation} alt="" className="object-cover h-full rounded-tr-2xl rounded-br-2xl" />
+                        </article>
                     </section>
                 </section>
             </details>
@@ -121,7 +123,7 @@ const Risk = () => {
                     </summary>
                     <section className="bg-hpi-white rounded-3xl shadow-lg mt-10">
                         <section className="flex">
-                            <article className="py-14 px-20 w-3/4">
+                            <article className="py-14 px-20">
                                 <header>
                                     <H3 color="text-hpi-blue-light font-bold">LEADERS MANAGE RISKS</H3>
                                 </header>
@@ -156,7 +158,9 @@ const Risk = () => {
                                     </li>
                                 </ul>
                             </article>
-                            <Image src={I_Risk} alt="" width={500} className="object-fill rounded-tr-2xl rounded-br-2xl" />
+                            <article style={{ aspectRatio: "16/9" }}>
+                                <Image src={I_Risk} alt="" className="object-cover h-full rounded-tr-2xl rounded-br-2xl" />
+                            </article>
                         </section>
                     </section>
                 </details>
@@ -195,7 +199,7 @@ const Strategy = () => {
                     </summary>
                     <section className="bg-hpi-white rounded-3xl shadow-lg mt-10">
                         <section className="flex">
-                            <article className="py-14 px-20 w-3/4">
+                            <article className="py-14 px-20">
                                 <header>
                                     <H3 color="text-hpi-blue-light font-bold">THE ESSENCE OF OUR RECIPE</H3>
                                 </header>
@@ -217,7 +221,9 @@ const Strategy = () => {
                                     </li>
                                 </ul>
                             </article>
-                            <Image src={I_Agility} alt="" width={500} className="object-fill rounded-tr-2xl rounded-br-2xl" />
+                            <article style={{ aspectRatio: "16/9" }}>
+                                <Image src={I_Agility} alt="" className="object-cover h-full rounded-tr-2xl rounded-br-2xl" />
+                            </article>
                         </section>
                     </section>
                 </details>
@@ -258,7 +264,7 @@ const People = () => {
                     </summary>
                     <section className="bg-hpi-white rounded-3xl shadow-lg mt-10">
                         <section className="flex">
-                            <article className="py-14 px-20 w-3/4">
+                            <article className="py-14 px-20">
                                 <header>
                                     <H3 color="text-hpi-blue-light font-bold">ALWAYS OUR FIRST PRIORITY</H3>
                                 </header>
@@ -287,7 +293,9 @@ const People = () => {
                                     </li>
                                 </ul>
                             </article>
-                            <Image src={I_People} alt="" width={500} className="object-fill rounded-tr-2xl rounded-br-2xl" />
+                            <article style={{ aspectRatio: "16/9" }}>
+                                <Image src={I_People} alt="" className="object-cover h-full rounded-tr-2xl rounded-br-2xl" />
+                            </article>
                         </section>
                     </section>
                 </details>
@@ -328,7 +336,7 @@ const Collaboration = () => {
                     </summary>
                     <section className="bg-hpi-white rounded-3xl shadow-lg mt-10">
                         <section className="flex">
-                            <article className="py-14 px-20 w-3/4">
+                            <article className="py-14 px-20">
                                 <header>
                                     <H3 color="text-hpi-blue-light font-bold">TOGETHER AS A TEAM</H3>
                                 </header>
@@ -362,7 +370,9 @@ const Collaboration = () => {
                                     </li>
                                 </ul>
                             </article>
-                            <Image src={I_Team} alt="" width={500} className="object-fill rounded-tr-2xl rounded-br-2xl" />
+                            <article style={{ aspectRatio: "16/9" }}>
+                                <Image src={I_Team} alt="" className="object-cover h-full rounded-tr-2xl rounded-br-2xl" />
+                            </article>
                         </section>
                     </section>
                 </details>
@@ -404,7 +414,7 @@ export default function AutomationPage() {
                     </header>
                     <section className="bg-hpi-white rounded-3xl mt-5 mb-20">
                         <MapSlider changeSection={changeSectionByMap} />
-                        <section className="mt-10 p-20">
+                        <section className="pt-10 pb-10 px-20">
                             <ContainerDatesInformation date={currentSectionMap} />
                         </section>
                     </section>
