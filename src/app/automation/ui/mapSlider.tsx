@@ -136,8 +136,7 @@ function map(trigger: any) {
     let slider = container.children.push(am5.Slider.new(root, {
         width: am5.percent(100),
         orientation: "horizontal",
-        start: 0,
-        end: 100,
+        start: 1,
         centerY: am5.p50,
     }));
 

@@ -101,8 +101,7 @@ const RosaComponent = () => {
         <section className="flex justify-between items-center gap-10 bg-hpi-white rounded-3xl p-10">
             <section className="flex flex-col justify-between w-3/4 pl-5">
                 <H3 color="text-hpi-blue-light font-bold">
-                    Remote Operations Services
-                    and Architecture (ROSA)
+                    REMOTE OPERATIONS SERVICES AND ARCHITECTURE (ROSA)
                 </H3>
                 <B2 color="text-hpi-body-grey font-medium mt-10">
                     Explore how ROSA, our pioneering remote operations
@@ -172,3 +171,4 @@ const Dots = ({
         </div>
     );
 };
+// poner el video

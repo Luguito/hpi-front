@@ -158,7 +158,7 @@ const Risk = () => {
                                     </li>
                                 </ul>
                             </article>
-                            <article style={{ aspectRatio: "16/9" }}>
+                            <article className="w-[177%]" style={{ aspectRatio: "16/9" }}>
                                 <Image src={I_Risk} alt="" className="object-cover h-full rounded-tr-2xl rounded-br-2xl" />
                             </article>
                         </section>
@@ -221,7 +221,7 @@ const Strategy = () => {
                                     </li>
                                 </ul>
                             </article>
-                            <article style={{ aspectRatio: "16/9" }}>
+                            <article className="w-[183%]" style={{ aspectRatio: "16/9" }}>
                                 <Image src={I_Agility} alt="" className="object-cover h-full rounded-tr-2xl rounded-br-2xl" />
                             </article>
                         </section>
@@ -293,7 +293,7 @@ const People = () => {
                                     </li>
                                 </ul>
                             </article>
-                            <article style={{ aspectRatio: "16/9" }}>
+                            <article className="w-[100%]" style={{ aspectRatio: "16/9" }}>
                                 <Image src={I_People} alt="" className="object-cover h-full rounded-tr-2xl rounded-br-2xl" />
                             </article>
                         </section>
@@ -370,7 +370,7 @@ const Collaboration = () => {
                                     </li>
                                 </ul>
                             </article>
-                            <article style={{ aspectRatio: "16/9" }}>
+                            <article className="w-[181%]" style={{ aspectRatio: "16/9" }}>
                                 <Image src={I_Team} alt="" className="object-cover h-full rounded-tr-2xl rounded-br-2xl" />
                             </article>
                         </section>

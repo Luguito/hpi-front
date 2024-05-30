@@ -40,7 +40,7 @@ const DDComponent = () => {
         // revisar margenes - mismo tamaño
         <motion.section className="flex flex-col w-[105%] shrink-0 justify-between items-center gap-10 bg-hpi-white rounded-3xl p-16" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
             <section className="flex flex-col justify-between">
-                <H3 color="text-hpi-blue-light font-bold leading-[35px]">
+                <H3 color="text-hpi-blue-light font-bold leading-[45px]">
                     AUTOMATING ORDER PROCESSING WITH DOCUMENT DIGITALISATION (DD) {"&"} HUTCHISON PORT DATA EXCHANGE (HPDX)
                 </H3>
                 <B2 color="text-hpi-body-grey font-medium mt-10">

@@ -6,7 +6,7 @@ import ROC4 from '../../../../public/shared-services/ROC 4.png'
 import ROC5 from '../../../../public/shared-services/ROC 5.png'
 
 import { motion } from 'framer-motion';
-import Text, { B2, H2, H3, H5} from '../../components/text/text';
+import Text, { B2, H2, H3, H5 } from '../../components/text/text';
 import Image from 'next/image';
 import { RevealFromLeftToRight, RevealFromRightToLeft, RevealTextAfterSection } from '@/app/animations/animation';
 
@@ -24,6 +24,7 @@ const variantParent = {
         opacity: 1,
         y: 0,
         transition: {
+            // delay - antes de la reunion
             staggerChildren: 0.3,
         }
     }
@@ -42,7 +43,7 @@ export const Regional = () => {
             </motion.header>
             <section className="bg-hpi-white p-20 rounded-3xl mt-8">
                 <B2 initial="hidden" whileInView="visible" viewport={{ once: true }}
-                color="font-medium text-hpi-body-grey">
+                    color="font-medium text-hpi-body-grey">
                     Our <b>Regional Operations Centre (ROC)</b> embodies our commitment to global collaboration and standardised, high-quality services.
                     The centre was empowered by a state-of-the-art TOS to ensure consistent services to be delivered to any terminal worldwide.
                     Our <b>National Operations Centre (NOC)</b> is a spin-off of ROC, but in a country-level scale.

@@ -165,7 +165,7 @@ export default function ForeFrontUI() {
                                 `
                             } />
                         <SectionUI
-                            url="https://hutchisonports.sharepoint.com/:v:/r/sites/ProductManagementTeam/Shared%20Documents/General/Product%20Management%20Center/4.Product%20Marketing/Product%20Website/Video/Hutchison%20Port%20ENG%20NM.mp4?csf=1&web=1&e=ljOY8d"
+                            url="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Hutchison%20Port%20ENG%20NM.mp4"
                             Img={
                                 <section className="flex justify-center items-center w-full h-full">
                                     <Image src={I4} alt="" />
