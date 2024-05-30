@@ -78,11 +78,10 @@ export const BlogsUI = () => {
                                 Read More
                             </B2>
                         </article>
-                        <article style={{ aspectRatio: "16/9" }} className="flex items-center">
-                            {/* Revisar Esta imageeeen */}
+                        <article className="flex items-center w-[137%]">
                             <Image src={Graphic} alt={""} className="
                             xs:h-[full] xs:object-cover xs:rounded-t-2xl
-                            md:w-full md:object-cover
+                            md:w-full md:object-cover md:max-h-none
                             " />
                         </article>
                     </motion.article>

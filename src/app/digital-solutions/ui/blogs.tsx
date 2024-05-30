@@ -59,7 +59,7 @@ export const BlogsDSUI = () => {
                                 Read More
                             </B2>
                         </article>
-                        <Image src={Veronica} alt={""} width={350} className="object-contain mr-7"/>
+                        <Image src={Veronica} alt={""} className="object-contain mr-7"/>
                     </motion.article>
                 </section>
                 <motion.article
