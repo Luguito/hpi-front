@@ -26,18 +26,18 @@ function Footer() {
                 <nav className="
                 flex items-center justify-between bg-hpi-blue-sea py-14 px-24
                 ">
-                    <section className="xs:hidden">
+                    <section className="hidden md:visible">
                         <article>
                             <Image src={Logo} alt="Logo" />
                         </article>
                     </section>
                     <section className="
-                    flex gap-10
-                    xs:flex-col xs:items-center
+                    flex gap-10 flex-col items-center
+                    md:flex-row md:items-start
                     ">
                         <article className="
-                        flex gap-10
-                        xs:flex-col-reverse xs:items-center 
+                        flex gap-10 flex-col-reverse items-center 
+                        md:flex-row md:items-start
                         ">
                             {
                                 footOptions.map((option, key) => (

@@ -27,15 +27,15 @@ export default function Navbar() {
                     // @ts-ignore
                     ref.current.classList.remove('py-4')
                     // @ts-ignore
-                    ref.current.classList.add('py-8')
+                    ref.current.classList.add('md:py-8')
                     // @ts-ignore
-                    ref.current.classList.add('xs:py-4')
+                    ref.current.classList.add('py-4')
                     setTop(true)
                 } else {
                     // @ts-ignore
-                    ref.current.classList.remove('py-8')
+                    ref.current.classList.remove('md:py-8')
                     // @ts-ignore
-                    ref.current.classList.remove('xs:py-4')
+                    ref.current.classList.remove('py-4')
                     // @ts-ignore
                     ref.current.classList.add('py-4')
                     setTop(false)
@@ -45,16 +45,20 @@ export default function Navbar() {
     }, []);
 
     return (
-        <nav className="flex items-center justify-around bg-hpi-white py-8 px-24 snap-end fixed w-full z-10 shadow-md transition-all 
-        xs:justify-between xs:px-5" ref={ref}>
+        <nav className="
+        flex items-center bg-hpi-white fixed w-full z-10 shadow-md transition-all justify-between px-5
+        md:py-8 md:px-24 md:justify-around
+        
+        " ref={ref}>
             <section>
                 <article>
-                    <Image src={profilePic} alt="Hutchison Port" width="200" height="20" priority className="xs:w-[100px]"></Image>
+                    <Image src={profilePic} alt="Hutchison Port" width="200" height="20" priority className="w-[100px] md:w-auto"></Image>
                 </article>
             </section>
-            <section className="gap-10 
+            <section className="
+            gap-10 hidden
             md:flex
-            xs:hidden">
+            ">
                 <article className="flex gap-10">
                     {
                         navOptions.map((option, key) => (
@@ -73,7 +77,7 @@ export default function Navbar() {
                     {/* <Text type="medium" classes="text-[14px] text-hpi-blue-dark">EN</Text> */}
                 </article>
             </section>
-            <section className="xs:flex md:hidden">
+            <section className="flex md:hidden">
                 <Image src={menu} alt="Menu" />
             </section>
         </nav>

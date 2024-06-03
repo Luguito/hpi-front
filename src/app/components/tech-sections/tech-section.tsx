@@ -45,7 +45,7 @@ export const TechSolutionsComponent = () => {
 
     return (
         <motion.section className="
-            xs:mt-2 
+            mt-2 
             md:mt-20 
             lg:mt-32 
             w-[80%]"
@@ -60,11 +60,15 @@ export const TechSolutionsComponent = () => {
                 </H2>
             </header>
             <section className="
-                bg-white shadow-lg flex justify-between 
-                xs:rounded-2xl xs:gap-5 xs:p-4
+                bg-white shadow-lg flex justify-between rounded-2xl gap-5 p-4
                 md:px-24 md:py-20 md:rounded-3xl
+                lg:gap-10
             ">
-                <nav className="flex flex-col gap-4 w-[30em]">
+                <nav className="
+                flex flex-col gap-4 w-[30em]
+                sm:w-[20em]
+                lg:gap-10 lg:w-[35em]
+                ">
                     <details onClick={checkDetails} open>
                         <summary className="flex justify-between cursor-pointer" onClick={() => setSection('automation')}>
                             <H3 color={`${currentSection === 'automation' ? 'text-hpi-blue-light' : 'text-hpi-grey-light'} font-bold`}>
@@ -74,13 +78,13 @@ export const TechSolutionsComponent = () => {
                                 currentSection === 'automation'
                                     ?
 
-                                    <Image src={Minus} alt="" className="xs:w-3" />
+                                    <Image src={Minus} alt="" className="w-3 md:w-auto"/>
                                     :
-                                    <Image src={Plus} alt="" className="xs:w-3" />
+                                    <Image src={Plus} alt="" className="w-3 md:w-auto" />
                             }
                         </summary>
                         <AnimatePresence>
-                            <B2 color="text-hpi-body-grey font-medium xs:text-hpi-grey-dark" exit={{ y: 20, opacity: 0 }}>
+                            <B2 color="md:text-hpi-body-grey font-medium text-hpi-grey-dark" exit={{ y: 20, opacity: 0 }}>
                                 Implementing AI and automation
                                 technologies, we elevate terminal
                                 productivity, safety, and quality through
@@ -92,7 +96,7 @@ export const TechSolutionsComponent = () => {
                     </details>
                     <hr />
                     <details onClick={checkDetails}>
-                        <summary className="flex justify-between cursor-pointer" onClick={() => setSection('shared-services')}>
+                        <summary className="flex justify-between cursor-pointer gap-3" onClick={() => setSection('shared-services')}>
                             <H3 color={`${currentSection === 'shared-services' ? 'text-hpi-blue-light' : 'text-hpi-grey-light'} font-bold`}>
                                 SHARED SERVICES
                             </H3>
@@ -100,12 +104,12 @@ export const TechSolutionsComponent = () => {
                                 currentSection === 'shared-services'
                                     ?
 
-                                    <Image src={Minus} alt="" className="xs:w-3" />
+                                    <Image src={Minus} alt="" className="w-3 md:w-auto" />
                                     :
-                                    <Image src={Plus} alt="" className="xs:w-3" />
+                                    <Image src={Plus} alt="" className="w-3 md:w-auto" />
                             }
                         </summary>
-                        <B2 color="text-hpi-body-grey font-medium xs:text-hpi-grey-dark">
+                        <B2 color="md:text-hpi-body-grey font-medium text-hpi-grey-dark">
                             Our Regional Operations Centre (ROC)
                             model streamlines logistics operations,
                             leveraging end-to-end management
@@ -124,12 +128,12 @@ export const TechSolutionsComponent = () => {
                                 currentSection === 'digital-solutions'
                                     ?
 
-                                    <Image src={Minus} alt="" className="xs:w-3" />
+                                    <Image src={Minus} alt="" className="w-3 md:w-auto" />
                                     :
-                                    <Image src={Plus} alt="" className="xs:w-3" />
+                                    <Image src={Plus} alt="" className="w-3 md:w-auto" />
                             }
                         </summary>
-                        <B2 color="text-hpi-body-grey font-medium xs:text-hpi-grey-dark">
+                        <B2 color="md:text-hpi-body-grey font-medium text-hpi-grey-dark">
                             Harnessing innovative, cost-efficient
                             digital solutions, we offer standardised
                             services enhancing terminal processes,
@@ -153,9 +157,9 @@ export const AutomationSection = () => {
     return (
         <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
             <Image src={AutomationImage} width={600} alt="Img Here" className="
-            max-w-[none] object-cover 
-            md:h-[400px] md:rounded-3xl
-            xs:w-[140px] xs:h-full xs:object-center xs:rounded-2xl
+            max-w-[none] object-cover w-[140px] h-full object-center rounded-2xl
+            md:h-[400px] md:rounded-3xl md:w-auto
+            lg:w-full 
             "/>
         </motion.section>
     )
@@ -165,9 +169,9 @@ export const SharedSection = () => {
     return (
         <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
             <Image src={SharedImage} width={600} alt="Img Here" className="
-            max-w-[none] object-cover 
-            md:h-[400px] md:rounded-3xl
-            xs:w-[140px] xs:h-full xs:object-center xs:rounded-2xl
+            max-w-[none] object-cover w-[140px] h-full object-center rounded-2xl
+            md:h-[400px] md:rounded-3xl md:w-auto
+            lg:w-full 
             " />
         </motion.section>
     )
@@ -177,9 +181,9 @@ export const DigitalSection = () => {
     return (
         <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
             <Image src={DigitalImage} width={600} alt="Img Here" className="
-            max-w-[none] object-cover 
-            md:h-[400px] md:rounded-3xl
-            xs:w-[140px] xs:h-full xs:object-center xs:rounded-2xl
+            max-w-[none] object-cover w-[140px] h-full object-center rounded-2xl
+            md:h-[400px] md:rounded-3xl md:w-auto
+            lg:w-full 
             " />
         </motion.section>
     )
