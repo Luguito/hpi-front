@@ -15,8 +15,8 @@ jobs:
   displayName: 'Qodana Scan'
   steps:
   - task: QodanaScan@2024
-    inputs:
-      token: $(QODANA_TOKEN)
+    env:
+      QODANA_TOKEN: $(QODANA_TOKEN)
 - job: DeployChangesAndCompose
   displayName: 'Deploy Changes and Updating Website in VM'
   steps:
