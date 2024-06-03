@@ -11,6 +11,9 @@ variables:
   SSH_PUBLIC_KEY: $(DEX_SSH_VM_PUBLIC_KEY)
 
 jobs:
+- task: QodanaScan@2024
+  env:
+    QODANA_TOKEN: $(QODANA_TOKEN)
 - job: DeployChangesAndCompose
   displayName: 'Deploy Changes and Updating Website in VM'
   steps:
