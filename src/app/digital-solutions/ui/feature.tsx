@@ -41,28 +41,31 @@ const VeronicaComponent = () => {
         setPlaying(false);
     }
     return (
-        <section className="flex justify-between items-center gap-10 bg-hpi-white rounded-3xl p-10">
-            <section className="flex flex-col justify-between w-3/4 pl-5">
+        <section className="
+        flex flex-col justify-between gap-2 bg-hpi-white rounded-3xl 
+        lg:flex-row lg:items-center lg:p-10 lg:gap-10
+        ">
+            <section className="flex flex-col justify-between lg:w-3/4 pt-7 px-7 lg:pt-0">
                 <H3 color="text-hpi-blue-light font-bold">
                     VERONICA-AS-A-SERVICE
                 </H3>
-                <B2 color="text-hpi-body-grey font-medium mt-10">
+                <B2 color="text-hpi-body-grey font-medium mt-5 lg:mt-10">
                     Discover how Veronica, our suite of terminal 
                     services, is revolutionising logistics 
                     operations, increasing efficiency, and
                     productivity through automation and real-time data management.
                 </B2>
             </section>
-            <article className="py-12 rounded-3xl cursor-pointer relative">
+            <article className="py-5 lg:py-12 rounded-3xl cursor-pointer relative">
                 <video
-                    className="rounded-3xl max-w-none h-[500px]"
+                    className="rounded-3xl 2xl:max-w-none lg:h-[500px]"
                     width={800}
                     ref={ref} onClick={playVideo} onEnded={resetVideo}
                     autoPlay loop>
                     <source src="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Digital%20Solutions%20VERONICA-preview.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
-                <Image src={Play} alt="" width={50} className={`absolute right-0 mt-5 cursor-pointer ${playing ? 'hidden' : 'block'}`} onClick={playVideo} />
+                <Image src={Play} alt=""  className={`absolute bottom-[10px] right-4  w-[30px] lg:w-[50px] lg:right-0 lg:mt-5 cursor-pointer ${playing ? 'hidden' : 'block'}`} onClick={playVideo} />
             </article>
         </section>
     )
@@ -98,12 +101,15 @@ const RosaComponent = () => {
     }
 
     return (
-        <section className="flex justify-between items-center gap-10 bg-hpi-white rounded-3xl p-10">
-            <section className="flex flex-col justify-between w-3/4 pl-5">
+        <section className="
+        flex flex-col justify-between gap-2 bg-hpi-white rounded-3xl 
+        lg:flex-row lg:items-center lg:p-10 lg:gap-10
+        ">
+            <section className="flex flex-col justify-between lg:w-3/4 pt-7 px-7 lg:pt-0">
                 <H3 color="text-hpi-blue-light font-bold">
                     REMOTE OPERATIONS SERVICES AND ARCHITECTURE (ROSA)
                 </H3>
-                <B2 color="text-hpi-body-grey font-medium mt-10">
+                <B2 color="text-hpi-body-grey font-medium mt-2 lg:mt-10">
                     Explore how ROSA, our pioneering remote operations
                     technology, is streamlining port management efficiency
                     byenabling seamless management across multiple
@@ -111,16 +117,16 @@ const RosaComponent = () => {
                     (ROC).
                 </B2>
             </section>
-            <article className="py-12 rounded-3xl cursor-pointer relative">
+            <article className="py-5 lg:py-12 rounded-3xl cursor-pointer relative">
                 <video
-                    className="rounded-3xl max-w-none h-[500px]"
+                    className="rounded-3xl 2xl:max-w-none lg:h-[500px]"
                     width={800}
                     ref={ref} onClick={playVideo} onEnded={resetVideo}
                     autoPlay loop>
                     <source src="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Digital%20Solutions%20ROSA-preview.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
-                <Image src={Play} alt="" width={50} className={`absolute right-0 mt-5 cursor-pointer ${playing ? 'hidden' : 'block'}`} onClick={playVideo} />
+                <Image src={Play} alt=""  className={`absolute bottom-[10px] right-4  w-[30px] lg:w-[50px] lg:right-0 lg:mt-5 cursor-pointer ${playing ? 'hidden' : 'block'}`} onClick={playVideo} />
             </article>
         </section>
     )
@@ -135,7 +141,7 @@ export const FeatureUI = () => {
         <motion.section  whileInView="visible" variants={RevealSectionInitial}>
             <header className="text-left ml-7">
                 <H3 color="text-hpi-blue-light">Our Stories</H3>
-                <H2 color="text-gradient leading-[60px]">HOW WE STAY AHEAD WITH OUR INNOVATIVE SOLUTIONS</H2>
+                <H2 color="text-gradient leading-[20px] 2xl:leading-[60px]">HOW WE STAY AHEAD WITH OUR INNOVATIVE SOLUTIONS</H2>
             </header>
             {/* <section className="mt-14 flex gap-5 justify-between">
                 <VeronicaComponent />

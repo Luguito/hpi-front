@@ -13,13 +13,13 @@ export default function MapImpactUI() {
                 <H2 color="text-gradient">
                     GLOBAL IMPACT OF OUR DIGITAL SOLUTIONS
                 </H2>
-                <B2 color="text-hpi-blue-dark font-medium">
+                <B2 color="text-hpi-blue-dark font-medium text-[12px]">
                     We are committed to expanding our reach and continuing to innovate at full speed.
                 </B2>
             </header>
-            <section className="bg-hpi-blue-dark mt-8 rounded-3xl flex justify-between p-20">
+            <section className="bg-hpi-blue-dark mt-8 rounded-3xl flex justify-between px-5 lg:p-20">
                 <MapGlobe />
-                <section className="flex flex-col gap-16">
+                <section className="flex flex-col gap-5 py-3 md:py-0 md:gap-16">
                     <article className="flex flex-col items-center">
                         <MapNumber color="text-hpi-white font-bold">
                             <ComponentName num={6} next="" />

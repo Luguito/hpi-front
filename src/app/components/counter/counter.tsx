@@ -30,9 +30,9 @@ export function ComponentName({ num, next }: any) {
 
     return (
         <LazyMotion features={domAnimation}>
-            <H1 color="font-extrabold" ref={ref}>
+            <m.p className="text-[20px] md:text-[80px] font-extrabold" ref={ref}>
                 {currentValue}
-            </H1>
+            </m.p>
         </LazyMotion>
     );
 }
