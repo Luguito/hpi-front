@@ -33,15 +33,15 @@ const variantParent = {
 
 export const Regional = () => {
     return (
-        <section className="mt-40 mb-32 mx-80">
+        <section className="mt-7 lg:mb-32 lg:mx-80 lg:mt-40">
             <motion.header className="text-left ml-7" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={variantParent}>
                 <H5 color="text-hpi-blue-light font-medium">Our Framework</H5>
-                <H2 color="text-gradient leading-[65px]">
+                <H2 color="text-gradient leading-[20px] lg:leading-[65px]">
                     REGIONAL OPERATIONS CENTRE AND <br />
                     NATIONAL OPERATIONS CENTRE
                 </H2>
             </motion.header>
-            <section className="bg-hpi-white p-20 rounded-3xl mt-8">
+            <section className="bg-hpi-white mx-5 rounded-3xl p-8 mt-4 lg:mt-8 lg:p-20">
                 <B2 initial="hidden" whileInView="visible" viewport={{ once: true }}
                     color="font-medium text-hpi-body-grey">
                     Our <b>Regional Operations Centre (ROC)</b> embodies our commitment to global collaboration and standardised, high-quality services.
@@ -49,24 +49,41 @@ export const Regional = () => {
                     Our <b>National Operations Centre (NOC)</b> is a spin-off of ROC, but in a country-level scale.
                     With the same DNA of ROC, NOC consolidates all operational planning, control and back-office functions to all Hutchison Ports terminals
                 </B2>
-                <motion.section className="flex flex-col justify-center items-center mt-12"
+                <motion.section className="flex flex-col justify-center items-center mt-5 lg:mt-12"
                     initial="hidden" whileInView="visible" variants={variantParent} viewport={{ once: true }}>
                     <motion.article variants={variantParent}>
-                        <Image src={ROC1} alt="Image" width={1150} />
+                        <Image src={ROC1} alt="Image"
+                            style={{ aspectRatio: "15/4" }}
+                            className="
+                            object-contain
+                        "/>
                     </motion.article>
                     <motion.section className="flex gap-10">
                         <motion.article variants={variantParent}>
-                            <Image src={ROC2} alt="Image" width={355} />
+                            <Image src={ROC2} alt="Image"
+                                className="
+                                object-contain
+                            "
+                            />
                         </motion.article>
                         <motion.article variants={variantParent}>
-                            <Image src={ROC3} alt="Image" width={355} />
+                            <Image src={ROC3} alt="Image"
+                                className="
+                                object-contain
+                            "/>
                         </motion.article>
                         <motion.article variants={variantParent}>
-                            <Image src={ROC4} alt="Image" width={355} />
+                            <Image src={ROC4} alt="Image"
+                                className="
+                                object-contain
+                            "/>
                         </motion.article>
                     </motion.section>
                     <motion.div className='flex justify-center' variants={RevealTextAfterSection}>
-                        <Image src={ROC5} alt="Image" width={1150} />
+                        <Image src={ROC5} alt="Image"
+                            className="
+                            object-contain
+                        "/>
                     </motion.div>
                 </motion.section>
             </section>

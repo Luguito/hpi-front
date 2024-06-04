@@ -12,7 +12,7 @@ export default function HomePage() {
     <section >
       {/* Video Section */}
       <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Home%20Banner.mp4" bgColor="">
-        <H1 color="absolute text-center text-hpi-white font-bold text-shadow-md leading-[80px] leading-[26px] md:leading-[65px]">
+        <H1 color="absolute text-center text-hpi-white font-bold text-shadow-md  leading-[26px] md:leading-[65px] 2xl:leading-[80px]">
           INNOVATIVE SOLUTIONS <br />
           FOR NEXT-GENERATION <br />
           PORT OPERATIONS

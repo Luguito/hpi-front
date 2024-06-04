@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 
 import { LazyMotion, domAnimation, m, useAnimate, useInView, useMotionValue, useTransform } from "framer-motion";
+import { H1 } from "../text/text";
 
 export function ComponentName({ num, next }: any) {
     const ref = useRef(null);
@@ -29,13 +30,11 @@ export function ComponentName({ num, next }: any) {
 
     return (
         <LazyMotion features={domAnimation}>
-            <m.p className="text-[80px] font-extrabold" ref={ref}>
+            <H1 color="font-extrabold" ref={ref}>
                 {currentValue}
-                </m.p>
+            </H1>
         </LazyMotion>
     );
 }
 
-// Punto final Regioal operations
-// Scale se hace diagonal -> deberia ser centrado
 // limite de lienas titulo 4 - body 4 lineas  -> HOME

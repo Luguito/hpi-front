@@ -10,14 +10,14 @@ import Arrow from '../../../../public/digital-solutions/arrow-right-direction.sv
 
 const RosaComponent = () => {
     return (
-        <motion.section className="flex flex-col shrink-0 w-[100%] justify-between items-center gap-10 bg-hpi-white rounded-3xl p-10" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
+        <motion.section className="flex flex-col w-[105%] shrink-0 justify-between items-center gap-4 p-5 lg:gap-10 bg-hpi-white rounded-3xl lg:p-16" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
             <section className="flex flex-col">
                 <H3 color="text-hpi-blue-light font-bold">
                     REMOTE OPERATIONS
                     SERVICES AND ARCHITECTURE
                     (ROSA)
                 </H3>
-                <B2 color="text-hpi-body-grey font-medium mt-10">
+                <B2 color="text-hpi-body-grey font-medium mt-3 lg:mt-10">
                     ROSA brings terminal operations into the digital age,
                     enabling end-to-end remote management of multiple
                     terminals with real-time transparency. This technology
@@ -25,7 +25,7 @@ const RosaComponent = () => {
                     efficient and competitive.
                 </B2>
             </section>
-            <article className="py-12 rounded-3xl flex justify-center">
+            <article className="py-5 lg:py-12 rounded-3xl flex justify-center">
                 <video autoPlay loop className="max-w-none w-[80%]">
                     <source src="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/ROSA_gif.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
@@ -37,20 +37,19 @@ const RosaComponent = () => {
 
 const DDComponent = () => {
     return (
-        // revisar margenes - mismo tamaño
-        <motion.section className="flex flex-col w-[105%] shrink-0 justify-between items-center gap-10 bg-hpi-white rounded-3xl p-16" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
+        <motion.section className="flex flex-col w-[105%] shrink-0 justify-between items-center gap-4 p-5 lg:gap-10 bg-hpi-white rounded-3xl lg:p-16" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
             <section className="flex flex-col justify-between">
-                <H3 color="text-hpi-blue-light font-bold leading-[45px]">
+                <H3 color="text-hpi-blue-light font-bold leading-[15px] lg:leading-[45px]">
                     AUTOMATING ORDER PROCESSING WITH DOCUMENT DIGITALISATION (DD) {"&"} HUTCHISON PORT DATA EXCHANGE (HPDX)
                 </H3>
-                <B2 color="text-hpi-body-grey font-medium mt-10">
+                <B2 color="text-hpi-body-grey font-medium mt-2 lg:mt-10">
                     With DD - the <strong>AI-driven platform</strong>, we simplify document handling by standardising and automating the classification and digitalisation of key information from emails, making processes faster without human intervention.
                 </B2>
-                <B2 color="text-hpi-body-grey font-medium mt-10">
+                <B2 color="text-hpi-body-grey font-medium mt-2 lg:mt-10">
                     With HPDX, we connect ROC to the global logistics community to support <strong>real-time data exchange</strong> via various industry standards: EDI, API, and GSBN logistic network.
                 </B2>
             </section>
-            <article className="py-12 rounded-3xl flex justify-center">
+            <article className="lg:py-12 rounded-3xl flex justify-center">
                 <video autoPlay loop className="max-w-none w-[85%] h-[40%]">
                     <source src="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/DD%20V2.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
@@ -83,8 +82,11 @@ export const InnovativeSection = () => {
     };
 
     return (
-        <motion.section className="mx-80" initial="hidden" whileInView="visible" variants={RevealSectionInitial}>
-            <header className="text-left ml-7">
+        <motion.section className="
+        mx-5
+        lg:mx-80
+        " initial="hidden" whileInView="visible" variants={RevealSectionInitial}>
+            <header className="text-left ml-2 md:ml-7">
                 <H5 color="text-hpi-blue-light font-medium">
                     Our Technologies
                 </H5>
@@ -110,17 +112,17 @@ export const InnovativeSection = () => {
                         translateX: `-${ind * 100}%`,
                     }}
                     onDragEnd={onDragEnd}
-                    className="flex cursor-grab items-center gap-10 active:cursor-grabbing mt-10">
+                    className="flex flex-col items-center gap-5 lg:gap-10 lg:flex-row lg:cursor-grab  lg:active:cursor-grabbing mt-10">
                     <RosaComponent />
                     <DDComponent />
                 </motion.div>
                 {ind === 0 && <>
-                    <div className="absolute flex justify-start items-center left-[103%] w-[18.5em] top-[0%] cursor-pointer bg-hpi-light-bg h-[84em]">
+                    <div className="hidden absolute md:flex justify-start items-center left-[103%] w-[18.5em] top-[0%] cursor-pointer bg-hpi-light-bg h-[84em]">
                         <Image src={Arrow} alt="" onClick={() => setIndex(1)} />
                     </div>
                 </>}
                 {ind === 1 && <>
-                    <div className="absolute rotate-180 flex justify-start items-center left-[-26%] w-[21.5em] top-[0%] cursor-pointer bg-hpi-light-bg h-[82em]">
+                    <div className="hidden absolute rotate-180 md:flex justify-start items-center left-[-26%] w-[21.5em] top-[0%] cursor-pointer bg-hpi-light-bg h-[82em]">
                         <Image src={Arrow} alt="" onClick={() => setIndex(0)} />
                     </div>
                 </>}

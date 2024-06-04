@@ -1,5 +1,5 @@
 'use client';
-import Text, { B1, H2, H3, H5} from "../../components/text/text";
+import Text, { B1, H2, H3, H5 } from "../../components/text/text";
 import { motion, AnimatePresence } from 'framer-motion';
 import { RevealTextAfterSection } from '@/app/animations/animation';
 import { HoverComponent } from "../../components/hover/hover";
@@ -50,10 +50,10 @@ export const RaasModelComponent = ({ children }: any) => {
         roc3: true,
         roc4: true,
     })
-    const STYLE = "flex items-center justify-center shadow-custom rounded-2xl gap-10 py-40 h-72 relative cursor-pointer";
+    const STYLE = "flex items-center justify-center shadow-custom rounded-2xl gap-3 h-[7.5em] lg:py-40 lg:h-72 lg:gap-10 relative cursor-pointer";
 
     return (
-        <section className="snap-center mt-8 mx-80">
+        <section className="mt-8 mx-5 lg:mx-80 lg:px-20">
             <motion.header className="text-left ml-7" variants={{
                 visible: {
                     transition: {
@@ -62,14 +62,14 @@ export const RaasModelComponent = ({ children }: any) => {
                 }
             }}>
                 <H5 color="text-hpi-blue-light font-medium">Our ROC Model</H5>
-                <H2 color="text-gradient leading-[65px]">FLEXIBLE MODEL FOR REGIONAL OPERATIONS CENTRE</H2>
+                <H2 color="text-gradient leading-[20px] lg:leading-[65px]">FLEXIBLE MODEL FOR REGIONAL OPERATIONS CENTRE</H2>
                 <B1 color="text-hpi-blue-dark font-medium mt-3">
-                    ROC offers a flexible subscription model enabling terminals to transition to a new <br />
+                    ROC offers a flexible subscription model enabling terminals to transition to a new
                     operational model in a seamless way.
                 </B1>
             </motion.header>
 
-            <section className="grid grid-cols-2 grid-rows-2 justify-center items-center gap-10 mt-14">
+            <section className="grid grid-cols-2 grid-rows-2 justify-center items-center mt-5 gap-1 lg:gap-10 lg:mt-14">
                 <motion.div animate={!roc.roc1 ? 'content' : 'banner'} onTap={() => setRoc({ ...roc, roc1: !roc.roc1 })}>
                     <motion.article
                         variants={variantParent}
@@ -87,11 +87,10 @@ export const RaasModelComponent = ({ children }: any) => {
                                                 duration: 0.2
                                             }
                                         }}>
-                                            {/* 21 */}
-                                        <p className="text-[21px] text-hpi-white text-center">
-                                            Plug-and-Play to the standardised and <br />
-                                            proven operational practice (SOP) - <br />
-                                            uplifting the service level in no time! <br />
+                                        <p className="text-[8px] px-1 lg:text-[21px] text-hpi-white text-center">
+                                            Plug-and-Play to the standardised and
+                                            proven operational practice (SOP) -
+                                            uplifting the service level in no time!
                                         </p>
                                     </motion.div>
                                     :
@@ -103,12 +102,17 @@ export const RaasModelComponent = ({ children }: any) => {
                                                 duration: 0.4
                                             }
                                         }}
-                                        className="flex items-center gap-12 px-10">
+                                        className="
+                                        flex items-center gap-4 px-4
+                                        lg:px-10 lg:gap-12
+                                        ">
                                         <H3 color="font-bold text-hpi-blue-light">
-                                            PEACE OF <br />
+                                            PEACE OF
                                             MIND
                                         </H3>
-                                        <Image src={MIND} alt="Mind Icon" height={200} />
+                                        <Image src={MIND} alt="Mind Icon" className="
+                                            h-[2.5em] w-[3em]
+                                        "/>
                                     </motion.div>
                             }
                         </AnimatePresence>
@@ -132,7 +136,7 @@ export const RaasModelComponent = ({ children }: any) => {
                                                 duration: 0.4
                                             }
                                         }}>
-                                        <p className="text-[21px] text-hpi-white text-center">
+                                        <p className="text-[8px] px-1 lg:text-[21px] text-hpi-white text-center">
                                             A scalable solution that ensures the growth
                                             of your terminal without the burden of
                                             significant upfront investments.
@@ -146,12 +150,17 @@ export const RaasModelComponent = ({ children }: any) => {
                                                 duration: 0.4
                                             }
                                         }}
-                                        className="flex items-center gap-12 px-10">
+                                        className="
+                                        flex items-center gap-4 px-4
+                                        lg:px-10 lg:gap-12
+                                        ">
                                         <H3 color="font-bold text-hpi-blue-light">
                                             EXPAND-AS- <br />
                                             YOU-GROW
                                         </H3>
-                                        <Image src={GROW} alt="Mind Icon" height={200} />
+                                        <Image src={GROW} alt="Mind Icon" className="
+                                            h-[3em] w-[3.5em]
+                                        "/>
                                     </motion.div>
                             }
                         </AnimatePresence>
@@ -175,9 +184,9 @@ export const RaasModelComponent = ({ children }: any) => {
                                                 duration: 0.4
                                             }
                                         }}>
-                                        <p className="text-[21px] text-hpi-white text-center">
-                                            A hassle-free solution! Let ROC do <br />
-                                            all the work, while your terminal <br />
+                                        <p className="text-[8px] px-1 lg:text-[21px] text-hpi-white text-center">
+                                            A hassle-free solution! Let ROC do
+                                            all the work, while your terminal
                                             focuses on strategy.
                                         </p>
                                     </motion.div>
@@ -190,12 +199,17 @@ export const RaasModelComponent = ({ children }: any) => {
                                                 duration: 0.4
                                             }
                                         }}
-                                        className="flex items-center gap-12 px-10">
+                                        className="
+                                        flex items-center gap-4 px-4
+                                        lg:px-10 lg:gap-12
+                                        ">
                                         <H3 color="font-bold text-hpi-blue-light">
                                             CENTRALISED <br />
                                             SOLUTION
                                         </H3>
-                                        <Image src={SOLUTION} alt="Mind Icon" height={200} />
+                                        <Image src={SOLUTION} alt="Mind Icon" className="
+                                            h-[3em] w-[2.5em]
+                                        "/>
                                     </motion.div>
                             }
                         </AnimatePresence>
@@ -219,9 +233,9 @@ export const RaasModelComponent = ({ children }: any) => {
                                                 duration: 0.4
                                             }
                                         }}>
-                                        <p className="text-[21px] text-hpi-white text-center">
-                                            Progress is fully visible to your <br />
-                                            terminal, allowing for complete <br />
+                                        <p className="text-[8px] px-1 lg:text-[21px] text-hpi-white text-center">
+                                            Progress is fully visible to your
+                                            terminal, allowing for complete
                                             oversight and transparency
                                         </p>
                                     </motion.div>
@@ -233,12 +247,17 @@ export const RaasModelComponent = ({ children }: any) => {
                                                 duration: 0.4
                                             }
                                         }}
-                                        className="flex items-center gap-12 px-10">
+                                        className="
+                                        flex items-center px-4 gap-4
+                                        lg:px-10 lg:gap-12
+                                        ">
                                         <H3 color="font-bold text-hpi-blue-light">
                                             SEE ALL AND <br />
                                             KNOW ALL
                                         </H3>
-                                        <Image src={EYE} alt="Mind Icon" height={200} />
+                                        <Image src={EYE} alt="Mind Icon" className="
+                                            h-[3.5em] w-[2.5em]
+                                        " />
                                     </motion.div>
                             }
                         </AnimatePresence>

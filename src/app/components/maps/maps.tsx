@@ -157,7 +157,7 @@ export const Maps = () => {
 
     return (
         <>
-            <div id="chartdiv" ref={ref} className="h-[30em]"></div>
+            <div id="chartdiv" ref={ref} className="h-[10em] lg:h-[30em]"></div>
         </>
     )
 }

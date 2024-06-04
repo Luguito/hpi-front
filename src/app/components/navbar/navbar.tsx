@@ -46,7 +46,7 @@ export default function Navbar() {
 
     return (
         <nav className="
-        flex items-center bg-hpi-white fixed w-full z-10 shadow-md transition-all justify-between px-5
+        flex items-center bg-hpi-white fixed w-full z-20 shadow-md transition-all justify-between px-5
         md:py-8 md:px-24 md:justify-around
         
         " ref={ref}>
