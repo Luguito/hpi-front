@@ -30,7 +30,7 @@ export default function HomePage() {
         <section className="overflow-hidden">
             {/* Video Section */}
             <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Shared%20Services%20Banner.mp4" bgColor="">
-                <H1 initial="hidden" animate="visible" color="absolute text-center text-hpi-white font-bold text-shadow-md leading-[26px] md:leading-[65px] 2xl:leading-[80px]">
+                <H1 initial="hidden" animate="visible" color="absolute text-center text-hpi-white font-bold text-shadow-md">
                     UNLEASHING GROWTH <br />
                     WITH SHARED SERVICES
                 </H1>
@@ -38,11 +38,14 @@ export default function HomePage() {
 
             {/* Description */}
             <RevealOnScrollComponent>
-                <section className="text-center mt-16 lg:mb-32">
+                <section className="
+                text-center mt-16 mx-4 
+                xl:mb-16
+                2xl:mb-32">
                     <H2 color="text-gradient">
                         HUTCHISON PORTS SHARED SERVICES
                     </H2>
-                    <B1 color="text-hpi-blue-dark font-medium mt-4 md:mt-0">
+                    <B1 color="text-hpi-blue-dark font-medium mt-4 md:mt-0 xl:mx-44 xl:text-[18px] 2xl:leading-[36px]">
                         Our Regional Operations Centre-as-a-Service (ROC) approach integrates standardisation,
                         digitalisation, and automation of port terminal operations.
                     </B1>
@@ -69,14 +72,15 @@ export default function HomePage() {
             <RevealOnScrollComponent>
                 <section className="
                 mx-5 mt-7 mb-8
-                lg:mt-36 lg:mb-40 lg:mx-80
+                xl:mx-28  
+                2xl:mt-36 2xl:mb-40 2xl:mx-80
                 ">
                     <header className="text-left snap-start mb-10 ml-7">
                         <H5 color="text-hpi-blue-light font-medium">
                             Our Services
                         </H5>
                         <H2 color="text-gradient">CORE COMPONENTS OF ROC</H2>
-                        <B1 color="text-hpi-blue-dark font-medium">
+                        <B1 color="text-hpi-blue-dark font-medium xl:mt-5">
                             Our ROC model encompasses four core components, leveraging
                             Hutchison Ports’ operational best practices and cutting-edge technology:
                         </B1>
@@ -86,7 +90,9 @@ export default function HomePage() {
                             <section className="absolute top-1 lg:top-24">
                                 <section className="
                                 grid grid-cols-1 grid-rows-4 justify-center items-center gap-y-5
-                                lg:gap-x-32 lg:gap-y-20">
+                                lg:gap-x-32 lg:gap-y-20
+                                xl:grid-cols-2 xl:gap-y-32
+                                ">
                                     <section className="
                                     flex flex-row items-center gap-4 rounded-md
                                     lg:flex-col
@@ -109,7 +115,7 @@ export default function HomePage() {
                                     flex flex-row items-center gap-4 rounded-md
                                     lg:flex-col
                                     ">
-                                        <Image src={PLAN} alt="" className="mt-[-2em] w-[3em]" />
+                                        <Image src={PLAN} alt="" className="mt-[-2em] w-[3em] xl:mt-[-1em]" />
                                         <article className="flex flex-col text-left md:text-center">
                                             <H3 color="font-bold text-hpi-white">
                                                 LET-IT-STOW
@@ -168,7 +174,7 @@ export default function HomePage() {
 
             {/* Journey */}
             <RevealOnScrollComponent>
-                <section className="mx-5 mt-7 lg:mt-36 lg:mx-80">
+                <section className="mx-5 mt-7 xl:mx-28 2xl:mx-80 2xl:mt-36">
                     <header className="text-left ml-7">
                         <H5 color="text-hpi-blue-light font-medium">Our Journey</H5>
                         <H2 color="text-gradient">FROM IDEATION TO EXPANSION</H2>
@@ -185,7 +191,7 @@ export default function HomePage() {
 
             {/* MAPA */}
             <RevealOnScrollComponent>
-                <section className="mt-24 mb-20 bg-hpi-blue-dark mx-5 lg:mx-80 rounded-3xl">
+                <section className="mt-24 mb-20 bg-hpi-blue-dark mx-5 xl:mx-28 2xl:mx-80 rounded-3xl">
                     <header className="text-left p-5 lg:p-[4.8em]">
                         <H2 color="text-hpi-white">SUCCESS SHOWCASES</H2>
                         <B2 color="text-hpi-white font-medium lg:mt-5">

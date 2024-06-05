@@ -46,12 +46,16 @@ export const TechSolutionsComponent = () => {
     return (
         <motion.section className="
             mt-2 
-            md:mt-20 
-            lg:mt-32 
-            w-[80%]"
+            md:mt-20
+            xl:mt-10
+            2xl:mt-32
+            w-[80%]
+            "
             initial="hidden" whileInView="visible" variants={RevealSectionInitial} viewport={{ once: true }}>
-            <header className="text-left py-12
-            xs:py-5">
+            <header className="
+            text-left py-12
+            xl:py-2
+            ">
                 <H5 color="text-hpi-blue-light font-medium">
                     Port Innovation
                 </H5>
@@ -63,6 +67,7 @@ export const TechSolutionsComponent = () => {
                 bg-white shadow-lg flex justify-between rounded-2xl gap-5 p-4
                 md:px-24 md:py-20 md:rounded-3xl
                 lg:gap-10
+                2xl:mt-10
             ">
                 <nav className="
                 flex flex-col gap-4 w-[30em]

@@ -7,12 +7,16 @@ import { motion, useMotionValue } from 'framer-motion'
 import { RevealSectionInitial, RevealTextAfterSection } from "@/app/animations/animation";
 import Arrow from '../../../../public/digital-solutions/arrow-right-direction.svg'
 
-
 const RosaComponent = () => {
     return (
-        <motion.section className="flex flex-col w-[105%] shrink-0 justify-between items-center gap-4 p-5 lg:gap-10 bg-hpi-white rounded-3xl lg:p-16" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
+        <motion.section className="
+        bg-hpi-white rounded-3xl flex flex-col  shrink-0 justify-between items-center gap-4 p-5 
+        lg:gap-10 lg:p-16
+        xl:w-[100%]
+        2xl:w-[100%]
+        " initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
             <section className="flex flex-col">
-                <H3 color="text-hpi-blue-light font-bold">
+                <H3 color="text-hpi-blue-light font-bold xl:leading-[40px]">
                     REMOTE OPERATIONS
                     SERVICES AND ARCHITECTURE
                     (ROSA)
@@ -37,9 +41,14 @@ const RosaComponent = () => {
 
 const DDComponent = () => {
     return (
-        <motion.section className="flex flex-col w-[105%] shrink-0 justify-between items-center gap-4 p-5 lg:gap-10 bg-hpi-white rounded-3xl lg:p-16" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
+        <motion.section className="
+        bg-hpi-white rounded-3xl flex flex-col shrink-0 justify-between items-center gap-4 p-5 
+        lg:gap-10 lg:p-16
+        xl:w-[100%]
+        2xl:w-[100%]
+        " initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
             <section className="flex flex-col justify-between">
-                <H3 color="text-hpi-blue-light font-bold leading-[15px] lg:leading-[45px]">
+                <H3 color="text-hpi-blue-light font-bold leading-[15px] lg:leading-[45px] xl:leading-[40px]">
                     AUTOMATING ORDER PROCESSING WITH DOCUMENT DIGITALISATION (DD) {"&"} HUTCHISON PORT DATA EXCHANGE (HPDX)
                 </H3>
                 <B2 color="text-hpi-body-grey font-medium mt-2 lg:mt-10">
@@ -50,7 +59,7 @@ const DDComponent = () => {
                 </B2>
             </section>
             <article className="lg:py-12 rounded-3xl flex justify-center">
-                <video autoPlay loop className="max-w-none w-[85%] h-[40%]">
+                <video autoPlay loop className="max-w-none w-[75%] h-[30%]">
                     <source src="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/DD%20V2.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
@@ -84,14 +93,15 @@ export const InnovativeSection = () => {
     return (
         <motion.section className="
         mx-5
-        lg:mx-80
+        xl:mx-28  
+        2xl:mx-80
         " initial="hidden" whileInView="visible" variants={RevealSectionInitial}>
             <header className="text-left ml-2 md:ml-7">
                 <H5 color="text-hpi-blue-light font-medium">
                     Our Technologies
                 </H5>
                 <H2 color="text-gradient">INNOVATIVE TECHNOLOGIES BEHIND ROC</H2>
-                <B1 color="text-hpi-blue-dark font-medium">
+                <B1 color="text-hpi-blue-dark font-medium xl:mt-5">
                     Two groundbreaking technologies reinforce ROC{'’'}s backbone, pushing the boundaries of
                     terminal operations and redefining the shipping industry{'’'}s standards.
                 </B1>
@@ -117,12 +127,12 @@ export const InnovativeSection = () => {
                     <DDComponent />
                 </motion.div>
                 {ind === 0 && <>
-                    <div className="hidden absolute md:flex justify-start items-center left-[103%] w-[18.5em] top-[0%] cursor-pointer bg-hpi-light-bg h-[84em]">
+                    <div className="hidden absolute md:flex justify-start items-center left-[103%] w-[18.5em] top-[0%] cursor-pointer bg-hpi-light-bg xl:h-[66em] 2xl:h-[84em]">
                         <Image src={Arrow} alt="" onClick={() => setIndex(1)} />
                     </div>
                 </>}
                 {ind === 1 && <>
-                    <div className="hidden absolute rotate-180 md:flex justify-start items-center left-[-26%] w-[21.5em] top-[0%] cursor-pointer bg-hpi-light-bg h-[82em]">
+                    <div className="hidden absolute rotate-180 md:flex justify-start items-center left-[-26%] top-[0%] cursor-pointer bg-hpi-light-bg xl:w-[20.5em] xl:h-[67em] 2xl:h-[82em] 2xl:w-[21.5em] ">
                         <Image src={Arrow} alt="" onClick={() => setIndex(0)} />
                     </div>
                 </>}

@@ -50,10 +50,14 @@ export const RaasModelComponent = ({ children }: any) => {
         roc3: true,
         roc4: true,
     })
-    const STYLE = "flex items-center justify-center shadow-custom rounded-2xl gap-3 h-[7.5em] lg:py-40 lg:h-72 lg:gap-10 relative cursor-pointer";
+    const STYLE = "flex items-center justify-center shadow-custom rounded-2xl gap-3 h-[7.5em] xl:h-[20em] 2xl:py-40 2xl:h-[25em] 2xl:gap-10 relative cursor-pointer";
 
     return (
-        <section className="mt-8 mx-5 lg:mx-80 lg:px-20">
+        <section className="
+        mt-8 mx-5 
+        xl:mx-28  
+        2xl:mx-80
+        ">
             <motion.header className="text-left ml-7" variants={{
                 visible: {
                     transition: {
@@ -62,7 +66,7 @@ export const RaasModelComponent = ({ children }: any) => {
                 }
             }}>
                 <H5 color="text-hpi-blue-light font-medium">Our ROC Model</H5>
-                <H2 color="text-gradient leading-[20px] lg:leading-[65px]">FLEXIBLE MODEL FOR REGIONAL OPERATIONS CENTRE</H2>
+                <H2 color="text-gradient leading-[20px]">FLEXIBLE MODEL FOR REGIONAL OPERATIONS CENTRE</H2>
                 <B1 color="text-hpi-blue-dark font-medium mt-3">
                     ROC offers a flexible subscription model enabling terminals to transition to a new
                     operational model in a seamless way.
@@ -106,12 +110,13 @@ export const RaasModelComponent = ({ children }: any) => {
                                         flex items-center gap-4 px-4
                                         lg:px-10 lg:gap-12
                                         ">
-                                        <H3 color="font-bold text-hpi-blue-light">
+                                        <H3 color="font-bold text-hpi-blue-light xl:w-[40%]">
                                             PEACE OF
                                             MIND
                                         </H3>
                                         <Image src={MIND} alt="Mind Icon" className="
                                             h-[2.5em] w-[3em]
+                                            xl:h-[9em] xl:w-[10em]
                                         "/>
                                     </motion.div>
                             }
@@ -154,12 +159,13 @@ export const RaasModelComponent = ({ children }: any) => {
                                         flex items-center gap-4 px-4
                                         lg:px-10 lg:gap-12
                                         ">
-                                        <H3 color="font-bold text-hpi-blue-light">
+                                        <H3 color="font-bold text-hpi-blue-light xl:w-[60%]">
                                             EXPAND-AS- <br />
                                             YOU-GROW
                                         </H3>
                                         <Image src={GROW} alt="Mind Icon" className="
                                             h-[3em] w-[3.5em]
+                                            xl:h-[9em] xl:w-[10em]
                                         "/>
                                     </motion.div>
                             }
@@ -209,6 +215,7 @@ export const RaasModelComponent = ({ children }: any) => {
                                         </H3>
                                         <Image src={SOLUTION} alt="Mind Icon" className="
                                             h-[3em] w-[2.5em]
+                                            xl:h-[10em] xl:w-[9em]
                                         "/>
                                     </motion.div>
                             }
@@ -257,6 +264,7 @@ export const RaasModelComponent = ({ children }: any) => {
                                         </H3>
                                         <Image src={EYE} alt="Mind Icon" className="
                                             h-[3.5em] w-[2.5em]
+                                            xl:h-[10em] xl:w-[9em]
                                         " />
                                     </motion.div>
                             }

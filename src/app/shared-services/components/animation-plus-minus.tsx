@@ -7,6 +7,8 @@ export const Icon1 = () => {
             {/* plus */}
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61 61" className="
             absolute bottom-3 right-3 h-[1em]
+            xl:h-[3.5em]
+            2xl:h-[4em] 2xl:right-7
             "> 
                 <g transform="translate(-1492 -2148)">
                     <motion.circle cx="30.5" cy="30.5" r="30.5" transform="translate(1492 2148)"

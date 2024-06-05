@@ -34,7 +34,7 @@ export const InnovationUI = () => {
         <section className="flex flex-col gap-10 mt-10 md:mt-28">
             <section className="flex flex-col text-left">
                 <H2 color="text-gradient leading-[26px] md:leading-[65px]">
-                    INNOVATION AND TECHNOLOGICAL <br />
+                    INNOVATION AND TECHNOLOGICAL
                     SOPHISTICATION ARE AT OUR CORE
                 </H2>
                 <article className="mt-3">
@@ -45,7 +45,7 @@ export const InnovationUI = () => {
                 </article>
             </section>
             <motion.article className="p-2 md:p-12 relative bg-hpi-white rounded-3xl" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                <video poster="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/F-frame-Sweden.png"
+                <video poster="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/veronica-digital.png"
                     className="rounded-3xl cursor-pointer"
                     ref={ref} onClick={playVideo} onEnded={resetVideo}>
                     <source src="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/veronica_final_v3%20(Original).mp4" type="video/mp4" />

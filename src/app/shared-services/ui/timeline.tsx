@@ -25,7 +25,7 @@ export const TimelineComponent = () => {
                 let parent = entry.target.parentElement as HTMLElement;
 
                 // Change color icon.
-                (icon as HTMLElement).style.backgroundColor = "#002E6D";
+                (icon as HTMLElement).classList.replace("bg-[#EFEFEF]", "bg-[#002E6D]");
 
                 const regex = /after:h-\[(100|\d{1,2}(?:\.\d+)?)(?:\.\d+)?%\]/;
                 const parentClassList = parent.classList;
@@ -60,7 +60,6 @@ export const TimelineComponent = () => {
 
     const iconClass = "bg-[#EFEFEF] text-hpi-white translate-x-[-3.5em] lg:translate-x-[-4.5em] translate-y-[1em] shadow-none w-[5em] h-[5em] lg:w-[7em] lg:h-[7em] flex justify-center items-center z-10 transition"
     const contentClass = "bg-transparent shadow-none ml-[35px] p-0 lg:py-[1em] lg:px-[2em]"
-    const contentStyle = { background: 'transparent', boxShadow: 'none', padding: '1em 2em' };
 
     return (
         <>
@@ -71,10 +70,9 @@ export const TimelineComponent = () => {
                 <VerticalTimelineElement
                     iconClassName={iconClass}
                     textClassName={contentClass}
-                    // contentStyle={contentStyle}
                     contentArrowStyle={{ border: 'none' }}
                     icon={
-                        <Image src={Icon1} alt="" />
+                        <Image src={Icon1} alt="" className="w-[1.5em] xl:w-auto"/>
                     }
                 >
                     <section>
@@ -94,7 +92,7 @@ export const TimelineComponent = () => {
                     textClassName={contentClass}
                     contentArrowStyle={{ border: 'none' }}
                     icon={
-                        <Image src={Icon2} alt="" />
+                        <Image src={Icon2} alt="" className="w-[1.5em] xl:w-auto"/>
                     }
                 >
                     <section>
@@ -112,7 +110,7 @@ export const TimelineComponent = () => {
                     textClassName={contentClass}
                     contentArrowStyle={{ border: 'none' }}
                     icon={
-                        <Image src={Icon3} alt="" />
+                        <Image src={Icon3} alt="" className="w-[1.5em] xl:w-auto"/>
                     }
                 >
                     <section>
@@ -131,7 +129,7 @@ export const TimelineComponent = () => {
                     textClassName={contentClass}
                     contentArrowStyle={{ border: 'none' }}
                     icon={
-                        <Image src={Icon4} alt="" />
+                        <Image src={Icon4} alt="" className="w-[1.5em] xl:w-auto"/>
                     }
                 >
                     <section>
@@ -150,7 +148,7 @@ export const TimelineComponent = () => {
                     textClassName={contentClass}
                     contentArrowStyle={{ border: 'none' }}
                     icon={
-                        <Image src={Icon5} alt="" className="w-[50%]" />
+                        <Image src={Icon5} alt="" className="w-[1.5em] xl:w-auto" />
                     }
                 >
                     <section>

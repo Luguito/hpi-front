@@ -130,6 +130,7 @@ function map(trigger: any) {
         width: am5.percent(90),
         layout: root.horizontalLayout,
         paddingBottom: 20,
+        paddingLeft:50,
     }));
 
     // Crear el slider
@@ -162,7 +163,7 @@ function map(trigger: any) {
             centerX: am5.percent(position),
             centerY: am5.percent(50),
             dy: -20,
-            fontSize: 21,
+            fontSize: 15,
             fill: am5.color("#002E6D"),
             fontWeight: "bold",
             x: am5.percent(position)
@@ -243,7 +244,7 @@ export const MapSlider = ({ changeSection }: any) => {
 
     return (
         <>
-            <div id="chartdiv" ref={ref} className="h-[45em]"></div>
+            <div id="chartdiv" ref={ref} className="h-[20em] lg:h-[45em]"></div>
         </>
     )
 }

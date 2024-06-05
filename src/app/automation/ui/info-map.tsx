@@ -51,7 +51,7 @@ export const U1993I = () => {
             </article>
             <Image src={I1993} alt="" priority fetchPriority="high"
                 className="
-                    w-full 
+                    w-full mt-5 rounded-2xl
                     md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover
                 "
             />
@@ -97,7 +97,7 @@ export const U2012I = () => {
             </ul>
             <Image src={I2012} alt="" priority fetchPriority="high"
                 className="
-                    w-full 
+                    w-full mt-5 rounded-2xl
                     md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover
                 "
             />
@@ -164,7 +164,7 @@ export const U2016I = () => {
             </B2>
             <section>
                 <Image src={arrImages[index].image} alt="" priority fetchPriority="high" className="
-                    w-full 
+                    w-full mt-5 rounded-2xl 
                     md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover
                 "/>
                 {/* <B2 color="text-[#AAAAAA] text-center mt-10 font-normal">{arrImages[index].name}</B2> */}
@@ -195,7 +195,7 @@ export const U2018I = () => {
             </ul>
             <Image src={I2018} alt="" priority fetchPriority="high"
                 className="
-                    w-full 
+                    w-full mt-5 rounded-2xl
                     md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover
                 "
             />
@@ -251,7 +251,7 @@ export const U2020I = () => {
             </B2>
             <Image src={I2020} alt="" priority fetchPriority="high"
                 className="
-                    w-full 
+                    w-full mt-5 rounded-2xl
                     md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover
                 "
             />
@@ -268,7 +268,7 @@ export const U2021I = () => {
             </B2>
             <Image src={I2021} alt="" priority fetchPriority="high"
                 className="
-                    w-full 
+                    w-full mt-5 rounded-2xl
                     md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover
                 "
             />
@@ -322,7 +322,7 @@ export const U2023I = () => {
             </ul>
             <Image src={I2023} alt="" priority fetchPriority="high"
                 className="
-                    w-full 
+                    w-full mt-5 rounded-2xl
                     md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover
                 "
             />
@@ -410,20 +410,24 @@ export const U2030I = () => {
                         <>
                             {/* @ts-ignore */}
                             <Image src={arrImages[index].image} alt="" priority fetchPriority="high" className="
-                                w-full 
-                                md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover
+                                w-full rounded-2xl mt-8 h-[13em]
+                                xl:h-[35em]
+                                2xl:h-[40em] 2xl:rounded-3xl 2xl:mt-10 2xl:object-cover
                             "/>
                         </>
                         :
                         <>
-                            <video width="auto" height="100" controls playsInline className="w-full md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover">
+                            <video width="auto" height="100" controls playsInline className="
+                            w-full mt-8 rounded-2xl h-[13em]
+                            xl:h-[35em]
+                            2xl:h-[40em] 2xl:rounded-3xl 2xl:mt-10 2xl:object-cover">
                                 <source src={arrImages[index].video} type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
                         </>
                 }
 
-                <B2 color="text-[#AAAAAA] text-center mt-10 font-normal">{arrImages[index].name}</B2>
+                <B2 color="text-[#AAAAAA] text-center my-5 lg:my-0 lg:mt-10 font-normal">{arrImages[index].name}</B2>
                 <Dots index={index} setIndex={setIndex} arr={arrImages} />
             </section>
         </>
@@ -467,7 +471,7 @@ const Dots = ({
     arr: any[]
 }) => {
     return (
-        <div className="mt-8 flex w-full justify-center gap-2">
+        <div className="pb-5 lg:pb-0 lg:mt-8 flex w-full justify-center gap-2">
             {arr.map((_, idx) => {
                 return (
                     <button

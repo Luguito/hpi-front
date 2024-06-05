@@ -157,7 +157,7 @@ const ExpandedComponent = ({ icon, title, isExpanded, children, ...props }: any)
                         {title}
                     </H3>
                 </summary>
-                <section className="pl-7 lg:pl-36">
+                <section className="pl-7 xl:pl-[8.5em] 2xl:pl-36">
                     {children}
                 </section>
             </motion.details>

@@ -58,7 +58,11 @@ const VeronicaComponent = () => {
             </section>
             <article className="py-5 lg:py-12 rounded-3xl cursor-pointer relative">
                 <video
-                    className="rounded-3xl 2xl:max-w-none lg:h-[500px]"
+                    className="
+                    rounded-3xl 
+                    xl:h-[15em] xl:object-cover
+                    2xl:max-w-none 2xl:h-[500px]
+                    "
                     width={800}
                     ref={ref} onClick={playVideo} onEnded={resetVideo}
                     autoPlay loop>
@@ -119,7 +123,11 @@ const RosaComponent = () => {
             </section>
             <article className="py-5 lg:py-12 rounded-3xl cursor-pointer relative">
                 <video
-                    className="rounded-3xl 2xl:max-w-none lg:h-[500px]"
+                    className="
+                    rounded-3xl 
+                    xl:h-[15em] xl:object-cover
+                    2xl:max-w-none 2xl:h-[500px]
+                    "
                     width={800}
                     ref={ref} onClick={playVideo} onEnded={resetVideo}
                     autoPlay loop>

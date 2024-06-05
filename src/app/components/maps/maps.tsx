@@ -120,7 +120,7 @@ function map() {
             tooltipHTML: `
             <section style="text-align: center; width: 25%;">
                 <header style="color: #002E6D; font-weight: semi-bold;">
-                    <b style="font-size: 16px;">{title}</b>
+                    <b class="text-[5px] 2xl:text-[16px]">{title}</b>
                 </header>
                 <section style="display:flex; justify-content: center; align-items: center; font-weight: medium; color: #002E6D;">
                     <p style="white-space: pre-line; font-size: 16px; text-wrap:wrap;">{description}</p>

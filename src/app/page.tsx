@@ -20,13 +20,13 @@ export default function HomePage() {
       </VideoContainer>
 
       {/* @ts-ignore */}
-      <RevealOnScrollComponent className="text-center mt-10 md:mt-28">
-        <H2 color="text-gradient leading-[20px] md:leading-[65px]">
-          HUTCHISON PORTS IS AT THE <br />
+      <RevealOnScrollComponent className="flex flex-col items-center justify-center mt-10 md:mt-28 ">
+        <H2 color="text-gradient leading-[20px] md:leading-[65px] text-center w-[75%] xl:w-full 2xl:w-2/4">
+          HUTCHISON PORTS IS AT THE
           FOREFRONT OF THE INDUSTRY
         </H2>
-        <B1 color="text-hpi-blue-dark text-center font-medium mt-3">
-          driving efficiency with ongoing investments and <br />
+        <B1 color="text-hpi-blue-dark text-center font-medium mt-3 xl:mt-1 xl:text-[18px] 2xl:w-2/4">
+          driving efficiency with ongoing investments and
           innovation in port technology
         </B1>
       </RevealOnScrollComponent>
@@ -38,7 +38,7 @@ export default function HomePage() {
 
       {/* What's new ... section */}
       {/* @ts-ignore */}
-      <RevealOnScrollComponent className="flex justify-center lg:mt-56 lg:mb-32">
+      <RevealOnScrollComponent className="flex justify-center xl:my-10 2xl:mt-56 2xl:mb-32">
         <section className="w-[80%] mt-10">
           <header className="text-left">
             <H5 color="text-hpi-blue-light font-medium">

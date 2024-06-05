@@ -30,16 +30,19 @@ export const BlogsUI = () => {
                     <motion.article
                         className="
                         bg-white shadow-lg flex flex-col-reverse rounded-2xl
-                        md:flex-row md:rounded-3xl"
+                        md:flex-row md:rounded-3xl
+                        2xl:w-[50%]
+                        "
                         whileHover={{ scale: 1.04 }}
                         variants={variantParent}>
                         <article className="
                             px-3 
                             md:py-10 md:px-14
+                            xl:pr-0
                             lg:flex lg:flex-col lg:justify-around
                         "
                         >
-                            <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0">
+                            <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0 xl:text-[20px]">
                                 UBI, THE
                                 NEW APP
                                 FOR TRUCK
@@ -58,20 +61,24 @@ export const BlogsUI = () => {
                         <Image src={UBI} alt={""} className="
                         h-[100px] object-cover pl-[20px] 
                         md:h-auto md:object-none md:pl-0
-                        lg:h-full lg:w-[90%] lg:object-cover lg:objecct-left
+                        lg:h-full lg:w-[90%] lg:object-cover lg:object-left
                         " />
                     </motion.article>
                     <motion.article
                         className="
                         bg-white shadow-lg flex flex-col-reverse rounded-2xl
-                        md:flex-row md:rounded-3xl"
+                        md:flex-row md:rounded-3xl
+                        2xl:w-[50%]
+                        "
                         whileHover={{ scale: 1.04 }}
                         variants={variantParent}>
                         <article className="
                             px-3 
                             md:py-10 md:px-14
+                            xl:px-0 xl:pl-14 xl:pr-5
+                            2xl:px-14
                             ">
-                            <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0 md:w-[80%] lg:w-full">
+                            <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0 md:w-[80%] lg:w-full xl:text-[20px]">
                                 VERONICA
                                 WILL GET
                                 SMARTER
@@ -90,7 +97,9 @@ export const BlogsUI = () => {
                         <Image src={Graphic} alt={""} className="
                             h-[100px] object-cover pl-[20px] 
                             md:h-auto md:object-none md:pl-0
-                            lg:h-full lg:w-[16em]
+                            lg:h-full lg:w-[13em]
+                            xl:h-full xl:w-[13em]
+                            2xl:w-[16em]
                             " />
                     </motion.article>
                 </section>
@@ -101,8 +110,9 @@ export const BlogsUI = () => {
                     <article className="
                     px-3 
                     md:p-14
+                    lg:flex lg:flex-col lg:justify-around
                     ">
-                        <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0">
+                        <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0 xl:text-[20px]">
                             GATE OPERATIONS ARE
                             POSSIBLE THROUGH
                             GATE AUTOMATION
@@ -114,11 +124,17 @@ export const BlogsUI = () => {
                             Recognition (LPR), CCTV, RFID tractor card
                             reader and remote reefer monitoring system.
                         </B2>
-                        <B2 color="text-hpi-blue-light font-semibold cursor-pointer py-2 md:py-0 md:mt-6">
+                        <B2 color="text-hpi-blue-light font-semibold cursor-pointer py-2 md:py-0 md:mt-6 lg:text-[21px]">
                             Read More
                         </B2>
                     </article>
-                    <Image src={Truck} alt={""} width={800} className="object-cover rounded-tr-2xl rounded-br-2xl w-[150px] object-left md:object-none md:w-auto" />
+                    <Image src={Truck} alt={""} width={800} className="
+                    object-cover rounded-tr-2xl rounded-br-2xl w-[150px] object-left 
+                    md:object-none md:w-auto
+                    lg:w-[30em]
+                    xl:w-[40em]
+                    2xl:w-[50em]
+                    " />
                 </motion.article>
                 <motion.div whileHover="animate" className="flex w-full justify-center gap-2 mb-10 md:mb-0">
                     <B2 color="text-[#009BDE] cursor-pointer font-medium">
