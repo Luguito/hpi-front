@@ -8,9 +8,11 @@ import SharedImage from '../../../../public/home/imagen home-02.png'
 import DigitalImage from '../../../../public/home/imagen home-03.png'
 import Minus from '../../../../public/home/minus.svg'
 import Plus from '../../../../public/home/plus.svg'
+import Go from '../../../../public/home/go-to.svg'
 import Image from "next/image";
 import { AnimatePresence, motion } from 'framer-motion';
 import { RevealSectionInitial } from "@/app/animations/animation";
+import Link from "next/link";
 
 export const TechSolutionsComponent = () => {
     const [currentSection, setSection] = useState('automation');
@@ -64,14 +66,14 @@ export const TechSolutionsComponent = () => {
                 </H2>
             </header>
             <section className="
-                bg-white shadow-lg flex justify-between rounded-2xl gap-5 p-4
-                md:px-24 md:py-20 md:rounded-3xl
+                bg-white shadow-lg flex flex-col justify-between rounded-2xl gap-5 p-4
+                md:px-24 md:py-20 md:rounded-3xl md:flex-row
                 lg:gap-10
                 xl:mt-7 xl:px-16 xl:py-10
                 2xl:mt-10
             ">
                 <nav className="
-                flex flex-col gap-4 w-[30em]
+                flex flex-col gap-4 p-5
                 sm:w-[20em]
                 lg:gap-10 lg:w-[35em]
                 xl:gap-4 xl:w-[30em]
@@ -86,7 +88,7 @@ export const TechSolutionsComponent = () => {
                                 currentSection === 'automation'
                                     ?
 
-                                    <Image src={Minus} alt="" className="w-3 md:w-auto"/>
+                                    <Image src={Minus} alt="" className="w-3 md:w-auto" />
                                     :
                                     <Image src={Plus} alt="" className="w-3 md:w-auto" />
                             }
@@ -101,6 +103,9 @@ export const TechSolutionsComponent = () => {
                                 to operational excellence.
                             </B2>
                         </AnimatePresence>
+                        <article className="md:hidden">
+                            <CurrentSection />
+                        </article>
                     </details>
                     <hr />
                     <details onClick={checkDetails}>
@@ -125,6 +130,9 @@ export const TechSolutionsComponent = () => {
                             consolidation, standardisation, and
                             automation of operations.
                         </B2>
+                        <article className="md:hidden">
+                            <CurrentSection />
+                        </article>
                     </details>
                     <hr />
                     <details onClick={checkDetails}>
@@ -148,9 +156,14 @@ export const TechSolutionsComponent = () => {
                             data analytics, and machine learning for
                             optimal operational visibility and control.
                         </B2>
+                        <article className="md:hidden">
+                            <CurrentSection />
+                        </article>
                     </details>
                 </nav>
-                <CurrentSection />
+                <article className="hidden md:block">
+                    <CurrentSection />
+                </article>
             </section>
         </motion.section>
 
@@ -159,42 +172,51 @@ export const TechSolutionsComponent = () => {
 
 export const AutomationSection = () => {
     return (
-        <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
+        <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }} className="relative">
             <Image src={AutomationImage} width={600} fetchPriority="high" alt="Img Here" className="
-            max-w-[none] object-cover w-[140px] h-full object-center rounded-2xl
+            object-cover h-full object-center rounded-2xl mt-3
             md:h-[400px] md:rounded-3xl md:w-auto
-            lg:w-auto
+            lg:w-auto lg:max-w-[none]
             xl:w-auto
             2xl:w-[50em] 2xl:h-full
             "/>
+            <Link href="/automation" className="cursor-pointer">
+                <Image src={Go} alt="" className="absolute bottom-3 right-5" />
+            </Link>
         </motion.section>
     )
 }
 
 export const SharedSection = () => {
     return (
-        <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
-            <Image src={SharedImage} width={600} fetchPriority="high"  alt="Img Here" className="
-            max-w-[none] object-cover w-[140px] h-full object-center rounded-2xl
+        <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }} className="relative">
+            <Image src={SharedImage} width={600} fetchPriority="high" alt="Img Here" className="
+            object-cover h-full object-center rounded-2xl
             md:h-[400px] md:rounded-3xl md:w-auto
-            lg:w-full 
+            lg:w-full lg:max-w-[none]
             xl:h-auto
             2xl:w-[50em] 2xl:h-full
             " />
+            <Link href="/shared-services" className="cursor-pointer">
+                <Image src={Go} alt="" className="absolute bottom-3 right-5" />
+            </Link>
         </motion.section>
     )
 }
 
 export const DigitalSection = () => {
     return (
-        <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
+        <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }} className="relative">
             <Image src={DigitalImage} width={600} fetchPriority="high" alt="Img Here" className="
-            max-w-[none] object-cover w-[140px] h-full object-center rounded-2xl
+            object-cover h-full object-center rounded-2xl
             md:h-[400px] md:rounded-3xl md:w-auto
-            lg:w-full 
+            lg:w-full lg:max-w-[none]
             xl:h-auto
             2xl:w-[50em]
             " />
+            <Link href="/digital-solutions" className="cursor-pointer">
+                <Image src={Go} alt="" className="absolute bottom-3 right-5" />
+            </Link>
         </motion.section>
     )
 }
