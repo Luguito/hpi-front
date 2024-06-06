@@ -50,8 +50,8 @@ const VeronicaComponent = () => {
                     VERONICA-AS-A-SERVICE
                 </H3>
                 <B2 color="text-hpi-body-grey font-medium mt-5 lg:mt-10">
-                    Discover how Veronica, our suite of terminal 
-                    services, is revolutionising logistics 
+                    Discover how Veronica, our suite of terminal
+                    services, is revolutionising logistics
                     operations, increasing efficiency, and
                     productivity through automation and real-time data management.
                 </B2>
@@ -69,7 +69,7 @@ const VeronicaComponent = () => {
                     <source src="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Digital%20Solutions%20VERONICA-preview.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
-                <Image src={Play} alt=""  className={`absolute bottom-[10px] right-4  w-[30px] lg:w-[50px] lg:right-0 lg:mt-5 cursor-pointer ${playing ? 'hidden' : 'block'}`} onClick={playVideo} />
+                <Image src={Play} alt="" className={`absolute bottom-[10px] right-4  w-[30px] lg:w-[50px] lg:right-0 lg:mt-5 cursor-pointer ${playing ? 'hidden' : 'block'}`} onClick={playVideo} />
             </article>
         </section>
     )
@@ -134,7 +134,7 @@ const RosaComponent = () => {
                     <source src="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Digital%20Solutions%20ROSA-preview.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
-                <Image src={Play} alt=""  className={`absolute bottom-[10px] right-4  w-[30px] lg:w-[50px] lg:right-0 lg:mt-5 cursor-pointer ${playing ? 'hidden' : 'block'}`} onClick={playVideo} />
+                <Image src={Play} alt="" className={`absolute bottom-[10px] right-4  w-[30px] lg:w-[50px] lg:right-0 lg:mt-5 cursor-pointer ${playing ? 'hidden' : 'block'}`} onClick={playVideo} />
             </article>
         </section>
     )
@@ -146,9 +146,11 @@ export const FeatureUI = () => {
 
     const CurrentSection = arrComponent[component];
     return (
-        <motion.section  whileInView="visible" variants={RevealSectionInitial}>
+        <motion.section whileInView="visible" variants={RevealSectionInitial}>
             <header className="text-left ml-7">
-                <H3 color="text-hpi-blue-light">Our Stories</H3>
+                <h3 className='text-hpi-blue-light text-[12px] lg:text-[22px] xl:text-[15px] 2xl:text-[35px]'>
+                    Our Stories
+                </h3>
                 <H2 color="text-gradient leading-[20px] 2xl:leading-[60px]">HOW WE STAY AHEAD WITH OUR INNOVATIVE SOLUTIONS</H2>
             </header>
             {/* <section className="mt-14 flex gap-5 justify-between">

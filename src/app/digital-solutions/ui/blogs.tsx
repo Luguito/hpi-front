@@ -120,6 +120,7 @@ export const BlogsDSUI = () => {
                     className="
                     bg-white shadow-lg flex justify-between w-[100%] rounded-2xl 
                     md:h-[30em] md:rounded-3xl
+                    xl:h-auto
                     "
                     whileHover={{ scale: 1.04 }}
                     variants={variantParent}>
@@ -127,6 +128,7 @@ export const BlogsDSUI = () => {
                     px-3 
                     md:p-14
                     lg:flex lg:flex-col lg:justify-around
+                    xl:w-[60%]
                     ">
                         <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0">
                             THE PORTS AI REVOLUTION IS HERE…
@@ -149,8 +151,8 @@ export const BlogsDSUI = () => {
                         object-cover rounded-tr-2xl rounded-br-2xl w-[150px] object-left 
                         md:object-none md:w-auto
                         lg:w-[30em]
-                        xl:w-[40em]
-                        2xl:w-[50em]
+                        xl:w-[40em] xl:object-cover xl:
+                        2xl:w-[50em] 
                     " />
                 </motion.article>
                 <motion.div whileHover="animate" className="flex w-full justify-center gap-2">

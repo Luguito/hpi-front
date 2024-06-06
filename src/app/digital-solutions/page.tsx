@@ -26,28 +26,28 @@ export default function DigitalSolutionsPage() {
                 </H1>
             </VideoContainer>
             <section>
-                <article className="mx-5 xl:mx-24 2xl:mx-56">
+                <article className="mx-5 xl:mx-28 2xl:mx-56">
                     <InnovationUI />
                 </article>
                 {/* Unleash power solutions */}
-                <article className="mx-5 xl:mx-24 2xl:mx-56 mt-20">
+                <article className="mx-5 xl:mx-28 2xl:mx-56 mt-20">
                     <PowerSolutionUI />
                 </article>
                 {/* MAPS */}
-                <article className="mx-5 mt-5 xl:mx-24 2xl:mx-56 2xl:mb-32 lg:py-20">
+                <article className="mx-5 mt-5 xl:mx-28 2xl:mx-56 2xl:mb-32 lg:py-16">
                     <MapImpactUI />
                 </article>
                 {/* Forefront */}
-                <article className="mx-5 mt-7 xl:mx-24 2xl:mx-56">
+                <article className="mx-5 mt-7 xl:mx-28 2xl:mx-56">
                     <ForeFrontUI />
                 </article>
                 {/*  */}
-                <article className="mx-5 xl:mx-24 2xl:mx-56 mt-20">
+                <article className="mx-5 xl:mx-28 2xl:mx-56 mt-20">
                     <FeatureUI />
                 </article>
                 {/*  */}
-                <section className="mx-5 xl:mx-24 2xl:mx-56 mt-20">
-                    <header className="text-left">
+                <section className="mx-5 xl:mx-28 2xl:mx-56 mt-20">
+                    <header className="text-left ml-7">
                         <H5 color="text-hpi-blue-light font-medium">
                             Explore More
                         </H5>

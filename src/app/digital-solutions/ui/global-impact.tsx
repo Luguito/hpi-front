@@ -9,7 +9,7 @@ import { ComponentName } from "@/app/components/counter/counter";
 export default function MapImpactUI() {
     return (
         <>
-            <header className="text-left">
+            <header className="text-left ml-7">
                 <H2 color="text-gradient">
                     GLOBAL IMPACT OF OUR DIGITAL SOLUTIONS
                 </H2>

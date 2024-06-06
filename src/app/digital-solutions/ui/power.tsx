@@ -49,7 +49,7 @@ export default function PowerSolutionUI() {
     }
     return (
         <>
-            <header className="text-left">
+            <header className="text-left ml-7">
                 <H5 color="text-hpi-blue-light font-medium">
                     Our Vision
                 </H5>
