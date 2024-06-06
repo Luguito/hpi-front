@@ -24,17 +24,17 @@ export const BlogsDSUI = () => {
     return (
         <>
             <motion.section className="flex flex-col items-center gap-5 mt-4 md:gap-10 md:mt-10" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                <section className="flex justify-center gap-5 md:gap-10">
+                <section className="flex flex-col md:flex-row justify-center gap-5 md:gap-10">
                     <motion.article
                         className="
-                        bg-white shadow-lg flex flex-col-reverse rounded-2xl
+                        bg-white shadow-lg flex rounded-2xl
                         md:flex-row md:rounded-3xl
                         xl:w-[50%]
                         "
                         whileHover={{ scale: 1.04 }}
                         variants={variantParent}>
                         <article className="
-                            px-3 
+                            p-3 leading-[20px] flex flex-col justify-around
                             md:py-10 md:px-14
                             lg:flex lg:flex-col lg:justify-around
                             xl:px-0 xl:pl-14 xl:w-[50%]
@@ -44,10 +44,10 @@ export const BlogsDSUI = () => {
                                 STAYING AHEAD BY REVOLUTIO…
                             </H3>
                             <p className="
-                            font-medium text-hpi-grey-dark text-[8px]
-                            md:text-hpi-body-grey md:mt-5
-                            xl:text-[15px]
-                            2xl:text-[21px]
+                            font-medium text-hpi-grey-dark text-[13px] line-clamp-4
+                            md:text-hpi-body-grey md:mt-5 lg:line-clamp-none
+                            xl:text-[15px] 
+                            2xl:text-[21px] 2xl:leading-[30px]
                             ">
                                 Discover how Hutchison Ports has continued
                                 to push the boundaries of automation and
@@ -62,7 +62,7 @@ export const BlogsDSUI = () => {
                             </B2>
                         </article>
                         <Image src={Table} alt={""} className="
-                            h-[100px] object-cover pl-[20px] 
+                            h-[14em] w-[10em] object-cover pl-[20px] 
                             md:h-auto md:object-none md:pl-0
                             lg:h-full lg:w-[90%] lg:object-cover lg:object-left
                             xl:object-cover xl:object-center xl:w-inherit
@@ -71,27 +71,27 @@ export const BlogsDSUI = () => {
                     </motion.article>
                     <motion.article
                         className="
-                        bg-white shadow-lg flex flex-col-reverse rounded-2xl
+                        bg-white shadow-lg flex rounded-2xl
                         md:flex-row md:rounded-3xl
                         xl:w-[50%]
                         "
                         whileHover={{ scale: 1.04 }}
                         variants={variantParent}>
                         <article className="
-                        px-3 
+                        p-3 flex flex-col justify-around
                         md:py-10 md:px-14
                         xl:px-0 xl:pl-14
                         2xl:w-[50%] 2xl:flex 2xl:flex-col 2xl:justify-around
                         ">
                             <H3 color="
-                            text-hpi-blue-light font-bold 
+                            text-hpi-blue-light font-bold leading-[20px]
                             md:mt-0 md:w-[80%] lg:w-full
                             xl:leading-[33px] 2xl:leading-[45px]
                             ">
                                 INTRODUCING VERONICA
                             </H3>
                             <p className="
-                            line-clamp-4 text-hpi-grey-dark font-medium text-[8px]
+                            line-clamp-4 text-hpi-grey-dark font-medium text-[13px]
                             md:text-hpi-body-grey md:mt-5 md:w-[60%] lg:w-full
                             xl:text-[15px]
                             2xl:text-[21px]
@@ -108,7 +108,7 @@ export const BlogsDSUI = () => {
                             </B2>
                         </article>
                         <Image src={Veronica} alt={""} className="
-                        h-[100px] object-cover pl-[20px] 
+                        h-[12.5em] object-contain pl-[20px] rounded-tr-2xl rounded-br-2xl
                         md:h-auto md:object-none md:pl-0
                         lg:h-full lg:w-[16em]
                         xl:object-contain xl:object-center xl:w-[13em] xl:pr-4
@@ -131,10 +131,10 @@ export const BlogsDSUI = () => {
                     lg:flex lg:flex-col lg:justify-around
                     xl:w-[60%]
                     ">
-                        <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0 xl:leading-[35px] 2xl:leading-[45px]">
+                        <H3 color="text-hpi-blue-light font-bold mt-2 leading-[20px] md:mt-0 xl:leading-[35px] 2xl:leading-[45px]">
                             THE PORTS AI REVOLUTION IS HERE…
                         </H3>
-                        <p className="text-hpi-grey-dark font-medium mt-5 md:mt-5 md:text-hpi-body-grey text-[8px] xl:text-[15px] 2xl:text-[21px]">
+                        <p className="text-hpi-grey-dark font-medium mt-5 line-clamp-4 lg:line-clamp-none md:mt-5 md:text-hpi-body-grey text-[13px] xl:text-[15px] 2xl:text-[21px]">
                             Hutchison Ports is revolutionising port operations by
                             welcoming a new family - Veronica and her offspring. Together,
                             they will replace the world{"'"}s leading Terminal Operating System, nGen,

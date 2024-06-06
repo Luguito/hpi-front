@@ -30,7 +30,7 @@ export default function DigitalSolutionsPage() {
                     <InnovationUI />
                 </article>
                 {/* Unleash power solutions */}
-                <article className="mx-5 xl:mx-28 2xl:mx-56 mt-20">
+                <article className="mx-5 mt-5 xl:mx-28 2xl:mx-56">
                     <PowerSolutionUI />
                 </article>
                 {/* MAPS */}
