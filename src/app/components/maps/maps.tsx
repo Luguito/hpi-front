@@ -94,14 +94,14 @@ function map() {
             strokeWidth: 2,
             showTooltipOn: 'hover',
             tooltipHTML: `
-            <section style="text-align: center; width: 27%;">
-                <header style="color: #002E6D; font-weight: semi-bold;">
-                    <b style="font-size: 16px;">{title}</b>
-                </header>
-                <section style="display:flex; justify-content: center; align-items: center; font-weight: medium; color: #002E6D;">
-                    <p style="white-space: pre-line; font-size: 16px; text-wrap:wrap;">{description}</p>
-                </section>
+            <section class="text-center max-w-full text-[5px] xl:text-[10px] xl:w-[45%] xl:px-2 2xl:text-[16px] 2xl:w-[30%]">
+            <header style="color: #002E6D; font-weight: bold;">
+                <b>{title}</b>
+            </header>
+            <section class="flex items-center justify-center text-[#002E6D] break-words">
+                <p>{description}</p>
             </section>
+        </section>
         `,
         });
 
@@ -114,16 +114,33 @@ function map() {
 
         // @ts-ignore
         let chinaPoint = china?.bullets[0]?.get('sprite');
+        // @ts-ignore
+        let karachi = pointSeries.dataItems.at(0)?.bullets[0].get('sprite')
+
+
+        // @ts-ignore
+        karachi?.setAll({
+            tooltipHTML: `
+            <section class="text-center max-w-full text-[5px] xl:text-[10px] xl:w-[40%] xl:px-2 2xl:text-[16px] 2xl:w-[27%]">
+                <header style="color: #002E6D; font-weight: bold;">
+                    <b>{title}</b>
+                </header>
+                <section class="flex items-center justify-center text-[#002E6D] break-words">
+                    <p>{description}</p>
+                </section>
+            </section>
+            `
+        })
 
         // @ts-ignore
         chinaPoint?.setAll({
             tooltipHTML: `
-            <section style="text-align: center; width: 25%;">
-                <header style="color: #002E6D; font-weight: semi-bold;">
-                    <b class="text-[5px] 2xl:text-[16px]">{title}</b>
+            <section class="text-center max-w-full text-[5px] xl:text-[10px] xl:w-[43%] xl:px-2 2xl:text-[16px] 2xl:w-[25%]">
+                <header style="color: #002E6D; font-weight: bold;">
+                    <b>{title}</b>
                 </header>
-                <section style="display:flex; justify-content: center; align-items: center; font-weight: medium; color: #002E6D;">
-                    <p style="white-space: pre-line; font-size: 16px; text-wrap:wrap;">{description}</p>
+                <section class="flex items-center justify-center text-[#002E6D] break-words">
+                    <p>{description}</p>
                 </section>
             </section>
             `
