@@ -54,7 +54,7 @@ export const RaasModelComponent = ({ children }: any) => {
 
     return (
         <section className="
-        mt-8 mx-5 
+        mt-8 
         xl:mx-28  xl:mt-14
         2xl:mx-44 2xl:mt-20
         ">
@@ -73,7 +73,10 @@ export const RaasModelComponent = ({ children }: any) => {
                 </B1>
             </motion.header>
 
-            <section className="grid grid-cols-2 grid-rows-2 justify-center items-center mt-5 gap-1 lg:gap-10 lg:mt-14">
+            <section className="
+            grid grid-cols-1 grid-rows-1 justify-center items-center mt-5 gap-3 mx-6
+            lg:grid-rows-2 lg:grid-cols-2 lg:gap-10 lg:mt-14
+            ">
                 <motion.div animate={!roc.roc1 ? 'content' : 'banner'} onTap={() => setRoc({ ...roc, roc1: !roc.roc1 })}>
                     <motion.article
                         variants={variantParent}
@@ -115,7 +118,7 @@ export const RaasModelComponent = ({ children }: any) => {
                                             MIND
                                         </H3>
                                         <Image src={MIND} alt="Mind Icon" className="
-                                            h-[2.5em] w-[3em]
+                                            h-[6em] w-[6em]
                                             xl:h-[9em] xl:w-[10em]
                                         "/>
                                     </motion.div>
@@ -164,7 +167,7 @@ export const RaasModelComponent = ({ children }: any) => {
                                             YOU-GROW
                                         </H3>
                                         <Image src={GROW} alt="Mind Icon" className="
-                                            h-[3em] w-[3.5em]
+                                            h-[5em] w-[5em]
                                             xl:h-[9em] xl:w-[10em]
                                         "/>
                                     </motion.div>
@@ -214,7 +217,7 @@ export const RaasModelComponent = ({ children }: any) => {
                                             SOLUTION
                                         </H3>
                                         <Image src={SOLUTION} alt="Mind Icon" className="
-                                            h-[3em] w-[2.5em]
+                                            h-[5em] w-[5em]
                                             xl:h-[10em] xl:w-[9em]
                                         "/>
                                     </motion.div>
@@ -263,7 +266,7 @@ export const RaasModelComponent = ({ children }: any) => {
                                             KNOW ALL
                                         </H3>
                                         <Image src={EYE} alt="Mind Icon" className="
-                                            h-[3.5em] w-[2.5em]
+                                            h-[5em] w-[5em]
                                             xl:h-[10em] xl:w-[9em]
                                         " />
                                     </motion.div>

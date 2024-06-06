@@ -16,8 +16,8 @@ export const EfficiencyComponent = () => {
         2xl:mx-44
         ">
             <section className="
-            flex gap-10
-            lg:gap-40
+            flex flex-col gap-10
+            lg:gap-40 lg:flex-row
             ">
                 <section className="flex flex-col justify-center">
                     <H5 color="text-hpi-blue-light font-medium">
@@ -26,7 +26,7 @@ export const EfficiencyComponent = () => {
                     <H3 color="text-hpi-blue-dark font-bold lg:leading-[43px] xl:leading-[35px] 2xl:mt-4 2xl:leading-[45px] 2xl:text-[40px]">
                         EFFICIENCY, SCALABILITY, VALUE GENERATION
                     </H3>
-                    <p className="text-hpi-body-grey font-medium mt-3 text-[10px] md:text-[15px] 2xl:text-[21px]">
+                    <p className="text-hpi-body-grey font-medium mt-3 text-[14px] md:text-[15px] 2xl:text-[21px]">
                         Through <b>consolidation</b>, <b>standardisation</b>, <b>digitalisation</b> and <b>automation</b>,
                         our Shared Services are committed to deliver high-quality operations to
                         support the growth of Hutchison Ports.

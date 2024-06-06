@@ -94,7 +94,7 @@ function map() {
             strokeWidth: 2,
             showTooltipOn: 'hover',
             tooltipHTML: `
-            <section class="text-center max-w-full text-[5px] xl:text-[10px] xl:w-[45%] xl:px-2 2xl:text-[16px] 2xl:w-[37%]">
+            <section class="text-center max-w-full text-[5px] w-[28%] xl:text-[10px] xl:w-[45%] xl:px-2 2xl:text-[16px] 2xl:w-[37%]">
             <header style="color: #002E6D; font-weight: bold;">
                 <b>{title}</b>
             </header>
@@ -121,7 +121,7 @@ function map() {
         // @ts-ignore
         karachi?.setAll({
             tooltipHTML: `
-            <section class="text-center max-w-full text-[5px] xl:text-[10px] xl:w-[40%] xl:px-2 2xl:text-[16px] 2xl:w-[33%]">
+            <section class="text-center max-w-full text-[5px] w-[35%] xl:text-[10px] xl:w-[40%] xl:px-2 2xl:text-[16px] 2xl:w-[33%]">
                 <header style="color: #002E6D; font-weight: bold;">
                     <b>{title}</b>
                 </header>
@@ -135,7 +135,7 @@ function map() {
         // @ts-ignore
         chinaPoint?.setAll({
             tooltipHTML: `
-            <section class="text-center max-w-full text-[5px] xl:text-[10px] xl:w-[42%] xl:px-2 2xl:text-[16px] 2xl:w-[35%]">
+            <section class="text-center max-w-full text-[5px] w-[45%] xl:text-[10px] xl:w-[42%] xl:px-2 2xl:text-[16px] 2xl:w-[35%]">
                 <header style="color: #002E6D; font-weight: bold;">
                     <b>{title}</b>
                 </header>

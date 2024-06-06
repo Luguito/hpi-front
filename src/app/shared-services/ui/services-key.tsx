@@ -12,7 +12,7 @@ export const ServicesKeysComponent = () => {
             <H3 color="text-gradient font-bold">
                 SHARED SERVICES KEY ACHIEVEMENTS
             </H3>
-            <section className="flex flex-col justify-between items-center py-12 text-center gap-4 mt-9">
+            <section className="flex flex-col justify-between items-center py-8 text-center gap-4 mt-9">
                 <motion.article viewport={{ once: true }} className="
                 flex gap-32 justify-between items-center w-[100%] text-hpi-blue-light
                 lg:justify-evenly

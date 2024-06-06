@@ -75,7 +75,7 @@ export default function HomePage() {
                 xl:mx-28  xl:mt-14
                 2xl:mt-24 2xl:mb-40 2xl:mx-44
                 ">
-                    <header className="text-left snap-start mb-10 ml-7">
+                    <header className="text-left snap-start mb-10 ml-2 lg:ml-7">
                         <H5 color="text-hpi-blue-light font-medium">
                             Our Services
                         </H5>
@@ -85,7 +85,7 @@ export default function HomePage() {
                             Hutchison Ports’ operational best practices and cutting-edge technology:
                         </B1>
                     </header>
-                    <section className="bg-hpi-blue-dark rounded-3xl py-5 flex h-[20em] lg:h-full">
+                    <section className="bg-hpi-blue-dark rounded-3xl py-5 flex h-[28em] lg:h-full">
                         <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Shared%20services%20Radar.mp4" bgColor="hpi-opacity-video">
                             <section className="absolute top-1 lg:top-24">
                                 <section className="
@@ -192,10 +192,10 @@ export default function HomePage() {
 
             {/* MAPA */}
             <RevealOnScrollComponent>
-                <section className="mt-24 mb-20 bg-hpi-blue-dark mx-5 xl:mx-28 2xl:mx-44 rounded-3xl">
+                <section className="mt-7 mb-20 bg-hpi-blue-dark mx-5 xl:mx-28 2xl:mx-44 rounded-3xl">
                     <header className="text-left p-5 lg:p-[4.8em]">
                         <H2 color="text-hpi-white">SUCCESS SHOWCASES</H2>
-                        <B2 color="text-hpi-white font-medium lg:mt-5">
+                        <B2 color="text-hpi-white font-medium mt-3 lg:mt-5">
                             Our success stories across the globe, from Karachi to Hong Kong and beyond, illustrate the transformative impact
                             of our ROC solutions.
                         </B2>

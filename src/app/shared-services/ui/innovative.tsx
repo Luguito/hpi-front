@@ -16,7 +16,7 @@ const RosaComponent = () => {
         2xl:w-[100%]
         " initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
             <section className="flex flex-col">
-                <H3 color="text-hpi-blue-light font-bold xl:leading-[40px]">
+                <H3 color="text-hpi-blue-light font-bold leading-[20px] xl:leading-[40px]">
                     REMOTE OPERATIONS
                     SERVICES AND ARCHITECTURE
                     (ROSA)
@@ -48,7 +48,7 @@ const DDComponent = () => {
         2xl:w-[100%]
         " initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
             <section className="flex flex-col justify-between">
-                <H3 color="text-hpi-blue-light font-bold leading-[15px] lg:leading-[45px] xl:leading-[40px]">
+                <H3 color="text-hpi-blue-light font-bold leading-[20px] lg:leading-[45px] xl:leading-[40px]">
                     AUTOMATING ORDER PROCESSING WITH DOCUMENT DIGITALISATION (DD) {"&"} HUTCHISON PORT DATA EXCHANGE (HPDX)
                 </H3>
                 <B2 color="text-hpi-body-grey font-medium mt-2 xl:mt-5 2xl:mt-10">
@@ -100,8 +100,8 @@ export const InnovativeSection = () => {
                 <H5 color="text-hpi-blue-light font-medium">
                     Our Technologies
                 </H5>
-                <H2 color="text-gradient xl:mt-2">INNOVATIVE TECHNOLOGIES BEHIND ROC</H2>
-                <B1 color="text-hpi-blue-dark font-medium xl:mt-5">
+                <H2 color="text-gradient mt-1 xl:mt-2">INNOVATIVE TECHNOLOGIES BEHIND ROC</H2>
+                <B1 color="text-hpi-blue-dark font-medium mt-3 xl:mt-5">
                     Two groundbreaking technologies reinforce ROC{'’'}s backbone, pushing the boundaries of
                     terminal operations and redefining the shipping industry{'’'}s standards.
                 </B1>

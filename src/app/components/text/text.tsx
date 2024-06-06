@@ -29,7 +29,7 @@ export const H1 = ({ children, color, ...props }: any) => {
 }
 export const H2 = ({ children, color, ...props }: any) => {
     return (
-        <motion.h2 {...props} variants={RevealTextAfterSection} viewport={{ once: true }} className={"text-[16px] xl:text-[30px] 2xl:text-[55px] font-bold leading-[20px] xl:leading-[35px] 2xl:leading-[65px] " + color}>{children}</motion.h2>
+        <motion.h2 {...props} variants={RevealTextAfterSection} viewport={{ once: true }} className={"text-[20px] xl:text-[30px] 2xl:text-[55px] font-bold leading-[20px] xl:leading-[35px] 2xl:leading-[65px] " + color}>{children}</motion.h2>
     )
 }
 
@@ -40,12 +40,12 @@ export const H3 = ({ children, color, ...props }: any) => {
 }
 export const H5 = ({ children, color, ...props }: any) => {
     return (
-        <motion.h5 {...props} variants={RevealTextAfterSection} viewport={{ once: true }} className={"text-[12px] xl:text-[15px] 2xl:text-[25px] " + color}>{children}</motion.h5>
+        <motion.h5 {...props} variants={RevealTextAfterSection} viewport={{ once: true }} className={"text-[14px] xl:text-[15px] 2xl:text-[25px] " + color}>{children}</motion.h5>
     )
 }
 export const B1 = ({ children, color, ...props }: any) => {
     return (
-        <motion.p {...props} variants={RevealTextAfterSection} viewport={{ once: true }} className={"text-[12px] xl:text-[18px] 2xl:text-[28px] " + color}>{children}</motion.p>
+        <motion.p {...props} variants={RevealTextAfterSection} viewport={{ once: true }} className={"text-[14px] xl:text-[18px] 2xl:text-[28px] " + color}>{children}</motion.p>
     )
 }
 export const B2 = ({ children, color, ...props }: any) => {
