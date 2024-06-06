@@ -37,10 +37,10 @@ export const BlogsDSUI = () => {
                             px-3 
                             md:py-10 md:px-14
                             lg:flex lg:flex-col lg:justify-around
-                            xl:px-0 xl:pl-14
+                            xl:px-0 xl:pl-14 xl:w-[50%]
                             2xl:w-[50%] 2xl:flex 2xl:flex-col 2xl:justify-around
                         ">
-                            <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0">
+                            <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0 xl:leading-[33px] 2xl:leading-[45px]">
                                 STAYING AHEAD BY REVOLUTIO…
                             </H3>
                             <p className="
@@ -65,7 +65,7 @@ export const BlogsDSUI = () => {
                             h-[100px] object-cover pl-[20px] 
                             md:h-auto md:object-none md:pl-0
                             lg:h-full lg:w-[90%] lg:object-cover lg:object-left
-                            xl:object-cover xl:object-center xl:w-[100%]
+                            xl:object-cover xl:object-center xl:w-inherit
                             2xl:w-[50%] 2xl:h-[90%] 2xl:pr-10 2xl:pt-5
                         " />
                     </motion.article>
@@ -86,6 +86,7 @@ export const BlogsDSUI = () => {
                             <H3 color="
                             text-hpi-blue-light font-bold 
                             md:mt-0 md:w-[80%] lg:w-full
+                            xl:leading-[33px] 2xl:leading-[45px]
                             ">
                                 INTRODUCING VERONICA
                             </H3>

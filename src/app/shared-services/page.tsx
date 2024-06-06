@@ -40,12 +40,12 @@ export default function HomePage() {
             <RevealOnScrollComponent>
                 <section className="
                 text-center mt-16 mx-4 
-                xl:mb-16
+                xl:mb-16 
                 2xl:mb-32">
                     <H2 color="text-gradient">
                         HUTCHISON PORTS SHARED SERVICES
                     </H2>
-                    <B1 color="text-hpi-blue-dark font-medium mt-4 md:mt-0 xl:mt-2 xl:mx-[21em] xl:text-[18px] 2xl:leading-[36px]">
+                    <B1 color="text-hpi-blue-dark font-medium mt-4 md:mt-0 xl:mt-2 xl:mx-[21em] xl:text-[18px] 2xl:mx-56 2xl:leading-[36px]">
                         Our Regional Operations Centre-as-a-Service (ROC) approach integrates standardisation,
                         digitalisation, and automation of port terminal operations.
                     </B1>
@@ -73,7 +73,7 @@ export default function HomePage() {
                 <section className="
                 mx-5 mt-7 mb-8
                 xl:mx-28  xl:mt-14
-                2xl:mt-24 2xl:mb-40 2xl:mx-80
+                2xl:mt-24 2xl:mb-40 2xl:mx-44
                 ">
                     <header className="text-left snap-start mb-10 ml-7">
                         <H5 color="text-hpi-blue-light font-medium">
@@ -175,7 +175,7 @@ export default function HomePage() {
 
             {/* Journey */}
             <RevealOnScrollComponent>
-                <section className="mx-5 mt-7 xl:mx-28 xl:mt-14 2xl:mx-80 2xl:mt-36">
+                <section className="mx-5 mt-7 xl:mx-28 xl:mt-14 2xl:mx-44 2xl:mt-36">
                     <header className="text-left ml-7">
                         <H5 color="text-hpi-blue-light font-medium">Our Journey</H5>
                         <H2 color="text-gradient xl:mt-2">FROM IDEATION TO EXPANSION</H2>
@@ -192,7 +192,7 @@ export default function HomePage() {
 
             {/* MAPA */}
             <RevealOnScrollComponent>
-                <section className="mt-24 mb-20 bg-hpi-blue-dark mx-5 xl:mx-28 2xl:mx-80 rounded-3xl">
+                <section className="mt-24 mb-20 bg-hpi-blue-dark mx-5 xl:mx-28 2xl:mx-44 rounded-3xl">
                     <header className="text-left p-5 lg:p-[4.8em]">
                         <H2 color="text-hpi-white">SUCCESS SHOWCASES</H2>
                         <B2 color="text-hpi-white font-medium lg:mt-5">

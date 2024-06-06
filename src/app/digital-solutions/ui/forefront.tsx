@@ -47,7 +47,7 @@ export default function ForeFrontUI() {
     return (
         <>
             <header className="text-left ml-7">
-                <h3 className='text-hpi-blue-light text-[12px] lg:text-[22px] xl:text-[15px] 2xl:text-[35px]'>
+                <h3 className='text-hpi-blue-light text-[12px] lg:text-[22px] xl:text-[15px] 2xl:text-[25px]'>
                     Our Strength
                 </h3>
                 <H2 color="text-gradient">AT THE FOREFRONT OF PORT INNOVATION</H2>

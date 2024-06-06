@@ -80,7 +80,7 @@ const Innovation = () => {
                             </ul>
                         </article>
                         <article style={{ aspectRatio: "16/9" }}>
-                            <Image src={I_Innovation} alt="" className="
+                            <Image src={I_Innovation} alt="" fetchPriority="high" className="
                                 object-cover rounded-br-2xl rounded-bl-2xl h-[15em]
                                 lg:rounded-tr-2xl lg:rounded-br-2xl lg:rounded-bl-none lg:h-full
                                 " />
@@ -154,7 +154,7 @@ const Risk = () => {
                                 </ul>
                             </article>
                             <article className="xl:w-[193%] 2xl:w-[177%]" style={{ aspectRatio: "16/9" }}>
-                                <Image src={I_Risk} alt="" className="
+                                <Image src={I_Risk} alt="" fetchPriority="high" className="
                                 object-cover rounded-br-2xl rounded-bl-2xl h-[15em]
                                 lg:rounded-tr-2xl lg:rounded-br-2xl lg:rounded-bl-none lg:h-full
                                 " />
@@ -216,7 +216,7 @@ const Strategy = () => {
                                 </ul>
                             </article>
                             <article className="xl:w-[202%] 2xl:w-[183%]" style={{ aspectRatio: "16/9" }}>
-                                <Image src={I_Agility} alt="" className="
+                                <Image src={I_Agility} alt="" fetchPriority="high" className="
                                 object-cover rounded-br-2xl rounded-bl-2xl h-[15em]
                                 lg:rounded-tr-2xl lg:rounded-br-2xl lg:rounded-bl-none lg:h-full
                                 " />
@@ -287,7 +287,7 @@ const People = () => {
                                 </ul>
                             </article>
                             <article className="xl:w-[113%] 2xl:w-[100%]" style={{ aspectRatio: "16/9" }}>
-                                <Image src={I_People} alt="" className="
+                                <Image src={I_People} alt="" fetchPriority="high" className="
                                 object-cover rounded-br-2xl rounded-bl-2xl h-[15em]
                                 lg:rounded-tr-2xl lg:rounded-br-2xl lg:rounded-bl-none lg:h-full
                                 " />
@@ -366,7 +366,7 @@ const Collaboration = () => {
                             xl:w-[202%]
                             2xl:w-[181%]
                             " style={{ aspectRatio: "16/9" }}>
-                                <Image src={I_Team} alt="" className="
+                                <Image src={I_Team} alt="" fetchPriority="high" className="
                                 object-cover rounded-br-2xl rounded-bl-2xl h-[15em]
                                 lg:rounded-tr-2xl lg:rounded-br-2xl lg:rounded-bl-none lg:h-full
                                 " />

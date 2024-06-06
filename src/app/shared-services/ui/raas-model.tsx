@@ -56,7 +56,7 @@ export const RaasModelComponent = ({ children }: any) => {
         <section className="
         mt-8 mx-5 
         xl:mx-28  xl:mt-14
-        2xl:mx-80 2xl:mt-20
+        2xl:mx-44 2xl:mt-20
         ">
             <motion.header className="text-left ml-7" variants={{
                 visible: {

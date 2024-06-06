@@ -57,7 +57,7 @@ export default function PowerSolutionUI() {
                     UNLEASHING THE POWER OF DIGITAL SOLUTIONS
                 </H2>
             </header>
-            <B1 color="text-hpi-blue-dark font-normal">
+            <B1 color="text-hpi-blue-dark font-normal ml-7">
                 Hutchison Ports is dedicated to offering standardised, cost-efficient, and innovative solutions that add value across all our terminals and logistics community.
                 We aim to empower individuals and businesses to transform the logistics world into a more efficient and sustainable one through innovative technologies.
             </B1>

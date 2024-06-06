@@ -160,10 +160,11 @@ export const TechSolutionsComponent = () => {
 export const AutomationSection = () => {
     return (
         <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
-            <Image src={AutomationImage} width={600} alt="Img Here" className="
+            <Image src={AutomationImage} width={600} fetchPriority="high" alt="Img Here" className="
             max-w-[none] object-cover w-[140px] h-full object-center rounded-2xl
             md:h-[400px] md:rounded-3xl md:w-auto
-            lg:w-full 
+            lg:w-auto
+            xl:w-auto
             2xl:w-[50em] 2xl:h-full
             "/>
         </motion.section>
@@ -173,10 +174,11 @@ export const AutomationSection = () => {
 export const SharedSection = () => {
     return (
         <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
-            <Image src={SharedImage} width={600} alt="Img Here" className="
+            <Image src={SharedImage} width={600} fetchPriority="high"  alt="Img Here" className="
             max-w-[none] object-cover w-[140px] h-full object-center rounded-2xl
             md:h-[400px] md:rounded-3xl md:w-auto
             lg:w-full 
+            xl:h-auto
             2xl:w-[50em] 2xl:h-full
             " />
         </motion.section>
@@ -186,7 +188,7 @@ export const SharedSection = () => {
 export const DigitalSection = () => {
     return (
         <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
-            <Image src={DigitalImage} width={600} alt="Img Here" className="
+            <Image src={DigitalImage} width={600} fetchPriority="high" alt="Img Here" className="
             max-w-[none] object-cover w-[140px] h-full object-center rounded-2xl
             md:h-[400px] md:rounded-3xl md:w-auto
             lg:w-full 

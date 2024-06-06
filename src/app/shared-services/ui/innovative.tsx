@@ -94,7 +94,7 @@ export const InnovativeSection = () => {
         <motion.section className="
         mx-5
         xl:mx-28 xl:mt-14
-        2xl:mx-80
+        2xl:mx-44
         " initial="hidden" whileInView="visible" variants={RevealSectionInitial}>
             <header className="text-left ml-2 md:ml-7">
                 <H5 color="text-hpi-blue-light font-medium">

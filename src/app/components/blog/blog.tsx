@@ -77,7 +77,7 @@ export const BlogsUI = () => {
                             px-3 
                             md:py-10 md:px-14
                             lg:flex lg:flex-col lg:justify-around
-                            xl:w-[90%]
+                            xl:w-[50%]
                             2xl:px-14
                             ">
                             <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0 md:w-[80%] lg:w-full xl:text-[20px] xl:leading-[33px] 2xl:leading-[45px]">
@@ -100,7 +100,7 @@ export const BlogsUI = () => {
                             h-[100px] object-cover pl-[20px] 
                             md:h-auto md:object-none md:pl-0
                             lg:h-full lg:w-[13em]
-                            xl:h-full xl:w-full
+                            xl:h-inherit xl:w-inherit xl:object-cover
                             2xl:w-[24em]
                             " />
                     </motion.article>

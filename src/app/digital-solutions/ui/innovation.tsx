@@ -46,7 +46,7 @@ export const InnovationUI = () => {
             </section>
             <motion.article className="p-2 md:p-12 relative bg-hpi-white rounded-3xl" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                 <video poster="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/veronica-digital.png"
-                    className="rounded-3xl cursor-pointer"
+                    className="rounded-3xl cursor-pointer w-full"
                     ref={ref} onClick={playVideo} onEnded={resetVideo}>
                     <source src="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/veronica_final_v3%20(Original).mp4" type="video/mp4" />
                     Your browser does not support the video tag.

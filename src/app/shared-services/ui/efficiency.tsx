@@ -13,7 +13,7 @@ export const EfficiencyComponent = () => {
         flex flex-col justify-center bg-hpi-white rounded-3xl p-8 mx-5 mt-5
         lg:mx-52 lg:px-20
         xl:mx-28 
-        2xl:mx-80
+        2xl:mx-44
         ">
             <section className="
             flex gap-10
@@ -43,6 +43,7 @@ export const EfficiencyComponent = () => {
                         w-full max-w-none object-cover h-full
                         lg:w-[10rem]
                         xl:w-[25rem]
+                        2xl:2-[35rem]
                     " />
                 </motion.article>
             </section>
