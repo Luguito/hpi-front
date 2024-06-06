@@ -21,7 +21,7 @@ const RosaComponent = () => {
                     SERVICES AND ARCHITECTURE
                     (ROSA)
                 </H3>
-                <B2 color="text-hpi-body-grey font-medium mt-3 lg:mt-10">
+                <B2 color="text-hpi-body-grey font-medium mt-3 xl:mt-5 2xl:mt-10">
                     ROSA brings terminal operations into the digital age,
                     enabling end-to-end remote management of multiple
                     terminals with real-time transparency. This technology
@@ -51,10 +51,10 @@ const DDComponent = () => {
                 <H3 color="text-hpi-blue-light font-bold leading-[15px] lg:leading-[45px] xl:leading-[40px]">
                     AUTOMATING ORDER PROCESSING WITH DOCUMENT DIGITALISATION (DD) {"&"} HUTCHISON PORT DATA EXCHANGE (HPDX)
                 </H3>
-                <B2 color="text-hpi-body-grey font-medium mt-2 lg:mt-10">
+                <B2 color="text-hpi-body-grey font-medium mt-2 xl:mt-5 2xl:mt-10">
                     With DD - the <strong>AI-driven platform</strong>, we simplify document handling by standardising and automating the classification and digitalisation of key information from emails, making processes faster without human intervention.
                 </B2>
-                <B2 color="text-hpi-body-grey font-medium mt-2 lg:mt-10">
+                <B2 color="text-hpi-body-grey font-medium mt-2 xl:mt-5 2xl:mt-10">
                     With HPDX, we connect ROC to the global logistics community to support <strong>real-time data exchange</strong> via various industry standards: EDI, API, and GSBN logistic network.
                 </B2>
             </section>
@@ -93,14 +93,14 @@ export const InnovativeSection = () => {
     return (
         <motion.section className="
         mx-5
-        xl:mx-28  
+        xl:mx-28 xl:mt-14
         2xl:mx-80
         " initial="hidden" whileInView="visible" variants={RevealSectionInitial}>
             <header className="text-left ml-2 md:ml-7">
                 <H5 color="text-hpi-blue-light font-medium">
                     Our Technologies
                 </H5>
-                <H2 color="text-gradient">INNOVATIVE TECHNOLOGIES BEHIND ROC</H2>
+                <H2 color="text-gradient xl:mt-2">INNOVATIVE TECHNOLOGIES BEHIND ROC</H2>
                 <B1 color="text-hpi-blue-dark font-medium xl:mt-5">
                     Two groundbreaking technologies reinforce ROC{'’'}s backbone, pushing the boundaries of
                     terminal operations and redefining the shipping industry{'’'}s standards.

@@ -35,7 +35,7 @@ export const H2 = ({ children, color, ...props }: any) => {
 
 export const H3 = ({ children, color, ...props }: any) => {
     return (
-        <motion.h3 {...props} variants={RevealTextAfterSection} className={"text-[12px] lg:text-[22px] xl:text-[22px] 2xl:text-[35px] " + color}>{children}</motion.h3>
+        <motion.h3 {...props} variants={RevealTextAfterSection} className={"text-[12px] lg:text-[22px] xl:text-[30px] 2xl:text-[35px] " + color}>{children}</motion.h3>
     )
 }
 export const H5 = ({ children, color, ...props }: any) => {

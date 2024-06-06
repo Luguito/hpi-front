@@ -55,8 +55,8 @@ export const RaasModelComponent = ({ children }: any) => {
     return (
         <section className="
         mt-8 mx-5 
-        xl:mx-28  
-        2xl:mx-80
+        xl:mx-28  xl:mt-14
+        2xl:mx-80 2xl:mt-20
         ">
             <motion.header className="text-left ml-7" variants={{
                 visible: {
@@ -66,7 +66,7 @@ export const RaasModelComponent = ({ children }: any) => {
                 }
             }}>
                 <H5 color="text-hpi-blue-light font-medium">Our ROC Model</H5>
-                <H2 color="text-gradient leading-[20px]">FLEXIBLE MODEL FOR REGIONAL OPERATIONS CENTRE</H2>
+                <H2 color="text-gradient leading-[20px] xl:mt-2">FLEXIBLE MODEL FOR REGIONAL OPERATIONS CENTRE</H2>
                 <B1 color="text-hpi-blue-dark font-medium mt-3">
                     ROC offers a flexible subscription model enabling terminals to transition to a new
                     operational model in a seamless way.

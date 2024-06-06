@@ -22,9 +22,9 @@ export const ServicesKeysComponent = () => {
                 initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                     <ComponentName num={6700} next="" />
                     <div className="text-center">
-                        <H3 color="text-hpi-blue-light xl:text-[22px] font-bold">
+                        <p className="text-hpi-blue-light font-bold text-[16px] lg:text-[22px] 2xl:text-[35px]">
                             MANAGED VESSELS/YR
-                        </H3>
+                        </p>
                     </div>
                 </motion.article>
                 <hr className="border-b-1 w-[90%] border-hpi-grey-light rounded-[80%] opacity-75 lg:border-b-2" />
@@ -38,11 +38,12 @@ export const ServicesKeysComponent = () => {
                     <ComponentName num={8} next="Million" />
                     <div className="
                     text-left pr-7
-                    lg:w-1/4
+                    lg:w-1/4 xl:pl-12
+                    2xl:pl-0
                     ">
-                        <H3 color="text-hpi-blue-light xl:text-[22px] font-bold">
+                        <p className="text-hpi-blue-light font-bold text-[16px] lg:text-[22px] 2xl:text-[35px]">
                             TEUS/YR
-                        </H3>
+                        </p>
                     </div>
                 </motion.article>
                 <hr className="border-b-1 w-[90%] border-hpi-grey-light rounded-[80%] opacity-75 lg:border-b-2" />
@@ -57,11 +58,12 @@ export const ServicesKeysComponent = () => {
                     <div className="
                     text-center 
                     lg:w-[45%] lg:pl-28
-                    xl:w-[38%] xl:pl-16
+                    xl:w-[38%] xl:pl-36
+                    2xl:w-[50%] 2xl:pl-48
                     ">
-                        <H3 color="text-hpi-blue-light xl:text-[22px] font-bold">
+                        <p className="text-hpi-blue-light font-bold text-[16px] lg:text-[22px] 2xl:text-[35px]">
                             MORE EFFICIENT
-                        </H3>
+                        </p>
                     </div>
                 </motion.article>
             </section>

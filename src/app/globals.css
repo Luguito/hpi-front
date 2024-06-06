@@ -50,3 +50,16 @@ body {
     color: #009BDE;
   }
 }
+
+/* Ocultar las flechas predeterminadas en todos los navegadores */
+details summary {
+  list-style: none; /* Elimina la lista de estilo */
+}
+
+details summary::-webkit-details-marker {
+  display: none; /* Oculta la flecha en navegadores basados en WebKit (Chrome, Safari, etc.) */
+}
+
+details summary::marker {
+  display: none; /* Oculta la flecha en Firefox */
+}

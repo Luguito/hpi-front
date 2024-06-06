@@ -45,7 +45,7 @@ export default function HomePage() {
                     <H2 color="text-gradient">
                         HUTCHISON PORTS SHARED SERVICES
                     </H2>
-                    <B1 color="text-hpi-blue-dark font-medium mt-4 md:mt-0 xl:mx-44 xl:text-[18px] 2xl:leading-[36px]">
+                    <B1 color="text-hpi-blue-dark font-medium mt-4 md:mt-0 xl:mt-2 xl:mx-[21em] xl:text-[18px] 2xl:leading-[36px]">
                         Our Regional Operations Centre-as-a-Service (ROC) approach integrates standardisation,
                         digitalisation, and automation of port terminal operations.
                     </B1>
@@ -72,14 +72,14 @@ export default function HomePage() {
             <RevealOnScrollComponent>
                 <section className="
                 mx-5 mt-7 mb-8
-                xl:mx-28  
-                2xl:mt-36 2xl:mb-40 2xl:mx-80
+                xl:mx-28  xl:mt-14
+                2xl:mt-24 2xl:mb-40 2xl:mx-80
                 ">
                     <header className="text-left snap-start mb-10 ml-7">
                         <H5 color="text-hpi-blue-light font-medium">
                             Our Services
                         </H5>
-                        <H2 color="text-gradient">CORE COMPONENTS OF ROC</H2>
+                        <H2 color="text-gradient xl:mt-2">CORE COMPONENTS OF ROC</H2>
                         <B1 color="text-hpi-blue-dark font-medium xl:mt-5">
                             Our ROC model encompasses four core components, leveraging
                             Hutchison Ports’ operational best practices and cutting-edge technology:
@@ -99,6 +99,7 @@ export default function HomePage() {
                                     ">
                                         <Image src={DOCUMENT} alt="" layout="responsive" className="
                                         mt-[-0.5em] w-[3em]
+                                        xl:w-[5em]
                                         " />
                                         <article className="flex flex-col text-left md:text-center">
                                             <H3 color="font-bold text-hpi-white">
@@ -115,7 +116,7 @@ export default function HomePage() {
                                     flex flex-row items-center gap-4 rounded-md
                                     lg:flex-col
                                     ">
-                                        <Image src={PLAN} alt="" className="mt-[-2em] w-[3em] xl:mt-[-1em]" />
+                                        <Image src={PLAN} alt="" className="mt-[-2em] w-[3em] xl:mt-[-1em] xl:w-[5em]" />
                                         <article className="flex flex-col text-left md:text-center">
                                             <H3 color="font-bold text-hpi-white">
                                                 LET-IT-STOW
@@ -131,7 +132,7 @@ export default function HomePage() {
                                     flex flex-row items-center gap-4 rounded-md
                                     lg:flex-col
                                     ">
-                                        <Image src={COMPARATION} alt="" className="mt-[-0.5em] w-[2em]" />
+                                        <Image src={COMPARATION} alt="" className="mt-[-0.5em] w-[2em] xl:w-[3.5em]" />
                                         <article className="flex flex-col text-left md:text-center ml-[1em] md:ml-0">
                                             <H3 color="font-bold text-hpi-white">
                                                 BERTH-LIFE-BALANCE
@@ -147,7 +148,7 @@ export default function HomePage() {
                                     flex flex-row items-center gap-4 rounded-md
                                     lg:flex-col
                                     ">
-                                        <Image src={FTP} alt="" className="mt-[0.1em] w-[3em]" />
+                                        <Image src={FTP} alt="" className="mt-[0.1em] w-[3em] xl:w-[5em]" />
                                         <article className="flex flex-col text-left md:text-center">
                                             <H3 color="font-bold text-hpi-white">
                                                 STACK-BY-STACK
@@ -174,10 +175,10 @@ export default function HomePage() {
 
             {/* Journey */}
             <RevealOnScrollComponent>
-                <section className="mx-5 mt-7 xl:mx-28 2xl:mx-80 2xl:mt-36">
+                <section className="mx-5 mt-7 xl:mx-28 xl:mt-14 2xl:mx-80 2xl:mt-36">
                     <header className="text-left ml-7">
                         <H5 color="text-hpi-blue-light font-medium">Our Journey</H5>
-                        <H2 color="text-gradient">FROM IDEATION TO EXPANSION</H2>
+                        <H2 color="text-gradient xl:mt-2">FROM IDEATION TO EXPANSION</H2>
                         <B1 color="text-hpi-blue-dark font-medium">
                             Our journey underscores a relentless
                             pursuit of redefining terminal operations.

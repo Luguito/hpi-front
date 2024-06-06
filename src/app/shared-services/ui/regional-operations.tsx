@@ -36,11 +36,11 @@ export const Regional = () => {
         <section className="
         mt-7 
         xl:mx-28 xl:mt-16
-        2xl:mb-32 2xl:mx-80 2xl:mt-40
+        2xl:mx-80 2xl:mt-20
         ">
             <motion.header className="text-left ml-7" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={variantParent}>
                 <H5 color="text-hpi-blue-light font-medium">Our Framework</H5>
-                <H2 color="text-gradient">
+                <H2 color="text-gradient xl:mt-2">
                     REGIONAL OPERATIONS CENTRE AND <br />
                     NATIONAL OPERATIONS CENTRE
                 </H2>
@@ -48,7 +48,7 @@ export const Regional = () => {
             <section className="bg-hpi-white mx-5 rounded-3xl p-8 mt-4 
             lg:mt-8 
             xl:px-10 xl:py-14 xl:mx-0
-            2xl:p-20
+            2xl:p-20 2xl:mt-16
             ">
                 <B2 initial="hidden" whileInView="visible" viewport={{ once: true }}
                     color="font-medium text-hpi-body-grey">
