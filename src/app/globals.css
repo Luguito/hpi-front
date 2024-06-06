@@ -42,6 +42,10 @@ body {
 }
 
 @layer components {
+  .list-blue li {
+    padding-top: 0.5em
+  }
+
   .list-blue li::marker {
     color: #009BDE;
   }

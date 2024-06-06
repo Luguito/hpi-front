@@ -455,7 +455,7 @@ export const ContainerDatesInformation = ({ date }: any) => {
     }
 
     // @ts-ignore
-    const CurrentSection = hashMap[date];
+    const CurrentSection = !date ? null : hashMap[date];
     return (
         <CurrentSection />
     )

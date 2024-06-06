@@ -29,13 +29,13 @@ const variantParent = {
         }
     }
 }
-
+//  espacios entre secciones - laptop
 
 export const Regional = () => {
     return (
         <section className="
         mt-7 
-        xl:mx-28 
+        xl:mx-28 xl:mt-16
         2xl:mb-32 2xl:mx-80 2xl:mt-40
         ">
             <motion.header className="text-left ml-7" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={variantParent}>

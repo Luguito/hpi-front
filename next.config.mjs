@@ -17,7 +17,7 @@ const nextConfig = {
     //             defaultLocale: 'en-US',
     //         }
     //     ]
-    // }
+    // } 
 };
 
 export default nextConfig;

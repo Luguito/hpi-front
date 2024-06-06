@@ -67,12 +67,15 @@ export const TechSolutionsComponent = () => {
                 bg-white shadow-lg flex justify-between rounded-2xl gap-5 p-4
                 md:px-24 md:py-20 md:rounded-3xl
                 lg:gap-10
+                xl:mt-7 xl:px-16 xl:py-10
                 2xl:mt-10
             ">
                 <nav className="
                 flex flex-col gap-4 w-[30em]
                 sm:w-[20em]
                 lg:gap-10 lg:w-[35em]
+                xl:gap-4 xl:w-[30em]
+                2xl:gap-9
                 ">
                     <details onClick={checkDetails} open>
                         <summary className="flex justify-between cursor-pointer" onClick={() => setSection('automation')}>
@@ -154,10 +157,6 @@ export const TechSolutionsComponent = () => {
     )
 }
 
-
-
-
-
 export const AutomationSection = () => {
     return (
         <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
@@ -165,6 +164,7 @@ export const AutomationSection = () => {
             max-w-[none] object-cover w-[140px] h-full object-center rounded-2xl
             md:h-[400px] md:rounded-3xl md:w-auto
             lg:w-full 
+            2xl:w-[50em] 2xl:h-full
             "/>
         </motion.section>
     )
@@ -177,6 +177,7 @@ export const SharedSection = () => {
             max-w-[none] object-cover w-[140px] h-full object-center rounded-2xl
             md:h-[400px] md:rounded-3xl md:w-auto
             lg:w-full 
+            2xl:w-[50em] 2xl:h-full
             " />
         </motion.section>
     )
@@ -189,6 +190,8 @@ export const DigitalSection = () => {
             max-w-[none] object-cover w-[140px] h-full object-center rounded-2xl
             md:h-[400px] md:rounded-3xl md:w-auto
             lg:w-full 
+            xl:h-auto
+            2xl:w-[50em]
             " />
         </motion.section>
     )

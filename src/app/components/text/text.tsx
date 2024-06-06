@@ -35,7 +35,7 @@ export const H2 = ({ children, color, ...props }: any) => {
 
 export const H3 = ({ children, color, ...props }: any) => {
     return (
-        <motion.h3 {...props} variants={RevealTextAfterSection} className={"text-[12px] lg:text-[22px] xl:text-[30px] 2xl:text-[35px] " + color}>{children}</motion.h3>
+        <motion.h3 {...props} variants={RevealTextAfterSection} className={"text-[12px] lg:text-[22px] xl:text-[22px] 2xl:text-[35px] " + color}>{children}</motion.h3>
     )
 }
 export const H5 = ({ children, color, ...props }: any) => {
@@ -50,7 +50,7 @@ export const B1 = ({ children, color, ...props }: any) => {
 }
 export const B2 = ({ children, color, ...props }: any) => {
     return (
-        <motion.p {...props} variants={RevealTextAfterSection} viewport={{ once: true }} className={"text-[8px] md:text-[15px] xl:text-[18px] 2xl:text-[21px] " + color}>{children}</motion.p>
+        <motion.p {...props} variants={RevealTextAfterSection} viewport={{ once: true }} className={"text-[8px] md:text-[15px] xl:text-[15px] 2xl:text-[21px] " + color}>{children}</motion.p>
     )
 }
 

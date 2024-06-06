@@ -18,6 +18,8 @@ const variantParent = {
         }
     }
 }
+
+// 
 export const BlogsDSUI = () => {
     return (
         <>
@@ -42,8 +44,9 @@ export const BlogsDSUI = () => {
                                 STAYING AHEAD BY REVOLUTIO…
                             </H3>
                             <p className="
-                            font-medium text-hpi-grey-dark 
+                            font-medium text-hpi-grey-dark text-[8px]
                             md:text-hpi-body-grey md:mt-5
+                            xl:text-[15px]
                             2xl:text-[21px]
                             ">
                                 Discover how Hutchison Ports has continued
@@ -87,8 +90,9 @@ export const BlogsDSUI = () => {
                                 INTRODUCING VERONICA
                             </H3>
                             <p className="
-                            line-clamp-4 text-hpi-grey-dark font-medium 
+                            line-clamp-4 text-hpi-grey-dark font-medium text-[8px]
                             md:text-hpi-body-grey md:mt-5 md:w-[60%] lg:w-full
+                            xl:text-[15px]
                             2xl:text-[21px]
                             ">
                                 Discover an exclusive feature dedicated to Veronica,
@@ -106,11 +110,12 @@ export const BlogsDSUI = () => {
                         h-[100px] object-cover pl-[20px] 
                         md:h-auto md:object-none md:pl-0
                         lg:h-full lg:w-[16em]
-                        xl:object-contain xl:object-center xl:w-[13em]
+                        xl:object-contain xl:object-center xl:w-[13em] xl:pr-4
                         2xl:w-[50%] 2xl:h-[90%] 2xl:pr-10 2xl:pt-5
                         " />
                     </motion.article>
                 </section>
+                {/* Blogs */}
                 <motion.article
                     className="
                     bg-white shadow-lg flex justify-between w-[100%] rounded-2xl 
@@ -126,7 +131,7 @@ export const BlogsDSUI = () => {
                         <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0">
                             THE PORTS AI REVOLUTION IS HERE…
                         </H3>
-                        <p className="text-hpi-grey-dark font-medium mt-5 md:mt-5 md:text-hpi-body-grey 2xl:text-[21px]">
+                        <p className="text-hpi-grey-dark font-medium mt-5 md:mt-5 md:text-hpi-body-grey text-[8px] xl:text-[15px] 2xl:text-[21px]">
                             Hutchison Ports is revolutionising port operations by
                             welcoming a new family - Veronica and her offspring. Together,
                             they will replace the world{"'"}s leading Terminal Operating System, nGen,
@@ -143,9 +148,9 @@ export const BlogsDSUI = () => {
                     <Image src={Sphere} alt={""} width={800} className="
                         object-cover rounded-tr-2xl rounded-br-2xl w-[150px] object-left 
                         md:object-none md:w-auto
-                        lg:w-[40em]
+                        lg:w-[30em]
                         xl:w-[40em]
-                        2xl:w-[45em]
+                        2xl:w-[50em]
                     " />
                 </motion.article>
                 <motion.div whileHover="animate" className="flex w-full justify-center gap-2">

@@ -34,7 +34,7 @@ export default function DigitalSolutionsPage() {
                     <PowerSolutionUI />
                 </article>
                 {/* MAPS */}
-                <article className="mx-5 mt-5 xl:mx-24 2xl:mx-56 lg:mb-32 lg:py-20">
+                <article className="mx-5 mt-5 xl:mx-24 2xl:mx-56 2xl:mb-32 lg:py-20">
                     <MapImpactUI />
                 </article>
                 {/* Forefront */}

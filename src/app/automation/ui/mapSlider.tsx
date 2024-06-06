@@ -153,7 +153,7 @@ function map(trigger: any) {
 
     
     // Años para las etiquetas
-    let yearTicks = ["1991", "1993", "1995", "2007", "2012", "2013", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2030"]
+    let yearTicks = ["1991", "1993", "1995", "", "2007", "", "2012", "2013", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "", "2030"]
 
     yearTicks.forEach((year, index) => {
         let position = (index / (yearTicks.length - 1)) * 100;
@@ -190,6 +190,7 @@ function map(trigger: any) {
 
     // REVISAR ESTO 
     function updateCountries(year: any) {
+        if(!year) return;
         pointSeries.data.clear();
 
         // @ts-ignore

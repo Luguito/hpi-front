@@ -31,15 +31,15 @@ export const BlogsUI = () => {
                         className="
                         bg-white shadow-lg flex flex-col-reverse rounded-2xl
                         md:flex-row md:rounded-3xl
-                        2xl:w-[50%]
+                        xl:w-[50%]
                         "
                         whileHover={{ scale: 1.04 }}
                         variants={variantParent}>
                         <article className="
                             px-3 
                             md:py-10 md:px-14
-                            xl:pr-0
                             lg:flex lg:flex-col lg:justify-around
+                            xl:w-[70%]
                         "
                         >
                             <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0 xl:text-[20px]">
@@ -62,20 +62,22 @@ export const BlogsUI = () => {
                         h-[100px] object-cover pl-[20px] 
                         md:h-auto md:object-none md:pl-0
                         lg:h-full lg:w-[90%] lg:object-cover lg:object-left
+                        xl:w-[65%]
                         " />
                     </motion.article>
                     <motion.article
                         className="
                         bg-white shadow-lg flex flex-col-reverse rounded-2xl
                         md:flex-row md:rounded-3xl
-                        2xl:w-[50%]
+                        xl:w-[50%]
                         "
                         whileHover={{ scale: 1.04 }}
                         variants={variantParent}>
                         <article className="
                             px-3 
                             md:py-10 md:px-14
-                            xl:px-0 xl:pl-14 xl:pr-5
+                            lg:flex lg:flex-col lg:justify-around
+                            xl:w-[90%]
                             2xl:px-14
                             ">
                             <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0 md:w-[80%] lg:w-full xl:text-[20px]">
@@ -98,8 +100,8 @@ export const BlogsUI = () => {
                             h-[100px] object-cover pl-[20px] 
                             md:h-auto md:object-none md:pl-0
                             lg:h-full lg:w-[13em]
-                            xl:h-full xl:w-[13em]
-                            2xl:w-[16em]
+                            xl:h-full xl:w-full
+                            2xl:w-[24em]
                             " />
                     </motion.article>
                 </section>
