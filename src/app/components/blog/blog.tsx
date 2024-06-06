@@ -42,7 +42,7 @@ export const BlogsUI = () => {
                             xl:w-[70%]
                         "
                         >
-                            <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0 xl:text-[20px]">
+                            <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0 xl:text-[20px] xl:leading-[33px] 2xl:leading-[45px]">
                                 UBI, THE
                                 NEW APP
                                 FOR TRUCK
@@ -80,7 +80,7 @@ export const BlogsUI = () => {
                             xl:w-[90%]
                             2xl:px-14
                             ">
-                            <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0 md:w-[80%] lg:w-full xl:text-[20px]">
+                            <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0 md:w-[80%] lg:w-full xl:text-[20px] xl:leading-[33px] 2xl:leading-[45px]">
                                 VERONICA
                                 WILL GET
                                 SMARTER
@@ -114,7 +114,7 @@ export const BlogsUI = () => {
                     md:p-14
                     lg:flex lg:flex-col lg:justify-around
                     ">
-                        <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0 xl:text-[20px]">
+                        <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0 xl:text-[20px] xl:leading-[33px] 2xl:leading-[45px]">
                             GATE OPERATIONS ARE
                             POSSIBLE THROUGH
                             GATE AUTOMATION

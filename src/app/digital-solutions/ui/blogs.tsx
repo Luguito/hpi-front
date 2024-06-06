@@ -130,7 +130,7 @@ export const BlogsDSUI = () => {
                     lg:flex lg:flex-col lg:justify-around
                     xl:w-[60%]
                     ">
-                        <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0">
+                        <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0 xl:leading-[35px] 2xl:leading-[45px]">
                             THE PORTS AI REVOLUTION IS HERE…
                         </H3>
                         <p className="text-hpi-grey-dark font-medium mt-5 md:mt-5 md:text-hpi-body-grey text-[8px] xl:text-[15px] 2xl:text-[21px]">
