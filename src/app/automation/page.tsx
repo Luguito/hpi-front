@@ -410,7 +410,30 @@ export default function AutomationPage() {
                         <H3 color="text-hpi-blue-light font-medium">Milestone Journey</H3>
                         <H2 color="text-gradient">OUR FORWARD-THINKING PLANS</H2>
                     </header>
-                    <section className="bg-hpi-white rounded-3xl mt-5 mb-20">
+                    <section className="bg-hpi-white rounded-3xl mt-5 mb-20 ">
+                        <article className="flex justify-center items-center pt-5 lg:hidden">
+                            <select className="
+                            bg-hpi-blue-light font-bold text-hpi-white p-2 rounded-xl
+                            "
+                                onChange={({ target: { value } }) => changeSectionByMap(parseInt(value))}>
+                                <option value="1991">1991</option>
+                                <option value="1993">1993</option>
+                                <option value="1995">1995</option>
+                                <option value="2007">2007</option>
+                                <option value="2012">2012</option>
+                                <option value="2013">2013</option>
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2030">2030</option>
+                            </select>
+                        </article>
                         <MapSlider changeSection={changeSectionByMap} />
                         <div className="relative bg-hpi-white w-16 h-[2em] left-0 top-[-2em]"></div>
                         <section className="px-4 py-5 lg:py-10 lg:px-20">

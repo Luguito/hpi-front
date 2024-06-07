@@ -153,7 +153,7 @@ export default function MapGlobe() {
     }, []);
 
     return (
-        <article className="flex flex-col w-2/3">
+        <article className="flex flex-col w-[60%]">
             <div id="chartdiv" className="h-full"></div>
             <div className="relative bg-hpi-blue-dark w-16 h-[2em] left-0 bottom-[2em]"></div>
         </article>

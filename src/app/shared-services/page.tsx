@@ -192,7 +192,7 @@ export default function HomePage() {
 
             {/* MAPA */}
             <RevealOnScrollComponent>
-                <section className="mt-7 mb-20 bg-hpi-blue-dark mx-5 rounded-3xl xl:mx-28 2xl:mx-44 2xl:mt-28">
+                <section className="mt-7 mb-20 xl:mt-16 bg-hpi-blue-dark mx-5 rounded-3xl xl:mx-28 2xl:mx-44 2xl:mt-28">
                     <header className="text-left p-5 lg:p-[4.8em]">
                         <H2 color="text-hpi-white">SUCCESS SHOWCASES</H2>
                         <B2 color="text-hpi-white font-medium mt-3 lg:mt-5">

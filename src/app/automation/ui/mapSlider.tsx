@@ -215,15 +215,9 @@ function map(trigger: any) {
         return am5.Bullet.new(root, { sprite: circle });
     }
 
-    function getFollowingYears(actualYear: any) {
-        const keys = Object.keys(years).map(year => parseInt(year)).sort((a, b) => a - b);
 
-        const followingYears = keys.filter(year => year > parseInt(actualYear));
-
-        // @ts-ignore
-        const followingProperties = followingYears.flatMap(year => years[year]);
-
-        return followingProperties;
+    if(window.innerWidth < 1280) {
+        slider.dispose()
     }
 }
 

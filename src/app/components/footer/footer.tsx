@@ -24,9 +24,9 @@ function Footer() {
                     </article>
                 </section>
                 <nav className="
-                flex items-center justify-between bg-hpi-blue-sea py-14 px-24 xl:px-14
+                flex flex-col lg:flex-row items-center justify-between bg-hpi-blue-sea py-14 px-24 xl:px-14
                 ">
-                    <section className="hidden md:block">
+                    <section className="mb-10">
                         <article>
                             <Image src={Logo} alt="Logo" />
                         </article>
