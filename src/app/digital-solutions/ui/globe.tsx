@@ -156,7 +156,7 @@ export default function MapGlobe() {
     return (
         <article className="flex flex-col w-[60%]">
             <div id="chartdiv" className="h-full"></div>
-            <div className="relative bg-[#F0F0F1] w-16 h-[2em] left-0 bottom-[2em]"></div>
+            <div className="relative bg-[#F0F0F1] w-16 h-[3em] left-0 bottom-[2em]"></div>
             <B2 color="text-hpi-blue-dark font-medium text-[12px] text-center">
                 Our Solutions are supporting more than 80% throughput of Hutchison Ports.
             </B2>

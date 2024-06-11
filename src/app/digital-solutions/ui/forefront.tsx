@@ -277,8 +277,8 @@ const Try = ({ }) => {
                         `
                                     The 1st global port group to provide a cloud-based
                                     TOS in SaaS model, and to standardise operations
-                                    across 30 terminals in 16 countries with our home-
-                                    grown TOS (nGen/Veronica).
+                                    across 30 terminals in 16 countries with our home-grown 
+                                    TOS (nGen/Veronica).
                                 `
                     } />
                 <SectionUI
