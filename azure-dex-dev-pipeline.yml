@@ -7,6 +7,7 @@ pool:
 variables:
   sourceRepo: $(SOURCE_REPO)
   sourceBranch: "main"
+  azureSourcePat: $(AZURE_SOURCE_PAT)
   azureDevOpsUser: $(AZURE_GIT_USER)
   azureRepo: $(APP_SERVICE_REPO)
   azureBranch: "master"
@@ -40,7 +41,7 @@ stages:
             displayName: "Download build artifacts"
 
           - script: |
-              git clone $(sourceRepo) source
+              git clone https://$(azureSourcePat)@$(sourceRepo) source
               cd source
               git checkout $(sourceBranch)
               rsync -av --exclude='.git' $(Pipeline.Workspace)/build/ .
@@ -49,6 +50,6 @@ stages:
               git add .
               git commit -m "Automated commit: Update from build" || echo "No changes to commit"
               git branch -M $(azureBranch)
-              git remote add azure https://$(AZURE_GIT_USER)@$(APP_SERVICE_REPO)
+              git remote add azure https://$(azureDevOpsUser)@$(azureRepo)
               git push azure $(azureBranch)
             displayName: "Clone source repo and push changes to Azure repository"
