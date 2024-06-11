@@ -4,7 +4,8 @@ import am5geodata_worldLow from "@amcharts/amcharts5-geodata/worldLow";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 import * as am5 from "@amcharts/amcharts5";
 import * as am5map from "@amcharts/amcharts5/map";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
+import { ContainerDatesInformation } from "./info-map";
 /* Chart code */
 // Country data
 
@@ -82,8 +83,7 @@ function map(trigger: any) {
     // Create main polygon series for countries
     // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/
     let polygonSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
-        fill: am5.color('#002E6D'),
-        stroke: am5.color('#002E6D'),
+        fill: am5.color('#009CDE'),
         geoJSON: am5geodata_worldLow,
         exclude: ["AQ"]
     }));
@@ -130,19 +130,24 @@ function map(trigger: any) {
         width: am5.percent(90),
         layout: root.horizontalLayout,
         paddingBottom: 20,
+        paddingLeft: 50,
     }));
 
     // Crear el slider
-    let slider = container.children.push(am5.Slider.new(root, {
+    var slider = container.children.push(am5.Slider.new(root, {
         width: am5.percent(100),
         orientation: "horizontal",
-        start: 0,
-        end: 100,
+        start: 1,
         centerY: am5.p50,
     }));
 
-    
 
+    // Set track color
+    slider.get("background")?.setAll({
+        fill: am5.color("#C9C9C9"), // Green color
+        fillOpacity: 0.5
+    });
+    
     // Crear el contenedor de ticks y etiquetas
     let ticksContainer = slider.children.push(am5.Container.new(root, {
         width: am5.percent(100),
@@ -151,9 +156,9 @@ function map(trigger: any) {
         centerY: am5.p50,
     }));
 
-    
+
     // Años para las etiquetas
-    let yearTicks = ["1991", "1993", "1995", "2007", "2012", "2013", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2030"]
+    let yearTicks = ["1991", "1993", "1995", "", "2007", "", "2012", "2013", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "", "2030"]
 
     yearTicks.forEach((year, index) => {
         let position = (index / (yearTicks.length - 1)) * 100;
@@ -163,7 +168,7 @@ function map(trigger: any) {
             centerX: am5.percent(position),
             centerY: am5.percent(50),
             dy: -20,
-            fontSize: 21,
+            fontSize: 15,
             fill: am5.color("#002E6D"),
             fontWeight: "bold",
             x: am5.percent(position)
@@ -172,24 +177,25 @@ function map(trigger: any) {
 
     // Configurar el color del startGrip
     slider.startGrip.get("background")?.setAll({ fill: am5.color("#009BDE") });
-    
+
     updateCountries(firstYear);
-    
+
     let index = 0;
     slider.events.on("rangechanged", function () {
         let start = slider.get("end");
         // @ts-ignore
         let currentIndex = Math.round(start * (yearTicks.length - 1));
-        slider.startGrip.get("label")?.setAll({ text: yearTicks[currentIndex]});
+        slider.startGrip.get("label")?.setAll({ text: yearTicks[currentIndex] });
 
-        if(index !== currentIndex){
+        if (index !== currentIndex) {
             updateCountries(yearTicks[currentIndex]);
             index = currentIndex
-        } 
+        }
     });
 
     // REVISAR ESTO 
     function updateCountries(year: any) {
+        if (!year) return;
         pointSeries.data.clear();
 
         // @ts-ignore
@@ -214,19 +220,20 @@ function map(trigger: any) {
         return am5.Bullet.new(root, { sprite: circle });
     }
 
-    function getFollowingYears(actualYear: any) {
-        const keys = Object.keys(years).map(year => parseInt(year)).sort((a, b) => a - b);
 
-        const followingYears = keys.filter(year => year > parseInt(actualYear));
-
-        // @ts-ignore
-        const followingProperties = followingYears.flatMap(year => years[year]);
-
-        return followingProperties;
+    if (window.innerWidth < 1280) {
+        slider.dispose()
     }
 }
 
-export const MapSlider = ({ changeSection }: any) => {
+export const MapSlider = () => {
+    const [currentSectionMap, setSectionMap] = useState("1991")
+
+    function changeSectionByMap(x: any) {
+        setSectionMap(x)
+    }
+
+
     const ref = useRef(null);
 
     useEffect(() => {
@@ -238,13 +245,43 @@ export const MapSlider = ({ changeSection }: any) => {
                     }
                 }
             });
-            map(changeSection);
+            map(changeSectionByMap);
         }
     }, []);
 
     return (
         <>
-            <div id="chartdiv" ref={ref} className="h-[45em]"></div>
+            <section className="bg-[#F0F0F1]">
+                <article className="flex justify-center items-center pt-5 lg:hidden">
+                    <select className="
+                            bg-hpi-blue-light font-bold text-hpi-white p-2 rounded-xl
+                            ">
+                        {/* onChange={({ target: { value } }) => changeSectionByMap(parseInt(value))} */}
+                        <option value="1991">1991</option>
+                        <option value="1993">1993</option>
+                        <option value="1995">1995</option>
+                        <option value="2007">2007</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2030">2030</option>
+                    </select>
+                </article>
+                <div id="chartdiv" ref={ref} className="h-[20em] lg:h-[45em]"></div>
+                <div className="relative bg-[#F0F0F1] w-16 h-[2em] left-0 top-[-2em]"></div>
+            </section>
+            <section className="px-4 py-5 lg:py-10 lg:px-20">
+                <ContainerDatesInformation date={currentSectionMap} />
+            </section>
         </>
+
     )
 }

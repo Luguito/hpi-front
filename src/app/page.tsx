@@ -5,28 +5,32 @@ import { SwipeCarousel } from "./components/carousel/carousel";
 import { TechSolutionsComponent } from "./components/tech-sections/tech-section";
 
 import { BlogsUI } from "./components/blog/blog";
+import { Metadata } from "next";
 
+
+export const metadata: Metadata = {
+  title: 'Innovation | Hutchison Ports',
+}
 export default function HomePage() {
 
   return (
-    <section >
+    <section>
       {/* Video Section */}
       <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Home%20Banner.mp4" bgColor="">
-        <H1 color="absolute text-center text-hpi-white font-bold text-shadow-md leading-[80px] xs:leading-[26px]">
-          INNOVATIVE SOLUTIONS <br />
-          FOR NEXT-GENERATION <br />
-          PORT OPERATIONS
+        <H1 color="absolute text-center text-hpi-white font-bold text-shadow-md  leading-[26px] md:leading-[65px] 2xl:leading-[80px]">
+          INNOVATIVE SOLUTIONS FOR NEXT- <br />
+          GENERATION PORT OPERATIONS
         </H1>
       </VideoContainer>
 
       {/* @ts-ignore */}
-      <RevealOnScrollComponent className="text-center xs:mt-10 lg:mt-28">
-        <H2 color="text-gradient leading-[65px] xs:leading-[20px]">
-          HUTCHISON PORTS IS AT THE <br />
+      <RevealOnScrollComponent className="flex flex-col items-center justify-center mt-10 xl:mt-9 2xl:mt-28">
+        <H2 color="text-gradient leading-[20px] md:leading-[65px] text-center w-[75%] xl:w-full 2xl:w-2/4">
+          HUTCHISON PORTS IS AT THE
           FOREFRONT OF THE INDUSTRY
         </H2>
-        <B1 color="text-hpi-blue-dark text-center font-medium mt-3">
-          driving efficiency with ongoing investments and <br />
+        <B1 color="text-hpi-blue-dark text-center font-medium mt-3 xl:mt-1 xl:text-[18px] 2xl:w-2/4">
+          driving efficiency with ongoing investments and
           innovation in port technology
         </B1>
       </RevealOnScrollComponent>
@@ -38,8 +42,8 @@ export default function HomePage() {
 
       {/* What's new ... section */}
       {/* @ts-ignore */}
-      <RevealOnScrollComponent className="flex justify-center lg:mt-56 lg:mb-32">
-        <section className="w-[80%] xs:mt-10">
+      <RevealOnScrollComponent className="flex justify-center xl:my-10 2xl:mt-40 2xl:mb-32">
+        <section className="w-[80%] mt-10">
           <header className="text-left">
             <H5 color="text-hpi-blue-light font-medium">
               Discover our latest technological advances

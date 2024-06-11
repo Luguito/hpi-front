@@ -2,10 +2,24 @@ import Image from "next/image";
 import Button from "../button/button";
 import Text, { H3 } from "../text/text";
 import Logo from '../../../../public/logo-hutchison-en.svg'
+import Link from "next/link";
 
 function Footer() {
     const footOptions = ['CONTACT US', 'PRIVACY POLICY', 'TERMS & CONDITIONS'];
-
+    const footerOptions = [
+        {
+            name: "CONTACT US",
+            url: "https://hutchisonports.com/en/News-And-Media/Media-Contacts.html"
+        },
+        {
+            name: "PRIVACY POLICY",
+            url: "https://hutchisonports.com/en/Others/Privacy-Policy.html"
+        },
+        {
+            name: "TERMS & CONDITIONS",
+            url: "https://hutchisonports.com/en/Others/Terms-And-Conditions.html"
+        }
+    ]
     return (
         <>
             {/* Contact ... section */}
@@ -24,26 +38,29 @@ function Footer() {
                     </article>
                 </section>
                 <nav className="
-                flex items-center justify-between bg-hpi-blue-sea py-14 px-24
+                flex flex-col items-center justify-between
+                lg:flex-row bg-hpi-blue-sea py-14 px-24 xl:px-14
                 ">
-                    <section className="xs:hidden">
+                    <section>
                         <article>
                             <Image src={Logo} alt="Logo" />
                         </article>
                     </section>
                     <section className="
-                    flex gap-10
-                    xs:flex-col xs:items-center
+                    flex gap-10 flex-col items-center
+                    md:flex-row md:items-start
                     ">
                         <article className="
-                        flex gap-10
-                        xs:flex-col-reverse xs:items-center 
+                        flex gap-10 flex-col-reverse items-center 
+                        md:flex-row md:items-start
                         ">
                             {
-                                footOptions.map((option, key) => (
-                                    <Text type="medium" classes="text-[14px] text-hpi-white" key={key}>
-                                        {option}
-                                    </Text>
+                                footerOptions.map((option, key) => (
+                                    <Link href={option.url}>
+                                        <Text type="medium" classes="text-[14px] text-hpi-white" key={key}>
+                                            {option.name}
+                                        </Text>
+                                    </Link>
                                 ))
                             }
                         </article>

@@ -11,10 +11,13 @@ import I5 from '../../../../public/digital-solutions/know before it happens.png'
 import I6 from '../../../../public/digital-solutions/keep_flow.png'
 import I7 from '../../../../public/digital-solutions/truck.png'
 import I8 from '../../../../public/digital-solutions/ROSA_logo.png'
+import Plus from '../../../../public/automation/plus.svg'
+
 import Arrow from '../../../../public/digital-solutions/arrow-right-direction.svg'
 import { Dispatch, SetStateAction, useState } from 'react';
 import { RevealFromLeftToRight, RevealTextAfterSection } from '@/app/animations/animation';
 import { B2, H2, H3 } from '@/app/components/text/text';
+import { Icon1 } from '@/app/shared-services/components/animation-plus-minus';
 
 const SPRING_OPTIONS = {
     type: "spring",
@@ -44,10 +47,12 @@ export default function ForeFrontUI() {
     return (
         <>
             <header className="text-left ml-7">
-                <H3 color="text-hpi-blue-light">Our Strength</H3>
+                <h3 className='text-hpi-blue-light text-[12px] lg:text-[22px] xl:text-[15px] 2xl:text-[25px]'>
+                    Our Strength
+                </h3>
                 <H2 color="text-gradient">AT THE FOREFRONT OF PORT INNOVATION</H2>
             </header>
-            <motion.section className="relative" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+            <motion.section className="relative hidden lg:block" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
                 <motion.div
                     drag="x"
                     dragConstraints={{
@@ -63,18 +68,21 @@ export default function ForeFrontUI() {
                     className="flex cursor-grab items-center gap-10 active:cursor-grabbing mt-4"
                     transition={SPRING_OPTIONS}
                     onDragEnd={onDragEnd}>
-                    <section className="grid grid-cols-2 grid-rows-2 justify-center items-center gap-10 mt-11 shrink-0 rounded-xl w-full">
+                    <section className="
+                    grid grid-cols-4
+                    lg:grid-cols-2 lg:grid-rows-2 justify-center items-center gap-10 mt-11 shrink-0 rounded-xl w-full
+                    ">
                         <SectionUI
                             Img={
-                                <Image src={I3} alt="" className='max-w-none' />
+                                <Image src={I3} alt="" className='2xl:max-w-none' />
                             }
                             title={"ONE TOS, ONE WORLD"}
                             content={
                                 `
                                     The 1st global port group to provide a cloud-based
                                     TOS in SaaS model, and to standardise operations
-                                    across 30 terminals in 16 countries with our home-
-                                    grown TOS (nGen/Veronica).
+                                    across 30 terminals in 16 countries with our home-grown 
+                                    TOS (nGen/Veronica).
                                 `
                             } />
                         <SectionUI
@@ -165,7 +173,7 @@ export default function ForeFrontUI() {
                                 `
                             } />
                         <SectionUI
-                            url="https://hutchisonports.sharepoint.com/:v:/r/sites/ProductManagementTeam/Shared%20Documents/General/Product%20Management%20Center/4.Product%20Marketing/Product%20Website/Video/Hutchison%20Port%20ENG%20NM.mp4?csf=1&web=1&e=ljOY8d"
+                            url="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Hutchison%20Port%20ENG%20NM.mp4"
                             Img={
                                 <section className="flex justify-center items-center w-full h-full">
                                     <Image src={I4} alt="" />
@@ -181,24 +189,34 @@ export default function ForeFrontUI() {
                     </section>
                 </motion.div>
                 {imgIndex === 0 && <>
-                    <div className="absolute flex justify-start items-center left-[101%] w-[14.5em] top-[1%] cursor-pointer bg-hpi-light-bg h-[84em]">
+                    <div className="
+                    absolute flex justify-start items-center left-[101%] w-[14.5em] top-[1%] cursor-pointer bg-hpi-light-bg 
+                    xl:h-[67em] 2xl:h-[86em]
+                    ">
                         <Image src={Arrow} alt="" onClick={() => setImgIndex(1)} />
                     </div>
                 </>}
                 {imgIndex === 1 && <>
-                    <div className="absolute rotate-180 flex justify-start items-center left-[-16%] w-[15.5em] top-[3%] cursor-pointer bg-hpi-light-bg h-[82em]">
+                    <div className="
+                    absolute rotate-180 flex justify-start items-center w-[15.5em] top-[3%] cursor-pointer bg-hpi-light-bg 
+                    xl:h-[68em] xl:left-[-19.5%]
+                    2xl:h-[84em] 2xl:left-[-16%]
+                    ">
                         <Image src={Arrow} alt="" onClick={() => setImgIndex(0)} />
                     </div>
                 </>}
             </motion.section>
+            <section className="relative lg:hidden">
+                <Try />
+            </section>
         </>
     )
 }
 
-const SectionUI = ({ Img, title, content, url}: any) => {
+const SectionUI = ({ Img, title, content, url }: any) => {
 
     function redirect() {
-        if(!url) return;
+        if (!url) return;
 
         let redirectNode = document.createElement('a');
 
@@ -211,21 +229,172 @@ const SectionUI = ({ Img, title, content, url}: any) => {
 
     return (
         <motion.section
-            className="flex flex-col bg-hpi-white gap-4 rounded-[3.5rem] h-[38.5em] shadow-lg"
+            className="
+            flex flex-col h-[22em] w-[22em] shrink-0 bg-hpi-white gap-4 rounded-[3.5rem] shadow-lg relative
+            lg:w-inherit
+            xl:h-[30em]
+            2xl:h-[40em] 
+            "
             whileHover={{ scale: 1.04 }}
-            onClick={redirect}
         >
-            <article className="w-full h-[55%]">
+            <article className="w-full h-[45%] xl:h-[55%]">
                 {Img}
             </article>
-            <article className="flex flex-col px-14 h-[35%]">
-                <H3 color="text-hpi-blue-dark font-bold">
+            <article className="flex flex-col px-14 xl:h-[35%]">
+                <p className='text-hpi-blue-dark font-bold text-[16px] lg:text-[22px] xl:text-[22px] 2xl:text-[35px] '>
                     {title}
-                </H3>
-                <B2 color="text-hpi-body-grey font-medium mt-5">
+                </p>
+                <p className="text-hpi-body-grey font-medium mt-5 text-[13px] xl:text-[15px] 2xl:text-[21px]">
                     {content}
-                </B2>
+                </p>
             </article>
+            {
+                url &&
+                <article onClick={redirect} className="absolute right-10 bottom-5">
+                    <Image src={Plus} alt="" className="w-5 xl:w-10 2xl:w-auto" />
+                </article>
+            }
         </motion.section>
+    )
+}
+
+const Try = ({ }) => {
+    const [imgIndex, setImgIndex] = useState(0);
+
+    return (
+        <>
+            <motion.section animate={{
+                translateX: `-${imgIndex * 92}%`,
+            }} className="
+                    flex gap-9 h-[20em] mt-5
+                    ">
+                <SectionUI
+                    Img={
+                        <Image src={I3} alt="" className='2xl:max-w-none' />
+                    }
+                    title={"ONE TOS, ONE WORLD"}
+                    content={
+                        `
+                                    The 1st global port group to provide a cloud-based
+                                    TOS in SaaS model, and to standardise operations
+                                    across 30 terminals in 16 countries with our home-grown 
+                                    TOS (nGen/Veronica).
+                                `
+                    } />
+                <SectionUI
+                    url="https://hpdx.io/"
+                    Img={
+                        <section className="flex justify-center items-center w-full h-full">
+                            <Image src={I} alt="" />
+                        </section>
+                    }
+                    title={"ONCE-FOR-ALL CONNECTION"}
+                    content={
+                        `
+                                    HPDX offers a single data exchange for connecting
+                                    all terminals with the logistics world, including the 
+                                    blockchain-based Global Shipping Business
+                                    Network (GSBN).
+                                `
+                    } />
+                <SectionUI
+                    Img={
+                        <section className="h-full flex justify-center items-center">
+                            <Image src={I8} alt="" height={150} className="" />
+                        </section>
+                    }
+                    title={"OPERATIONS ANYTIME, ANYWHERE"}
+                    content={
+                        `
+                                    Revolutionising remote operations management
+                                    with our Remote Operations Services and
+                                    Architecture (ROSA), enabling efficient multi-port
+                                    management.
+                                `
+                    } />
+                <SectionUI
+                    Img={
+                        <section className="flex justify-center items-center w-full h-full px-14 py-10">
+                            <Image src={I7} alt="" className="h-[100%]" />
+                        </section>
+                    }
+                    title={"UNLOCKING EFFICIENCY THROUGH AUTOMATION"}
+                    content={
+                        `
+                                    Our advanced scheduling system optimises the management 
+                                    of all types of automation equipment and job scheduling.
+                                `
+                    } />
+                <SectionUI
+                    Img={
+                        <section className="flex justify-center items-center w-full h-full">
+                            <Image src={I2} alt="" width={100} />
+                        </section>
+                    }
+                    title={"GO BEYOND PAPERLESS"}
+                    content={
+                        `
+                                Elevate digital communication and process documentation 
+                                using DD (Document Digitalisation), our advanced AI application, 
+                                for global port operations data processing.
+                                `
+                    } />
+                <SectionUI
+                    Img={
+                        <section className="flex justify-center items-center w-full h-full">
+                            <Image src={I6} alt="" />
+                        </section>
+                    }
+                    title={"KEEP-IT-FLOW"}
+                    content={
+                        `
+                                    Our Auto Gate Operating System (AGOS), designed for faster container flow,
+                                    boosts container movements and enhances terminal efficiency by 50%.
+                                `
+                    } />
+
+                <SectionUI
+                    Img={
+                        <section className="flex justify-center items-center w-full h-full">
+                            <Image src={I5} alt="" width={150} />
+                        </section>
+                    }
+                    title={"KNOW BEFORE IT HAPPENS"}
+                    content={
+                        `
+                                    With our EMULATION technology, you can foresee and optimise operational outcomes.
+                                    Ensure efficient refinements across your TOS, Equipment Control System, and Fleet Management System without trial and error.
+                                `
+                    } />
+                <SectionUI
+                    url="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Hutchison%20Port%20ENG%20NM.mp4"
+                    Img={
+                        <section className="flex justify-center items-center w-full h-full">
+                            <Image src={I4} alt="" width={200} />
+                        </section>
+                    }
+                    title={"PORT ACCESSIBILITY"}
+                    content={
+                        `
+                                    Experience unparalleled access to real-time logistics insights and services with Ubi,
+                                    the first app to standardise mobile access across our global ports.
+                                `
+                    } />
+            </motion.section>
+            {imgIndex !== 7 && <>
+                    <div className="
+                    absolute flex justify-start items-center h-[25em] left-[93%] w-[3em] top-[-3%] cursor-pointer bg-hpi-light-bg 
+                    ">
+                        <Image src={Arrow} alt="" onClick={() => setImgIndex(imgIndex + 1)} />
+                    </div>
+                </>}
+                {imgIndex !== 0 && imgIndex <= 7 && <>
+                    <div className="
+                    absolute rotate-180 flex justify-start items-center left-[-5%] h-[25em] w-[3em] top-[-3%] cursor-pointer bg-hpi-light-bg 
+                    ">
+                        <Image src={Arrow} alt="" onClick={() => setImgIndex(imgIndex - 1)} />
+                    </div>
+                </>}
+        </>
     )
 }

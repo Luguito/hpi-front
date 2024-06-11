@@ -37,8 +37,7 @@ function map() {
     let polygonSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
         geoJSON: am5geodata_worldLow,
         exclude: ["AQ"],
-        fill: am5.color('#009BDE'),
-        stroke: am5.color('#446694'),
+        fill: am5.color('#009CDE'),
     }));
 
     let cities = [
@@ -94,14 +93,14 @@ function map() {
             strokeWidth: 2,
             showTooltipOn: 'hover',
             tooltipHTML: `
-            <section style="text-align: center; width: 27%;">
-                <header style="color: #002E6D; font-weight: semi-bold;">
-                    <b style="font-size: 16px;">{title}</b>
-                </header>
-                <section style="display:flex; justify-content: center; align-items: center; font-weight: medium; color: #002E6D;">
-                    <p style="white-space: pre-line; font-size: 16px; text-wrap:wrap;">{description}</p>
-                </section>
+            <section class="text-center max-w-full text-[5px] w-[28%] xl:text-[10px] xl:w-[45%] xl:px-2 2xl:text-[16px] 2xl:w-[37%]">
+            <header style="color: #002E6D; font-weight: bold;">
+                <b>{title}</b>
+            </header>
+            <section class="flex items-center justify-center text-[#002E6D] break-words">
+                <p>{description}</p>
             </section>
+        </section>
         `,
         });
 
@@ -114,16 +113,33 @@ function map() {
 
         // @ts-ignore
         let chinaPoint = china?.bullets[0]?.get('sprite');
+        // @ts-ignore
+        let karachi = pointSeries.dataItems.at(0)?.bullets[0].get('sprite')
+
+
+        // @ts-ignore
+        karachi?.setAll({
+            tooltipHTML: `
+            <section class="text-center max-w-full text-[5px] w-[35%] xl:text-[10px] xl:w-[40%] xl:px-2 2xl:text-[16px] 2xl:w-[33%]">
+                <header style="color: #002E6D; font-weight: bold;">
+                    <b>{title}</b>
+                </header>
+                <section class="flex items-center justify-center text-[#002E6D] break-words">
+                    <p>{description}</p>
+                </section>
+            </section>
+            `
+        })
 
         // @ts-ignore
         chinaPoint?.setAll({
             tooltipHTML: `
-            <section style="text-align: center; width: 25%;">
-                <header style="color: #002E6D; font-weight: semi-bold;">
-                    <b style="font-size: 16px;">{title}</b>
+            <section class="text-center max-w-full text-[5px] w-[45%] xl:text-[10px] xl:w-[42%] xl:px-2 2xl:text-[16px] 2xl:w-[35%]">
+                <header style="color: #002E6D; font-weight: bold;">
+                    <b>{title}</b>
                 </header>
-                <section style="display:flex; justify-content: center; align-items: center; font-weight: medium; color: #002E6D;">
-                    <p style="white-space: pre-line; font-size: 16px; text-wrap:wrap;">{description}</p>
+                <section class="flex items-center justify-center text-[#002E6D] break-words">
+                    <p>{description}</p>
                 </section>
             </section>
             `
@@ -157,7 +173,7 @@ export const Maps = () => {
 
     return (
         <>
-            <div id="chartdiv" ref={ref} className="h-[30em]"></div>
+            <div id="chartdiv" ref={ref} className="h-[10em] lg:h-[30em]"></div>
         </>
     )
 }

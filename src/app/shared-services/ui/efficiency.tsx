@@ -9,25 +9,42 @@ import { ServicesKeysComponent } from './services-key';
 
 export const EfficiencyComponent = () => {
     return (
-        <section className="flex flex-col px-20 justify-center bg-hpi-white rounded-3xl mx-80">
-            <section className="flex gap-40">
+        <section className="
+        flex flex-col justify-center bg-hpi-white rounded-3xl p-8 mx-5 mt-5
+        lg:mx-52 lg:px-20
+        xl:mx-28 
+        2xl:mx-44
+        ">
+            <section className="
+            flex flex-col gap-10
+            lg:gap-40 lg:flex-row
+            ">
                 <section className="flex flex-col justify-center">
                     <H5 color="text-hpi-blue-light font-medium">
                         Our Vision
                     </H5>
-                    <H3 color="text-hpi-blue-dark font-bold leading-[43px]">
+                    <H3 color="text-hpi-blue-dark font-bold lg:leading-[43px] xl:leading-[35px] 2xl:mt-4 2xl:leading-[45px] 2xl:text-[40px]">
                         EFFICIENCY, SCALABILITY, VALUE GENERATION
                     </H3>
-                    <B2 color="text-hpi-body-grey font-medium mt-3">
-                        Through <b>consolidation</b>, <b>standardisation</b>, <b>digitalisation</b> and <b>automation</b>, 
-                        our Shared Services are committed to deliver high-quality operations to 
+                    <p className="text-hpi-body-grey font-medium mt-3 text-[14px] md:text-[15px] 2xl:text-[21px]">
+                        Through <b>consolidation</b>, <b>standardisation</b>, <b>digitalisation</b> and <b>automation</b>,
+                        our Shared Services are committed to deliver high-quality operations to
                         support the growth of Hutchison Ports.
-                    </B2>
+                    </p>
                 </section>
-                <motion.article className="py-24 rounded-3xl"
+                <motion.article className="
+                    rounded-3xl
+                    xl:py-0
+                    2xl:py-24
+                "
                     variants={RevealFromRightToLeft}
                     viewport={{ once: true }}>
-                    <Image src={PLANET} alt="PLANET" className="w-[100rem]" />
+                    <Image src={PLANET} alt="PLANET" className="
+                        w-full max-w-none object-cover h-full
+                        lg:w-[10rem]
+                        xl:w-[25rem]
+                        2xl:2-[35rem]
+                    " />
                 </motion.article>
             </section>
             <ServicesKeysComponent />
