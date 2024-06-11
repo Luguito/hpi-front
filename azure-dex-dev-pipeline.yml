@@ -20,7 +20,7 @@ stages:
               npm install
               npm run build
             displayName: "Building project for testing"
-          - publish: $(Build.SourcesDirectory)/build
+          - publish: $(Build.SourcesDirectory)/.next
             artifact: build
             displayName: "Publish build artifacts"
 
