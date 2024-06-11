@@ -16,16 +16,17 @@ stages:
       - job: TestBuildingCodeRepo
         steps:
           - checkout: self
+            displayName: "Checkout source code"
+
           - script: |
               npm install
               npm run build
             displayName: "Building project for testing"
 
-          - task: PublishBuildArtifacts@1
-            inputs:  
-              PathtoPublish: $(Build.SourcesDirectory)/.next
+          - task: PublishPipelineArtifact@1
+            inputs:
+              targetPath: '$(Build.SourcesDirectory)/.next'
               artifact: 'build'
-              publishLocation: 'Pipeline'
             displayName: "Publish build artifacts"
 
   - stage: PushToAzure
@@ -36,6 +37,7 @@ stages:
           - download: current
             artifact: build
             displayName: "Download build artifacts"
+
           - script: |
               git clone $(sourceRepo) source
               cd source
@@ -45,7 +47,6 @@ stages:
               git config user.name "Your Name"
               git add .
               git commit -m "Automated commit: Update from build"
-              git branch -M $(azureBranch)
               git remote add azure $(azureRepo)
               git push azure $(azureBranch)
             displayName: "Clone source repo and push changes to Azure repository"
