@@ -84,7 +84,6 @@ function map(trigger: any) {
     // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/
     let polygonSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
         fill: am5.color('#009CDE'),
-        stroke: am5.color('#002E6D'),
         geoJSON: am5geodata_worldLow,
         exclude: ["AQ"]
     }));
@@ -143,7 +142,12 @@ function map(trigger: any) {
     }));
 
 
-
+    // Set track color
+    slider.get("background")?.setAll({
+        fill: am5.color("#C9C9C9"), // Green color
+        fillOpacity: 0.5
+    });
+    
     // Crear el contenedor de ticks y etiquetas
     let ticksContainer = slider.children.push(am5.Container.new(root, {
         width: am5.percent(100),

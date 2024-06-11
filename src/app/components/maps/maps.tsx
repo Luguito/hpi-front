@@ -37,8 +37,7 @@ function map() {
     let polygonSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
         geoJSON: am5geodata_worldLow,
         exclude: ["AQ"],
-        fill: am5.color('#009BDE'),
-        stroke: am5.color('#446694'),
+        fill: am5.color('#009CDE'),
     }));
 
     let cities = [

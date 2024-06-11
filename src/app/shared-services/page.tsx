@@ -197,17 +197,17 @@ export default function HomePage() {
 
             {/* MAPA */}
             <RevealOnScrollComponent>
-                <section className="mt-7 mb-20 xl:mt-16 bg-hpi-blue-dark mx-5 rounded-3xl xl:mx-28 2xl:mx-44 2xl:mt-28">
+                <section className="mt-7 mb-20 xl:mt-16 bg-[#F0F0F1] mx-5 rounded-3xl xl:mx-28 2xl:mx-44 2xl:mt-28">
                     <header className="text-left p-5 lg:p-[4.8em]">
-                        <H2 color="text-hpi-white">SUCCESS SHOWCASES</H2>
-                        <B2 color="text-hpi-white font-medium mt-3 lg:mt-5">
+                        <H2 color="text-hpi-blue-dark">SUCCESS SHOWCASES</H2>
+                        <B2 color="text-hpi-blue-dark font-medium mt-3 lg:mt-5">
                             Our success stories across the globe, from Karachi to Hong Kong and beyond, illustrate the transformative impact
                             of our ROC solutions.
                         </B2>
                     </header>
                     <section className="lg:pb-12">
                         <Maps />
-                        <div className="relative bg-hpi-blue-dark w-24 h-[2em] left-0 top-[-2em]"></div>
+                        <div className="relative bg-[#F0F0F1] w-24 h-[2em] left-0 top-[-2em]"></div>
                     </section>
                 </section>
             </RevealOnScrollComponent>
