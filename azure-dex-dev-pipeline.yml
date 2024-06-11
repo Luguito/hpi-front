@@ -20,20 +20,27 @@ stages:
               npm install
               npm run build
             displayName: "Building project for testing"
+          - publish: $(Build.SourcesDirectory)/build
+            artifact: build
+            displayName: "Publish build artifacts"
 
   - stage: PushToAzure
     dependsOn: TestCode
     jobs:
       - job: PushAzure
         steps:
-          - checkout: none
+          - download: current
+            artifact: build
+            displayName: "Download build artifacts"
           - script: |
-              git clone $(sourceRepo) temp
-              cd temp
+              git clone $(sourceRepo) source
+              cd source
               git checkout $(sourceBranch)
-            displayName: "Clone source repository"
-
-          - script: |
-              cd temp
-              git push $(azureRepo) $(azureBranch)
-            displayName: "Push changes to Azure repository"
+              rsync -av --exclude='.git' ../build/ .
+              git config user.email "devs@dexfreight.io"
+              git config user.name "devs@defreight.io"
+              git add .
+              git commit -m "Automated commit: Update from build"
+              git remote add azure $(azureRepo)
+              git push azure $(azureBranch)
+            displayName: "Clone source repo and push changes to Azure repository"
