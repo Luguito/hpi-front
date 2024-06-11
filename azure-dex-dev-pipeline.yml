@@ -41,8 +41,9 @@ stages:
             displayName: "Download build artifacts"
 
           - script: |
-              git clone https://\$(azureDevOpsUser)@$(azureRepo) source
+              git clone https://$(azureDevOpsUser)@$(azureRepo) source
               cd source
+              git remote add azure $(azureRepo)  # Add 'azure' as the remote
               git checkout -b $(azureBranch)
               rsync -av --exclude='.git' --exclude='.git/' $(Pipeline.Workspace)/build/ .  # Exclude .git directory
               git config user.email "devs@dexfreight.io"
