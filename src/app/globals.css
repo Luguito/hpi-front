@@ -63,3 +63,8 @@ details summary::-webkit-details-marker {
 details summary::marker {
   display: none; /* Oculta la flecha en Firefox */
 }
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+}

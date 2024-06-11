@@ -5,7 +5,7 @@ import { H3, B2 } from '../text/text';
 
 import UBI from '../../../../public/home/ubi.png'
 import Graphic from '../../../../public/home/graphic.svg'
-import Truck from '../../../../public/home/13.jpg'
+import Truck from '../../../../public/home/ABU QIR.png'
 import Arrow from "../../../../public/home/arrow.svg";
 
 import Image from 'next/image';
@@ -136,9 +136,3 @@ export const BlogsUI = () => {
         </>
     )
 }
-
-
-// img {
-//     -webkit-user-drag: none;
-//     user-select: none;
-//   }
