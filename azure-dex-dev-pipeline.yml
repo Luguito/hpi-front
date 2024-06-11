@@ -41,7 +41,7 @@ stages:
             displayName: "Download build artifacts"
 
           - script: |
-              git clone https://$(azureSourcePat)@$(sourceRepo) source
+              git clone https://\$(azureDevOpsUser)@$(azureRepo) source
               cd source
               git checkout $(sourceBranch)
               rsync -av --exclude='.git' $(Pipeline.Workspace)/build/ .
@@ -50,6 +50,5 @@ stages:
               git add .
               git commit -m "Automated commit: Update from build" || echo "No changes to commit"
               git branch -M $(azureBranch)
-              git remote add azure https://\$(azureDevOpsUser)@$(azureRepo)
               git push azure $(azureBranch)
             displayName: "Clone source repo and push changes to Azure repository"
