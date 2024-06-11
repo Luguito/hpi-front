@@ -56,8 +56,8 @@ function Footer() {
                         ">
                             {
                                 footerOptions.map((option, key) => (
-                                    <Link href={option.url}>
-                                        <Text type="medium" classes="text-[14px] text-hpi-white" key={key}>
+                                    <Link href={option.url} key={key}>
+                                        <Text type="medium" classes="text-[14px] text-hpi-white">
                                             {option.name}
                                         </Text>
                                     </Link>
