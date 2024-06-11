@@ -50,6 +50,6 @@ stages:
               git add .
               git commit -m "Automated commit: Update from build" || echo "No changes to commit"
               git branch -M $(azureBranch)
-              git remote add azure https://$(azureDevOpsUser)@$(azureRepo)
+              git remote add azure https://$dev-code-hki@$(azureRepo)
               git push azure $(azureBranch)
             displayName: "Clone source repo and push changes to Azure repository"
