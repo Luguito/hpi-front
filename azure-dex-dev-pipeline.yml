@@ -5,15 +5,34 @@ pool:
   name: Default
 
 variables:
-  VM_HOST: $(DEX_VM_HOST) # Update with your VM's host
-  VM_USER: $(DEX_VM_USER) # Update with your VM's username
-  PROJECT_PATH: $(PROJECT_RELATIVE_PATH) # Relative path to project directory
-  SSH_PUBLIC_KEY: $(DEX_SSH_VM_PUBLIC_KEY)
+  sourceRepo: $(SOURCE_REPO)
+  sourceBranch: "main"
+  azureRepo:  $(APP_SERVICE_REPO)
+  azureBranch: "master"
 
-jobs:
-  - job: QodanaScan
-    displayName: "Qodana Scan"
-    steps:
-      - task: QodanaScan@2024
-        env:
-          QODANA_TOKEN: $(QODANA_TOKEN)
+stages:
+  - stage: TestCode
+    jobs:
+      - job: TestBuildingCodeRepo
+        steps:
+          - checkout: none
+          - script: |
+              npm run build
+            displayName: "Building project for testing"
+
+  - stage: PushToAzure
+    dependsOn: TestCode
+    jobs:
+      - job: PushAzure
+        steps:
+          - checkout: none
+          - script: |
+              git clone $(sourceRepo) temp
+              cd temp
+              git checkout $(sourceBranch)
+            displayName: "Clone source repository"
+
+          - script: |
+              cd temp
+              git push $(azureRepo) $(azureBranch)
+            displayName: "Push changes to Azure repository"
