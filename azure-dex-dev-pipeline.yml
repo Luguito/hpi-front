@@ -43,12 +43,15 @@ stages:
           - script: |
               git clone https://\$(azureDevOpsUser)@$(azureRepo) source
               cd source
-              git checkout $(sourceBranch)
+              git checkout $(azureBranch)
               rsync -av --exclude='.git' $(Pipeline.Workspace)/build/ .
               git config user.email "devs@dexfreight.io"
               git config user.name "devs@dexfreight.io"
               git add .
               git commit -m "Automated commit: Update from build" || echo "No changes to commit"
               git branch -M $(azureBranch)
+              echo "Checking remote repository configuration..."
+              git remote -v
+              echo "Pushing changes to Azure repository..."
               git push azure $(azureBranch)
             displayName: "Clone source repo and push changes to Azure repository"
