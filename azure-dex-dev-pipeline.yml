@@ -15,8 +15,9 @@ stages:
     jobs:
       - job: TestBuildingCodeRepo
         steps:
-          - checkout: none
+          - checkout: self
           - script: |
+              npm install
               npm run build
             displayName: "Building project for testing"
 
