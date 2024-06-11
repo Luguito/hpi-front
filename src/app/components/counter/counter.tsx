@@ -2,7 +2,6 @@
 import { useEffect, useRef } from "react";
 
 import { LazyMotion, domAnimation, m, useAnimate, useInView, useMotionValue, useTransform } from "framer-motion";
-import { H1 } from "../text/text";
 
 export function ComponentName({ num, next }: any) {
     const ref = useRef(null);
@@ -16,7 +15,7 @@ export function ComponentName({ num, next }: any) {
     const startingValue = useMotionValue(0);
 
     const currentValue = useTransform(startingValue, (value) => (
-        Math.round(value).toLocaleString() + next)
+        Math.round(value) + next)
     );
 
     useEffect(() => {
@@ -36,5 +35,3 @@ export function ComponentName({ num, next }: any) {
         </LazyMotion>
     );
 }
-
-// limite de lienas titulo 4 - body 4 lineas  -> HOME

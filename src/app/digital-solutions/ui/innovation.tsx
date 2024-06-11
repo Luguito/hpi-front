@@ -32,7 +32,7 @@ export const InnovationUI = () => {
     }
     return (
         <section className="flex flex-col gap-10 mt-10 md:mt-28 xl:mt-16 2xl:mt-28">
-            <section className="flex flex-col text-left">
+            <section className="flex flex-col text-center">
                 <H2 color="text-gradient leading-[26px] md:leading-[65px]">
                     INNOVATION AND TECHNOLOGICAL
                     SOPHISTICATION ARE AT OUR CORE

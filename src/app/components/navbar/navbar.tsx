@@ -12,7 +12,6 @@ export default function Navbar() {
     const ref = useRef(null);
     const [isMenu, setMenu] = useState(false);
     const currentPath = usePathname();
-    // const navOptions = ['HOME', 'AUTOMATION', 'SHARED SERVICES', 'DIGITAL SOLUTIONS', 'CONTACT US'];
     const navOptions = [
         { name: 'HOME', link: '/' },
         { name: 'AUTOMATION', link: '/automation' },
@@ -52,9 +51,11 @@ export default function Navbar() {
         ref={ref}>
             <section>
                 <article>
+                <Link href="https://hutchisonports.com/en/index.html">
                     <Image src={profilePic} alt="Hutchison Port" width="200" height="20" priority className="
-                    w-[100px] md:w-auto xl:w-40
-                    "></Image>
+                    w-[100px] md:w-auto xl:w-40">
+                    </Image>
+                </Link>
                 </article>
             </section>
             <section className="

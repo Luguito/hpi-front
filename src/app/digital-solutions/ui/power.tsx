@@ -69,7 +69,9 @@ export default function PowerSolutionUI() {
                     <section className="flex items-end">
                         <Image src={ngGenVeronica} alt="" className="hidden lg:block" />
                         <B2 color="font-medium text-hpi-grey-dark mt-7 lg:ml-7">
-                            <b className="font-bold">TOS for Container Terminal Operations:</b>  nGen/Veronica
+                            <b className="font-bold">TOS for Container Terminal Operations: </b>  
+                            nGen - The core system keeping track of every move the terminal makes. 
+                            Veronica - Intelligent "Add-on" extensions elevating nGen to the next level.
                         </B2>
                     </section>
                     <section className="flex items-center lg:ml-20 lg:mt-10">
@@ -90,7 +92,7 @@ export default function PowerSolutionUI() {
                         </B2>
                     </section>
                     <section className="flex items-center mt-3 lg:mt-10">
-                        <Image src={DD} alt="" width={300} className="hidden lg:block ml-14"/>
+                        <Image src={DD} alt="" width={300} className="hidden lg:block ml-14" />
                         <B2 color="font-medium text-hpi-grey-dark lg:mt-4 lg:ml-44">
                             <b className="font-bold">Document Digitalisation (DD):</b> A state-of-the-art AI application for digitising communication with customers and documenting processes, scalable to support multiple ports globally. <br />
                         </B2>
@@ -107,7 +109,7 @@ export default function PowerSolutionUI() {
                         Our solutions leverage AI technology for yard utilisation optimisation, and a holistic mathematical model for equipment and job scheduling algorithms. This ensures higher productivity, operational cost savings, improved safety and quality at the terminal.
                     </B2>
                     <section className="flex items-center mt-3 lg:mt-10">
-                        <Image src={ngGenVeronica} alt="" className="hidden lg:block"/>
+                        <Image src={ngGenVeronica} alt="" className="hidden lg:block" />
                         <B2 color="font-medium text-hpi-grey-dark lg:mt-4 lg:ml-10">
                             <b className="font-bold">Autonomous Truck (AT)</b> operations management <br />
                             <b className="font-bold">Equipment Agnostic Yard Crane Scheduling:</b>  ASC, ARTG <br />
@@ -115,7 +117,7 @@ export default function PowerSolutionUI() {
                         </B2>
                     </section>
                     <section className="flex items-center mt-3 lg:mt-10">
-                        <Image src={AGOS} alt=""  className="hidden lg:block ml-28"/>
+                        <Image src={AGOS} alt="" className="hidden lg:block ml-28" />
                         <B2 color="font-medium text-hpi-grey-dark lg:mt-4 lg:ml-[160px]">
                             <b className="font-bold">Gate Automation</b>
                         </B2>
@@ -126,17 +128,17 @@ export default function PowerSolutionUI() {
                         Our end-to-end logistics management services streamline operations from start to finish, maximising efficiency and minimising costs.
                     </B2>
                     <section className="flex items-center mt-3 lg:mt-10">
-                        <Image src={PARIS} alt="" className="hidden lg:block"/>
+                        <Image src={PARIS} alt="" className="hidden lg:block" />
                         <B2 color="font-medium text-hpi-grey-dark lg:mt-4 lg:ml-24">
                             <b className="font-bold">Multi-modal Optimisation App.</b> <br />
                         </B2>
                     </section>
-                    <section className="flex items-center mt-3 lg:mt-10">
+                    {/* <section className="flex items-center mt-3 lg:mt-10">
                         <Image src={WMS} alt="" className="hidden lg:block"/>
                         <B2 color="font-medium text-hpi-grey-dark lg:mt-4 lg:ml-24">
                            <b className="font-bold">Warehouse Management System.</b>
                         </B2>
-                    </section>
+                    </section> */}
                 </ExpandedComponent>
             </section>
         </>

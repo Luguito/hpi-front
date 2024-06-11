@@ -24,7 +24,12 @@ import { EfficiencyComponent } from "./ui/efficiency";
 import { ServicesKeysComponent } from "./ui/services-key";
 import { RaasModelComponent } from "./ui/raas-model";
 import { TimelineComponent } from "./ui/timeline";
+import { Metadata } from "next";
 
+
+export const metadata: Metadata = {
+    title: 'Shared Services | Hutchison Ports',
+}
 export default function HomePage() {
     return (
         <section className="overflow-hidden">
@@ -119,7 +124,7 @@ export default function HomePage() {
                                         <Image src={PLAN} alt="" className="mt-[-2em] w-[3em] xl:mt-[-1em] xl:w-[5em]" />
                                         <article className="flex flex-col text-left md:text-center">
                                             <H3 color="font-bold text-hpi-white">
-                                                LET-IT-STOW
+                                                KPI DRIVEN STOWAGE PLANNING
                                             </H3>
                                             <B2 color="font-medium text-hpi-white">
                                                 Enhancing vessel stowage planning <br />
@@ -135,7 +140,7 @@ export default function HomePage() {
                                         <Image src={COMPARATION} alt="" className="mt-[-0.5em] w-[2em] xl:w-[3.5em]" />
                                         <article className="flex flex-col text-left md:text-center ml-[1em] md:ml-0">
                                             <H3 color="font-bold text-hpi-white">
-                                                BERTH-LIFE-BALANCE
+                                                BERTH OPTIMISATION
                                             </H3>
                                             <B2 color="font-medium text-hpi-white">
                                                 Optimising vessel traffic with our <br />
@@ -151,7 +156,7 @@ export default function HomePage() {
                                         <Image src={FTP} alt="" className="mt-[0.1em] w-[3em] xl:w-[5em]" />
                                         <article className="flex flex-col text-left md:text-center">
                                             <H3 color="font-bold text-hpi-white">
-                                                STACK-BY-STACK
+                                                HOLISTIC YARD PLANNING
                                             </H3>
                                             <B2 color="font-medium text-hpi-white">
                                                 Utilising real-time data-driven <br />

@@ -5,11 +5,16 @@ import { SwipeCarousel } from "./components/carousel/carousel";
 import { TechSolutionsComponent } from "./components/tech-sections/tech-section";
 
 import { BlogsUI } from "./components/blog/blog";
+import { Metadata } from "next";
 
+
+export const metadata: Metadata = {
+  title: 'Innovation | Hutchison Ports',
+}
 export default function HomePage() {
 
   return (
-    <section >
+    <section>
       {/* Video Section */}
       <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Home%20Banner.mp4" bgColor="">
         <H1 color="absolute text-center text-hpi-white font-bold text-shadow-md  leading-[26px] md:leading-[65px] 2xl:leading-[80px]">

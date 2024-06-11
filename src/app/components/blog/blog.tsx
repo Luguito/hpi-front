@@ -43,16 +43,10 @@ export const BlogsUI = () => {
                         "
                         >
                             <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0 xl:text-[20px] xl:leading-[33px] 2xl:leading-[45px]">
-                                UBI, THE
-                                NEW APP
-                                FOR TRUCK
-                                DRIVERS
+                                UBI, REVOLUTIONISING PORTS OPERATIONS
                             </H3>
                             <B2 color="font-medium text-hpi-grey-dark line-clamp-4 md:text-hpi-body-grey md:mt-5 lg:line-clamp-none">
-                                Check whether the
-                                container is on the
-                                vessel, or ready for
-                                pickup or collected.
+                                UBI is truly a game-changer. Users can access critical port-related information, including vessel schedules and port announcements
                             </B2>
                             <B2 color="text-hpi-blue-light font-semibold cursor-pointer py-2 lg:text-[21px] md:mt-6 md:py-0">
                                 Read More
@@ -81,16 +75,10 @@ export const BlogsUI = () => {
                             2xl:px-14
                             ">
                             <H3 color="text-hpi-blue-light font-bold mt-2 leading-[20px] md:mt-0 md:w-[80%] lg:w-full xl:text-[20px] xl:leading-[33px] 2xl:leading-[45px]">
-                                VERONICA
-                                WILL GET
-                                SMARTER
+                                VERONICA IS ONBOARDING IN MEXICO
                             </H3>
                             <B2 color="font-medium text-hpi-grey-dark line-clamp-4 md:text-hpi-body-grey md:mt-5 md:w-[60%] lg:w-full lg:line-clamp-none">
-                                New decision
-                                engines driven by
-                                real-time data
-                                provide flexibility to
-                                accommodate changes.
+                                Exciting times ahead as we gear up to introduce "Veronica," the cutting-edge Terminal Operating System (TOS), to our Mexico Business Units.
                             </B2>
                             <B2 color="text-hpi-blue-light font-semibold cursor-pointer py-2 md:mt-6 md:py-0 lg:text-[21px]">
                                 Read More
@@ -115,16 +103,10 @@ export const BlogsUI = () => {
                     lg:flex lg:flex-col lg:justify-around
                     ">
                         <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0 xl:text-[20px] xl:leading-[33px] 2xl:leading-[45px]">
-                            GATE OPERATIONS ARE
-                            POSSIBLE THROUGH
-                            GATE AUTOMATION
+                            NGEN - HUTCHISON PORTS ABU QIR
                         </H3>
                         <B2 color="font-medium text-hpi-grey-dark line-clamp-4 md:mt-5 md:text-hpi-body-grey lg:line-clamp-none">
-                            These systems integrate advanced
-                            technologies such as Optical Characters
-                            Recognition (OCR), License Plate
-                            Recognition (LPR), CCTV, RFID tractor card
-                            reader and remote reefer monitoring system.
+                            nGen sailed smoothly into action at Hutchison Ports Abu Qir (AQCT) aligning with the terminal's grand opening on 8th Jan 2024.
                         </B2>
                         <B2 color="text-hpi-blue-light font-semibold cursor-pointer py-2 md:py-0 md:mt-6 lg:text-[21px]">
                             Read More

@@ -7,6 +7,7 @@ import am5geodata_worldLow from "@amcharts/amcharts5-geodata/worldLow";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 import * as am5 from "@amcharts/amcharts5";
 import { useEffect } from "react";
+import { B2 } from "@/app/components/text/text";
 
 let data = [
     { year: 1991, geometry: { type: "Point", coordinates: [0.6817, 51.4348] } },
@@ -20,7 +21,7 @@ let data = [
     { year: 2015, geometry: { type: "Point", coordinates: [114.1284, 22.3323] } },
     { year: 2016, geometry: { type: "Point", coordinates: [4.0588, 51.9511] } },
     { year: 2016, geometry: { type: "Point", coordinates: [56.6076, 24.5146] } },
-    { year: 2017, geometry: { type: "Point", coordinates: [-78.767, 26.5289] } },
+    // { year: 2017, geometry: { type: "Point", coordinates: [-78.767, 26.5289] } },
     { year: 2017, geometry: { type: "Point", coordinates: [66.9843, 24.8019] } },
     { year: 2018, geometry: { type: "Point", coordinates: [100.8976, 13.0557] } },
     { year: 2019, geometry: { type: "Point", coordinates: [1.3074, 51.9573] } },
@@ -44,10 +45,11 @@ let data = [
     { year: 2030, geometry: { type: "Point", coordinates: [-96.1747, 19.2568] } },
     { year: 2030, geometry: { type: "Point", coordinates: [114.1284, 22.3323] } },
     { year: 2030, geometry: { type: "Point", coordinates: [114.1284, 22.3323] } },
-    { year: 2030, geometry: { type: "Point", coordinates: [-78.767, 26.5289] } },
+    // { year: 2030, geometry: { type: "Point", coordinates: [-78.767, 26.5289] } },
     { year: 2030, geometry: { type: "Point", coordinates: [4.0327, 51.9767] } },
     { year: 2030, geometry: { type: "Point", coordinates: [4.0588, 51.9511] } },
     { year: 2030, geometry: { type: "Point", coordinates: [4.0588, 51.9511] } },
+    { year: 2030, geometry: { type: "Point", coordinates: [-79.5286862, 8.5671394] } },
     { year: 2030, geometry: { type: "Point", coordinates: [153.1798, -27.3619] } },
     { year: 2030, geometry: { type: "Point", coordinates: [2.1461, 41.3101] } },
     { year: 2030, geometry: { type: "Point", coordinates: [31.3166, 30.0666] } },
@@ -78,9 +80,8 @@ function map() {
         paddingBottom: 20,
         paddingTop: 20,
         paddingLeft: 20,
-        paddingRight: 20
+        paddingRight: 20,
     }));
-
 
     // Create main polygon series for countries
     // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/
@@ -92,10 +93,10 @@ function map() {
 
     // Create series for background fill
     // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/#Background_polygon
-    let backgroundSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {}));
+    let backgroundSeries = chart.series.unshift(am5map.MapPolygonSeries.new(root, {}));
     backgroundSeries.mapPolygons.template.setAll({
-        fill: root.interfaceColors.get("alternativeBackground"),
-        fillOpacity: 0.1,
+        fill: am5.color("#002E6D"),
+        fillOpacity: 1,
         strokeOpacity: 0
     });
 
@@ -155,7 +156,10 @@ export default function MapGlobe() {
     return (
         <article className="flex flex-col w-[60%]">
             <div id="chartdiv" className="h-full"></div>
-            <div className="relative bg-hpi-blue-dark w-16 h-[2em] left-0 bottom-[2em]"></div>
+            <div className="relative bg-[#F0F0F1] w-16 h-[2em] left-0 bottom-[2em]"></div>
+            <B2 color="text-hpi-blue-dark font-medium text-[12px] text-center">
+                Our Solutions are supporting more than 80% throughput of Hutchison Ports.
+            </B2>
         </article>
     )
 }

@@ -10,10 +10,14 @@ import { SwipeCarousel } from "../components/carousel/carousel";
 import PowerSolutionUI from "./ui/power";
 import ForeFrontUI from "./ui/forefront";
 import MapImpactUI from "./ui/global-impact";
-import { BlogsUI } from "../components/blog/blog";
 import { H1, H2, H5 } from "../components/text/text";
 import { BlogsDSUI } from "./ui/blogs";
+import { Metadata } from "next";
 
+
+export const metadata: Metadata = {
+    title: 'Digital Solutions | Hutchison Ports',
+}
 
 export default function DigitalSolutionsPage() {
     return (

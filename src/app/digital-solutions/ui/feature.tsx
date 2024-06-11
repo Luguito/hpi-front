@@ -34,7 +34,7 @@ const VeronicaComponent = () => {
         let video = ref.current as HTMLVideoElement;
 
         video.controls = false;
-        video.src = "https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Digital%20Solutions%20VERONICA-preview.mp4"
+        video.src = "https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Digital%20Solutions%20VERONICA%20NEW.mp4"
         video.loop = true;
         video.load();
         video.play();
@@ -66,7 +66,7 @@ const VeronicaComponent = () => {
                     width={800}
                     ref={ref} onClick={playVideo} onEnded={resetVideo}
                     autoPlay loop>
-                    <source src="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Digital%20Solutions%20VERONICA-preview.mp4" type="video/mp4" />
+                    <source src="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Digital%20Solutions%20VERONICA%20NEW.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
                 <Image src={Play} alt="" className={`absolute bottom-[10px] right-4  w-[30px] lg:w-[50px] lg:right-0 lg:mt-5 cursor-pointer ${playing ? 'hidden' : 'block'}`} onClick={playVideo} />
