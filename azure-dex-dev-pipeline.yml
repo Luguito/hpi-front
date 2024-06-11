@@ -20,8 +20,12 @@ stages:
               npm install
               npm run build
             displayName: "Building project for testing"
-          - publish: $(Build.SourcesDirectory)/.next
-            artifact: build
+
+          - task: PublishBuildArtifacts@1
+            inputs:  
+              PathtoPublish: $(Build.SourcesDirectory)/.next
+              artifact: 'build'
+              publishLocation: 'Pipeline'
             displayName: "Publish build artifacts"
 
   - stage: PushToAzure
@@ -36,11 +40,12 @@ stages:
               git clone $(sourceRepo) source
               cd source
               git checkout $(sourceBranch)
-              rsync -av --exclude='.git' ../build/ .
-              git config user.email "devs@dexfreight.io"
-              git config user.name "devs@defreight.io"
+              rsync -av --exclude='.git' $(Pipeline.Workspace)/build/ .
+              git config user.email "you@example.com"
+              git config user.name "Your Name"
               git add .
               git commit -m "Automated commit: Update from build"
+              git branch -M $(azureBranch)
               git remote add azure $(azureRepo)
               git push azure $(azureBranch)
             displayName: "Clone source repo and push changes to Azure repository"
