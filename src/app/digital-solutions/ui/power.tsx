@@ -71,7 +71,7 @@ export default function PowerSolutionUI() {
                         <B2 color="font-medium text-hpi-grey-dark mt-7 lg:ml-7">
                             <b className="font-bold">TOS for Container Terminal Operations: </b>  
                             nGen - The core system keeping track of every move the terminal makes. 
-                            Veronica - Intelligent "Add-on" extensions elevating nGen to the next level.
+                            Veronica - Intelligent &quot;Add-on&quot; extensions elevating nGen to the next level.
                         </B2>
                     </section>
                     <section className="flex items-center lg:ml-20 lg:mt-10">

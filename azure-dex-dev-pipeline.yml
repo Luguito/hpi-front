@@ -7,7 +7,7 @@ pool:
 variables:
   sourceRepo: $(SOURCE_REPO)
   sourceBranch: "main"
-  azureRepo:  $(APP_SERVICE_REPO)
+  azureRepo: $(APP_SERVICE_REPO)
   azureBranch: "master"
 
 stages:

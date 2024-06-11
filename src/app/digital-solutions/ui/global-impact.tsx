@@ -54,6 +54,9 @@ export default function MapImpactUI() {
                     </article>
                 </section>
             </section>
+            <B2 color="text-hpi-blue-dark font-medium text-[12px] text-center">
+                Our Solutions are supporting more than 80% throughput of Hutchison Ports.
+            </B2>
         </>
     )
 }
