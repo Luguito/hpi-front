@@ -14,7 +14,6 @@ variables:
 
 stages:
   - stage: PushToAzure
-    dependsOn: TestCode
     jobs:
       - job: PushAzure
         steps:
