@@ -54,7 +54,17 @@ stages:
                 git checkout $(azureBranch)
               fi
               # sync files between artifact and remote repo
+              echo "Files in build directory before rsync:"
+              ls -R $(Pipeline.Workspace)/build/
+
+              echo "Files in source directory before rsync:"
+              ls -R .
+
+              echo "Syncing files from build artifact to source directory..."
               rsync -av --exclude='.git' $(Pipeline.Workspace)/build/ ./  # Exclude .git directory
+
+              echo "Files in source directory after rsync:"
+              ls -R .
               git config user.email "devs@dexfreight.io"
               git config user.name "devs@dexfreight.io"
               git add .
