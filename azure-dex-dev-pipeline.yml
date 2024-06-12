@@ -33,8 +33,7 @@ stages:
               else
                 git checkout $(azureBranch)
               fi
-
-              rsync -av --exclude='.git' $(Pipeline.Workspace)/build/ .  # Exclude .git directory
+              
               git config user.email "devs@dexfreight.io"
               git config user.name "devs@dexfreight.io"
               git add .
