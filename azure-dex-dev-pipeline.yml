@@ -9,6 +9,7 @@ variables:
   sourceBranch: "main"
   azureSourcePat: $(AZURE_SOURCE_PAT)
   azureDevOpsUser: $(AZURE_GIT_USER)
+  azureDevOpsPass: $(AZURE_GIT_PASS)
   azureRepo: $(APP_SERVICE_REPO)
   azureBranch: "master"
 
@@ -22,7 +23,7 @@ stages:
 
           - script: |
               echo "Cloning the Azure repository..."
-              git clone https://$(azureDevOpsUser)@$(azureRepo) source
+              git clone https://\$(azureDevOpsUser):$(azureDevOpsPass)@$(azureRepo) source
               cd source
               git remote -v
 
