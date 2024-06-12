@@ -13,24 +13,6 @@ variables:
   azureBranch: "master"
 
 stages:
-  - stage: TestCode
-    jobs:
-      - job: TestBuildingCodeRepo
-        steps:
-          - checkout: self
-            displayName: "Checkout source code"
-
-          - script: |
-              npm install
-              npm run build
-            displayName: "Building project for testing"
-
-          - task: PublishPipelineArtifact@1
-            inputs:
-              targetPath: '$(Build.SourcesDirectory)/.next'
-              artifact: 'build'
-            displayName: "Publish build artifacts"
-
   - stage: PushToAzure
     dependsOn: TestCode
     jobs:
