@@ -41,7 +41,7 @@ stages:
             artifact: build
             displayName: "Download build artifacts"
 
-           - script: |
+          - script: |
               echo "Pipeline Workspace: $(Pipeline.Workspace)"
               ls -la $(Pipeline.Workspace)
             displayName: "Echo Pipeline.Workspace and List Contents"
