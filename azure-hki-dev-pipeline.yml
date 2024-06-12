@@ -5,60 +5,61 @@ pool:
   name: Default
 
 variables:
-  image_name: 'hpi-front-next'
-  image_tag: 'latest'
-  publish_profile: 'AppServiceProfile.PublishSettings'
+  sourceRepo: $(SOURCE_REPO)
+  sourceBranch: "main"
+  azureSourcePat: $(AZURE_SOURCE_PAT)
+  azureDevOpsUser: $(AZURE_GIT_USER)
+  azureDevOpsPass: $(AZURE_GIT_PASS)
+  azureRepo: $(APP_SERVICE_REPO)
+  azureBranch: "master"
 
-steps:
-# Checkout code from the Azure Repo
-- checkout: self
-  displayName: 'Checkout Code'
+stages:
+  - stage: TestCode
+    jobs:
+      - job: TestBuildingCodeRepo
+        steps:
+          - checkout: self
+            displayName: "Checkout source code"
 
-- task: DownloadSecureFile@1
-  displayName: 'Download Publish Profile'
-  inputs:
-    secureFile: $(publish_profile)
+          - script: |
+              npm install
+              npm run build
+            displayName: "Building project for testing"
 
-- script: |
-    docker compose -f docker-compose.yml build
-  displayName: 'Build Docker Image'
+          - task: PublishPipelineArtifact@1
+            inputs:
+              targetPath: "$(Build.SourcesDirectory)"
+              artifact: "build"
+            displayName: "Publish build artifacts"
 
-- script: |
-    docker tag $(image_name):$(image_tag) $(image_name):$(Build.BuildId)
-  displayName: 'Tag Docker Image'
+  - stage: PushToAzure
+    dependsOn: TestCode
+    jobs:
+      - job: PushAzure
+        steps:
+          - download: current
+            artifact: build
+            displayName: "Download build artifacts"
 
-- script: |
-    docker save $(image_name):$(Build.BuildId) -o $(Build.ArtifactStagingDirectory)/$(image_name).tar
-  displayName: 'Save Docker Image to Tar File'
-  
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/$(image_name).tar'
-    ArtifactName: 'docker-image'
-  displayName: 'Publish Docker Image as an Artifact'
+          - script: |
+              echo "Cloning the Azure repository..."
+              git clone https://\$(azureDevOpsUser):$(azureDevOpsPass)@$(azureRepo) source
+              cd source
+              git remote -v
 
-- task: AzureCLI@2
-  inputs:
-    azureSubscription: 'hki_automatic'
-    scriptType: 'bash'
-    scriptLocation: 'inlineScript'
-    inlineScript: |
-      publishProfile=$(cat $(Agent.TempDirectory)/$(publish_profile))
-      user=$(echo $publishProfile | grep -oP '(?<=userName=").*?(?=")')
-      pass=$(echo $publishProfile | grep -oP '(?<=userPWD=").*?(?=")')
-      site=$(echo $publishProfile | grep -oP '(?<=publishUrl=").*?(?=")' | sed 's/ftp:\/\///')
-
-      # Log in to Azure Web App using FTP credentials
-      curl -u $user:$pass --ftp-ssl -T $(Build.ArtifactStagingDirectory)/$(image_name).tar ftp://$site/
-
-      # Debug output
-      echo "User: $user"
-      echo "Pass: $pass"
-      echo "Site: $site"
-
-      # Log in to Azure Web App using FTP credentials
-      curl -u $user:$pass --ftp-ssl ftp://$site/
-      
-      # Update the web app configuration to use the new Docker image
-      # az webapp config container set --name '$(image_name)' --docker-custom-image-name $(image_name):$(Build.BuildId)
-  displayName: 'Deploy Docker Image to Azure Web App'
+              # Check if the branch exists remotely and create it if it doesn't
+              if ! git ls-remote --exit-code --heads origin $(azureBranch); then
+                git checkout -b $(azureBranch)
+              else
+                git checkout $(azureBranch)
+              fi
+              # sync files between artifact and remote repo
+              rsync -av --exclude='.git' $(Pipeline.Workspace)/build/ ./  # Exclude .git directory
+              git config user.email "devs@dexfreight.io"
+              git config user.name "devs@dexfreight.io"
+              git add .
+              git commit -m "Automated commit: Update from build" || echo "No changes to commit"
+              # Deploy changes to remote
+              git remote add azure https://\$(azureDevOpsUser):$(azureDevOpsPass)@$(azureRepo)
+              git push azure $(azureBranch)
+            displayName: "Clone source repo and push changes to Azure repository"
