@@ -261,7 +261,7 @@ export const MapSlider = () => {
 
     return (
         <>
-            <section className="bg-[#F0F0F1]">
+            <section className="bg-[#F0F0F1] rounded-tr-3xl rounded-tl-3xl">
                 <article className="flex justify-center items-center pt-5 lg:hidden">
                     <select className="
                             bg-hpi-blue-light font-bold text-hpi-white p-2 rounded-xl

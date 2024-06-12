@@ -26,7 +26,7 @@ function Footer() {
             <footer className="snap-center">
                 <section className="text-center mb-24">
                     <H3 color="text-gradient font-bold">
-                        EXPLORE HOW WE CAN TRANSFORM CONTAINER <br />
+                        EXPLORE HOW WE CAN TRANSFORM CONTAINER
                         TERMINAL OPERATIONS TOGETHER
                     </H3>
                     <article>
