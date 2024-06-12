@@ -28,7 +28,7 @@ stages:
 
           - task: PublishPipelineArtifact@1
             inputs:
-              targetPath: '$(Build.SourcesDirectory)/.next'
+              targetPath: '$(Build.SourcesDirectory)'
               artifact: 'build'
             displayName: "Publish build artifacts"
 
@@ -54,7 +54,7 @@ stages:
                 git checkout $(azureBranch)
               fi
               # sync files between artifact and remote repo
-              rsync -av --exclude='.git' $(Pipeline.Workspace)/build/.next/ ./.next/  # Exclude .git directory
+              rsync -av --exclude='.git' $(Pipeline.Workspace)/build/ ./  # Exclude .git directory
               git config user.email "devs@dexfreight.io"
               git config user.name "devs@dexfreight.io"
               git add .
