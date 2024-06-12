@@ -53,13 +53,16 @@ stages:
               else
                 git checkout $(azureBranch)
               fi
-              
+              # sync files between artifact and remote repo
               rsync -av --exclude='.git' $(Pipeline.Workspace)/build/ .  # Exclude .git directory
               git config user.email "devs@dexfreight.io"
               git config user.name "devs@dexfreight.io"
+              # Install dependencies and run build
+              npm install
+              npm run build
               git add .
               git commit -m "Automated commit: Update from build" || echo "No changes to commit"
-              echo "Pushing changes to Azure repository..."
+              # Deploy changes to remote
               git remote add azure https://\$(azureDevOpsUser):$(azureDevOpsPass)@$(azureRepo)
               git push azure $(azureBranch)
             displayName: "Clone source repo and push changes to Azure repository"
