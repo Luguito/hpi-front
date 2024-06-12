@@ -18,7 +18,6 @@ stages:
       - job: PushAzure
         steps:
           - download: current
-            artifact: build
             displayName: "Download build artifacts"
 
           - script: |
