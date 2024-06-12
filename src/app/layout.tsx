@@ -30,23 +30,23 @@ export default async function RootLayout({
 }
 
 
-// export async function fetchData() {
-//   try {
-//     const res = await fetch('http://20.29.41.168:8000/api/authorize/login', {
-//       method: "POST",
-//       headers: {
-//         'Content-Type': 'application/json',
-//         'Accept': 'application/json'
-//       },
-//       body: JSON.stringify({
-//         "email": "devs@dexfreight.io",
-//         "password": "JD7C46s63.7tHcc"
-//       })
-//     });
+export async function fetchData() {
+  try {
+    const res = await fetch('http://20.29.41.168:8000/api/authorize/login', {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        "email": "devs@dexfreight.io",
+        "password": "JD7C46s63.7tHcc"
+      })
+    });
 
-//     const data = await res.json();
-//     return data;
-//   } catch (e) {
-//     console.log(e)
-//   }
-// }
+    const data = await res.json();
+    return data;
+  } catch (e) {
+    console.log(e)
+  }
+}

@@ -89,7 +89,6 @@ export const BlogsUI = () => {
                             md:h-auto md:object-none md:pl-0
                             lg:h-full lg:w-[13em]
                             xl:h-inherit xl:w-inherit xl:object-cover
-                            2xl:w-[24em]
                             " />
                     </motion.article>
                 </section>
@@ -114,7 +113,7 @@ export const BlogsUI = () => {
                     </article>
                     <Image src={Truck} alt={""} width={800} className="
                     object-cover rounded-tr-2xl rounded-br-2xl w-[150px] object-left 
-                    md:object-none md:w-auto
+                    md:w-auto
                     lg:w-[30em]
                     xl:w-[40em] xl:h-full
                     2xl:w-[50em]
