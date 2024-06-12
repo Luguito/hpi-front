@@ -147,7 +147,7 @@ function map(trigger: any) {
         fill: am5.color("#C9C9C9"), // Green color
         fillOpacity: 0.5
     });
-    
+
     // Crear el contenedor de ticks y etiquetas
     let ticksContainer = slider.children.push(am5.Container.new(root, {
         width: am5.percent(100),
@@ -205,7 +205,9 @@ function map(trigger: any) {
             }
         })
 
-        trigger(year)
+        if (window.innerWidth > 1280) {
+            trigger(year)
+        }
     }
 
     function createPoint() {
@@ -220,10 +222,17 @@ function map(trigger: any) {
         return am5.Bullet.new(root, { sprite: circle });
     }
 
+    window.addEventListener('resize', () => {
+        if (window.innerWidth < 1280) {
+            slider.hide();
 
-    if (window.innerWidth < 1280) {
-        slider.dispose()
-    }
+            window.addEventListener('updateCountries', (e: CustomEventInit) => updateCountries(e.detail))
+        } else {
+            slider.show()
+            window.removeEventListener("updateCountries", (e: CustomEventInit) => updateCountries(e.detail))
+        }
+    })
+
 }
 
 export const MapSlider = () => {
@@ -231,6 +240,7 @@ export const MapSlider = () => {
 
     function changeSectionByMap(x: any) {
         setSectionMap(x)
+        window.dispatchEvent(new CustomEvent('updateCountries', { detail: x }))
     }
 
 
@@ -255,8 +265,8 @@ export const MapSlider = () => {
                 <article className="flex justify-center items-center pt-5 lg:hidden">
                     <select className="
                             bg-hpi-blue-light font-bold text-hpi-white p-2 rounded-xl
-                            ">
-                        {/* onChange={({ target: { value } }) => changeSectionByMap(parseInt(value))} */}
+                            "
+                        onChange={({ target: { value } }) => changeSectionByMap(parseInt(value))}>
                         <option value="1991">1991</option>
                         <option value="1993">1993</option>
                         <option value="1995">1995</option>
@@ -272,7 +282,7 @@ export const MapSlider = () => {
                         <option value="2021">2021</option>
                         <option value="2022">2022</option>
                         <option value="2023">2023</option>
-                        <option value="2030">2030</option>
+                        <option value="2030" selected>2030</option>
                     </select>
                 </article>
                 <div id="chartdiv" ref={ref} className="h-[20em] lg:h-[45em]"></div>
