@@ -30,9 +30,9 @@ export default function VeronicaNew() {
                 />
             <section className="xl:w-3/4 mt-10">
                 <B1 color="text-hpi-body-grey font-medium">
-                    nGen sailed smoothly into action at Hutchison Ports Abu Qir (AQCT) aligning with the terminal's
-                    grand opening on 8th Jan 2024. This achievement is a pivotal moment in AQCT's journey. Looking ahead,
-                    we're geared up for more success in 2024 with Automated Gate Operating System (AGOS) and Autonomous Truck (AT)
+                    nGen sailed smoothly into action at Hutchison Ports Abu Qir (AQCT) aligning with the terminal&apos;s
+                    grand opening on 8th Jan 2024. This achievement is a pivotal moment in AQCT&apos;s journey. Looking ahead,
+                    we&apos;re geared up for more success in 2024 with Automated Gate Operating System (AGOS) and Autonomous Truck (AT)
                     deployments.
                 </B1>
             </section>
@@ -63,7 +63,7 @@ export default function VeronicaNew() {
                                 VERONICA IS ONBOARDING IN MEXICO
                             </h3>
                             <B2 color="font-medium text-hpi-grey-dark line-clamp-4 md:text-hpi-body-grey md:mt-5 lg:line-clamp-none">
-                                Exciting times ahead as we gear up to introduce "Veronica," the cutting-edge Terminal Operating System (TOS), to our Mexico Business Units.
+                                Exciting times ahead as we gear up to introduce &quot;Veronica&quot;, the cutting-edge Terminal Operating System (TOS), to our Mexico Business Units.
                             </B2>
                             <B2 color="text-hpi-blue-light font-semibold cursor-pointer py-2 lg:text-[21px] md:mt-6 md:py-0">
                                 <Link href="/news/veronica">

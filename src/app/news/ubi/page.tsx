@@ -60,7 +60,7 @@ export default function UBINew() {
                                 VERONICA IS ONBOARDING IN MEXICO
                             </h3>
                             <B2 color="font-medium text-hpi-grey-dark line-clamp-4 md:text-hpi-body-grey md:mt-5 lg:line-clamp-none">
-                                Exciting times ahead as we gear up to introduce "Veronica," the cutting-edge Terminal Operating System (TOS), to our Mexico Business Units.
+                                Exciting times ahead as we gear up to introduce &quot;Veronica&quot;, the cutting-edge Terminal Operating System (TOS), to our Mexico Business Units.
                             </B2>
                             <B2 color="text-hpi-blue-light font-semibold cursor-pointer py-2 lg:text-[21px] md:mt-6 md:py-0">
                                 <Link href="/news/veronica">
@@ -92,7 +92,7 @@ export default function UBINew() {
                                 NGEN - HUTCHISON PORTS ABU QIR
                             </h3>
                             <B2 color="font-medium text-hpi-grey-dark line-clamp-4 md:text-hpi-body-grey md:mt-5 md:w-[60%] lg:w-full lg:line-clamp-none">
-                                nGen sailed smoothly into action at Hutchison Ports Abu Qir (AQCT) aligning with the terminal's grand opening on 8th Jan 2024.
+                                nGen sailed smoothly into action at Hutchison Ports Abu Qir (AQCT) aligning with the terminal&apos;s grand opening on 8th Jan 2024.
                             </B2>
                             <B2 color="text-hpi-blue-light font-semibold cursor-pointer py-2 md:mt-6 md:py-0 lg:text-[21px]">
                                 <Link href="/news/ngen">
