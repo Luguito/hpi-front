@@ -1,9 +1,10 @@
 import VideoContainer from "../components/video-container/video-container";
 import { MapSlider } from "./ui/mapSlider";
-import { B2, H1, H2, H3 } from "../components/text/text";
+import Text, { B2, H1, H2, H3 } from "../components/text/text";
 
 import { Metadata } from "next";
 import { Innovation, Collaboration, People, Risk, Strategy } from "./ui/sections";
+import Button from "../components/button/button";
 
 
 
@@ -38,6 +39,21 @@ export default function AutomationPage() {
                     </section>
                 </section>
             </section>
+            <footer>
+                <section className="text-center mt-10 mb-24 lg:mt-0">
+                    <H3 color="text-gradient font-bold mx-24 2xl:mx-56">
+                        EXPLORE HOW WE CAN TRANSFORM CONTAINER
+                        TERMINAL OPERATIONS TOGETHER
+                    </H3>
+                    <article>
+                        <Button>
+                            <Text type="bold" classes="text-[16px] text-hpi-white">
+                                <a href="mailto:grp_ops_product_management_team@hutchisonports.com">Contact Us</a>
+                            </Text>
+                        </Button>
+                    </article>
+                </section>
+            </footer>
         </section>
     )
 }

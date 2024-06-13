@@ -211,6 +211,23 @@ export default function HomePage() {
                     </section>
                 </section>
             </RevealOnScrollComponent>
+
+
+            <footer>
+                <section className="text-center mb-24">
+                    <H3 color="text-gradient font-bold mx-24 2xl:mx-56">
+                        EXPLORE HOW WE CAN TRANSFORM CONTAINER
+                        TERMINAL OPERATIONS TOGETHER
+                    </H3>
+                    <article>
+                        <Button>
+                            <Text type="bold" classes="text-[16px] text-hpi-white">
+                                <a href="mailto:grp_ops_product_management_team@hutchisonports.com">Contact Us</a>
+                            </Text>
+                        </Button>
+                    </article>
+                </section>
+            </footer>
         </section>
     );
 }

@@ -77,12 +77,10 @@ export const Innovation = () => {
                                 </li>
                             </ul>
                         </article>
-                        <article style={{ aspectRatio: "16/9" }}>
-                            <Image src={I_Innovation} alt="" fetchPriority="high" className="
+                        <Image src={I_Innovation} alt="" fetchPriority="high" className="
                                 object-cover rounded-br-2xl rounded-bl-2xl h-[15em]
                                 lg:rounded-tr-2xl lg:rounded-br-2xl lg:rounded-bl-none lg:h-full
                                 " />
-                        </article>
                     </section>
                 </section>
             </details>

@@ -48,7 +48,7 @@ export const TechSolutionsComponent = () => {
     return (
         <motion.section className="
             mt-2 
-            md:mt-20
+            lg:mt-20
             xl:mt-10
             2xl:mt-32
             w-[84%]
@@ -67,8 +67,7 @@ export const TechSolutionsComponent = () => {
             </header>
             <section className="
                 bg-white shadow-lg flex flex-col justify-between rounded-2xl gap-5 p-4
-                md:px-24 md:py-20 md:rounded-3xl md:flex-row
-                lg:gap-10
+                lg:gap-10 lg:px-24 lg:py-20 lg:rounded-3xl lg:flex-row
                 xl:mt-7 xl:px-16 xl:py-10
                 2xl:mt-10
             ">
@@ -87,9 +86,9 @@ export const TechSolutionsComponent = () => {
                                 currentSection === 'automation'
                                     ?
 
-                                    <Image src={Minus} alt="" className="w-3 md:w-auto" />
+                                    <Image src={Minus} alt="" className="w-3 lg:w-auto" />
                                     :
-                                    <Image src={Plus} alt="" className="w-3 md:w-auto" />
+                                    <Image src={Plus} alt="" className="w-3 lg:w-auto" />
                             }
                         </summary>
                         <AnimatePresence>
@@ -102,7 +101,7 @@ export const TechSolutionsComponent = () => {
                                 to operational excellence.
                             </B2>
                         </AnimatePresence>
-                        <article className="md:hidden">
+                        <article className="lg:hidden">
                             <CurrentSection />
                         </article>
                     </details>
@@ -116,9 +115,9 @@ export const TechSolutionsComponent = () => {
                                 currentSection === 'shared-services'
                                     ?
 
-                                    <Image src={Minus} alt="" className="w-3 md:w-auto" />
+                                    <Image src={Minus} alt="" className="w-3 lg:w-auto" />
                                     :
-                                    <Image src={Plus} alt="" className="w-3 md:w-auto" />
+                                    <Image src={Plus} alt="" className="w-3 lg:w-auto" />
                             }
                         </summary>
                         <B2 color="md:text-hpi-body-grey font-medium text-hpi-grey-dark">
@@ -129,7 +128,7 @@ export const TechSolutionsComponent = () => {
                             consolidation, standardisation, and
                             automation of operations.
                         </B2>
-                        <article className="md:hidden">
+                        <article className="lg:hidden">
                             <CurrentSection />
                         </article>
                     </details>
@@ -143,24 +142,24 @@ export const TechSolutionsComponent = () => {
                                 currentSection === 'digital-solutions'
                                     ?
 
-                                    <Image src={Minus} alt="" className="w-3 md:w-auto" />
+                                    <Image src={Minus} alt="" className="w-3 lg:w-auto" />
                                     :
-                                    <Image src={Plus} alt="" className="w-3 md:w-auto" />
+                                    <Image src={Plus} alt="" className="w-3 lg:w-auto" />
                             }
                         </summary>
-                        <B2 color="md:text-hpi-body-grey font-medium text-hpi-grey-dark">
+                        <B2 color="lg:text-hpi-body-grey font-medium text-hpi-grey-dark">
                             Harnessing innovative, cost-efficient
                             digital solutions, we offer standardised
                             services enhancing terminal processes,
                             data analytics, and machine learning for
                             optimal operational visibility and control.
                         </B2>
-                        <article className="md:hidden">
+                        <article className="lg:hidden">
                             <CurrentSection />
                         </article>
                     </details>
                 </nav>
-                <article className="hidden md:block">
+                <article className="hidden lg:block">
                     <CurrentSection />
                 </article>
             </section>
@@ -174,8 +173,8 @@ export const AutomationSection = () => {
         <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }} className="relative">
             <Image src={AutomationImage} width={600} fetchPriority="high" alt="Img Here" className="
             object-cover h-full object-center rounded-2xl mt-3
-            md:h-[400px] md:rounded-3xl md:w-auto
-            lg:w-auto lg:max-w-[none]
+            md:w-full
+            lg:w-auto lg:max-w-[none] lg:h-[400px] lg:rounded-3xl
             xl:w-auto
             2xl:w-[50em] 2xl:h-full
             "/>
@@ -191,8 +190,8 @@ export const SharedSection = () => {
         <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }} className="relative">
             <Image src={SharedImage} width={600} fetchPriority="high" alt="Img Here" className="
             object-cover h-full object-center rounded-2xl
-            md:h-[400px] md:rounded-3xl md:w-auto
-            lg:w-full lg:max-w-[none]
+            md:w-full
+            lg:w-full lg:max-w-[none] lg:h-[400px] lg:rounded-3xl
             xl:h-auto
             2xl:w-[50em] 2xl:h-full
             " />
@@ -208,8 +207,8 @@ export const DigitalSection = () => {
         <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }} className="relative">
             <Image src={DigitalImage} width={600} fetchPriority="high" alt="Img Here" className="
             object-cover h-full object-center rounded-2xl
-            md:h-[400px] md:rounded-3xl md:w-auto
-            lg:w-full lg:max-w-[none]
+            md:w-full
+            lg:w-full lg:max-w-[none] lg:h-[400px] lg:rounded-3xl
             xl:h-auto
             2xl:w-[50em]
             " />

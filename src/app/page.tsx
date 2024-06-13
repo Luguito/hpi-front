@@ -6,6 +6,7 @@ import { TechSolutionsComponent } from "./components/tech-sections/tech-section"
 
 import { BlogsUI } from "./components/blog/blog";
 import { Metadata } from "next";
+import Button from "./components/button/button";
 
 
 export const metadata: Metadata = {
@@ -17,7 +18,7 @@ export default function HomePage() {
     <section>
       {/* Video Section */}
       <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Home%20Banner.mp4" bgColor="">
-        <H1 color="absolute text-center text-hpi-white font-bold text-shadow-md  leading-[26px] md:leading-[65px] 2xl:leading-[80px]">
+        <H1 color="absolute text-center text-hpi-white font-bold text-shadow-md leading-[26px] xl:leading-[65px] 2xl:leading-[80px]">
           INNOVATIVE SOLUTIONS FOR NEXT- <br />
           GENERATION PORT OPERATIONS
         </H1>
@@ -25,7 +26,7 @@ export default function HomePage() {
 
       {/* @ts-ignore */}
       <RevealOnScrollComponent className="flex flex-col items-center justify-center mt-10 xl:mt-9 2xl:mt-28">
-        <H2 color="text-gradient leading-[20px] md:leading-[65px] text-center w-[75%] xl:w-full 2xl:w-2/4">
+        <H2 color="text-gradient leading-[20px] lg:leading-[65px] text-center w-[75%] xl:w-full 2xl:w-2/4">
           HUTCHISON PORTS IS AT THE
           FOREFRONT OF THE INDUSTRY
         </H2>
@@ -55,6 +56,21 @@ export default function HomePage() {
           <BlogsUI />
         </section>
       </RevealOnScrollComponent>
+      <footer>
+        <section className="text-center mb-24 mt-10">
+          <H3 color="text-gradient font-bold mx-24 2xl:mx-56">
+            EXPLORE HOW WE CAN TRANSFORM CONTAINER
+            TERMINAL OPERATIONS TOGETHER
+          </H3>
+          <article>
+            <Button>
+              <Text type="bold" classes="text-[16px] text-hpi-white">
+                <a href="mailto:grp_ops_product_management_team@hutchisonports.com">Contact Us</a>
+              </Text>
+            </Button>
+          </article>
+        </section>
+      </footer>
     </section>
   );
 }
