@@ -11,6 +11,7 @@ import Arrow from "../../../../public/home/arrow.svg";
 import Image from 'next/image';
 
 import { RevealTextAfterSection } from '../../animations/animation'
+import Link from 'next/link';
 
 
 const variantParent = {
@@ -51,7 +52,9 @@ export const BlogsUI = () => {
                                 UBI is truly a game-changer. Users can access critical port-related information, including vessel schedules and port announcements
                             </B2>
                             <B2 color="text-hpi-blue-light font-semibold cursor-pointer py-2 lg:text-[21px] md:mt-6 md:py-0">
-                                Read More
+                                <Link href="/news/ubi" target="_blank">
+                                    Read More
+                                </Link>
                             </B2>
                         </article>
                         <Image src={UBI} alt={""} className="
@@ -83,7 +86,9 @@ export const BlogsUI = () => {
                                 Exciting times ahead as we gear up to introduce &quot;Veronica&quot;, the cutting-edge Terminal Operating System (TOS), to our Mexico Business Units.
                             </B2>
                             <B2 color="text-hpi-blue-light font-semibold cursor-pointer py-2 md:mt-6 md:py-0 lg:text-[21px]">
-                                Read More
+                                <Link href="/news/veronica" target="_blank">
+                                    Read More
+                                </Link>
                             </B2>
                         </article>
                         <Image src={Graphic} alt={""} className="
@@ -105,13 +110,15 @@ export const BlogsUI = () => {
                     lg:flex lg:flex-col lg:justify-around
                     ">
                         <h3 className="text-hpi-blue-light font-bold mt-2 text-[16px] md:mt-0 xl:text-[22px] xl:leading-[33px] 2xl:leading-[45px] 2xl:text-[35px]">
-                            NGEN - HUTCHISON PORTS ABU QIR
+                            nGEN - HUTCHISON PORTS ABU QIR
                         </h3>
                         <B2 color="font-medium text-hpi-grey-dark line-clamp-4 md:mt-5 md:text-hpi-body-grey lg:line-clamp-none">
                             nGen sailed smoothly into action at Hutchison Ports Abu Qir (AQCT) aligning with the terminal&apos;s grand opening on 8th Jan 2024.
                         </B2>
                         <B2 color="text-hpi-blue-light font-semibold cursor-pointer py-2 md:py-0 md:mt-6 lg:text-[21px]">
-                            Read More
+                            <Link href="/news/ngen" target="_blank">
+                                Read More
+                            </Link>
                         </B2>
                     </article>
                     <Image src={Truck} alt={""} width={800} className="
