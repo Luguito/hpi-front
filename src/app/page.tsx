@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: 'Innovation | Hutchison Ports',
 }
 export default function HomePage() {
-
+  // 720 resolution
   return (
     <section>
       {/* Video Section */}
@@ -43,7 +43,7 @@ export default function HomePage() {
       {/* What's new ... section */}
       {/* @ts-ignore */}
       <RevealOnScrollComponent className="flex justify-center xl:my-10 2xl:mt-40 2xl:mb-32">
-        <section className="w-[80%] mt-10">
+        <section className="w-[84%] mt-10">
           <header className="text-left">
             <H5 color="text-hpi-blue-light font-medium">
               Discover our latest technological advances

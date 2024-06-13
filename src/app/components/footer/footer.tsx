@@ -25,7 +25,7 @@ function Footer() {
             {/* Contact ... section */}
             <footer className="snap-center">
                 <section className="text-center mb-24">
-                    <H3 color="text-gradient font-bold">
+                    <H3 color="text-gradient font-bold mx-24">
                         EXPLORE HOW WE CAN TRANSFORM CONTAINER
                         TERMINAL OPERATIONS TOGETHER
                     </H3>
@@ -56,7 +56,7 @@ function Footer() {
                         ">
                             {
                                 footerOptions.map((option, key) => (
-                                    <Link href={option.url} key={key}>
+                                    <Link href={option.url} key={key} target="_blank">
                                         <Text type="medium" classes="text-[14px] text-hpi-white">
                                             {option.name}
                                         </Text>
