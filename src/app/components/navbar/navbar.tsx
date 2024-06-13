@@ -26,13 +26,13 @@ export default function Navbar() {
                     // @ts-ignore
                     ref.current && ref.current.classList.remove('py-4')
                     // @ts-ignore
-                    ref.current && ref.current.classList.add('md:py-8')
+                    ref.current && ref.current.classList.add('lg:py-8')
                     // @ts-ignore
                     ref.current && ref.current.classList.add('py-4')
                     // setTop(true)
                 } else {
                     // @ts-ignore
-                    ref.current && ref.current.classList.remove('md:py-8')
+                    ref.current && ref.current.classList.remove('lg:py-8')
                     // @ts-ignore
                     ref.current && ref.current.classList.remove('py-4')
                     // @ts-ignore
@@ -46,21 +46,21 @@ export default function Navbar() {
     return (
         <nav className="
         flex items-center bg-hpi-white fixed w-full z-20 shadow-md transition-all justify-between px-5 py-4
-        md:py-8 md:px-24 md:justify-around
+        lg:py-8 lg:px-24 lg:justify-between
         " 
         ref={ref}>
             <section>
                 <article>
                 <Link href="https://hutchisonports.com/en/index.html">
                     <Image src={profilePic} alt="Hutchison Port" width="200" height="20" priority className="
-                    w-[100px] md:w-auto xl:w-40">
+                    w-[100px] xl:w-40">
                     </Image>
                 </Link>
                 </article>
             </section>
             <section className="
             gap-10 hidden
-            md:flex
+            lg:flex
             ">
                 <article className="flex gap-10">
                     {
@@ -80,7 +80,7 @@ export default function Navbar() {
                     {/* <Text type="medium" classes="text-[14px] text-hpi-blue-dark">EN</Text> */}
                 </article>
             </section>
-            <section className="flex relative md:hidden">
+            <section className="flex relative lg:hidden">
                 <Image src={menu} alt="Menu" onClick={() => setMenu(!isMenu)} className="cursor-pointer" />
                 {
                     isMenu &&

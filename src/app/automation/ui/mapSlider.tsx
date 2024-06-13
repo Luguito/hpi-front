@@ -263,7 +263,7 @@ export const MapSlider = () => {
         <>
             <section className="bg-[#F0F0F1] rounded-tr-3xl rounded-tl-3xl">
                 <article className="flex justify-center items-center pt-5 lg:hidden">
-                    <select className="
+                    <select defaultValue="2030" className="
                             bg-hpi-blue-light font-bold text-hpi-white p-2 rounded-xl
                             "
                         onChange={({ target: { value } }) => changeSectionByMap(parseInt(value))}>
@@ -282,7 +282,7 @@ export const MapSlider = () => {
                         <option value="2021">2021</option>
                         <option value="2022">2022</option>
                         <option value="2023">2023</option>
-                        <option value="2030" selected>2030</option>
+                        <option value="2030">2030</option>
                     </select>
                 </article>
                 <div id="chartdiv" ref={ref} className="h-[20em] lg:h-[45em]"></div>
