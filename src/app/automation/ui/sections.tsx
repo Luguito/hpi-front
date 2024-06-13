@@ -28,7 +28,7 @@ export const Innovation = () => {
     }, [])
 
     return (
-        <article className="mt-10">
+        <article className="my-10">
             <details onClick={() => setOpen(!isOpen)} id="innovation">
                 <summary className="flex gap-5 lg:gap-10 cursor-pointer">
                     <IconSideName open={isOpen} />
@@ -103,7 +103,7 @@ export const Risk = () => {
     }, [])
     return (
         <>
-            <article className="mt-10">
+            <article className="my-10">
                 <details onClick={() => setOpen(!isOpen)} id="risk">
                     <summary className="flex gap-5 lg:gap-10 cursor-pointer">
                         <IconSideName open={isOpen} />
@@ -178,7 +178,7 @@ export const Strategy = () => {
     }, [])
     return (
         <>
-            <article className="mt-10">
+            <article className="my-10">
                 <details onClick={() => setOpen(!isOpen)} id="strategy">
                     <summary className="flex gap-5 lg:gap-10 cursor-pointer">
                         <IconSideName open={isOpen} />
@@ -241,7 +241,7 @@ export const People = () => {
     }, [])
     return (
         <>
-            <article className="mt-10">
+            <article className="my-10">
                 <details onClick={() => setOpen(!isOpen)} id="people">
                     <summary className="flex gap-5 lg:gap-10 cursor-pointer">
                         <IconSideName open={isOpen} />
@@ -313,7 +313,7 @@ export const Collaboration = () => {
 
     return (
         <>
-            <article className="mt-10">
+            <article className="my-10">
                 <details onClick={() => setOpen(!isOpen)} id="collab">
                     <summary className="flex gap-5 lg:gap-10 cursor-pointer">
                         <IconSideName open={isOpen} />
@@ -354,7 +354,7 @@ export const Collaboration = () => {
                                     </li>
                                     <li className="flex items-start">
                                         <ArrowComponent />
-                                        <B2 color="text-hpi-grey-dark md:text-hpi-grey-dark md:text-hpi-body-grey font-medium">
+                                        <B2 color="text-hpi-grey-dark md:text-hpi-body-grey font-medium">
                                             We provide a <strong>driver education program</strong> to train drivers on how to deal with new terminal policies.
                                         </B2>
                                     </li>

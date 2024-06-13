@@ -22,7 +22,7 @@ export default function AutomationPage() {
                 </H1>
             </VideoContainer>
             {/* SECTION  */}
-            <section className="px-5 xl:px-24 2xl:px-64">
+            <section className="px-5 xl:px-28 2xl:px-64">
                 {
                     listSections.map((Component, index) => (
                         <Component key={index + 1} />

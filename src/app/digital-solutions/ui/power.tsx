@@ -19,6 +19,7 @@ import { RevealFromLeftToRight } from '@/app/animations/animation';
 import { B1, B2, H2, H3, H5 } from '@/app/components/text/text';
 import { useState } from 'react';
 
+// MOBILE TEXT MOVE TO LEFT
 export default function PowerSolutionUI() {
     return (
         <>
@@ -30,11 +31,11 @@ export default function PowerSolutionUI() {
                     UNLEASHING THE POWER OF DIGITAL SOLUTIONS
                 </H2>
             </header>
-            <B1 color="text-hpi-blue-dark font-medium ml-7">
+            <B1 color="text-hpi-blue-dark font-medium ml-7 mt-3">
                 Hutchison Ports is dedicated to offering standardised, cost-efficient, and innovative solutions that add value across all our terminals and logistics community.
                 We aim to empower individuals and businesses to transform the logistics world into a more efficient and sustainable one through innovative technologies.
             </B1>
-            <section className="flex flex-col gap-6 mt-5 bg-hpi-white rounded-3xl p-5 lg:p-20 lg:mt-16">
+            <section className="flex flex-col gap-6 mt-5 bg-hpi-white rounded-3xl p-5 lg:p-20 xl:mt-10">
                 <ExpandedComponent icon={Icon1} title={"TERMINAL OPERATING SYSTEM (TOS)"} id="e-1">
                     <B2 color="font-medium text-hpi-grey-dark mt-5">
                         A comprehensive solution designed to streamline terminal processes by providing real-time data for enhanced visibility and control, forecasting capabilities, data-driven decision support, and a consolidated data platform for analytics and machine learning. <br />
@@ -90,7 +91,7 @@ export default function PowerSolutionUI() {
                         </B2>
                     </section>
                     <section className="grid grid-cols-[1fr_2fr] items-center mt-3 gap-10 lg:mt-10">
-                        <Image src={AGOS} alt="" className="hidden lg:block" />
+                        <Image src={AGOS} alt="" className="hidden justify-self-center lg:block" />
                         <B2 color="font-medium text-hpi-grey-dark lg:mt-4">
                             <b className="font-bold">Gate Automation</b>
                         </B2>

@@ -75,7 +75,7 @@ export const RaasModelComponent = ({ children }: any) => {
 
             <section className="
             grid grid-cols-1 grid-rows-1 justify-center items-center mt-5 gap-3 mx-6
-            lg:grid-rows-2 lg:grid-cols-2 lg:gap-10 lg:mt-14
+            lg:grid-rows-2 lg:grid-cols-2 lg:gap-10 lg:mt-10
             ">
                 <motion.div animate={!roc.roc1 ? 'content' : 'banner'} onTap={() => setRoc({ ...roc, roc1: !roc.roc1 })}>
                     <motion.article
@@ -246,7 +246,7 @@ export const RaasModelComponent = ({ children }: any) => {
                                         <p className="text-[8px] px-1 lg:text-[21px] text-hpi-white text-center">
                                             Progress is fully visible to your
                                             terminal, allowing for complete
-                                            oversight and transparency
+                                            oversight and transparency.
                                         </p>
                                     </motion.div>
                                     :
