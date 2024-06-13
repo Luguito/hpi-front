@@ -34,8 +34,8 @@ const variantParent = {
 export const Regional = () => {
     return (
         <section className="
-        mt-7 
-        xl:mx-28 xl:mt-16
+        mt-5
+        xl:mx-28 xl:mt-14
         2xl:mt-20 2xl:mx-44
         ">
             <motion.header className="text-left ml-7" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={variantParent}>
