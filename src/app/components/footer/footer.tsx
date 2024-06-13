@@ -24,22 +24,9 @@ function Footer() {
         <>
             {/* Contact ... section */}
             <footer className="snap-center">
-                {/* <section className="text-center mb-24">
-                    <H3 color="text-gradient font-bold mx-24 2xl:mx-56">
-                        EXPLORE HOW WE CAN TRANSFORM CONTAINER
-                        TERMINAL OPERATIONS TOGETHER
-                    </H3>
-                    <article>
-                        <Button>
-                            <Text type="bold" classes="text-[16px] text-hpi-white">
-                                <a href="mailto:grp_ops_product_management_team@hutchisonports.com">Contact Us</a>
-                            </Text>
-                        </Button>
-                    </article>
-                </section> */}
                 <nav className="
-                flex flex-col items-center justify-between
-                lg:flex-row bg-hpi-blue-sea py-14 px-24 xl:px-14
+                flex flex-col justify-between py-14 px-10
+                lg:flex-row bg-hpi-blue-sea lg:px-24 xl:px-14
                 ">
                     <section>
                         <article>
@@ -47,12 +34,12 @@ function Footer() {
                         </article>
                     </section>
                     <section className="
-                    flex gap-10 flex-col items-center
+                    flex gap-10 flex-col
                     md:flex-row md:items-start
                     ">
                         <article className="
-                        flex gap-10 flex-col-reverse items-center 
-                        md:flex-row md:items-start
+                        flex gap-10 flex-wrap mt-5
+                        md:flex-row md:items-start md:mt-0
                         ">
                             {
                                 footerOptions.map((option, key) => (

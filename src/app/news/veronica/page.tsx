@@ -32,7 +32,7 @@ export default function VeronicaNew() {
                     on this transformative journey with Veronica!
                 </B1>
             </section>
-            <footer className="flex flex-col justify-center mt-10 xl:my-20 xl:w-3/4 2xl:my-40">
+            <footer className="flex flex-col justify-center mt-10 xl:my-20 xl:w-[85%] 2xl:my-40">
                 <header className="text-left">
                     <H5 color="text-hpi-blue-light font-medium">
                         Discover our latest technological advances
@@ -58,7 +58,7 @@ export default function VeronicaNew() {
                             <h3 className="text-hpi-blue-light font-bold mt-2 text-[16px] md:mt-0 xl:text-[22px] xl:leading-[33px] 2xl:leading-[45px] 2xl:text-[35px]">
                                 UBI, REVOLUTIONISING PORTS OPERATIONS
                             </h3>
-                            <B2 color="font-medium text-hpi-grey-dark line-clamp-4 md:text-hpi-body-grey md:mt-5 lg:line-clamp-none">
+                            <B2 color="font-medium text-hpi-grey-dark line-clamp-3 md:text-hpi-body-grey md:mt-5 xl:line-clamp-4 2xl:line-clamp-none">
                                 ubi is truly a game-changer. Users can access critical port-related information, including vessel schedules and port announcements
                             </B2>
                             <B2 color="text-hpi-blue-light font-semibold cursor-pointer py-2 lg:text-[21px] md:mt-6 md:py-0">
@@ -90,7 +90,7 @@ export default function VeronicaNew() {
                             <h3 className="text-hpi-blue-light font-bold mt-2 leading-[20px] text-[16px] md:mt-0 md:w-[80%] lg:w-full xl:text-[22px] xl:leading-[33px] 2xl:leading-[45px] 2xl:text-[35px]">
                                 NGEN - HUTCHISON PORTS ABU QIR
                             </h3>
-                            <B2 color="font-medium text-hpi-grey-dark line-clamp-4 md:text-hpi-body-grey md:mt-5 md:w-[60%] lg:w-full lg:line-clamp-none">
+                            <B2 color="font-medium text-hpi-grey-dark line-clamp-3 md:text-hpi-body-grey md:mt-5 md:w-[60%] lg:w-full xl:line-clamp-4 2xl:line-clamp-none">
                                 nGen sailed smoothly into action at Hutchison Ports Abu Qir (AQCT) aligning with the terminal&apos;s grand opening on 8th Jan 2024.
                             </B2>
                             <B2 color="text-hpi-blue-light font-semibold cursor-pointer py-2 md:mt-6 md:py-0 lg:text-[21px]">

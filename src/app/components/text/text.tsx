@@ -24,7 +24,7 @@ type TypeText = 'medium' | 'bold';
 
 export const H1 = ({ children, color, ...props }: any) => {
     return (
-        <motion.h1 {...props} variants={RevealTextAfterSection} viewport={{ once: true }} className={"text-[20px] xl:text-[40px] 2xl:text-[80px] leading-[26px] md:leading-[65px] xl:leading-[50px] 2xl:leading-[80px] " + color}>{children}</motion.h1>
+        <motion.h1 {...props} variants={RevealTextAfterSection} viewport={{ once: true }} className={"text-[20px] xl:text-[40px] 2xl:text-[80px] leading-[26px] xl:leading-[50px] 2xl:leading-[80px] " + color}>{children}</motion.h1>
     )
 }
 export const H2 = ({ children, color, ...props }: any) => {
