@@ -31,7 +31,7 @@ const RosaComponent = () => {
             </section>
             <article className="py-5 lg:py-12 rounded-3xl flex justify-center">
                 <video autoPlay loop className="max-w-none w-[80%]">
-                    <source src="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/ROSA_gif.mp4" type="video/mp4" />
+                    <source src="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/ROSA.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </article>
@@ -60,7 +60,7 @@ const DDComponent = () => {
             </section>
             <article className="lg:py-12 rounded-3xl flex justify-center">
                 <video autoPlay loop className="max-w-none w-[75%] h-[30%]">
-                    <source src="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/DD%20V2.mp4" type="video/mp4" />
+                    <source src="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/DD%20V2%20(1).mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </article>
@@ -96,7 +96,7 @@ export const InnovativeSection = () => {
         xl:mx-28 xl:mt-14
         2xl:mx-44
         " initial="hidden" whileInView="visible" variants={RevealSectionInitial}>
-            <header className="text-left ml-2 md:ml-7">
+            <header className="text-left ml-2 md:ml-7 xl:mb-10">
                 <H5 color="text-hpi-blue-light font-medium">
                     Our Technologies
                 </H5>

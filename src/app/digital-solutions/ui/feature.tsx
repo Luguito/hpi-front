@@ -157,7 +157,7 @@ export const FeatureUI = () => {
                 <VeronicaComponent />
                 <RosaComponent />
             </section> */}
-            <section className="mt-14">
+            <section className="mt-10">
                 <CurrentSection />
                 <Dots index={component} setIndex={setIndexComponent}></Dots>
             </section>

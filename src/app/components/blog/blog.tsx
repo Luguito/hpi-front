@@ -23,6 +23,8 @@ const variantParent = {
     }
 }
 export const BlogsUI = () => {
+    // IMAGES GO OUT OF CARDS
+    // CHECK MOBILES
     return (
         <>
             <motion.section className="flex flex-col items-center mt-10 gap-5 md:gap-10" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
@@ -42,9 +44,9 @@ export const BlogsUI = () => {
                             xl:w-[70%]
                         "
                         >
-                            <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0 xl:text-[20px] xl:leading-[33px] 2xl:leading-[45px]">
+                            <h3 className="text-hpi-blue-light font-bold mt-2 text-[16px] md:mt-0 xl:text-[22px] xl:leading-[33px] 2xl:leading-[45px] 2xl:text-[35px]">
                                 UBI, REVOLUTIONISING PORTS OPERATIONS
-                            </H3>
+                            </h3>
                             <B2 color="font-medium text-hpi-grey-dark line-clamp-4 md:text-hpi-body-grey md:mt-5 lg:line-clamp-none">
                                 UBI is truly a game-changer. Users can access critical port-related information, including vessel schedules and port announcements
                             </B2>
@@ -56,7 +58,7 @@ export const BlogsUI = () => {
                         h-[12em] object-contain pl-[20px] 
                         md:h-auto md:object-none md:pl-0
                         lg:h-full lg:w-[90%] lg:object-cover lg:object-left
-                        xl:w-[65%]
+                        xl:w-[60%] xl:h-[90%]
                         " />
                     </motion.article>
                     <motion.article
@@ -74,9 +76,9 @@ export const BlogsUI = () => {
                             xl:w-[50%]
                             2xl:px-14
                             ">
-                            <H3 color="text-hpi-blue-light font-bold mt-2 leading-[20px] md:mt-0 md:w-[80%] lg:w-full xl:text-[20px] xl:leading-[33px] 2xl:leading-[45px]">
+                            <h3 className="text-hpi-blue-light font-bold mt-2 leading-[20px] text-[16px] md:mt-0 md:w-[80%] lg:w-full xl:text-[22px] xl:leading-[33px] 2xl:leading-[45px] 2xl:text-[35px]">
                                 VERONICA IS ONBOARDING IN MEXICO
-                            </H3>
+                            </h3>
                             <B2 color="font-medium text-hpi-grey-dark line-clamp-4 md:text-hpi-body-grey md:mt-5 md:w-[60%] lg:w-full lg:line-clamp-none">
                                 Exciting times ahead as we gear up to introduce &quot;Veronica&quot;, the cutting-edge Terminal Operating System (TOS), to our Mexico Business Units.
                             </B2>
@@ -89,6 +91,7 @@ export const BlogsUI = () => {
                             md:h-auto md:object-none md:pl-0
                             lg:h-full lg:w-[13em]
                             xl:h-inherit xl:w-inherit xl:object-cover
+                            2xl:w-[24em]
                             " />
                     </motion.article>
                 </section>
@@ -101,9 +104,9 @@ export const BlogsUI = () => {
                     md:p-14
                     lg:flex lg:flex-col lg:justify-around
                     ">
-                        <H3 color="text-hpi-blue-light font-bold mt-2 md:mt-0 xl:text-[20px] xl:leading-[33px] 2xl:leading-[45px]">
+                        <h3 className="text-hpi-blue-light font-bold mt-2 text-[16px] md:mt-0 xl:text-[22px] xl:leading-[33px] 2xl:leading-[45px] 2xl:text-[35px]">
                             NGEN - HUTCHISON PORTS ABU QIR
-                        </H3>
+                        </h3>
                         <B2 color="font-medium text-hpi-grey-dark line-clamp-4 md:mt-5 md:text-hpi-body-grey lg:line-clamp-none">
                             nGen sailed smoothly into action at Hutchison Ports Abu Qir (AQCT) aligning with the terminal&apos;s grand opening on 8th Jan 2024.
                         </B2>

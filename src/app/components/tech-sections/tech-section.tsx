@@ -51,7 +51,7 @@ export const TechSolutionsComponent = () => {
             md:mt-20
             xl:mt-10
             2xl:mt-32
-            w-[80%]
+            w-[84%]
             "
             initial="hidden" whileInView="visible" variants={RevealSectionInitial} viewport={{ once: true }}>
             <header className="
@@ -74,7 +74,6 @@ export const TechSolutionsComponent = () => {
             ">
                 <nav className="
                 flex flex-col gap-4 p-5
-                sm:w-[20em]
                 lg:gap-10 lg:w-[35em]
                 xl:gap-4 xl:w-[30em]
                 2xl:gap-9

@@ -65,7 +65,7 @@ export default function ForeFrontUI() {
                     animate={{
                         translateX: `-${imgIndex * 100}%`,
                     }}
-                    className="flex cursor-grab items-center gap-10 active:cursor-grabbing mt-4"
+                    className="flex cursor-grab items-center gap-10 active:cursor-grabbing"
                     transition={SPRING_OPTIONS}
                     onDragEnd={onDragEnd}>
                     <section className="

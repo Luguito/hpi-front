@@ -44,8 +44,8 @@ export default function HomePage() {
             {/* Description */}
             <RevealOnScrollComponent>
                 <section className="
-                text-center mt-16 mx-4 
-                xl:mb-16 
+                text-center mt-14 mx-4 
+                xl:mb-12
                 2xl:mb-32">
                     <H2 color="text-gradient">
                         HUTCHISON PORTS SHARED SERVICES
@@ -102,7 +102,7 @@ export default function HomePage() {
                                     flex flex-row items-center gap-4 rounded-md
                                     lg:flex-col
                                     ">
-                                        <Image src={DOCUMENT} alt="" layout="responsive" className="
+                                        <Image src={DOCUMENT} alt="" className="
                                         mt-[-0.5em] w-[3em]
                                         xl:w-[5em]
                                         " />
@@ -181,7 +181,7 @@ export default function HomePage() {
             {/* Journey */}
             <RevealOnScrollComponent>
                 <section className="mx-5 mt-7 xl:mx-28 xl:mt-14 2xl:mx-44 2xl:mt-36">
-                    <header className="text-left ml-7">
+                    <header className="text-left ml-7 xl:mb-10">
                         <H5 color="text-hpi-blue-light font-medium">Our Journey</H5>
                         <H2 color="text-gradient xl:mt-2">FROM IDEATION TO EXPANSION</H2>
                         <B1 color="text-hpi-blue-dark font-medium">
