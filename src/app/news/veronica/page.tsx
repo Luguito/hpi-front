@@ -26,8 +26,8 @@ export default function VeronicaNew() {
             <Image src={BlogImage} alt="Image" />
             <section className="xl:w-3/4 mt-10">
                 <B1 color="text-hpi-body-grey font-medium">
-                    Exciting times ahead as we gear up to introduce "Veronica," the cutting-edge Terminal Operating System (TOS),
-                    to our Mexico Business Units. By June 2024, we'll witness Veronica's adoption in full swing in Mexico Business
+                    Exciting times ahead as we gear up to introduce &quot;Veronica&quot;, the cutting-edge Terminal Operating System (TOS),
+                    to our Mexico Business Units. By June 2024, we&apos;ll witness Veronica&apos;s adoption in full swing in Mexico Business
                     Units, marking a milestone in our journey toward operational excellence. Stay tuned for more updates as we embark
                     on this transformative journey with Veronica!
                 </B1>
@@ -91,7 +91,7 @@ export default function VeronicaNew() {
                                 NGEN - HUTCHISON PORTS ABU QIR
                             </h3>
                             <B2 color="font-medium text-hpi-grey-dark line-clamp-4 md:text-hpi-body-grey md:mt-5 md:w-[60%] lg:w-full lg:line-clamp-none">
-                                nGen sailed smoothly into action at Hutchison Ports Abu Qir (AQCT) aligning with the terminal's grand opening on 8th Jan 2024.
+                                nGen sailed smoothly into action at Hutchison Ports Abu Qir (AQCT) aligning with the terminal&apos;s grand opening on 8th Jan 2024.
                             </B2>
                             <B2 color="text-hpi-blue-light font-semibold cursor-pointer py-2 md:mt-6 md:py-0 lg:text-[21px]">
                                 <Link href="/news/ngen">

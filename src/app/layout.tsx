@@ -30,7 +30,7 @@ export default async function RootLayout({
 }
 
 
-export async function fetchData() {
+async function fetchData() {
   try {
     const res = await fetch('http://20.29.41.168:8000/api/authorize/login', {
       method: "POST",
