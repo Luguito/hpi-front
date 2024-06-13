@@ -47,7 +47,7 @@ export default function MapImpactUI() {
                         </article>
                         <article className="flex flex-col items-center">
                             <MapNumber color="text-hpi-blue-dark font-bold">
-                                <ComponentName num={82.1} next="M" />
+                                <ComponentName num={82} next=".1M" />
                             </MapNumber>
                             <H3 color="text-hpi-blue-dark font-bold text-center">
                                 TEUs HANDLED IN 2023

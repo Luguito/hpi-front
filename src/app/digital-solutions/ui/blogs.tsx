@@ -8,6 +8,7 @@ import Table from '../../../../public/digital-solutions/tablet.png'
 import Veronica from '../../../../public/digital-solutions/veronica-port.png'
 import Sphere from '../../../../public/digital-solutions/sphere.png'
 import Arrow from '../../../../public/home/arrow.svg'
+import Link from 'next/link';
 
 const variantParent = {
     visible: {
@@ -58,7 +59,9 @@ export const BlogsDSUI = () => {
                             md:mt-6 md:py-0
                             lg:text-[21px]
                             ">
-                                Read More
+                                <Link href="https://wpassets.porttechnology.org/wp-content/uploads/2023/07/12101353/019-024_PTI132_Hutchinson_v10.pdf" target="_blank">
+                                    Read More
+                                </Link>
                             </B2>
                         </article>
                         <Image src={Table} alt={""} className="
@@ -104,7 +107,9 @@ export const BlogsDSUI = () => {
                             text-hpi-blue-light font-semibold cursor-pointer py-2 md:mt-6 md:py-0
                             lg:text-[21px]
                             ">
-                                Read More
+                                <Link href="https://hutchisonports.com/media/d/OPPORTUNITY+Issue+18.pdf?key=000000000017079109639244tFe4" target="_blank">
+                                    Read More
+                                </Link>
                             </B2>
                         </article>
                         <Image src={Veronica} alt={""} className="
@@ -145,7 +150,9 @@ export const BlogsDSUI = () => {
                         md:py-0 md:mt-6
                         lg:text-[21px]
                         ">
-                            Read More
+                            <Link href="https://sphere.ckh.com.hk/eng/in-focus/280/the-ports-ai-revolution-is-here-%E2%80%93-and-her-name-is-veronica.html" target="_blank">
+                                Read More
+                            </Link>
                         </B2>
                     </article>
                     <Image src={Sphere} alt={""} width={800} className="
@@ -156,7 +163,7 @@ export const BlogsDSUI = () => {
                         2xl:w-[50em] 
                     " />
                 </motion.article>
-                <motion.div whileHover="animate" className="flex w-full justify-center gap-2">
+                {/* <motion.div whileHover="animate" className="flex w-full justify-center gap-2">
                     <B2 color="text-[#009BDE] cursor-pointer font-medium">
                         See All
                     </B2>
@@ -167,7 +174,7 @@ export const BlogsDSUI = () => {
                     }} className="flex items-center">
                         <Image src={Arrow} alt="" />
                     </motion.div>
-                </motion.div>
+                </motion.div> */}
             </motion.section>
         </>
     )

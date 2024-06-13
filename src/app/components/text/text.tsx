@@ -66,3 +66,9 @@ export const MapNumber = ({ children, color, ...props }: any) => {
     )
 }
 
+
+export const TitleNews = ({ children, color, ...props }: any) => {
+    return (
+        <motion.h2 {...props} variants={RevealTextAfterSection} viewport={{ once: true }} className={"text-[13px] xl:text-[35px] 2xl:text-[65px] 2xl:leading-[65px] " + color}>{children}</motion.h2>
+    )
+}

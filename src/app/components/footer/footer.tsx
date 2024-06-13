@@ -24,8 +24,8 @@ function Footer() {
         <>
             {/* Contact ... section */}
             <footer className="snap-center">
-                <section className="text-center mb-24">
-                    <H3 color="text-gradient font-bold mx-24">
+                {/* <section className="text-center mb-24">
+                    <H3 color="text-gradient font-bold mx-24 2xl:mx-56">
                         EXPLORE HOW WE CAN TRANSFORM CONTAINER
                         TERMINAL OPERATIONS TOGETHER
                     </H3>
@@ -36,7 +36,7 @@ function Footer() {
                             </Text>
                         </Button>
                     </article>
-                </section>
+                </section> */}
                 <nav className="
                 flex flex-col items-center justify-between
                 lg:flex-row bg-hpi-blue-sea py-14 px-24 xl:px-14
