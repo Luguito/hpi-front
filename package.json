@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:dev": "mv .env.development .env.local && next build",
+    "build:development": "env-cmd -f .env.development npm run build",
+    "build:production": "env-cmd -f .env.production npm run build",
     "start": "next start -p 3000",
     "start:project": "npm install && npm run build && npx next start -p 3000",
     "lint": "next lint"
