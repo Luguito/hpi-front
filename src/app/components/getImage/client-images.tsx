@@ -1,18 +1,14 @@
 'use client'
 
 import Image from "next/image";
-import { getImageFromStorage } from "./images";
 import { useEffect, useState } from "react";
+import { getImageFromStorage } from "./get";
 
 export default function StorageImageClient({ name, width, height, ...props}: any) {
     const [imageUrl, setImage] = useState("/");
     
     useEffect(() => {
-        console.log(name)
-        getImageFromStorage(name).then((v) => {
-            console.log(v)
-            setImage(v)
-        })
+        getImageFromStorage(name).then((v) => { setImage(v) })
     }, [])
 
     return (

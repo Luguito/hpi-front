@@ -12,18 +12,6 @@ const nextConfig = {
             },
         ],
     },
-    async rewrites() {
-        return [
-            {
-                source: '/token',
-                destination: 'http://20.29.41.168:8000/api/authorize/login',
-            },
-            {
-                source: '/get-image',
-                destination: 'http://20.29.41.168:8000/api/authorize/login',
-            },
-        ]
-    },
     // i18n: {
     //     locales: ['en-US', 'es-MX', 'zh_Hans_HK'],
     //     defaultLocale: 'en-US',

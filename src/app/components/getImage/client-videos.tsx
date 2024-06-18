@@ -1,11 +1,11 @@
 'use client'
 
-import { getImageFromStorage } from "./images";
 import { useEffect, useRef, useState } from "react";
 import Play from '../../../../public/digital-solutions/play-circle.svg'
 import BluePlay from '../../../../public/digital-solutions/play.svg'
 
 import Image from 'next/image';
+import { getImageFromStorage } from "./get";
 
 export default function StorageVideosClient({ name, poster, ...props }: any) {
     const [videoUrl, setVideo] = useState("/");

@@ -43,7 +43,7 @@ export const config = {
 
 async function fetchData() {
     try {
-        const res = await fetch(`${process.env.STORAGE_URL}/api/authorize/login`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_STORAGE_URL}/api/authorize/login`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',

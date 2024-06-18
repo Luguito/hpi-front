@@ -1,4 +1,4 @@
-export default async function RootNews({
+export default function RootNews({
     children,
 }: Readonly<{
     children: React.ReactNode;
