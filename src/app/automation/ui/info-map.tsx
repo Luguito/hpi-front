@@ -1,33 +1,9 @@
 'use client'
 import { B2 } from "@/app/components/text/text"
-import { Dispatch, SetStateAction, useEffect, useState } from "react"
-import Image from 'next/image'
+import { Dispatch, SetStateAction, useState } from "react"
 
-
-// Images
-import I1993 from '../../../../public/automation/1993.jpg'
-import I2012 from '../../../../public/automation/2012.jpg'
-
-import I2016_1 from '../../../../public/automation/2016-1.jpg'
-import I2016_2 from '../../../../public/automation/2016-2.jpg'
-import I2016_3 from '../../../../public/automation/2016-3.png'
-
-import I2018 from '../../../../public/automation/2018.jpg'
-
-import I2020 from '../../../../public/automation/2020.bmp'
-import I2021 from '../../../../public/automation/2021.png'
-// import I2022 from '../../../../public/automation/2020.bmp'
-// @ts-ignore
-import I2023 from '../../../../public/automation/2023.jpg'
-
-
-
-import I2030_1 from '../../../../public/automation/2030-1.jpg'
-import I2030_2 from '../../../../public/automation/2030-2.jpg'
-import I2030_3 from '../../../../public/automation/2030-3.jpg'
-import I2030_4 from '../../../../public/automation/2030-4.jpg'
-// @ts-ignore
-import I2030_5 from '../../../../public/automation/2030-5.jpg'
+import StorageImageClient from "@/app/components/getImage/client-images"
+import StorageVideosClient from "@/app/components/getImage/client-videos"
 
 
 export const U1999I = () => {
@@ -49,7 +25,7 @@ export const U1993I = () => {
                         Automated Guided Vehicles</strong>, automated gantry and in-stack shuffling capability, setting a model for terminal automation.
                 </B2>
             </article>
-            <Image src={I1993} alt="" priority fetchPriority="high"
+            <StorageImageClient width={500} height={500} name="automation/1993.jpg" alt="" priority
                 className="
                     w-full mt-5 rounded-2xl
                     md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover
@@ -95,7 +71,7 @@ export const U2012I = () => {
                     </B2>
                 </li>
             </ul>
-            <Image src={I2012} alt="" priority fetchPriority="high"
+            <StorageImageClient name="automation/2012.jpg" width={500} height={500} alt="" priority
                 className="
                     w-full mt-5 rounded-2xl
                     md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover
@@ -141,20 +117,20 @@ export const U2015I = () => {
     )
 }
 
-export const U2016I = () => {
+export const U2016I = () => {    
     const [index, setIndex] = useState(0);
     const arrImages = [
         {
             name: 'Autonomous Truck (AT)',
-            image: I2016_1
+            image: "automation/2016-1.jpg"
         },
         {
             name: 'Automated Straddle Carrier (Auto-SC)',
-            image: I2016_2
+            image: "automation/2016-2.jpg"
         },
         {
             name: "",
-            image: I2016_3
+            image: "automation/2016-3.png"
         }
     ];
     return (
@@ -163,7 +139,7 @@ export const U2016I = () => {
                 Hutchison Ports Sohar implements Remote-Controlled Quay Cranes (RCQCs). This marks the <strong>standardisation of RCQCs</strong>, with quick implementation across global terminals.
             </B2>
             <section>
-                <Image src={arrImages[index].image} alt="" priority fetchPriority="high" className="
+                <StorageImageClient width={500} height={500} name={arrImages[index].image} alt="" priority className="
                     w-full mt-5 rounded-2xl 
                     md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover
                 "/>
@@ -193,7 +169,7 @@ export const U2018I = () => {
                     </B2>
                 </li>
             </ul>
-            <Image src={I2018} alt="" priority fetchPriority="high"
+            <StorageImageClient width={500} height={500} name="automation/2018.jpg" alt="" priority fetchPriority="high"
                 className="
                     w-full mt-5 rounded-2xl
                     md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover
@@ -243,13 +219,14 @@ export const U2019I = () => {
     )
 }
 export const U2020I = () => {
+
     return (
         <>
             <B2 color="text-hpi-body-grey font-medium">
                 <strong>Remote-Controlled Quay Cranes</strong> begin operations in Hutchison Ports Stockholm,
                 setting new efficiency standards.
             </B2>
-            <Image src={I2020} alt="" priority fetchPriority="high"
+            <StorageImageClient name="automation/2020.jpg" alt="" priority width={500} height={500}
                 className="
                     w-full mt-5 rounded-2xl
                     md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover
@@ -266,7 +243,7 @@ export const U2021I = () => {
                 <strong>Automated Straddle Carriers</strong> are introduced in Hutchison Ports Stockholm,
                 optimising container handling.
             </B2>
-            <Image src={I2021} alt="" priority fetchPriority="high"
+            <StorageImageClient width={500} height={500} name="automation/2021.png" alt="" priority
                 className="
                     w-full mt-5 rounded-2xl
                     md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover
@@ -320,7 +297,7 @@ export const U2023I = () => {
                     </B2>
                 </li>
             </ul>
-            <Image src={I2023} alt="" priority fetchPriority="high"
+            <StorageImageClient width={500} height={500} name="automation/2023.jpg" alt="" priority
                 className="
                     w-full mt-5 rounded-2xl
                     md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover
@@ -335,27 +312,28 @@ export const U2030I = () => {
     const arrImages = [
         {
             name: '',
-            video: "https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/New%20Autonomous%20Truck%20Ecosystem%20Reshapes%20Terminal%20Operations%20Video.mp4"
+            video: "videos/hpi_assets_New Autonomous Truck Ecosystem Reshapes Terminal Operations Video.mp4"
         },
         {
             name: 'Autonomous Truck (AT)',
-            image: I2030_5
+            image: "automation/2030-5.jpg"
+
         },
         {
             name: 'Automated Straddle Carrier (Auto-SC)',
-            image: I2030_4
+            image: "automation/2030-4.jpg"
         },
         {
             name: 'Automated Stacking Cranes (ASCs)',
-            image: I2030_3
+            image: "automation/2030-3.jpg"
         },
         {
             name: 'Automated Guided Vehicles (AGVs)',
-            image: I2030_2
+            image: "automation/2030-2.jpg"
         },
         {
             name: 'Gate Automation',
-            image: I2030_1
+            image: "automation/2030-1.jpg"
         },
     ];
 
@@ -409,7 +387,7 @@ export const U2030I = () => {
                         ?
                         <>
                             {/* @ts-ignore */}
-                            <Image src={arrImages[index].image} alt="" priority fetchPriority="high" className="
+                            <StorageImageClient width={800} height={800} name={arrImages[index].image} alt="" priority className="
                                 w-full rounded-2xl mt-8 h-[13em]
                                 xl:h-[35em]
                                 2xl:h-[40em] 2xl:rounded-3xl 2xl:mt-10 2xl:object-cover
@@ -417,13 +395,10 @@ export const U2030I = () => {
                         </>
                         :
                         <>
-                            <video width="auto" height="100" controls playsInline className="
+                            <StorageVideosClient controls clickeable={false} name={arrImages[index].video} poster={arrImages[index].video} className="
                             w-full mt-8 rounded-2xl h-[13em]
                             xl:h-[35em]
-                            2xl:h-[40em] 2xl:rounded-3xl 2xl:mt-10 2xl:object-cover">
-                                <source src={arrImages[index].video} type="video/mp4" />
-                                Your browser does not support the video tag.
-                            </video>
+                            2xl:h-[40em] 2xl:rounded-3xl 2xl:mt-10 2xl:object-cover" />
                         </>
                 }
 

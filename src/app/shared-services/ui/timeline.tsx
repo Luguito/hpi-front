@@ -12,6 +12,7 @@ import Icon5 from '../../../../public/shared-services/timeline/future-flag.svg'
 import { useEffect } from 'react';
 import { B2, H3, H5 } from '@/app/components/text/text';
 import { motion } from 'framer-motion'
+import StorageImageClient from '@/app/components/getImage/client-images';
 
 export const TimelineComponent = () => {
 
@@ -72,7 +73,7 @@ export const TimelineComponent = () => {
                     textClassName={contentClass}
                     contentArrowStyle={{ border: 'none' }}
                     icon={
-                        <Image src={Icon1} alt="" className="w-[1.5em] xl:w-auto"/>
+                        <StorageImageClient width={100} height={100} name="shared-services/timeline/light.svg" alt="" className="w-[1.5em] xl:w-auto"/>
                     }
                 >
                     <section>
@@ -92,7 +93,7 @@ export const TimelineComponent = () => {
                     textClassName={contentClass}
                     contentArrowStyle={{ border: 'none' }}
                     icon={
-                        <Image src={Icon2} alt="" className="w-[1.5em] xl:w-auto"/>
+                        <StorageImageClient width={100} height={100} name="shared-services/timeline/pin.svg" alt="" className="w-[1.5em] xl:w-auto"/>
                     }
                 >
                     <section>
@@ -110,7 +111,7 @@ export const TimelineComponent = () => {
                     textClassName={contentClass}
                     contentArrowStyle={{ border: 'none' }}
                     icon={
-                        <Image src={Icon3} alt="" className="w-[1.5em] xl:w-auto"/>
+                        <StorageImageClient width={100} height={100} name="shared-services/timeline/growth-stack.svg" alt="" className="w-[1.5em] xl:w-auto"/>
                     }
                 >
                     <section>
@@ -129,7 +130,7 @@ export const TimelineComponent = () => {
                     textClassName={contentClass}
                     contentArrowStyle={{ border: 'none' }}
                     icon={
-                        <Image src={Icon4} alt="" className="w-[1.5em] xl:w-auto"/>
+                        <StorageImageClient width={100} height={100} name="shared-services/timeline/boxes.svg" alt="" className="w-[1.5em] xl:w-auto"/>
                     }
                 >
                     <section>
@@ -148,7 +149,7 @@ export const TimelineComponent = () => {
                     textClassName={contentClass}
                     contentArrowStyle={{ border: 'none' }}
                     icon={
-                        <Image src={Icon5} alt="" className="w-[1.5em] xl:w-auto" />
+                        <StorageImageClient width={100} height={100} name="shared-services/timeline/future-flag.svg" alt="" className="w-[1.5em] xl:w-auto" />
                     }
                 >
                     <section>

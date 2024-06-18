@@ -6,14 +6,6 @@ import Group from '../../../public/Group 62.png'
 import ROSA from '../../../public/home/Shared.svg'
 
 
-
-import DOCUMENT from '../../../public/shared-services/document-signed.png';
-import COMPARATION from '../../../public/shared-services/balance.svg';
-import PLAN from '../../../public/shared-services/ship.png';
-import FTP from '../../../public/shared-services/stack.png';
-
-
-
 import { HoverComponent } from "../components/hover/hover";
 import { CentralisedSolution, EyeSolution, GrowSolution, PeaceSolution } from "./ui/operations";
 import { RevealOnScrollComponent } from '../animations/reveal';
@@ -25,6 +17,7 @@ import { ServicesKeysComponent } from "./ui/services-key";
 import { RaasModelComponent } from "./ui/raas-model";
 import { TimelineComponent } from "./ui/timeline";
 import { Metadata } from "next";
+import StorageImage from "../components/getImage/images";
 
 
 export const metadata: Metadata = {
@@ -34,7 +27,7 @@ export default function HomePage() {
     return (
         <section className="overflow-hidden">
             {/* Video Section */}
-            <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Shared%20Services%20Banner.mp4" bgColor="">
+            <VideoContainer videoSrc="videos/hpi-assets_Shared Services Banner.mp4" bgColor="">
                 <H1 initial="hidden" animate="visible" color="absolute text-center text-hpi-white font-bold text-shadow-md">
                     UNLEASHING GROWTH <br />
                     WITH SHARED SERVICES
@@ -69,108 +62,120 @@ export default function HomePage() {
 
 
             {/* RaaS Model */}
-            <RevealOnScrollComponent>
-                <RaasModelComponent />
-            </RevealOnScrollComponent>
+            <RaasModelComponent />
 
             {/* Core Services */}
-            <RevealOnScrollComponent>
-                <section className="
+            <section className="
                 mx-5 mt-7 mb-8
                 xl:mx-28  xl:mt-14
                 2xl:mt-24 2xl:mb-40 2xl:mx-44
                 ">
-                    <header className="text-left snap-start mb-10 ml-2 lg:ml-7">
-                        <H5 color="text-hpi-blue-light font-medium">
-                            Our Services
-                        </H5>
-                        <H2 color="text-gradient xl:mt-2">CORE COMPONENTS OF ROC</H2>
-                        <B1 color="text-hpi-blue-dark font-medium xl:mt-5">
-                            Our ROC model encompasses four core components, leveraging
-                            Hutchison Ports’ operational best practices and cutting-edge technology:
-                        </B1>
-                    </header>
-                    <section className="bg-hpi-blue-dark rounded-3xl py-5 flex h-[28em] lg:h-full">
-                        <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Shared%20services%20Radar.mp4" bgColor="hpi-opacity-video">
-                            <section className="absolute top-1 lg:top-24">
-                                <section className="
+                <header className="text-left snap-start mb-10 ml-2 lg:ml-7">
+                    <H5 color="text-hpi-blue-light font-medium">
+                        Our Services
+                    </H5>
+                    <H2 color="text-gradient xl:mt-2">CORE COMPONENTS OF ROC</H2>
+                    <B1 color="text-hpi-blue-dark font-medium xl:mt-5">
+                        Our ROC model encompasses four core components, leveraging
+                        Hutchison Ports’ operational best practices and cutting-edge technology:
+                    </B1>
+                </header>
+                <section className="bg-hpi-blue-dark rounded-3xl py-5 flex h-[28em] lg:h-full">
+                    <VideoContainer videoSrc="videos/hpi-assets_Shared services Radar.mp4" bgColor="hpi-opacity-video">
+                        <section className="absolute top-1 lg:top-24">
+                            <section className="
                                 grid grid-cols-1 grid-rows-4 justify-center items-center gap-y-5
                                 lg:gap-x-32 lg:gap-y-20
                                 xl:grid-cols-2 xl:gap-y-32
                                 ">
-                                    <section className="
+                                <section className="
                                     flex flex-row items-center gap-4 rounded-md
                                     lg:flex-col
                                     ">
-                                        <Image src={DOCUMENT} alt="" className="
+                                    <StorageImage
+                                        name="shared-services/document-signed.png"
+                                        width={84}
+                                        height={53}
+                                        className="
                                         mt-[-0.5em] w-[3em]
                                         xl:w-[5em]
-                                        " />
-                                        <article className="flex flex-col text-left md:text-center">
-                                            <H3 color="font-bold text-hpi-white">
-                                                DOCUMENT-MADE-EASY
-                                            </H3>
-                                            <B2 color="font-medium text-hpi-white">
-                                                Centralised documentation centre powered <br />
-                                                by AI, streamlining communications with <br />
-                                                the logistics community.
-                                            </B2>
-                                        </article>
-                                    </section>
-                                    <section className="
+                                        "
+                                    />
+                                    <article className="flex flex-col text-left md:text-center">
+                                        <H3 color="font-bold text-hpi-white">
+                                            DOCUMENT-MADE-EASY
+                                        </H3>
+                                        <B2 color="font-medium text-hpi-white">
+                                            Centralised documentation centre powered <br />
+                                            by AI, streamlining communications with <br />
+                                            the logistics community.
+                                        </B2>
+                                    </article>
+                                </section>
+                                <section className="
                                     flex flex-row items-center gap-4 rounded-md
                                     lg:flex-col
                                     ">
-                                        <Image src={PLAN} alt="" className="mt-[-2em] w-[3em] xl:mt-[-1em] xl:w-[5em]" />
-                                        <article className="flex flex-col text-left md:text-center">
-                                            <H3 color="font-bold text-hpi-white">
-                                                KPI DRIVEN STOWAGE PLANNING
-                                            </H3>
-                                            <B2 color="font-medium text-hpi-white">
-                                                Enhancing vessel stowage planning <br />
-                                                for operational efficiency without <br />
-                                                compromising safety.
-                                            </B2>
-                                        </article>
-                                    </section>
-                                    <section className="
+                                    <StorageImage
+                                        width={105}
+                                        height={80}
+                                        name="shared-services/ship.png"
+                                        className="mt-[-2em] w-[3em] xl:mt-[-1em] xl:w-[5em]"
+                                    />
+                                    <article className="flex flex-col text-left md:text-center">
+                                        <H3 color="font-bold text-hpi-white">
+                                            KPI DRIVEN STOWAGE PLANNING
+                                        </H3>
+                                        <B2 color="font-medium text-hpi-white">
+                                            Enhancing vessel stowage planning <br />
+                                            for operational efficiency without <br />
+                                            compromising safety.
+                                        </B2>
+                                    </article>
+                                </section>
+                                <section className="
                                     flex flex-row items-center gap-4 rounded-md
                                     lg:flex-col
                                     ">
-                                        <Image src={COMPARATION} alt="" className="mt-[-0.5em] w-[2em] xl:w-[3.5em]" />
-                                        <article className="flex flex-col text-left md:text-center ml-[1em] md:ml-0">
-                                            <H3 color="font-bold text-hpi-white">
-                                                BERTH OPTIMISATION
-                                            </H3>
-                                            <B2 color="font-medium text-hpi-white">
-                                                Optimising vessel traffic with our <br />
-                                                intelligent berth planning system <br />
-                                                (Veronica).
-                                            </B2>
-                                        </article>
-                                    </section>
-                                    <section className="
+                                    <StorageImage
+                                        width={97}
+                                        height={90}
+                                        name="shared-services/balance.svg" className="mt-[-0.5em] w-[2em] xl:w-[3.5em]" />
+                                    <article className="flex flex-col text-left md:text-center ml-[1em] md:ml-0">
+                                        <H3 color="font-bold text-hpi-white">
+                                            BERTH OPTIMISATION
+                                        </H3>
+                                        <B2 color="font-medium text-hpi-white">
+                                            Optimising vessel traffic with our <br />
+                                            intelligent berth planning system <br />
+                                            (Veronica).
+                                        </B2>
+                                    </article>
+                                </section>
+                                <section className="
                                     flex flex-row items-center gap-4 rounded-md
                                     lg:flex-col
                                     ">
-                                        <Image src={FTP} alt="" className="mt-[0.1em] w-[3em] xl:w-[5em]" />
-                                        <article className="flex flex-col text-left md:text-center">
-                                            <H3 color="font-bold text-hpi-white">
-                                                HOLISTIC YARD PLANNING
-                                            </H3>
-                                            <B2 color="font-medium text-hpi-white">
-                                                Utilising real-time data-driven <br />
-                                                algorithms for optimal yard <br />
-                                                resource use.
-                                            </B2>
-                                        </article>
-                                    </section>
+                                    <StorageImage
+                                        width={97}
+                                        height={90}
+                                        name="shared-services/stack.png" alt="" className="mt-[0.1em] w-[3em] xl:w-[5em]" />
+                                    <article className="flex flex-col text-left md:text-center">
+                                        <H3 color="font-bold text-hpi-white">
+                                            HOLISTIC YARD PLANNING
+                                        </H3>
+                                        <B2 color="font-medium text-hpi-white">
+                                            Utilising real-time data-driven <br />
+                                            algorithms for optimal yard <br />
+                                            resource use.
+                                        </B2>
+                                    </article>
                                 </section>
                             </section>
-                        </VideoContainer>
-                    </section>
+                        </section>
+                    </VideoContainer>
                 </section>
-            </RevealOnScrollComponent>
+            </section>
 
 
             {/* Innovate RaaS Tech */}

@@ -1,11 +1,9 @@
 import VideoContainer from "../components/video-container/video-container";
-import Image from 'next/image'
 import { InnovationUI } from "./ui/innovation";
 
 // Icons 
 
 import { FeatureUI } from "./ui/feature";
-import { SwipeCarousel } from "../components/carousel/carousel";
 
 import PowerSolutionUI from "./ui/power";
 import ForeFrontUI from "./ui/forefront";
@@ -24,7 +22,7 @@ export default function DigitalSolutionsPage() {
     return (
         <section className="mb-32 overflow-hidden">
             {/* Break lines */}
-            <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Digital%20Solutions%20Banner.mp4" bgColor="">
+            <VideoContainer videoSrc="videos/hpi-assets_Digital Solutions Banner.mp4" bgColor="">
                 <H1 color="absolute text-center text-hpi-white font-bold text-shadow-md leading-[26px] md:leading-[65px] 2xl:leading-[80px]">
                     REVOLUTIONISING CONTAINER <br />
                     TERMINALS WITH DIGITAL <br />

@@ -18,6 +18,7 @@ import { Dispatch, SetStateAction, useState } from 'react';
 import { RevealFromLeftToRight, RevealTextAfterSection } from '@/app/animations/animation';
 import { B2, H2, H3 } from '@/app/components/text/text';
 import { Icon1 } from '@/app/shared-services/components/animation-plus-minus';
+import StorageImageClient from '@/app/components/getImage/client-images';
 
 const SPRING_OPTIONS = {
     type: "spring",
@@ -74,7 +75,7 @@ export default function ForeFrontUI() {
                     ">
                         <SectionUI
                             Img={
-                                <Image src={I3} alt="" className='2xl:max-w-none' />
+                                <StorageImageClient width={690} height={308} name="digital-solutions/VERONICA_logo.png" alt="" className='2xl:max-w-none' />
                             }
                             title={"ONE TOS, ONE WORLD"}
                             content={
@@ -89,7 +90,7 @@ export default function ForeFrontUI() {
                             url="https://hpdx.io/"
                             Img={
                                 <section className="flex justify-center items-center w-full h-full">
-                                    <Image src={I} alt="" />
+                                    <StorageImageClient width={475} height={117} name="digital-solutions/HPDX_logo.png" alt="" />
                                 </section>
                             }
                             title={"ONCE-FOR-ALL CONNECTION"}
@@ -104,7 +105,7 @@ export default function ForeFrontUI() {
                         <SectionUI
                             Img={
                                 <section className="w-full h-full flex justify-center items-center">
-                                    <Image src={I8} alt="" height={250} className="" />
+                                    <StorageImageClient width={259} height={200} name="digital-solutions/ROSA_logo.png" alt="" className="" />
                                 </section>
                             }
                             title={"OPERATIONS ANYTIME, ANYWHERE"}
@@ -119,7 +120,7 @@ export default function ForeFrontUI() {
                         <SectionUI
                             Img={
                                 <section className="flex justify-center items-center w-full h-full px-14 py-10">
-                                    <Image src={I7} alt="" className="h-[100%]" />
+                                    <StorageImageClient width={1407} height={561} name="digital-solutions/truck.png" alt="" className="h-[100%]" />
                                 </section>
                             }
                             title={"UNLOCKING EFFICIENCY THROUGH AUTOMATION"}
@@ -134,7 +135,7 @@ export default function ForeFrontUI() {
                         <SectionUI
                             Img={
                                 <section className="flex justify-center items-center w-full h-full">
-                                    <Image src={I2} alt="" width={200} />
+                                    <StorageImageClient width={325} height={378} name="digital-solutions/DD_logo.png" alt="" className="lg:w-40" />
                                 </section>
                             }
                             title={"GO BEYOND PAPERLESS"}
@@ -148,7 +149,7 @@ export default function ForeFrontUI() {
                         <SectionUI
                             Img={
                                 <section className="flex justify-center items-center w-full h-full">
-                                    <Image src={I6} alt="" />
+                                    <StorageImageClient width={608} height={298} name="digital-solutions/keep_flow.png" alt="" />
                                 </section>
                             }
                             title={"KEEP-IT-FLOW"}
@@ -162,7 +163,7 @@ export default function ForeFrontUI() {
                         <SectionUI
                             Img={
                                 <section className="flex justify-center items-center w-full h-full">
-                                    <Image src={I5} alt="" />
+                                    <StorageImageClient width={282} height={245} name="digital-solutions/know before it happens.png" alt="" />
                                 </section>
                             }
                             title={"KNOW BEFORE IT HAPPENS"}
@@ -176,7 +177,7 @@ export default function ForeFrontUI() {
                             url="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Hutchison%20Port%20ENG%20NM.mp4"
                             Img={
                                 <section className="flex justify-center items-center w-full h-full">
-                                    <Image src={I4} alt="" />
+                                    <StorageImageClient width={606} height={286} name="digital-solutions/UBI_logo.png" alt="" />
                                 </section>
                             }
                             title={"PORT ACCESSIBILITY"}
@@ -230,6 +231,7 @@ const SectionUI = ({ Img, title, content, url }: any) => {
     return (
         <motion.section
             className="
+            snap-center
             flex flex-col h-[22em] w-[22em] shrink-0 bg-hpi-white gap-4 rounded-[3.5rem] shadow-lg relative
             lg:w-inherit
             xl:h-[30em]
@@ -259,14 +261,40 @@ const SectionUI = ({ Img, title, content, url }: any) => {
 }
 
 const Try = ({ }) => {
-    const [imgIndex, setImgIndex] = useState(0);
+    let wq = 0;
+
+    const newSlider = () => {
+        const s = document.querySelector("#wrapper") as Element
+        const w = s.childNodes.length;
+
+        let ws = 352;
+        let max = w * ws
+
+        let nextSlider = wq + ws;
+        if (wq >= max) return;
+
+        wq = nextSlider;
+
+        s.scrollTo(nextSlider, 0)
+    }
+    const previusSlider = () => {
+        const s = document.querySelector("#wrapper") as Element
+        const w = s.childNodes.length;
+
+        let ws = 352;
+
+        let nextSlider = wq - ws;
+        if (wq == 0) return;
+
+        wq = nextSlider;
+
+        s.scrollTo(nextSlider, 0)
+    }
 
     return (
         <>
-            <motion.section animate={{
-                translateX: `-${imgIndex * 92}%`,
-            }} className="
-                    flex gap-9 h-[20em] mt-5
+            <motion.section id="wrapper" className="
+                    flex gap-9 h-[24em] mt-5 snap-mandatory snap-x overflow-x-auto scroll-smooth
                     ">
                 <SectionUI
                     Img={
@@ -352,7 +380,6 @@ const Try = ({ }) => {
                                     boosts container movements and enhances terminal efficiency by 50%.
                                 `
                     } />
-
                 <SectionUI
                     Img={
                         <section className="flex justify-center items-center w-full h-full">
@@ -381,20 +408,14 @@ const Try = ({ }) => {
                                 `
                     } />
             </motion.section>
-            {imgIndex !== 7 && <>
-                    <div className="
-                    absolute flex justify-start items-center h-[25em] left-[93%] w-[3em] top-[-3%] cursor-pointer bg-hpi-light-bg 
-                    ">
-                        <Image src={Arrow} alt="" onClick={() => setImgIndex(imgIndex + 1)} />
-                    </div>
-                </>}
-                {imgIndex !== 0 && imgIndex <= 7 && <>
-                    <div className="
-                    absolute rotate-180 flex justify-start items-center left-[-5%] h-[25em] w-[3em] top-[-3%] cursor-pointer bg-hpi-light-bg 
-                    ">
-                        <Image src={Arrow} alt="" onClick={() => setImgIndex(imgIndex - 1)} />
-                    </div>
-                </>}
+            <div className="flex justify-center items-center gap-5 mt-5">
+                <div className="rotate-180 cursor-pointer">
+                    <Image src={Arrow} alt="" onClick={previusSlider} width={30} />
+                </div>
+                <div className="cursor-pointer">
+                    <Image src={Arrow} alt="" onClick={newSlider} width={30} />
+                </div>
+            </div>
         </>
     )
 }

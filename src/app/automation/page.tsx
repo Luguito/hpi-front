@@ -16,7 +16,7 @@ export default function AutomationPage() {
 
     return (
         <section>
-            <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Automation%20Banner%20video_1.mp4" bgColor="">
+            <VideoContainer videoSrc="videos/hpi-assets_Automation Banner.mp4" bgColor="">
                 <H1 color="absolute text-center text-hpi-white font-bold text-shadow-md">
                     MASTERING THE ART OF <br />
                     TERMINAL AUTOMATION

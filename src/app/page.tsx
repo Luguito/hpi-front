@@ -17,7 +17,7 @@ export default function HomePage() {
   return (
     <section>
       {/* Video Section */}
-      <VideoContainer videoSrc="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Home%20Banner.mp4" bgColor="">
+      <VideoContainer videoSrc="videos/hpi-assets_Home Banner.mp4" bgColor="">
         <H1 color="absolute text-center text-hpi-white font-bold text-shadow-md leading-[26px] xl:leading-[65px] 2xl:leading-[80px]">
           INNOVATIVE SOLUTIONS FOR NEXT- <br />
           GENERATION PORT OPERATIONS
