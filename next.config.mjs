@@ -1,12 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    async rewrites() {
-        return [
+    images: {
+        dangerouslyAllowSVG: true,
+        contentDispositionType: 'attachment',
+        contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+        remotePatterns: [
             {
-                source: '/login',
-                destination: 'http://20.29.41.168:8000/api/authorize/login',
+                protocol: 'https',
+                hostname: 'hki.blob.core.windows.net',
+                port: '',
             },
-        ]
+        ],
     },
     // i18n: {
     //     locales: ['en-US', 'es-MX', 'zh_Hans_HK'],

@@ -6,30 +6,9 @@ import { motion } from 'framer-motion';
 import { RevealFromLeftToRight, RevealFromRightToLeft, RevealTextAfterSection } from '@/app/animations/animation';
 import { useRef, useState } from 'react';
 import Play from '../../../../public/digital-solutions/play-circle.svg'
+import StorageVideosClient from '@/app/components/getImage/client-videos';
 
 export const InnovationUI = () => {
-    const [playing, setPlaying] = useState(false)
-    const ref = useRef(null);
-
-    const playVideo = () => {
-        if (!ref.current) return;
-
-        let video = ref.current as HTMLVideoElement;
-
-        video.play();
-        video.controls = true;
-        setPlaying(true);
-    }
-
-    const resetVideo = () => {
-        if (!ref.current) return;
-
-        let video = ref.current as HTMLVideoElement;
-
-        video.controls = false;
-        video.load();
-        setPlaying(false)
-    }
     return (
         <section className="flex flex-col gap-10 mt-10 md:mt-28 xl:mt-16 2xl:mt-28">
             <section className="flex flex-col text-center">
@@ -45,13 +24,7 @@ export const InnovationUI = () => {
                 </article>
             </section>
             <motion.article className="p-2 md:p-12 relative bg-hpi-white rounded-3xl" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                <video poster="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/veronica-digital.png"
-                    className="rounded-3xl cursor-pointer w-full"
-                    ref={ref} onClick={playVideo} onEnded={resetVideo}>
-                    <source src="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/veronica_final_v3%20(Original).mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-                <Image src={Play} alt="" className={`absolute top-[25%] left-[35%] md:top-[40%] md:left-[45%] cursor-pointer ${playing ? 'hidden' : 'block'}`} onClick={playVideo} />
+                <StorageVideosClient clickeable={true} className="rounded-3xl cursor-pointer w-full" name="videos/hpi-assets_veronica_final_v3 (Original).mp4" poster="digital-solutions/veronica-digital.png"/>
             </motion.article>
         </section>
     )

@@ -1,41 +1,18 @@
-'use client'
-
-import I_Innovation from '../../../../public/automation/Pioneer in the industry.jpg';
-import I_Risk from '../../../../public/automation/Leaders take risk.jpeg'
-import I_Agility from '../../../../public/automation/Agility.png'
-import I_People from '../../../../public/automation/People always our first priority.jpg'
-import I_Team from '../../../../public/automation/Together as a team.jpg'
-
 import Image from 'next/image'
 import Arrow from "../../../../public/automation/blue-arrow.svg";
 import Plus from '../../../../public/automation/plus.svg'
 import Minus from '../../../../public/automation/minus.svg'
 
-import { useEffect, useState } from 'react';
-import { B2, H1, H2, H3 } from "../../components/text/text";
+import { B2, H3 } from "../../components/text/text";
+import { SectionHeader } from './section-header';
+import StorageImage from '@/app/components/getImage/images';
+
 
 export const Innovation = () => {
-    const [isOpen, setOpen] = useState(false);
-
-    const isExtended = () => {
-        let doc = document.getElementById('innovation') as HTMLDetailsElement
-
-        setOpen(doc.open ?? false);
-    }
-
-    useEffect(() => {
-        isExtended();
-    }, [])
-
     return (
         <article className="my-10">
-            <details onClick={() => setOpen(!isOpen)} id="innovation">
-                <summary className="flex gap-5 lg:gap-10 cursor-pointer">
-                    <IconSideName open={isOpen} />
-                    <H2 color={`${!isOpen ? 'text-hpi-grey-light' : 'text-hpi-blue-dark'} font-bold`}>
-                        INDUSTRY INNOVATIONS
-                    </H2>
-                </summary>
+            <details id="innovation">
+                <SectionHeader title={"INDUSTRY INNOVATIONS"} />
                 <section className="bg-hpi-white rounded-3xl shadow-lg mt-5 lg:mt-10">
                     <section className="flex flex-col md:flex-row">
                         <article className="
@@ -77,10 +54,17 @@ export const Innovation = () => {
                                 </li>
                             </ul>
                         </article>
-                        <Image src={I_Innovation} alt="" fetchPriority="high" className="
-                                object-cover rounded-br-2xl rounded-bl-2xl h-[15em]
-                                lg:rounded-tr-2xl lg:rounded-br-2xl lg:rounded-bl-none lg:h-full
-                                " />
+                        <StorageImage
+                            width={3339}
+                            height={2854}
+                            name="automation/Pioneer in the industry.jpg"
+                            alt="" fetchPriority="high" className="
+                        object-cover rounded-br-2xl rounded-bl-2xl h-[15em]
+                        lg:rounded-tr-2xl lg:rounded-br-2xl lg:rounded-bl-none lg:h-full
+                        xl:w-[37em] xl:h-auto
+                        "
+                        />
+                        {/* <Image src={I_Innovation} /> */}
                     </section>
                 </section>
             </details>
@@ -89,26 +73,11 @@ export const Innovation = () => {
 }
 
 export const Risk = () => {
-    const [isOpen, setOpen] = useState(false);
-
-    const isExtended = () => {
-        let doc = document.getElementById('risk') as HTMLDetailsElement;
-        setOpen(doc.open ?? false);
-    }
-
-    useEffect(() => {
-        isExtended();
-    }, [])
     return (
         <>
             <article className="my-10">
-                <details onClick={() => setOpen(!isOpen)} id="risk">
-                    <summary className="flex gap-5 lg:gap-10 cursor-pointer">
-                        <IconSideName open={isOpen} />
-                        <H2 color={`${!isOpen ? 'text-hpi-grey-light' : 'text-hpi-blue-dark'} font-bold`}>
-                            EMBRACING RISK
-                        </H2>
-                    </summary>
+                <details id="risk">
+                    <SectionHeader title={"EMBRACING RISK"} />
                     <section className="bg-hpi-white rounded-3xl shadow-lg mt-5 lg:mt-10">
                         <section className="flex flex-col md:flex-row">
                             <article className="
@@ -150,10 +119,15 @@ export const Risk = () => {
                                 </ul>
                             </article>
                             <article className="xl:w-[193%] 2xl:w-[177%]" style={{ aspectRatio: "16/9" }}>
-                                <Image src={I_Risk} alt="" fetchPriority="high" className="
-                                object-cover rounded-br-2xl rounded-bl-2xl h-[15em]
-                                lg:rounded-tr-2xl lg:rounded-br-2xl lg:rounded-bl-none lg:h-full
-                                " />
+                                <StorageImage
+                                 width={1772}
+                                 height={1440}
+                                    name="automation/Leaders take risk.jpeg"
+                                    alt="" fetchPriority="high" className="
+                                    object-cover rounded-br-2xl rounded-bl-2xl h-[15em]
+                                    lg:rounded-tr-2xl lg:rounded-br-2xl lg:rounded-bl-none lg:h-full
+                                    "
+                                />
                             </article>
                         </section>
                     </section>
@@ -164,26 +138,11 @@ export const Risk = () => {
 }
 
 export const Strategy = () => {
-    const [isOpen, setOpen] = useState(false);
-
-    const isExtended = () => {
-        let doc = document.getElementById('strategy') as HTMLDetailsElement;
-        setOpen(doc.open ?? false);
-    }
-
-    useEffect(() => {
-        isExtended();
-    }, [])
     return (
         <>
             <article className="my-10">
-                <details onClick={() => setOpen(!isOpen)} id="strategy">
-                    <summary className="flex gap-5 lg:gap-10 cursor-pointer">
-                        <IconSideName open={isOpen} />
-                        <H2 color={`${!isOpen ? 'text-hpi-grey-light' : 'text-hpi-blue-dark'} font-bold`}>
-                            AGILE STRATEGY
-                        </H2>
-                    </summary>
+                <details id="strategy">
+                    <SectionHeader title={"AGILE STRATEGY"} />
                     <section className="bg-hpi-white rounded-3xl shadow-lg mt-5 lg:mt-10">
                         <section className="flex flex-col md:flex-row">
                             <article className="
@@ -212,10 +171,15 @@ export const Strategy = () => {
                                 </ul>
                             </article>
                             <article className="xl:w-[202%] 2xl:w-[183%]" style={{ aspectRatio: "16/9" }}>
-                                <Image src={I_Agility} alt="" fetchPriority="high" className="
-                                object-cover rounded-br-2xl rounded-bl-2xl h-[15em]
-                                lg:rounded-tr-2xl lg:rounded-br-2xl lg:rounded-bl-none lg:h-full
-                                " />
+                                <StorageImage
+                                width={1509}
+                                height={844}
+                                    name="automation/Agility.png"
+                                    alt="" fetchPriority="high" className="
+                                    object-cover rounded-br-2xl rounded-bl-2xl h-[15em]
+                                    lg:rounded-tr-2xl lg:rounded-br-2xl lg:rounded-bl-none lg:h-full
+                                    "
+                                />
                             </article>
                         </section>
                     </section>
@@ -226,28 +190,11 @@ export const Strategy = () => {
 }
 
 export const People = () => {
-    const [isOpen, setOpen] = useState(false);
-
-    const isExtended = () => {
-        let doc = document.getElementById('people') as HTMLDetailsElement;
-
-        setOpen(doc.open ?? false);
-    }
-
-    useEffect(() => {
-        isExtended();
-    }, [])
     return (
         <>
             <article className="my-10">
-                <details onClick={() => setOpen(!isOpen)} id="people">
-                    <summary className="flex gap-5 lg:gap-10 cursor-pointer">
-                        <IconSideName open={isOpen} />
-                        <H2 color={`${!isOpen ? 'text-hpi-grey-light' : 'text-hpi-blue-dark'} font-bold`}>
-                            PEOPLE FIRST
-
-                        </H2>
-                    </summary>
+                <details id="people">
+                    <SectionHeader title={"PEOPLE FIRST"} />
                     <section className="bg-hpi-white rounded-3xl shadow-lg mt-5 lg:mt-10">
                         <section className="flex flex-col md:flex-row">
                             <article className="
@@ -283,10 +230,15 @@ export const People = () => {
                                 </ul>
                             </article>
                             <article className="xl:w-[113%] 2xl:w-[100%]" style={{ aspectRatio: "16/9" }}>
-                                <Image src={I_People} alt="" fetchPriority="high" className="
-                                object-cover rounded-br-2xl rounded-bl-2xl h-[15em]
-                                lg:rounded-tr-2xl lg:rounded-br-2xl lg:rounded-bl-none lg:h-full
-                                " />
+                                <StorageImage
+                                width={1220}
+                                height={1753}
+                                    name="automation/People always our first priority.jpg"
+                                    alt="" fetchPriority="high" className="
+                                    object-cover rounded-br-2xl rounded-bl-2xl h-[15em]
+                                    lg:rounded-tr-2xl lg:rounded-br-2xl lg:rounded-bl-none lg:h-full
+                                    "
+                                />
                             </article>
                         </section>
                     </section>
@@ -297,28 +249,11 @@ export const People = () => {
 }
 
 export const Collaboration = () => {
-    const [isOpen, setOpen] = useState(false);
-
-    const isExtended = () => {
-        let doc = document.getElementById('collab') as HTMLDetailsElement;
-
-        setOpen(doc.open ?? false);
-    }
-
-    useEffect(() => {
-        isExtended();
-    }, [])
-
     return (
         <>
             <article className="my-10">
-                <details onClick={() => setOpen(!isOpen)} id="collab">
-                    <summary className="flex gap-5 lg:gap-10 cursor-pointer">
-                        <IconSideName open={isOpen} />
-                        <H2 color={`${!isOpen ? 'text-hpi-grey-light' : 'text-hpi-blue-dark'} font-bold`}>
-                            COLLABORATION
-                        </H2>
-                    </summary>
+                <details id="collab">
+                    <SectionHeader title={"COLLABORATION"} />
                     <section className="bg-hpi-white rounded-3xl shadow-lg mt-5 lg:mt-10">
                         <section className="flex flex-col md:flex-row">
                             <article className="
@@ -362,10 +297,15 @@ export const Collaboration = () => {
                             xl:w-[202%]
                             2xl:w-[181%]
                             " style={{ aspectRatio: "16/9" }}>
-                                <Image src={I_Team} alt="" fetchPriority="high" className="
-                                object-cover rounded-br-2xl rounded-bl-2xl h-[15em]
-                                lg:rounded-tr-2xl lg:rounded-br-2xl lg:rounded-bl-none lg:h-full
-                                " />
+                                <StorageImage
+                                width={1274}
+                                height={998}
+                                    name="automation/Together as a team.jpg"
+                                    alt="" fetchPriority="high" className="
+                                    object-cover rounded-br-2xl rounded-bl-2xl h-[15em]
+                                    lg:rounded-tr-2xl lg:rounded-br-2xl lg:rounded-bl-none lg:h-full
+                                    "
+                                />
                             </article>
                         </section>
                     </section>

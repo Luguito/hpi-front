@@ -1,4 +1,3 @@
-'use client';
 import EFFICIENCY from '../../../../public/shared-services/efficiency.png';
 import PLANET from '../../../../public/shared-services/planet.png';
 import Text, { B1, B2, H2, H3, H5 } from "../../components/text/text";
@@ -6,6 +5,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion';
 import { RevealFromLeftToRight, RevealFromRightToLeft, RevealTextAfterSection } from '@/app/animations/animation';
 import { ServicesKeysComponent } from './services-key';
+import StorageImage from '@/app/components/getImage/images';
 
 export const EfficiencyComponent = () => {
     return (
@@ -32,20 +32,18 @@ export const EfficiencyComponent = () => {
                         support the growth of Hutchison Ports.
                     </p>
                 </section>
-                <motion.article className="
+                <article className="
                     rounded-3xl
                     xl:py-0
                     2xl:py-24
-                "
-                    variants={RevealFromRightToLeft}
-                    viewport={{ once: true }}>
-                    <Image src={PLANET} alt="PLANET" className="
+                ">
+                    <StorageImage width={489} height={489} name="shared-services/planet.png" alt="PLANET" className="
                         w-full max-w-none object-cover h-full
                         lg:w-[10rem]
                         xl:w-[25rem]
                         2xl:2-[35rem]
                     " />
-                </motion.article>
+                </article>
             </section>
             <ServicesKeysComponent />
         </section>

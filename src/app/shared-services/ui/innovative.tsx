@@ -6,6 +6,7 @@ import Text, { B1, B2, H2, H3, H5 } from '../../components/text/text';
 import { motion, useMotionValue } from 'framer-motion'
 import { RevealSectionInitial, RevealTextAfterSection } from "@/app/animations/animation";
 import Arrow from '../../../../public/digital-solutions/arrow-right-direction.svg'
+import { StorageVideosClientWithoutPoster } from "@/app/components/getImage/client-videos";
 
 const RosaComponent = () => {
     return (
@@ -30,10 +31,7 @@ const RosaComponent = () => {
                 </B2>
             </section>
             <article className="py-5 lg:py-12 rounded-3xl flex justify-center">
-                <video autoPlay loop className="max-w-none w-[80%]">
-                    <source src="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/ROSA.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+                <StorageVideosClientWithoutPoster className="max-w-none w-[70%]" name="videos/hpi-assets_ROSA_gif.mp4" />
             </article>
         </motion.section>
     )
@@ -59,10 +57,7 @@ const DDComponent = () => {
                 </B2>
             </section>
             <article className="lg:py-12 rounded-3xl flex justify-center">
-                <video autoPlay loop className="max-w-none w-[75%] h-[30%]">
-                    <source src="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/DD%20V2%20(1).mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+                <StorageVideosClientWithoutPoster className="max-w-none w-[75%] h-[30%]" name="videos/hpi-assets_DD V2.mp4" />
             </article>
         </motion.section>
     )

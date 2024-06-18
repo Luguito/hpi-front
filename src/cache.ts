@@ -1,0 +1,1 @@
+export const CACHE_IMAGES:Record<string, string> = {};

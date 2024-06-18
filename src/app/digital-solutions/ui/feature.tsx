@@ -9,37 +9,10 @@ import DD from '../../../../public/shared-services/DD Graphic.png'
 import { motion } from 'framer-motion'
 import { RevealSectionInitial, RevealTextAfterSection } from "@/app/animations/animation";
 import Play from '../../../../public/digital-solutions/play.svg'
+import StorageVideosClient, { StorageVideosClientWithPosterAsVideos } from "@/app/components/getImage/client-videos";
 
 
 const VeronicaComponent = () => {
-    const [playing, setPlaying] = useState(false)
-    const ref = useRef(null);
-
-    const playVideo = () => {
-        if (!ref.current) return;
-
-        let video = ref.current as HTMLVideoElement;
-
-        video.src = "https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/VERONICA_video.mp4"
-        video.controls = true;
-        video.loop = false;
-        video.load();
-        video.play();
-        setPlaying(true);
-    }
-
-    const resetVideo = () => {
-        if (!ref.current) return;
-
-        let video = ref.current as HTMLVideoElement;
-
-        video.controls = false;
-        video.src = "https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Digital%20Solutions%20VERONICA%20NEW.mp4"
-        video.loop = true;
-        video.load();
-        video.play();
-        setPlaying(false);
-    }
     return (
         <section className="
         flex flex-col justify-between gap-2 bg-hpi-white rounded-3xl 
@@ -57,7 +30,14 @@ const VeronicaComponent = () => {
                 </B2>
             </section>
             <article className="py-5 lg:py-12 rounded-3xl cursor-pointer relative">
-                <video
+                <StorageVideosClientWithPosterAsVideos
+                    className="
+                        rounded-3xl 
+                        xl:h-[15em] xl:object-cover
+                        2xl:max-w-none 2xl:h-[500px]
+                    "
+                    poster="videos/hpi-assets_Digital Solutions VERONICA NEW.mp4" name="videos/hpi-assets_VERONICA_video.mp4" />
+                {/* <video
                     className="
                     rounded-3xl 
                     xl:h-[15em] xl:object-cover
@@ -69,41 +49,13 @@ const VeronicaComponent = () => {
                     <source src="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Digital%20Solutions%20VERONICA%20NEW.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
-                <Image src={Play} alt="" className={`absolute bottom-[10px] right-4  w-[30px] lg:w-[50px] lg:right-0 lg:mt-5 cursor-pointer ${playing ? 'hidden' : 'block'}`} onClick={playVideo} />
+                <Image src={Play} alt="" className={`absolute bottom-[10px] right-4  w-[30px] lg:w-[50px] lg:right-0 lg:mt-5 cursor-pointer ${playing ? 'hidden' : 'block'}`} onClick={playVideo} /> */}
             </article>
+
         </section>
     )
 }
 const RosaComponent = () => {
-    const [playing, setPlaying] = useState(false)
-    const ref = useRef(null);
-
-    const playVideo = () => {
-        if (!ref.current) return;
-
-        let video = ref.current as HTMLVideoElement;
-        // change video 
-        video.src = "https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/ROSA_video.mp4"
-        video.controls = true;
-        video.loop = false;
-        video.load();
-        video.play();
-        setPlaying(true);
-    }
-
-    const resetVideo = () => {
-        if (!ref.current) return;
-
-        let video = ref.current as HTMLVideoElement;
-
-        video.controls = false;
-        video.src = "https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Digital%20Solutions%20ROSA-preview.mp4"
-        video.loop = true;
-        video.load();
-        video.play();
-        setPlaying(false);
-    }
-
     return (
         <section className="
         flex flex-col justify-between gap-2 bg-hpi-white rounded-3xl 
@@ -122,7 +74,15 @@ const RosaComponent = () => {
                 </B2>
             </section>
             <article className="py-5 lg:py-12 rounded-3xl cursor-pointer relative">
-                <video
+                <StorageVideosClientWithPosterAsVideos
+                    className="
+                        rounded-3xl 
+                        xl:h-[15em] xl:object-cover
+                        2xl:max-w-none 2xl:h-[500px]
+                    "
+                    poster="videos/hpi-assets_Digital Solutions ROSA-preview.mp4" name="videos/hpi-assets_ROSA_video.mp4" />
+
+                {/* <video
                     className="
                     rounded-3xl 
                     xl:h-[15em] xl:object-cover
@@ -134,7 +94,7 @@ const RosaComponent = () => {
                     <source src="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Digital%20Solutions%20ROSA-preview.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
-                <Image src={Play} alt="" className={`absolute bottom-[10px] right-4  w-[30px] lg:w-[50px] lg:right-0 lg:mt-5 cursor-pointer ${playing ? 'hidden' : 'block'}`} onClick={playVideo} />
+                <Image src={Play} alt="" className={`absolute bottom-[10px] right-4  w-[30px] lg:w-[50px] lg:right-0 lg:mt-5 cursor-pointer ${playing ? 'hidden' : 'block'}`} onClick={playVideo} /> */}
             </article>
         </section>
     )
