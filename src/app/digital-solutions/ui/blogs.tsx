@@ -9,6 +9,7 @@ import Veronica from '../../../../public/digital-solutions/veronica-port.png'
 import Sphere from '../../../../public/digital-solutions/sphere.png'
 import Arrow from '../../../../public/home/arrow.svg'
 import Link from 'next/link';
+import StorageImageClient from '@/app/components/getImage/client-images';
 
 const variantParent = {
     visible: {
@@ -64,7 +65,7 @@ export const BlogsDSUI = () => {
                                 </Link>
                             </B2>
                         </article>
-                        <Image src={Table} alt={""} className="
+                        <StorageImageClient name="digital-solutions/tablet.png" height={742} width={495} alt={""} className="
                             h-[14em] w-[10em] object-cover pl-[20px] 
                             md:h-auto md:object-none md:pl-0
                             lg:h-full lg:w-[90%] lg:object-cover lg:object-left
@@ -112,7 +113,7 @@ export const BlogsDSUI = () => {
                                 </Link>
                             </B2>
                         </article>
-                        <Image src={Veronica} alt={""} className="
+                        <StorageImageClient name="digital-solutions/veronica-port.png" height={280} width={373} alt={""} className="
                         h-[12.5em] object-contain pl-[20px] rounded-tr-2xl rounded-br-2xl
                         md:h-auto md:object-none md:pl-0
                         lg:h-full lg:w-[16em]
@@ -155,7 +156,7 @@ export const BlogsDSUI = () => {
                             </Link>
                         </B2>
                     </article>
-                    <Image src={Sphere} alt={""} width={800} className="
+                    <StorageImageClient name="digital-solutions/sphere.png" alt={""} height={497} width={746} className="
                         object-cover rounded-tr-2xl rounded-br-2xl w-[150px] object-left 
                         md:object-none md:w-auto
                         lg:w-[30em]

@@ -8,11 +8,11 @@ import SharedImage from '../../../../public/home/imagen home-02.png'
 import DigitalImage from '../../../../public/home/imagen home-03.png'
 import Minus from '../../../../public/home/minus.svg'
 import Plus from '../../../../public/home/plus.svg'
-import Go from '../../../../public/home/go-to.svg'
 import Image from "next/image";
 import { AnimatePresence, motion } from 'framer-motion';
 import { RevealSectionInitial } from "@/app/animations/animation";
 import Link from "next/link";
+import StorageImageClient from "../getImage/client-images";
 
 export const TechSolutionsComponent = () => {
     const [currentSection, setSection] = useState('automation');
@@ -91,7 +91,6 @@ export const TechSolutionsComponent = () => {
                                     <Image src={Plus} alt="" className="w-3 lg:w-auto" />
                             }
                         </summary>
-                        <AnimatePresence>
                             <B2 color="md:text-hpi-body-grey font-medium text-hpi-grey-dark" exit={{ y: 20, opacity: 0 }}>
                                 Implementing AI and automation
                                 technologies, we elevate terminal
@@ -100,7 +99,6 @@ export const TechSolutionsComponent = () => {
                                 operations, and gate automation, leading
                                 to operational excellence.
                             </B2>
-                        </AnimatePresence>
                         <article className="lg:hidden">
                             <CurrentSection />
                         </article>
@@ -171,7 +169,7 @@ export const TechSolutionsComponent = () => {
 export const AutomationSection = () => {
     return (
         <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }} className="relative">
-            <Image src={AutomationImage} width={600} fetchPriority="high" alt="Img Here" className="
+            <StorageImageClient name="home/Automation.png" width={623} height={415} priority alt="Img Here" className="
             object-cover h-full object-center rounded-2xl mt-3
             md:w-full
             lg:w-auto lg:max-w-[none] lg:h-[400px] lg:rounded-3xl
@@ -179,7 +177,7 @@ export const AutomationSection = () => {
             2xl:w-[50em] 2xl:h-full
             "/>
             <Link href="/automation" className="cursor-pointer">
-                <Image src={Go} alt="" className="absolute bottom-3 right-5" />
+                <StorageImageClient name="home/go-to.svg" width={50} height={50} alt="" className="absolute bottom-3 right-5" />
             </Link>
         </motion.section>
     )
@@ -188,7 +186,7 @@ export const AutomationSection = () => {
 export const SharedSection = () => {
     return (
         <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }} className="relative">
-            <Image src={SharedImage} width={600} fetchPriority="high" alt="Img Here" className="
+            <StorageImageClient name="home/imagen home-02.png" width={1274} height={703} priority alt="Img Here" className="
             object-cover h-full object-center rounded-2xl
             md:w-full
             lg:w-full lg:max-w-[none] lg:h-[400px] lg:rounded-3xl
@@ -196,7 +194,7 @@ export const SharedSection = () => {
             2xl:w-[50em] 2xl:h-full
             " />
             <Link href="/shared-services" className="cursor-pointer">
-                <Image src={Go} alt="" className="absolute bottom-3 right-5" />
+                <StorageImageClient name="home/go-to.svg" width={50} height={50} alt="" className="absolute bottom-3 right-5" />
             </Link>
         </motion.section>
     )
@@ -205,7 +203,7 @@ export const SharedSection = () => {
 export const DigitalSection = () => {
     return (
         <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }} className="relative">
-            <Image src={DigitalImage} width={600} fetchPriority="high" alt="Img Here" className="
+            <StorageImageClient name="home/imagen home-03.png" width={7658} height={4917} priority alt="Img Here" className="
             object-cover h-full object-center rounded-2xl
             md:w-full
             lg:w-full lg:max-w-[none] lg:h-[400px] lg:rounded-3xl
@@ -213,7 +211,7 @@ export const DigitalSection = () => {
             2xl:w-[50em]
             " />
             <Link href="/digital-solutions" className="cursor-pointer">
-                <Image src={Go} alt="" className="absolute bottom-3 right-5" />
+                <StorageImageClient name="home/go-to.svg" width={50} height={50} alt="" className="absolute bottom-3 right-5" />
             </Link>
         </motion.section>
     )

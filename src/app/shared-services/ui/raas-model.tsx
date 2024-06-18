@@ -13,6 +13,7 @@ import SOLUTION from '../../../../public/shared-services/Centralized.png';
 import EYE from '../../../../public/shared-services/Eye.png';
 
 import { useState } from "react";
+import StorageImageClient from "@/app/components/getImage/client-images";
 
 const variantParent = {
     content: {
@@ -117,7 +118,7 @@ export const RaasModelComponent = ({ children }: any) => {
                                             PEACE OF
                                             MIND
                                         </H3>
-                                        <Image src={MIND} alt="Mind Icon" className="
+                                        <StorageImageClient width={249} height={220} name="shared-services/Idea.png" alt="Mind Icon" className="
                                             h-[6em] w-[6em]
                                             xl:h-[9em] xl:w-[10em]
                                         "/>
@@ -166,7 +167,8 @@ export const RaasModelComponent = ({ children }: any) => {
                                             EXPAND-AS- <br />
                                             YOU-GROW
                                         </H3>
-                                        <Image src={GROW} alt="Mind Icon" className="
+                                        <StorageImageClient width={249} height={220} name="shared-services/grow.svg" alt="Mind Icon" 
+                                        className="
                                             h-[5em] w-[5em]
                                             xl:h-[9em] xl:w-[10em]
                                         "/>
@@ -216,7 +218,7 @@ export const RaasModelComponent = ({ children }: any) => {
                                             CENTRALISED <br />
                                             SOLUTION
                                         </H3>
-                                        <Image src={SOLUTION} alt="Mind Icon" className="
+                                        <StorageImageClient width={185} height={217} name="shared-services/Centralized.png" alt="Mind Icon" className="
                                             h-[5em] w-[5em]
                                             xl:h-[10em] xl:w-[9em]
                                         "/>
@@ -265,7 +267,7 @@ export const RaasModelComponent = ({ children }: any) => {
                                             SEE ALL AND <br />
                                             KNOW ALL
                                         </H3>
-                                        <Image src={EYE} alt="Mind Icon" className="
+                                        <StorageImageClient width={162} height={271} name="shared-services/Eye.png" alt="Mind Icon" className="
                                             h-[5em] w-[5em]
                                             xl:h-[10em] xl:w-[9em]
                                         " />

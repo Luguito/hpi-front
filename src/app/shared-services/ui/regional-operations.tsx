@@ -9,6 +9,7 @@ import { motion } from 'framer-motion';
 import Text, { B2, H2, H3, H5 } from '../../components/text/text';
 import Image from 'next/image';
 import { RevealFromLeftToRight, RevealFromRightToLeft, RevealTextAfterSection } from '@/app/animations/animation';
+import StorageImageClient from '@/app/components/getImage/client-images'
 
 
 // ITS WORKING THIS STAGGER
@@ -60,7 +61,7 @@ export const Regional = () => {
                 <motion.section className="flex flex-col justify-center items-center mt-5 lg:mt-12"
                     initial="hidden" whileInView="visible" variants={variantParent} viewport={{ once: true }}>
                     <motion.article variants={variantParent}>
-                        <Image src={ROC1} alt="Image"
+                        <StorageImageClient width={2466} height={647} name="shared-services/ROC 1.png" alt="Image"
                             style={{ aspectRatio: "15/4" }}
                             className="
                             object-contain
@@ -68,27 +69,27 @@ export const Regional = () => {
                     </motion.article>
                     <motion.section className="flex gap-10">
                         <motion.article variants={variantParent}>
-                            <Image src={ROC2} alt="Image"
+                            <StorageImageClient width={786} height={535} name="shared-services/ROC 2.png" alt="Image"
                                 className="
                                 object-contain
                             "
                             />
                         </motion.article>
                         <motion.article variants={variantParent}>
-                            <Image src={ROC3} alt="Image"
+                            <StorageImageClient width={787} height={535} name="shared-services/ROC 3.png" alt="Image"
                                 className="
                                 object-contain
                             "/>
                         </motion.article>
                         <motion.article variants={variantParent}>
-                            <Image src={ROC4} alt="Image"
+                            <StorageImageClient width={787} height={535} name="shared-services/ROC 4.png" alt="Image"
                                 className="
                                 object-contain
                             "/>
                         </motion.article>
                     </motion.section>
                     <motion.div className='flex justify-center' variants={RevealTextAfterSection}>
-                        <Image src={ROC5} alt="Image"
+                        <StorageImageClient width={2467} height={97} name="shared-services/ROC 5.png" alt="Image"
                             className="
                             object-contain
                         "/>
