@@ -14,9 +14,9 @@ import I2016_3 from '../../../../public/automation/2016-3.png'
 
 import I2018 from '../../../../public/automation/2018.jpg'
 
-import I2020 from '../../../../public/automation/2020.bmp'
+import I2020 from '../../../../public/automation/2020.jpg'
 import I2021 from '../../../../public/automation/2021.png'
-// import I2022 from '../../../../public/automation/2020.bmp'
+
 // @ts-ignore
 import I2023 from '../../../../public/automation/2023.jpg'
 
@@ -266,7 +266,7 @@ export const U2021I = () => {
                 <strong>Automated Straddle Carriers</strong> are introduced in Hutchison Ports Stockholm,
                 optimising container handling.
             </B2>
-            <Image src={I2021} alt="" priority fetchPriority="high"
+            <Image src={I2021} alt="" priority
                 className="
                     w-full mt-5 rounded-2xl
                     md:h-[40em] md:rounded-3xl md:mt-10 md:object-cover
