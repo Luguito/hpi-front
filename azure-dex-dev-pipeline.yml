@@ -23,7 +23,7 @@ stages:
 
           - script: |
               npm install
-              npm run build:development
+              npm run build:dev
             displayName: "Building project for testing"
 
           - task: PublishPipelineArtifact@1
