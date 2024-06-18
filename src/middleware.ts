@@ -38,9 +38,9 @@ export async function middleware(req: any) {
 
                 return NextResponse.next({ request: modifiedReq });
             } catch (error) {
-                console.error('Fetch error:', error);
+                // console.error('Fetch error:', error);
                 // Handle the fetch error gracefully using NextResponse.error
-                return NextResponse.json({ error: 'Internal Server Error' }, { statusText: 'Failed to fetch data', status: 500 });
+                // return NextResponse.json({ error: 'Internal Server Error' }, { statusText: 'Failed to fetch data', status: 500 });
             }
         }
 
@@ -69,7 +69,7 @@ async function fetchData() {
         });
 
         const data = await res.json();
-        console.log("TOKEEEN", data)
+
         return data;
     } catch (e) {
         console.log(e)
