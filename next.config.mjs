@@ -12,7 +12,12 @@ const nextConfig = {
             },
             {
                 protocol: 'https',
-                hostname: 'https://dev-code-hki.azurewebsites.net',
+                hostname: 'dev-code-hki.azurewebsites.net',
+                port: '', 
+            },
+            {
+                protocol: 'https',
+                hostname: 'app-hph-it-innoweb-u-sea-02.azurewebsites.net',
                 port: '', 
             }
         ],
