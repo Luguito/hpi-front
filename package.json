@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npx env-cmd -f .env.development npm run build",
     "build:dev": "npx env-cmd -f .env.development npm run build",
     "start": "next start -p 3000",
     "start:project": "npm install && npm run build && npx next start -p 3000",
