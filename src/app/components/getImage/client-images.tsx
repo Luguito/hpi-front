@@ -12,6 +12,6 @@ export default function StorageImageClient({ name, width, height, ...props}: any
     }, [])
 
     return (
-        <Image src={imageUrl} width={width} height={height} alt=""  {...props}/>
+        <Image src={imageUrl} width={width} height={height} alt=""  {...props} unoptimized/>
     )
 }
