@@ -1,4 +1,5 @@
 
+'use client'
 import { H3, B2 } from '../text/text';
 import Image from 'next/image';
 
