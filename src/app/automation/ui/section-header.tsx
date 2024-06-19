@@ -30,8 +30,8 @@ const IconSideName = ({ open }: { open: boolean }) => {
     return (
         open
             ?
-            <StorageImageClient width={100} height={100} name="automation/minus.svg" alt="" className="w-5 xl:w-10 2xl:w-auto" />
+            <StorageImageClient width={100} height={100} name="automation/minus.svg" alt="" className="w-5 xl:w-10" />
             :
-            <StorageImageClient width={100} height={100} name="automation/plus.svg" alt="" className="w-5 xl:w-10 2xl:w-auto" />
+            <StorageImageClient width={100} height={100} name="automation/plus.svg" alt="" className="w-5 xl:w-10" />
     )
 }
