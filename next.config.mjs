@@ -10,6 +10,11 @@ const nextConfig = {
                 hostname: 'hki.blob.core.windows.net',
                 port: '',
             },
+            {
+                protocol: 'https',
+                hostname: 'https://dev-code-hki.azurewebsites.net',
+                port: '', 
+            }
         ],
     },
     // i18n: {
