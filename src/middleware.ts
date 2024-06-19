@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 
-export async function middleware(req: any) {
+export async function middleware(req: NextRequest) {
+    return NextResponse.next();
+
     const token = req.cookies.get('auth');
 
     if (!token) {
