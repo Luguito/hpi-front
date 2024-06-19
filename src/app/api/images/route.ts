@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
         if (CACHE_IMAGES[name]) {
             return NextResponse.json({ url: CACHE_IMAGES[name] })
         }
-
+        console.log(process.env.NEXT_PUBLIC_STORAGE_URL)
         let res = await fetch(`${process.env.NEXT_PUBLIC_STORAGE_URL}/api/generate-sas-token`, {
             method: 'POST',
             headers: {
