@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
+        domains: [
+            'hki.blob.core.windows.net',
+            'dev-code-hki.azurewebsites.net',
+            'app-hph-it-innoweb-u-sea-02.azurewebsites.net',
+        ],
         dangerouslyAllowSVG: true,
         contentDispositionType: 'attachment',
         contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
@@ -13,12 +18,12 @@ const nextConfig = {
             {
                 protocol: 'https',
                 hostname: 'dev-code-hki.azurewebsites.net',
-                port: '', 
+                port: '',
             },
             {
                 protocol: 'https',
                 hostname: 'app-hph-it-innoweb-u-sea-02.azurewebsites.net',
-                port: '', 
+                port: '',
             }
         ],
     },
