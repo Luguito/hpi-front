@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
+import { cookies } from 'next/headers'
 
 export async function POST(req: NextRequest) {
+    const cookieStore = cookies();
+
     try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_STORAGE_URL}/api/authorize/login`, {
             method: "POST",
@@ -16,16 +19,8 @@ export async function POST(req: NextRequest) {
 
         const data = await res.json();
 
-        // Guardar el token en localStorage
-        if (typeof window !== 'undefined') {
-            localStorage.setItem('authToken', data.token);
-        }
 
-        let nextRes = NextResponse.json({ token: data.token })
-
-        nextRes.cookies.set('auth', data.token, { httpOnly: true, secure: true, path: '/' });
-
-        return nextRes;
+        return NextResponse.json({ token: data.token });
     } catch (e) {
         console.log(e)
     }
