@@ -12,6 +12,6 @@ export default function StorageImage({ name, width, height, ...props}: any) {
         getImageFromStorage(name).then((v) => { setImage(v) })
     }, [])
     return (
-        <Image src={imageUrl} width={width} height={height} alt=""  {...props}/>
+        <Image src={imageUrl} width={width} height={height} alt=""  {...props} unoptimized/>
     )
 }
