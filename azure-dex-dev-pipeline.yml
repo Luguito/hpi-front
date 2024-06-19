@@ -2,7 +2,7 @@ pr: none
 trigger: none
 
 pool:
-  name: Default
+  name: Book
 
 variables:
   sourceRepo: $(SOURCE_REPO)
