@@ -6,35 +6,14 @@ import { motion } from 'framer-motion';
 import { RevealFromLeftToRight, RevealFromRightToLeft, RevealTextAfterSection } from '@/app/animations/animation';
 import { useRef, useState } from 'react';
 import Play from '../../../../public/digital-solutions/play-circle.svg'
+import StorageVideosClient from '@/app/components/getImage/client-videos';
 
 export const InnovationUI = () => {
-    const [playing, setPlaying] = useState(false)
-    const ref = useRef(null);
-
-    const playVideo = () => {
-        if (!ref.current) return;
-
-        let video = ref.current as HTMLVideoElement;
-
-        video.play();
-        video.controls = true;
-        setPlaying(true);
-    }
-
-    const resetVideo = () => {
-        if (!ref.current) return;
-
-        let video = ref.current as HTMLVideoElement;
-
-        video.controls = false;
-        video.load();
-        setPlaying(false)
-    }
     return (
-        <section className="flex flex-col gap-10 mt-28">
-            <section className="flex flex-col text-left">
-                <H2 color="text-gradient">
-                    INNOVATION AND TECHNOLOGICAL <br />
+        <section className="flex flex-col gap-10 mt-10 md:mt-28 xl:mt-16 2xl:mt-28">
+            <section className="flex flex-col text-center">
+                <H2 color="text-gradient leading-[26px] md:leading-[65px]">
+                    INNOVATION AND TECHNOLOGICAL
                     SOPHISTICATION ARE AT OUR CORE
                 </H2>
                 <article className="mt-3">
@@ -44,14 +23,8 @@ export const InnovationUI = () => {
                     </B1>
                 </article>
             </section>
-            <motion.article className="p-12 relative bg-hpi-white rounded-3xl" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
-                <video poster="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/F-frame-Sweden.png"
-                    className="rounded-3xl cursor-pointer"
-                    ref={ref} onClick={playVideo} onEnded={resetVideo}>
-                    <source src="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/HPI-Sweden.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-                <Image src={Play} alt="" className={`absolute top-[40%] left-[45%] cursor-pointer ${playing ? 'hidden' : 'block'}`} onClick={playVideo} />
+            <motion.article className="p-2 md:p-12 relative bg-hpi-white rounded-3xl" initial="hidden" whileInView="visible" variants={RevealTextAfterSection}>
+                <StorageVideosClient clickeable={true} className="rounded-3xl cursor-pointer w-full" name="videos/hpi-assets_veronica_final_v3 (Original).mp4" poster="digital-solutions/veronica-digital.png"/>
             </motion.article>
         </section>
     )

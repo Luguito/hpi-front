@@ -4,9 +4,14 @@ import am5geodata_worldLow from "@amcharts/amcharts5-geodata/worldLow";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 import * as am5 from "@amcharts/amcharts5";
 import * as am5map from "@amcharts/amcharts5/map";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
+import { ContainerDatesInformation } from "./info-map";
 /* Chart code */
 // Country data
+
+
+
+// SOLO LOS PUNTOS DEL AÑO
 let data = [
     { year: 1991, geometry: { type: "Point", coordinates: [0.6817, 51.4348] } },
     { year: 1993, geometry: { type: "Point", coordinates: [4.0588, 51.9511] } },
@@ -78,8 +83,7 @@ function map(trigger: any) {
     // Create main polygon series for countries
     // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/
     let polygonSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
-        fill: am5.color('#002E6D'),
-        stroke: am5.color('#002E6D'),
+        fill: am5.color('#009CDE'),
         geoJSON: am5geodata_worldLow,
         exclude: ["AQ"]
     }));
@@ -89,25 +93,6 @@ function map(trigger: any) {
     );
 
     pointSeries.bullets.push(createPoint);
-    // polygonSeries.mapPolygons.template.setAll({
-    //     tooltipText: "{name}",
-    //     toggleKey: "active",
-    //     interactive: true
-    // });
-
-    // polygonSeries.mapPolygons.template.states.create("hover", {
-    //     fill: root.interfaceColors.get("primaryButtonHover")
-    // });
-
-    // polygonSeries.mapPolygons.template.states.create("active", {
-    //     fill: root.interfaceColors.get("primaryButtonActive")
-    // });
-
-    // Set clicking on "water" to zoom out
-    //   @ts-ignore
-    // chart.chartContainer.get("background").events.on("click", function () {
-    //     chart.goHome();
-    // })
 
     // Make stuff animate on load
     chart.appear(1000, 100);
@@ -144,62 +129,90 @@ function map(trigger: any) {
         x: am5.p50,
         width: am5.percent(90),
         layout: root.horizontalLayout,
-        paddingBottom: 10,
+        paddingBottom: 20,
+        paddingLeft: 50,
     }));
 
-
-    let slider = container.children.push(am5.Slider.new(root, {
-        width: am5.percent(80),
+    // Crear el slider
+    var slider = container.children.push(am5.Slider.new(root, {
+        width: am5.percent(100),
         orientation: "horizontal",
         start: 1,
-        centerY: am5.p50
+        centerY: am5.p50,
     }));
 
-    slider.startGrip.get('background')?.set('fill', am5.color('#009BDE'))
-    slider.thumb.setAll({
-        fill: am5.color('#FFFF'),
-    })
 
-    slider.startGrip.set("label", am5.Label.new(root, {
-        text: lastYear + "",
-        paddingTop: 0,
-        paddingRight: 0,
-        paddingBottom: 0,
-        paddingLeft: 0,
+    // Set track color
+    slider.get("background")?.setAll({
+        fill: am5.color("#C9C9C9"), // Green color
+        fillOpacity: 0.5
+    });
+
+    // Crear el contenedor de ticks y etiquetas
+    let ticksContainer = slider.children.push(am5.Container.new(root, {
+        width: am5.percent(100),
+        height: am5.percent(100),
+        layout: root.horizontalLayout,
+        centerY: am5.p50,
     }));
 
+
+    // Años para las etiquetas
+    let yearTicks = ["1991", "1993", "1995", "", "2007", "", "2012", "2013", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "", "2030"]
+
+    yearTicks.forEach((year, index) => {
+        let position = (index / (yearTicks.length - 1)) * 100;
+
+        ticksContainer.children.push(am5.Label.new(root, {
+            text: year,
+            centerX: am5.percent(position),
+            centerY: am5.percent(50),
+            dy: -20,
+            fontSize: 15,
+            fill: am5.color("#002E6D"),
+            fontWeight: "bold",
+            x: am5.percent(position)
+        }));
+    });
+
+    // Configurar el color del startGrip
+    slider.startGrip.get("background")?.setAll({ fill: am5.color("#009BDE") });
 
     updateCountries(firstYear);
 
-    slider.events.on("rangechanged", function (e) {
-        let year = firstYear + Math.round(slider.get("start", 0) * (lastYear - firstYear));
-        //   @ts-ignore
-        if (!years[year]) return;
+    let index = 0;
+    slider.events.on("rangechanged", function () {
+        let start = slider.get("end");
+        // @ts-ignore
+        let currentIndex = Math.round(start * (yearTicks.length - 1));
+        slider.startGrip.get("label")?.setAll({ text: yearTicks[currentIndex] });
 
-        //   @ts-ignore
-        slider.startGrip.get("label")?.setAll({ text: year + '' });
+        if (index !== currentIndex) {
+            updateCountries(yearTicks[currentIndex]);
+            index = currentIndex
+        }
+    });
 
-        updateCountries(year);
-    })
-
+    // REVISAR ESTO 
     function updateCountries(year: any) {
+        if (!year) return;
+        pointSeries.data.clear();
+
         // @ts-ignore
         am5.object.each(years[year], function (joinYear, country) {
-            let shouldDelete = getFollowingYears(year);
-
-            shouldDelete.map(p => pointSeries.data.contains(p) && pointSeries.data.removeValue(p));
-
             if (!pointSeries.data.contains(country)) {
                 pointSeries.data.push(country)
             }
-            
-            trigger(year)
         })
+
+        if (window.innerWidth > 1280) {
+            trigger(year)
+        }
     }
 
     function createPoint() {
         let circle = am5.Circle.new(root, {
-            radius: 5,
+            radius: 8,
             fill: am5.color("#FFC627"),
             stroke: am5.color("#FFFFFF"),
             cursorOverStyle: "pointer",
@@ -209,19 +222,28 @@ function map(trigger: any) {
         return am5.Bullet.new(root, { sprite: circle });
     }
 
-    function getFollowingYears(actualYear: any) {
-        const keys = Object.keys(years).map(year => parseInt(year)).sort((a, b) => a - b);
+    window.addEventListener('resize', () => {
+        if (window.innerWidth < 1280) {
+            slider.hide();
 
-        const followingYears = keys.filter(year => year > parseInt(actualYear));
+            window.addEventListener('updateCountries', (e: CustomEventInit) => updateCountries(e.detail))
+        } else {
+            slider.show()
+            window.removeEventListener("updateCountries", (e: CustomEventInit) => updateCountries(e.detail))
+        }
+    })
 
-        // @ts-ignore
-        const followingProperties = followingYears.flatMap(year => years[year]);
-
-        return followingProperties;
-    }
 }
 
-export const MapSlider = ({ changeSection }: any) => {
+export const MapSlider = () => {
+    const [currentSectionMap, setSectionMap] = useState("1991")
+
+    function changeSectionByMap(x: any) {
+        setSectionMap(x)
+        window.dispatchEvent(new CustomEvent('updateCountries', { detail: x }))
+    }
+
+
     const ref = useRef(null);
 
     useEffect(() => {
@@ -233,13 +255,43 @@ export const MapSlider = ({ changeSection }: any) => {
                     }
                 }
             });
-            map(changeSection);
+            map(changeSectionByMap);
         }
     }, []);
 
     return (
         <>
-            <div id="chartdiv" ref={ref} className="h-[40em]"></div>
+            <section className="bg-[#F0F0F1] rounded-tr-3xl rounded-tl-3xl">
+                <article className="flex justify-center items-center pt-5 lg:hidden">
+                    <select defaultValue="2030" className="
+                            bg-hpi-blue-light font-bold text-hpi-white p-2 rounded-xl
+                            "
+                        onChange={({ target: { value } }) => changeSectionByMap(parseInt(value))}>
+                        <option value="1991">1991</option>
+                        <option value="1993">1993</option>
+                        <option value="1995">1995</option>
+                        <option value="2007">2007</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2030">2030</option>
+                    </select>
+                </article>
+                <div id="chartdiv" ref={ref} className="h-[20em] lg:h-[45em]"></div>
+                <div className="relative bg-[#F0F0F1] w-16 h-[2em] left-0 top-[-2em]"></div>
+            </section>
+            <section className="px-4 py-5 lg:py-10 lg:px-20">
+                <ContainerDatesInformation date={currentSectionMap} />
+            </section>
         </>
+
     )
 }

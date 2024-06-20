@@ -32,7 +32,10 @@ const config: Config = {
       screens: {
         'xs': { min: '400px', max: '640px' },
         ...defaultTheme.screens
-      }
+      },
+      width: {
+        'inherit': 'inherit',
+      },
     },
   },
   important: true,

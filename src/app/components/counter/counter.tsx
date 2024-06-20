@@ -15,13 +15,13 @@ export function ComponentName({ num, next }: any) {
     const startingValue = useMotionValue(0);
 
     const currentValue = useTransform(startingValue, (value) => (
-        Math.round(value).toLocaleString() + next)
+        Math.round(value) + next)
     );
 
     useEffect(() => {
         if (isInView) {
             animate(startingValue, num, {
-                duration: 5,
+                duration: 2,
                 ease: "circIn"
             });
         }
@@ -29,9 +29,9 @@ export function ComponentName({ num, next }: any) {
 
     return (
         <LazyMotion features={domAnimation}>
-            <m.p className="text-[80px] font-extrabold" ref={ref}>
+            <m.p className="text-[20px] xl:text-[50px] 2xl:text-[80px] font-extrabold" ref={ref}>
                 {currentValue}
-                </m.p>
+            </m.p>
         </LazyMotion>
     );
 }

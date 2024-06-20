@@ -16,7 +16,8 @@
   }
 }
 
-html, body { 
+html,
+body {
   /* scroll-snap-type: y mandatory; */
 }
 
@@ -30,11 +31,40 @@ html, body {
   }
 }
 
-@layer base{
+@layer base {
   ul {
-   @apply list-disc pl-4 pt-2;
+    @apply list-disc pl-4 pt-2;
   }
+
   li {
     @apply pt-6;
   }
- }
+}
+
+@layer components {
+  .list-blue li {
+    padding-top: 0.5em
+  }
+
+  .list-blue li::marker {
+    color: #009BDE;
+  }
+}
+
+/* Ocultar las flechas predeterminadas en todos los navegadores */
+details summary {
+  list-style: none; /* Elimina la lista de estilo */
+}
+
+details summary::-webkit-details-marker {
+  display: none; /* Oculta la flecha en navegadores basados en WebKit (Chrome, Safari, etc.) */
+}
+
+details summary::marker {
+  display: none; /* Oculta la flecha en Firefox */
+}
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+}

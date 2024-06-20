@@ -16,6 +16,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // const data = await fetchData();
+  // console.log(data)
   return (
     <html lang="en">
       <body className={mont.className + " bg-hpi-light-bg"}>

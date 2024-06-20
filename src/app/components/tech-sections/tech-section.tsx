@@ -11,6 +11,8 @@ import Plus from '../../../../public/home/plus.svg'
 import Image from "next/image";
 import { AnimatePresence, motion } from 'framer-motion';
 import { RevealSectionInitial } from "@/app/animations/animation";
+import Link from "next/link";
+import StorageImageClient from "../getImage/client-images";
 
 export const TechSolutionsComponent = () => {
     const [currentSection, setSection] = useState('automation');
@@ -45,13 +47,17 @@ export const TechSolutionsComponent = () => {
 
     return (
         <motion.section className="
-            xs:mt-2 
-            md:mt-20 
-            lg:mt-32 
-            w-[80%]"
+            mt-2 
+            lg:mt-20
+            xl:mt-10
+            2xl:mt-32
+            w-[84%]
+            "
             initial="hidden" whileInView="visible" variants={RevealSectionInitial} viewport={{ once: true }}>
-            <header className="text-left py-12
-            xs:py-5">
+            <header className="
+            text-left py-12
+            xl:py-2
+            ">
                 <H5 color="text-hpi-blue-light font-medium">
                     Port Innovation
                 </H5>
@@ -60,12 +66,18 @@ export const TechSolutionsComponent = () => {
                 </H2>
             </header>
             <section className="
-                bg-white shadow-lg flex justify-between 
-                xs:rounded-2xl xs:gap-5 xs:p-4
-                md:px-24 md:py-20 md:rounded-3xl
+                bg-white shadow-lg flex flex-col justify-between rounded-2xl gap-5 p-4
+                lg:gap-10 lg:px-24 lg:py-20 lg:rounded-3xl lg:flex-row
+                xl:mt-7 xl:px-16 xl:py-10
+                2xl:mt-10
             ">
-                <nav className="flex flex-col gap-4 w-[30em]">
-                    <details onClick={checkDetails}>
+                <nav className="
+                flex flex-col gap-4 p-5
+                lg:gap-10 lg:w-[35em]
+                xl:gap-4 xl:w-[30em]
+                2xl:gap-9
+                ">
+                    <details onClick={checkDetails} open>
                         <summary className="flex justify-between cursor-pointer" onClick={() => setSection('automation')}>
                             <H3 color={`${currentSection === 'automation' ? 'text-hpi-blue-light' : 'text-hpi-grey-light'} font-bold`}>
                                 AUTOMATION
@@ -74,13 +86,12 @@ export const TechSolutionsComponent = () => {
                                 currentSection === 'automation'
                                     ?
 
-                                    <Image src={Minus} alt="" className="xs:w-3" />
+                                    <Image src={Minus} alt="" className="w-3 lg:w-auto" />
                                     :
-                                    <Image src={Plus} alt="" className="xs:w-3" />
+                                    <Image src={Plus} alt="" className="w-3 lg:w-auto" />
                             }
                         </summary>
-                        <AnimatePresence>
-                            <B2 color="text-hpi-body-grey font-medium xs:text-hpi-grey-dark" exit={{ y: 20, opacity: 0 }}>
+                            <B2 color="md:text-hpi-body-grey font-medium text-hpi-grey-dark" exit={{ y: 20, opacity: 0 }}>
                                 Implementing AI and automation
                                 technologies, we elevate terminal
                                 productivity, safety, and quality through
@@ -88,11 +99,13 @@ export const TechSolutionsComponent = () => {
                                 operations, and gate automation, leading
                                 to operational excellence.
                             </B2>
-                        </AnimatePresence>
+                        <article className="lg:hidden">
+                            <CurrentSection />
+                        </article>
                     </details>
                     <hr />
                     <details onClick={checkDetails}>
-                        <summary className="flex justify-between cursor-pointer" onClick={() => setSection('shared-services')}>
+                        <summary className="flex justify-between cursor-pointer gap-3" onClick={() => setSection('shared-services')}>
                             <H3 color={`${currentSection === 'shared-services' ? 'text-hpi-blue-light' : 'text-hpi-grey-light'} font-bold`}>
                                 SHARED SERVICES
                             </H3>
@@ -100,12 +113,12 @@ export const TechSolutionsComponent = () => {
                                 currentSection === 'shared-services'
                                     ?
 
-                                    <Image src={Minus} alt="" className="xs:w-3" />
+                                    <Image src={Minus} alt="" className="w-3 lg:w-auto" />
                                     :
-                                    <Image src={Plus} alt="" className="xs:w-3" />
+                                    <Image src={Plus} alt="" className="w-3 lg:w-auto" />
                             }
                         </summary>
-                        <B2 color="text-hpi-body-grey font-medium xs:text-hpi-grey-dark">
+                        <B2 color="md:text-hpi-body-grey font-medium text-hpi-grey-dark">
                             Our Regional Operations Centre (ROC)
                             model streamlines logistics operations,
                             leveraging end-to-end management
@@ -113,6 +126,9 @@ export const TechSolutionsComponent = () => {
                             consolidation, standardisation, and
                             automation of operations.
                         </B2>
+                        <article className="lg:hidden">
+                            <CurrentSection />
+                        </article>
                     </details>
                     <hr />
                     <details onClick={checkDetails}>
@@ -124,63 +140,79 @@ export const TechSolutionsComponent = () => {
                                 currentSection === 'digital-solutions'
                                     ?
 
-                                    <Image src={Minus} alt="" className="xs:w-3" />
+                                    <Image src={Minus} alt="" className="w-3 lg:w-auto" />
                                     :
-                                    <Image src={Plus} alt="" className="xs:w-3" />
+                                    <Image src={Plus} alt="" className="w-3 lg:w-auto" />
                             }
                         </summary>
-                        <B2 color="text-hpi-body-grey font-medium xs:text-hpi-grey-dark">
+                        <B2 color="lg:text-hpi-body-grey font-medium text-hpi-grey-dark">
                             Harnessing innovative, cost-efficient
                             digital solutions, we offer standardised
                             services enhancing terminal processes,
                             data analytics, and machine learning for
                             optimal operational visibility and control.
                         </B2>
+                        <article className="lg:hidden">
+                            <CurrentSection />
+                        </article>
                     </details>
                 </nav>
-                <CurrentSection />
+                <article className="hidden lg:block">
+                    <CurrentSection />
+                </article>
             </section>
         </motion.section>
 
     )
 }
 
-
-
-
-
 export const AutomationSection = () => {
     return (
-        <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
-            <Image src={AutomationImage} width={600} alt="Img Here" className="
-            max-w-[none] object-cover 
-            md:h-[400px] md:rounded-3xl
-            xs:w-[140px] xs:h-full xs:object-center xs:rounded-2xl
+        <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }} className="relative">
+            <StorageImageClient name="home/Automation.png" width={623} height={415} priority alt="Img Here" className="
+            object-cover h-full object-center rounded-2xl mt-3
+            md:w-full
+            lg:w-auto lg:max-w-[none] lg:h-[400px] lg:rounded-3xl
+            xl:w-auto
+            2xl:w-[50em] 2xl:h-full
             "/>
+            <Link href="/automation" className="cursor-pointer">
+                <StorageImageClient name="home/go-to.svg" width={50} height={50} alt="" className="absolute bottom-3 right-5" />
+            </Link>
         </motion.section>
     )
 }
 
 export const SharedSection = () => {
     return (
-        <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
-            <Image src={SharedImage} width={600} alt="Img Here" className="
-            max-w-[none] object-cover 
-            md:h-[400px] md:rounded-3xl
-            xs:w-[140px] xs:h-full xs:object-center xs:rounded-2xl
+        <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }} className="relative">
+            <StorageImageClient name="home/imagen home-02.png" width={1274} height={703} priority alt="Img Here" className="
+            object-cover h-full object-center rounded-2xl
+            md:w-full
+            lg:w-full lg:max-w-[none] lg:h-[400px] lg:rounded-3xl
+            xl:h-auto
+            2xl:w-[50em] 2xl:h-full
             " />
+            <Link href="/shared-services" className="cursor-pointer">
+                <StorageImageClient name="home/go-to.svg" width={50} height={50} alt="" className="absolute bottom-3 right-5" />
+            </Link>
         </motion.section>
     )
 }
 
 export const DigitalSection = () => {
     return (
-        <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
-            <Image src={DigitalImage} width={600} alt="Img Here" className="
-            max-w-[none] object-cover 
-            md:h-[400px] md:rounded-3xl
-            xs:w-[140px] xs:h-full xs:object-center xs:rounded-2xl
+        <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }} className="relative">
+            <StorageImageClient name="home/imagen home-03.png" width={7658} height={4917} priority alt="Img Here" className="
+            object-cover h-full object-center rounded-2xl
+            md:w-full
+            lg:w-full lg:max-w-[none] lg:h-[400px] lg:rounded-3xl
+            xl:h-auto
+            2xl:w-[50em]
             " />
+            <Link href="/digital-solutions" className="cursor-pointer">
+                <StorageImageClient name="home/go-to.svg" width={50} height={50} alt="" className="absolute bottom-3 right-5" />
+            </Link>
         </motion.section>
     )
 }
