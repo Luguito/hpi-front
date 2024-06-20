@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { cookies } from 'next/headers'
 
 export async function POST(req: NextRequest) {
-    const cookieStore = cookies();
-
     try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_STORAGE_URL}/api/authorize/login`, {
             method: "POST",
@@ -19,9 +17,9 @@ export async function POST(req: NextRequest) {
 
         const data = await res.json();
 
-
         return NextResponse.json({ token: data.token });
     } catch (e) {
         console.log(e)
+        return NextResponse.json({ error: e })
     }
 }
