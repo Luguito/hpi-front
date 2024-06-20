@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
         if (!authToken) {
             let token = await fetch(`${req.nextUrl.origin}/api/token`, { method: "POST" });
             auth = (await token.json()).token;
-
+            console.log("AUTH TOKEN", auth)
             cookieStore.set('auth', auth, { httpOnly: true, secure: true, path: '/' })
         }
 

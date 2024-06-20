@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
         });
 
         const data = await res.json();
-
+        console.log(data.token)
         return NextResponse.json({ token: data.token });
     } catch (e) {
         console.log(e)
