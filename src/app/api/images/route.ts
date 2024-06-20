@@ -38,6 +38,7 @@ export async function POST(req: NextRequest) {
 
         CACHE_IMAGES[name] = url.sas_url;
 
+        console.log(url.sas_url);
 
         return NextResponse.json({ url: url.sas_url })
     } catch (e) {
