@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { cookies } from 'next/headers'
 
 export async function POST(req: NextRequest) {
+    console.log("REQ IMAGE", req.headers)
     const cookieStore = cookies();
 
     try {

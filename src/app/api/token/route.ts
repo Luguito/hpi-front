@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { cookies } from 'next/headers'
 
 export async function POST(req: NextRequest) {
+    console.log("REQ TOKEN", req.headers)
     try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_STORAGE_URL}/api/authorize/login`, {
             method: "POST",
