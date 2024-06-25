@@ -26,11 +26,11 @@ export default function HomePage() {
 
       {/* @ts-ignore */}
       <RevealOnScrollComponent className="flex flex-col items-center justify-center mt-10 xl:mt-9 2xl:mt-28">
-        <H2 color="text-gradient leading-[20px] lg:leading-[65px] text-center w-[75%] xl:w-full 2xl:w-2/4">
+        <H2 color="text-gradient leading-[20px] lg:leading-[40px] text-center w-[75%] xl:w-full 2xl:w-2/4">
           HUTCHISON PORTS IS AT THE
           FOREFRONT OF THE INDUSTRY
         </H2>
-        <B1 color="text-hpi-blue-dark text-center font-medium mt-3 xl:mt-1 xl:text-[18px] 2xl:w-2/4">
+        <B1 color="text-hpi-blue-dark text-center font-medium mt-3 lg:mt-0 xl:mt-1 xl:text-[18px] 2xl:w-2/4">
           driving efficiency with ongoing investments and
           innovation in port technology
         </B1>
@@ -58,7 +58,7 @@ export default function HomePage() {
       </RevealOnScrollComponent>
       <footer>
         <section className="text-center mb-24 mt-10">
-          <H3 color="text-gradient font-bold mx-24 2xl:mx-56">
+          <H3 color="text-gradient font-bold mx-10 xl:mx-24 2xl:mx-56">
             EXPLORE HOW WE CAN TRANSFORM CONTAINER
             TERMINAL OPERATIONS TOGETHER
           </H3>

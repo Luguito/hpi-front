@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { RevealTextAfterSection } from '../../animations/animation'
 import Link from 'next/link';
 import StorageImage from '../getImage/images';
+import Button from '../button/button';
 
 
 const variantParent = {
@@ -18,6 +19,17 @@ const variantParent = {
     }
 }
 export const BlogsUI = () => {
+    const callManualFetch = async () => {
+        try {
+
+            let res = await fetch('/api/token', { method: 'POST' });
+            let json = await res.json()
+
+            console.log(json)
+        } catch (e) {
+            console.log(e)
+        }
+    }
     return (
         <>
             <section className="flex flex-col items-center mt-10 gap-5 md:gap-10"
@@ -28,14 +40,14 @@ export const BlogsUI = () => {
                         className="
                         bg-white shadow-lg flex rounded-2xl
                         lg:flex-row lgx:rounded-3xl
-                        xl:w-[50%]
+                        lg:w-[50%]
                         "
                     // whileHover={{ scale: 1.04 }}
                     // variants={variantParent}
                     >
                         <article className="
                             p-3 
-                            lg:flex lg:flex-col lg:justify-around lg:py-10 lg:px-14
+                            lg:flex lg:flex-col lg:justify-around lg:py-10 lg:pl-5
                             xl:w-[70%]
                         "
                         >
@@ -45,7 +57,7 @@ export const BlogsUI = () => {
                             <B2 color="font-medium text-hpi-grey-dark line-clamp-3 md:text-hpi-body-grey md:mt-5 xl:line-clamp-4 2xl:line-clamp-none">
                                 UBI is truly a game-changer. Users can access critical port-related information, including vessel schedules and port announcements
                             </B2>
-                            <B2 color="text-hpi-blue-light font-semibold cursor-pointer py-2 lg:text-[21px] md:mt-6 md:py-0">
+                            <B2 color="text-hpi-blue-light font-semibold cursor-pointer py-2 md:mt-6 md:py-0">
                                 <Link href="/news/ubi" target="_blank">
                                     Read More
                                 </Link>
@@ -57,7 +69,7 @@ export const BlogsUI = () => {
                             height={505}
                             className="
                                 h-[12em] object-contain pl-[20px] 
-                                lg:h-full lg:w-[90%] lg:object-cover lg:object-left
+                                lg:h-[80%] lg:w-[10em] lg:object-cover lg:object-left
                                 xl:w-[60%] xl:h-[90%]
                             "
                         />
@@ -66,14 +78,14 @@ export const BlogsUI = () => {
                         className="
                         bg-white shadow-lg flex rounded-2xl
                         lg:flex-row lg:rounded-3xl
-                        xl:w-[50%]
+                        lg:w-[50%]
                         "
                     // whileHover={{ scale: 1.04 }}
                     // variants={variantParent}
                     >
                         <article className="
                             p-3
-                            lg:flex lg:flex-col lg:justify-around lg:py-10 lg:px-14
+                            lg:flex lg:flex-col lg:justify-around lg:py-10 lg:pl-5
                             xl:w-[70%]
                             2xl:px-14
                             ">
@@ -83,7 +95,7 @@ export const BlogsUI = () => {
                             <B2 color="font-medium text-hpi-grey-dark line-clamp-3 md:text-hpi-body-grey md:mt-5 lg:w-full xl:line-clamp-4 2xl:line-clamp-none">
                                 Exciting times ahead as we gear up to introduce &quot;Veronica&quot;, the cutting-edge Terminal Operating System (TOS), to our Mexico Business Units.
                             </B2>
-                            <B2 color="text-hpi-blue-light font-semibold cursor-pointer py-2 md:mt-6 md:py-0 lg:text-[21px]">
+                            <B2 color="text-hpi-blue-light font-semibold cursor-pointer py-2 md:mt-6 md:py-0">
                                 <Link href="/news/veronica" target="_blank">
                                     Read More
                                 </Link>
@@ -116,7 +128,7 @@ export const BlogsUI = () => {
                         <B2 color="font-medium text-hpi-grey-dark line-clamp-4 md:mt-5 md:text-hpi-body-grey lg:line-clamp-none">
                             nGen sailed smoothly into action at Hutchison Ports Abu Qir (AQCT) aligning with the terminal&apos;s grand opening on 8th Jan 2024.
                         </B2>
-                        <B2 color="text-hpi-blue-light font-semibold cursor-pointer py-2 md:py-0 md:mt-6 lg:text-[21px]">
+                        <B2 color="text-hpi-blue-light font-semibold cursor-pointer py-2 md:py-0 md:mt-6">
                             <Link href="/news/ngen" target="_blank">
                                 Read More
                             </Link>
@@ -146,6 +158,10 @@ export const BlogsUI = () => {
                     </div>
                 </div> */}
             </section>
+            <Button onClick={callManualFetch}>
+                Contact us
+            </Button>
+
         </>
     )
 }

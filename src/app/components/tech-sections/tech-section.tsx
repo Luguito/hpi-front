@@ -1,4 +1,3 @@
-
 'use client'
 
 import React, { useState } from "react"
@@ -48,7 +47,7 @@ export const TechSolutionsComponent = () => {
     return (
         <motion.section className="
             mt-2 
-            lg:mt-20
+            lg:mt-15
             xl:mt-10
             2xl:mt-32
             w-[84%]
@@ -67,13 +66,13 @@ export const TechSolutionsComponent = () => {
             </header>
             <section className="
                 bg-white shadow-lg flex flex-col justify-between rounded-2xl gap-5 p-4
-                lg:gap-10 lg:px-24 lg:py-20 lg:rounded-3xl lg:flex-row
+                lg:gap-10 lg:px-10 lg:py-10 lg:rounded-3xl lg:flex-row
                 xl:mt-7 xl:px-16 xl:py-10
                 2xl:mt-10
             ">
                 <nav className="
                 flex flex-col gap-4 p-5
-                lg:gap-10 lg:w-[35em]
+                lg:gap-10
                 xl:gap-4 xl:w-[30em]
                 2xl:gap-9
                 ">
@@ -99,7 +98,7 @@ export const TechSolutionsComponent = () => {
                                 operations, and gate automation, leading
                                 to operational excellence.
                             </B2>
-                        <article className="lg:hidden">
+                        <article className="xl:hidden">
                             <CurrentSection />
                         </article>
                     </details>
@@ -126,7 +125,7 @@ export const TechSolutionsComponent = () => {
                             consolidation, standardisation, and
                             automation of operations.
                         </B2>
-                        <article className="lg:hidden">
+                        <article className="xl:hidden">
                             <CurrentSection />
                         </article>
                     </details>
@@ -152,12 +151,12 @@ export const TechSolutionsComponent = () => {
                             data analytics, and machine learning for
                             optimal operational visibility and control.
                         </B2>
-                        <article className="lg:hidden">
+                        <article className="xl:hidden">
                             <CurrentSection />
                         </article>
                     </details>
                 </nav>
-                <article className="hidden lg:block">
+                <article className="hidden xl:block">
                     <CurrentSection />
                 </article>
             </section>
@@ -172,7 +171,7 @@ export const AutomationSection = () => {
             <StorageImageClient name="home/Automation.png" width={623} height={415} priority alt="Img Here" className="
             object-cover h-full object-center rounded-2xl mt-3
             md:w-full
-            lg:w-auto lg:max-w-[none] lg:h-[400px] lg:rounded-3xl
+            lg:max-w-[none] lg:h-[400px] lg:rounded-3xl
             xl:w-auto
             2xl:w-[50em] 2xl:h-full
             "/>

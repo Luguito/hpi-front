@@ -25,7 +25,7 @@ function Footer() {
             {/* Contact ... section */}
             <footer className="snap-center">
                 <nav className="
-                flex flex-col justify-between py-14 px-10
+                flex flex-col justify-between py-14 px-10 gap-5
                 lg:flex-row bg-hpi-blue-sea lg:px-24 xl:px-14
                 ">
                     <section>

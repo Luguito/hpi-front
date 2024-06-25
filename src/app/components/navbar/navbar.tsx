@@ -20,6 +20,8 @@ export default function Navbar() {
     ]
 
     useEffect(() => {
+        fetch('/api/token', { method: "POST", credentials: 'include' });
+        
         if (ref.current) {
             window.addEventListener('scroll', () => {
                 if (window.scrollY === 0) {

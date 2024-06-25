@@ -3,31 +3,24 @@ import { NextRequest, NextResponse } from "next/server";
 import { cookies } from 'next/headers'
 
 export async function POST(req: NextRequest) {
-    console.log("REQ IMAGE", req.headers)
     const cookieStore = cookies();
 
     try {
         let authToken = cookieStore.get('auth')?.value;
 
-        let auth = ''
-        if (!authToken) {
-            let token = await fetch(`${req.nextUrl.origin}/api/token`, { method: "POST" });
-            auth = (await token.json()).token;
-            console.log("AUTH TOKEN", auth)
-            cookieStore.set('auth', auth, { httpOnly: true, secure: true, path: '/' })
-        }
+        // if(!authToken) return NextResponse.json({error: "Token has no been provided, please refresh the page"})
 
         let { name } = await req.json()
 
         if (CACHE_IMAGES[name]) {
             return NextResponse.json({ url: CACHE_IMAGES[name] })
         }
-        console.log(process.env.NEXT_PUBLIC_STORAGE_URL)
+        // console.log(process.env.NEXT_PUBLIC_STORAGE_URL)
         let res = await fetch(`${process.env.NEXT_PUBLIC_STORAGE_URL}/api/generate-sas-token`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${authToken ?? auth}`,
+                'Authorization': `Bearer ${authToken}`,
             },
             body: JSON.stringify({
                 "blob_name": name,
@@ -39,10 +32,9 @@ export async function POST(req: NextRequest) {
 
         CACHE_IMAGES[name] = url.sas_url;
 
-        console.log(url.sas_url);
-
         return NextResponse.json({ url: url.sas_url })
     } catch (e) {
+        // console.log(e)
         return NextResponse.json({ error: e })
     }
 }

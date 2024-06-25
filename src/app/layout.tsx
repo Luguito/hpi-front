@@ -11,13 +11,12 @@ export const metadata: Metadata = {
   description: "HPI",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // const data = await fetchData();
-  // console.log(data)
+
   return (
     <html lang="en">
       <body className={mont.className + " bg-hpi-light-bg"}>
