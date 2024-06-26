@@ -1,10 +1,21 @@
 import Text, { B1, B2, H1, H2, H3, H5, TitleNews } from "../../components/text/text";
-import BlogImage from '../../../../public/home/ubi.png';
+import BlogImage from '../../../../public/news/ubi/UBI.jpg';
 import Graphic from '../../../../public/home/graphic.svg'
 import Truck from '../../../../public/home/ABU QIR.png'
 import Image from 'next/image';
 import Link from "next/link";
 import Arrow from "../../../../public/home/arrow.svg";
+
+// IMAGES 
+import TruckAppoinment from '../../../../public/news/ubi/Truck Appointment System.png'
+import DriverQR from '../../../../public/news/ubi/Driver Identification QR Code.png'
+import GateInSlip from '../../../../public/news/ubi/Gate In Slip.png'
+import TerminalInformation from '../../../../public/news/ubi/Terminal Information.png'
+import VesselOperations from '../../../../public/news/ubi/Vessel Operations.png'
+import ShippingInformation from '../../../../public/news/ubi/Shipping information.png'
+import Download from '../../../../public/news/ubi/DOWNLOAD.jpg'
+
+
 
 export default function UBINew() {
     return (
@@ -26,12 +37,90 @@ export default function UBINew() {
             <Image src={BlogImage} alt="Image" />
             <section className="xl:w-3/4 mt-10">
                 <B1 color="text-hpi-body-grey font-medium">
-                    ubi is truly a game-changer. Users can access critical port-related information,
-                    including vessel schedules and port announcements, for efficient operational planning.
-                    Moreover, they can perform key tasks such as submitting Truck Appointment Requests and
-                    utilising Driver Identification QR codes to streamline Gate Automation processes and eliminate
-                    paperwork.
+                    We are thrilled to unveil ubi, the revolutionary mobile app designed to transform the way you access to critical port-related information seamlessly, empowering you to enhance operational efficiency like never before.
+                    It allows you to plan and optimise your operations with ease, ensuring smooth and streamlines workflows. Say goodbye to unnecessary delays and hello to efficient operational planning.
                 </B1>
+                <B1 color="text-hpi-body-grey font-medium mt-3">
+                    Ubi goes beyond information access. Submit truck appointment requests effortlessly and utilise Driver Identification QR codes to streamline Gate Automation processes and eliminate paperwork.
+                </B1>
+                <B1 color="text-hpi-body-grey font-medium mt-3">
+                    Join the growing community who have already made ubi their go-to solution! Get ready to embark on a new era of efficiency and effectiveness with -
+                    <Link className="text-hpi-blue-light" href="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Hutchison%20Port%20ENG%20NM.mp4">
+                        ubi.
+                    </Link>
+                </B1>
+                <article className="mt-5">
+                    <header>
+                        <H3 color="text-hpi-blue-light font-medium mt-2">Truck Appointment System</H3>
+                        <B1 color="text-hpi-body-grey font-medium mt-4">
+                            Truck Appointment Systems allows terminal to authenticate for container pickup and drop-off booking.
+                            Also, it allows cargo agent/ trucking company to assign drivers and reserve timeslot.
+                        </B1>
+                    </header>
+                    <article className="mt-5">
+                        <Image src={TruckAppoinment} alt="Truck Appoinment" className="h-[45em] sm:h-[34em] sm:w-[20em] xl:h-[35em] xl:w-[20em]"></Image>
+                    </article>
+                </article>
+                <article className="mt-5">
+                    <header>
+                        <H3 color="text-hpi-blue-light font-medium mt-2">Driver Identification QR Code</H3>
+                        <B1 color="text-hpi-body-grey font-medium mt-4">
+                            A one-time QR code to identify driver at gate kiosk to streamline Gate Automation workflows.
+                        </B1>
+                    </header>
+                    <article className="mt-5">
+                        <Image src={DriverQR} alt="Truck Appoinment" className="h-[45em] sm:h-[34em] sm:w-[20em] xl:h-[35em] xl:w-[20em]"></Image>
+                    </article>
+                </article>
+                <article className="mt-5">
+                    <header>
+                        <H3 color="text-hpi-blue-light font-medium mt-2">Gate In Slip</H3>
+                        <B1 color="text-hpi-body-grey font-medium mt-4">
+                            Gate in Slip allows Truck Drivers to receive the container movement slip directly in the App removing the need to carry paper slip.
+                        </B1>
+                    </header>
+                    <article className="mt-5">
+                        <Image src={GateInSlip} alt="Truck Appoinment" className="h-[45em] sm:h-[34em] sm:w-[20em] xl:h-[35em] xl:w-[20em]"></Image>
+                    </article>
+                </article>
+                <article className="mt-5">
+                    <header>
+                        <H3 color="text-hpi-blue-light font-medium mt-2">Terminal Information</H3>
+                        <B1 color="text-hpi-body-grey font-medium mt-4">
+                            Terminal Updates is a feature in ubi that allows user to view and subscribe the updates of the terminal. Announcement and Operational status will pop-up when launching the application.
+                        </B1>
+                    </header>
+                    <article className="mt-5">
+                        <Image src={TerminalInformation} alt="Truck Appoinment" className="h-[45em] sm:h-[34em] sm:w-[20em] xl:h-[35em] xl:w-[20em]"></Image>
+                    </article>
+                </article>
+                <article className="mt-5">
+                    <header>
+                        <H3 color="text-hpi-blue-light font-medium mt-2">Vessel Operations</H3>
+                        <B1 color="text-hpi-body-grey font-medium mt-4">
+                            Shipping Line can see progress of operations and projected time of departure.
+                        </B1>
+                    </header>
+                    <article className="mt-5">
+                        <Image src={VesselOperations} alt="Truck Appoinment" className="h-[45em] sm:h-[34em] sm:w-[20em] xl:h-[35em] xl:w-[20em]"></Image>
+                    </article>
+                </article>
+                <article className="mt-5">
+                    <header>
+                        <H3 color="text-hpi-blue-light font-medium mt-2">Shipping information</H3>
+                        <B1 color="text-hpi-body-grey font-medium mt-4">
+                            Shipping Information allows Shippers, Shipping Lines/Agents {'&'} auliers to view the arrival, departure and closing time of the vessels.
+                        </B1>
+                    </header>
+                    <article className="mt-5">
+                        <Image src={ShippingInformation} alt="Truck Appoinment" className="h-[45em] sm:h-[34em] sm:w-[20em] xl:h-[35em] xl:w-[20em]"></Image>
+                    </article>
+                </article>
+                <article className="mt-5">
+                    <article className="mt-5">
+                        <Image src={Download} alt="Truck Appoinment" ></Image>
+                    </article>
+                </article>
             </section>
             <footer className="flex flex-col justify-center mt-10 xl:my-20 xl:w-[85%] 2xl:my-40">
                 <header className="text-left">
@@ -112,3 +201,5 @@ export default function UBINew() {
         </section>
     )
 }
+
+// 

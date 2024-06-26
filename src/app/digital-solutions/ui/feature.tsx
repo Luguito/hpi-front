@@ -10,7 +10,9 @@ import { motion } from 'framer-motion'
 import { RevealSectionInitial, RevealTextAfterSection } from "@/app/animations/animation";
 import Play from '../../../../public/digital-solutions/play.svg'
 import StorageVideosClient, { StorageVideosClientWithPosterAsVideos } from "@/app/components/getImage/client-videos";
-
+import ROSAGraphic from '../../../../public/digital-solutions/ROSA Graphic.png'
+import BluePlay from '../../../../public/digital-solutions/play.svg'
+import Link from "next/link";
 
 const VeronicaComponent = () => {
     return (
@@ -74,13 +76,18 @@ const RosaComponent = () => {
                 </B2>
             </section>
             <article className="py-5 lg:py-12 rounded-3xl cursor-pointer relative">
-                <StorageVideosClientWithPosterAsVideos
+                <Image src={ROSAGraphic} alt="ROSA Graphic" />
+                <Link href="/news/ubi">
+                    <Image src={BluePlay} alt="Redirect" className={`absolute bottom-[10px] right-4  w-[30px] lg:w-[50px] lg:right-0 lg:mt-5 cursor-pointer`}/>
+                </Link>
+
+                {/* <StorageVideosClientWithPosterAsVideos
                     className="
                         rounded-3xl 
                         xl:h-[15em] xl:object-cover
                         2xl:max-w-none 2xl:h-[500px]
                     "
-                    poster="videos/hpi-assets_Digital Solutions ROSA-preview.mp4" name="videos/hpi-assets_ROSA_video.mp4" />
+                    poster="videos/hpi-assets_Digital Solutions ROSA-preview.mp4" name="videos/hpi-assets_ROSA_video.mp4" /> */}
 
                 {/* <video
                     className="

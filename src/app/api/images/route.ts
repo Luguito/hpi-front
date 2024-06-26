@@ -34,7 +34,7 @@ export async function POST(req: NextRequest) {
 
         return NextResponse.json({ url: url.sas_url })
     } catch (e) {
-        // console.log(e)
+        console.log(e)
         return NextResponse.json({ error: e })
     }
 }

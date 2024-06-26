@@ -174,7 +174,7 @@ export default function ForeFrontUI() {
                                 `
                             } />
                         <SectionUI
-                            url="https://storage.googleapis.com/dexfreight-webapp-assets/hpi-assets/Hutchison%20Port%20ENG%20NM.mp4"
+                            url="/news/ubi"
                             Img={
                                 <section className="flex justify-center items-center w-full h-full">
                                     <StorageImageClient width={606} height={286} name="digital-solutions/UBI_logo.png" alt="" />

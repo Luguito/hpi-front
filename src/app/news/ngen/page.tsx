@@ -17,7 +17,7 @@ export default function VeronicaNew() {
                     </p>
                 </Link>
                 <TitleNews color="text-hpi-blue-dark font-bold">
-                    NGEN IS LIVE IN HUTCHISON PORTS ABU QIR
+                    nGEN IS LIVE IN HUTCHISON PORTS ABU QIR
                 </TitleNews>
                 <H5 color="text-hpi-blue-light font-medium mt-2">
                     Jun 07, 2024
